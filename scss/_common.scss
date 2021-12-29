@@ -1,0 +1,309 @@
+@charset "UTF-8";
+
+/* layout */
+html, body {
+  @include nsM;
+  height: 100%;
+  font-size: 20px;
+  letter-spacing: -0.075em;
+  color: #15141F;
+}
+
+#wrap {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  @include contentMinWidth($webWidthNumber);
+  min-height: 100%;
+
+  padding-top: 157px;
+
+  /* header */
+  #header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    width: 100%;
+    @include contentMinWidth($webWidthNumber);
+    height: 157px;
+    border-top: 1px solid #707070;;
+    border-bottom: 1px solid #707070;
+    background-color: #DE5A27;
+    z-index: 10;
+
+    &::before, &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background-color: #707070;
+    }
+
+    &::after {
+      left: auto;
+      right: 0;
+    }
+
+    .headerIn {
+      position: relative;
+      box-sizing: border-box;
+      @include contentWidth($webWidthNumber);
+      padding: 0 1px;
+      height: 100%;
+      margin: 0 auto;
+
+      .logoText {
+        display: inline-block;
+        vertical-align: top;
+        padding-top: 53px;
+
+        a {
+          display: block;
+
+          line-height: 58px;
+          font-size: 40px;
+          color: #fff;
+        }
+      }
+
+      .gnb {
+
+        .gnbBtn {
+          display: none;
+        }
+
+        nav {
+          overflow: hidden;
+          position: absolute;
+          left: 608px;
+          top: 76px;
+
+          a {
+            float: left;
+            font-size: 24px;
+            color: #fff;
+
+            & + a {
+              margin-left: 50px;
+            }
+
+            &.active {
+              color: #FFF3B9;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* container */
+  #container {
+
+    .topVisual {
+      height: 490px;
+    }
+
+    .content {
+      @include contentWidth($webWidthNumber);
+      margin: 0 auto;
+    }
+  }
+
+  /* footer */
+  #footer {
+    position: relative;
+    margin-top: auto;
+    box-sizing: border-box;
+    height: 208px;
+    border-top: 1px solid #707070;;
+    border-bottom: 1px solid #707070;
+    background-color: #3C3C3C;
+
+    &::before, &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background-color: #707070;
+    }
+
+    &::after {
+      left: auto;
+      right: 0;
+    }
+
+    .footerIn {
+      position: relative;
+      box-sizing: border-box;
+      @include contentWidth($webWidthNumber);
+      height: 100%;
+      margin: 0 auto;
+      padding: 0 1px;
+
+      .tel {
+        padding-top: 60px;
+
+        a {
+          display: inline-block;
+          vertical-align: top;
+          line-height: 33px;
+          @include gtM;
+          font-size: 30px;
+          color: #fff;
+        }
+      }
+
+      .copyright {
+        line-height: 29px;
+        padding-top: 10px;
+        font-size: 20px;
+        color: #fff;
+
+        span {
+          display: inline-block;
+          vertical-align: top;
+        }
+      }
+
+      .snsLink {
+        overflow: hidden;
+        position: absolute;
+        right: 1px;
+        top: 60px;
+
+        .snsItem {
+          float: left;
+
+          & + .snsItem {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: #{768px}) {
+  #wrap {
+    @include contentMinWidth($mobileWidthNumber);
+    padding-top: 78px;
+
+    #header {
+      @include contentMinWidth($mobileWidthNumber);
+      height: 78px;
+
+      .headerIn {
+        @include contentWidth($mobileWidthNumber);
+        padding-left: 15px;
+
+        .logoText {
+          padding-top: 20px;
+
+          a {
+            line-height: 35px;
+            font-size: 23px;
+          }
+        }
+
+        .gnb {
+
+          .gnbBtn {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            display: block;
+            width: 64px;
+            height: 64px;
+            margin-top: -32px;
+            background: url("../images/icon_gnbOff.png") no-repeat center;
+            background-size: 27px 19px;
+
+            span {
+              @include blind;
+            }
+          }
+
+          nav {
+            position: fixed;
+            left: 100%;
+            top: 77px;
+            bottom: 0;
+            box-sizing: border-box;
+            width: 100vw;
+            padding: 17px 0 0 52px;
+            border: 1px solid #707070;
+            border-top: 0 none;
+            background-color: #DE5A27;
+
+            a {
+              float: none;
+              display: block;
+              text-align: right;
+              line-height: 73px;
+              padding-right: 22px;
+              border-bottom: 1px solid #fff;
+              font-size: 21px;
+
+              & + a {
+                margin: 0;
+              }
+            }
+          }
+
+          &.open {
+
+            .gnbBtn {
+              background-image: url("../images/icon_gnbOn.png");
+              background-size: 21px 21px;
+            }
+          }
+        }
+      }
+    }
+
+    #container {
+
+      .topVisual {
+        height: 245px;
+      }
+
+      .content {
+        @include contentWidth($mobileWidthNumber);
+      }
+    }
+
+    #footer {
+      height: 160px;
+
+      .footerIn {
+        @include contentWidth($mobileWidthNumber);
+        padding-left: 30px;
+
+        .tel {
+          padding-top: 30px;
+
+          a {
+            line-height: 24px;
+            font-size: 22px;
+          }
+        }
+
+        .copyright {
+          width: 230px;
+          line-height: 20px;
+          padding-top: 16px;
+          font-size: 14px;
+        }
+
+        .snsLink {
+          display: none;
+        }
+      }
+    }
+  }
+}

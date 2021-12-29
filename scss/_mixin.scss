@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+/* font-family */
+@mixin nsM {
+  font-family: "NotoSansCJKkrMedium", sans-serif;
+}
+
+@mixin nsR {
+  font-family: "NotoSansCJKkrRegular", sans-serif;
+}
+
+@mixin gtM {
+  font-family: "GothamMedium", sans-serif;
+}
+
+/* blind */
+@mixin blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* content width, min-width */
+$webWidthNumber: 1200px;
+$mobileWidthNumber: auto;
+
+@mixin contentWidth($number) {
+  width: $number;
+}
+
+@mixin contentMinWidth($number) {
+  min-width: $number;
+}

@@ -1,0 +1,336 @@
+@charset "UTF-8";
+/* fonts */
+@font-face {
+  font-family: "NotoSansCJKkrMedium";
+  src: url("../fonts/NotoSansCJKkr-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "NotoSansCJKkrRegular";
+  src: url("../fonts/NotoSansCJKkr-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "GothamMedium";
+  src: url("../fonts/Gotham-Medium.ttf") format("truetype");
+}
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 추가 */
+a {
+  text-decoration: none;
+}
+
+button {
+  padding: 0;
+  border: 0 none;
+  cursor: pointer;
+}
+
+/* font-family */
+/* blind */
+/* content width, min-width */
+/* layout */
+html, body {
+  font-family: "NotoSansCJKkrMedium", sans-serif;
+  height: 100%;
+  font-size: 20px;
+  letter-spacing: -0.075em;
+  color: #15141F;
+}
+
+#wrap {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  min-width: 1200px;
+  min-height: 100%;
+  padding-top: 157px;
+  /* header */
+  /* container */
+  /* footer */
+}
+#wrap #header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 1200px;
+  height: 157px;
+  border-top: 1px solid #707070;
+  border-bottom: 1px solid #707070;
+  background-color: #DE5A27;
+  z-index: 10;
+}
+#wrap #header::before, #wrap #header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: #707070;
+}
+#wrap #header::after {
+  left: auto;
+  right: 0;
+}
+#wrap #header .headerIn {
+  position: relative;
+  box-sizing: border-box;
+  width: 1200px;
+  padding: 0 1px;
+  height: 100%;
+  margin: 0 auto;
+}
+#wrap #header .headerIn .logoText {
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 53px;
+}
+#wrap #header .headerIn .logoText a {
+  display: block;
+  line-height: 58px;
+  font-size: 40px;
+  color: #fff;
+}
+#wrap #header .headerIn .gnb .gnbBtn {
+  display: none;
+}
+#wrap #header .headerIn .gnb nav {
+  overflow: hidden;
+  position: absolute;
+  left: 608px;
+  top: 76px;
+}
+#wrap #header .headerIn .gnb nav a {
+  float: left;
+  font-size: 24px;
+  color: #fff;
+}
+#wrap #header .headerIn .gnb nav a + a {
+  margin-left: 50px;
+}
+#wrap #header .headerIn .gnb nav a.active {
+  color: #FFF3B9;
+}
+#wrap #container .topVisual {
+  height: 490px;
+}
+#wrap #container .content {
+  width: 1200px;
+  margin: 0 auto;
+}
+#wrap #footer {
+  position: relative;
+  margin-top: auto;
+  box-sizing: border-box;
+  height: 208px;
+  border-top: 1px solid #707070;
+  border-bottom: 1px solid #707070;
+  background-color: #3C3C3C;
+}
+#wrap #footer::before, #wrap #footer::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: #707070;
+}
+#wrap #footer::after {
+  left: auto;
+  right: 0;
+}
+#wrap #footer .footerIn {
+  position: relative;
+  box-sizing: border-box;
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 1px;
+}
+#wrap #footer .footerIn .tel {
+  padding-top: 60px;
+}
+#wrap #footer .footerIn .tel a {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 33px;
+  font-family: "GothamMedium", sans-serif;
+  font-size: 30px;
+  color: #fff;
+}
+#wrap #footer .footerIn .copyright {
+  line-height: 29px;
+  padding-top: 10px;
+  font-size: 20px;
+  color: #fff;
+}
+#wrap #footer .footerIn .copyright span {
+  display: inline-block;
+  vertical-align: top;
+}
+#wrap #footer .footerIn .snsLink {
+  overflow: hidden;
+  position: absolute;
+  right: 1px;
+  top: 60px;
+}
+#wrap #footer .footerIn .snsLink .snsItem {
+  float: left;
+}
+#wrap #footer .footerIn .snsLink .snsItem + .snsItem {
+  margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+  #wrap {
+    min-width: auto;
+    padding-top: 78px;
+  }
+  #wrap #header {
+    min-width: auto;
+    height: 78px;
+  }
+  #wrap #header .headerIn {
+    width: auto;
+    padding-left: 15px;
+  }
+  #wrap #header .headerIn .logoText {
+    padding-top: 20px;
+  }
+  #wrap #header .headerIn .logoText a {
+    line-height: 35px;
+    font-size: 23px;
+  }
+  #wrap #header .headerIn .gnb .gnbBtn {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin-top: -32px;
+    background: url("../images/icon_gnbOff.png") no-repeat center;
+    background-size: 27px 19px;
+  }
+  #wrap #header .headerIn .gnb .gnbBtn span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+  #wrap #header .headerIn .gnb nav {
+    position: fixed;
+    left: 100%;
+    top: 77px;
+    bottom: 0;
+    box-sizing: border-box;
+    width: 100vw;
+    padding: 17px 0 0 52px;
+    border: 1px solid #707070;
+    border-top: 0 none;
+    background-color: #DE5A27;
+  }
+  #wrap #header .headerIn .gnb nav a {
+    float: none;
+    display: block;
+    text-align: right;
+    line-height: 73px;
+    padding-right: 22px;
+    border-bottom: 1px solid #fff;
+    font-size: 21px;
+  }
+  #wrap #header .headerIn .gnb nav a + a {
+    margin: 0;
+  }
+  #wrap #header .headerIn .gnb.open .gnbBtn {
+    background-image: url("../images/icon_gnbOn.png");
+    background-size: 21px 21px;
+  }
+  #wrap #container .topVisual {
+    height: 245px;
+  }
+  #wrap #container .content {
+    width: auto;
+  }
+  #wrap #footer {
+    height: 160px;
+  }
+  #wrap #footer .footerIn {
+    width: auto;
+    padding-left: 30px;
+  }
+  #wrap #footer .footerIn .tel {
+    padding-top: 30px;
+  }
+  #wrap #footer .footerIn .tel a {
+    line-height: 24px;
+    font-size: 22px;
+  }
+  #wrap #footer .footerIn .copyright {
+    width: 230px;
+    line-height: 20px;
+    padding-top: 16px;
+    font-size: 14px;
+  }
+  #wrap #footer .footerIn .snsLink {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
