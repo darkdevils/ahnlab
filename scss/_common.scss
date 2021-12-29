@@ -15,7 +15,6 @@ html, body {
   box-sizing: border-box;
   @include contentMinWidth($webWidthNumber);
   min-height: 100%;
-
   padding-top: 157px;
 
   /* header */
