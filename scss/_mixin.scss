@@ -60,3 +60,8 @@ $colorRed: #E62214;
 @mixin colorRed {
   color: $colorRed;
 }
+
+@mixin imageUrl($imgUrl, $type: png) {
+  background: url("../images/" + $imgUrl +"." + $type) no-repeat;
+}
+//@include imageUrl(common/logo_scroll,png) 사용법;

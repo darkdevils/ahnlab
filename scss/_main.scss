@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+
+
 /* layout */
 #wrap.mainLayout {
 
@@ -43,7 +45,8 @@
         box-sizing: border-box;
         height: 800px;
         padding-top: 192px;
-        background: url("../images/web/bg/bg_topVisualVideo.png") no-repeat center top;
+        @include imageUrl(web/bg/bg_topVisualVideo,png);
+        background-position: center top;
 
         .title {
           display: none;
@@ -154,7 +157,7 @@
         .topVisualVideo {
           height: 113.3333vw;
           padding: 12.8205vw 6.1538vw 0;
-          background-image: url("../images/mobile/bg/bg_topVisualVideo.png");
+          @include imageUrl(mobile/bg/bg_topVisualVideo,png);
           background-size: 100% 100%;
 
           .title {

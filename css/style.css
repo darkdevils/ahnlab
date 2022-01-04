@@ -141,7 +141,8 @@ html, body {
   font-size: 14px;
   font-family: "GothamMedium", sans-serif;
   color: #fff;
-  background: url("../images/web/icon/icon_pageTop.png") no-repeat center top;
+  background: url("../images/web/icon/icon_pageTop.png") no-repeat;
+  background-position: center top;
 }
 #wrap .imgMobile {
   display: none;
@@ -201,7 +202,8 @@ html, body {
   display: none;
   width: 35px;
   height: 35px;
-  background: url("../images/web/icon/icon_gnbClose.png") no-repeat center;
+  background: url("../images/web/icon/icon_gnbClose.png") no-repeat;
+  background-position: center;
   z-index: 12;
 }
 #wrap #header .headerIn .gnb .gnbCloseBtn span {
@@ -233,7 +235,8 @@ html, body {
 }
 #wrap #header .headerIn .gnb nav .gnbItem.category > button {
   padding-left: 35px;
-  background: url("../images/web/icon/icon_category.png") no-repeat left center;
+  background: url("../images/web/icon/icon_category.png") no-repeat;
+  background-position: left center;
 }
 #wrap #header .headerIn .gnb nav .gnbItem.category .gnbItemSub {
   position: fixed;
@@ -306,10 +309,12 @@ html, body {
 }
 #wrap #header .headerIn .gnb nav .gnbItem.login > button {
   width: 35px;
-  background: url("../images/web/icon/icon_login.png") no-repeat center;
+  background: url("../images/web/icon/icon_login.png") no-repeat;
+  background-position: center;
 }
 #wrap #header .headerIn .gnb nav .gnbItem.login > button.on {
-  background-image: url("../images/web/icon/icon_login_on.png");
+  background: url("../images/web/icon/icon_login_on.png") no-repeat;
+  background-position: center;
 }
 #wrap #header .headerIn .gnb nav .gnbItem.login > button span {
   position: absolute;
@@ -389,7 +394,8 @@ html, body {
 }
 #wrap #header .headerIn .gnb nav .gnbItem.search > button {
   width: 35px;
-  background: url("../images/web/icon/icon_search.png") no-repeat center;
+  background: url("../images/web/icon/icon_search.png") no-repeat;
+  background-position: center;
 }
 #wrap #header .headerIn .gnb nav .gnbItem.search > button span {
   position: absolute;
@@ -452,7 +458,8 @@ html, body {
   width: 54px;
   height: 54px;
   margin-left: 5px;
-  background: url("../images/web/icon/icon_gnbSearch.png") no-repeat center;
+  background: url("../images/web/icon/icon_gnbSearch.png") no-repeat;
+  background-position: center;
 }
 #wrap #header .headerIn .gnb nav .gnbItem.search .gnbItemSub .gnbItemSubIn .searchInputArea .searchInput button span {
   position: absolute;
@@ -491,10 +498,12 @@ html, body {
   display: none;
 }
 #wrap #header .headerIn .gnb nav .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-prev {
-  background: url("../images/web/icon/icon_gnbSearchArrowLeft.png") no-repeat left center;
+  background: url("../images/web/icon/icon_gnbSearchArrowLeft.png") no-repeat;
+  background-position: left center;
 }
 #wrap #header .headerIn .gnb nav .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-next {
-  background: url("../images/web/icon/icon_gnbSearchArrowRight.png") no-repeat right center;
+  background: url("../images/web/icon/icon_gnbSearchArrowRight.png") no-repeat;
+  background-position: right center;
 }
 #wrap #header .headerIn .gnb nav .gnbItem.search .gnbItemSub .gnbItemSubIn .searchNodataArea {
   line-height: 45px;
@@ -585,7 +594,8 @@ html, body {
     line-height: 9px;
     padding-top: 13px;
     font-size: 8px;
-    background: url("../images/mobile/icon/icon_pageTop.png") no-repeat center top;
+    background: url("../images/web/icon/icon_pageTop.png") no-repeat;
+    background-position: center top;
     background-size: 21px 10px;
   }
   #wrap .imgWeb {
@@ -608,7 +618,8 @@ html, body {
     display: block;
     width: 50px;
     height: 50px;
-    background: url("../images/mobile/icon/icon_pageBack.png") no-repeat center;
+    background: url("../images/mobile/icon/icon_pageBack.png") no-repeat;
+    background-position: center;
     background-size: 12px 21px;
   }
   #wrap #header .headerIn .pageBack span {
@@ -637,7 +648,8 @@ html, body {
     display: block;
     width: 60px;
     height: 50px;
-    background: url("../images/mobile/icon/icon_gnbOpen.png") no-repeat center;
+    background: url("../images/mobile/icon/icon_gnbOpen.png") no-repeat;
+    background-position: center;
     background-size: 27px 20px;
   }
   #wrap #header .headerIn .gnb .gnbCloseBtn {
@@ -647,7 +659,8 @@ html, body {
     display: none;
     width: 35px;
     height: 32px;
-    background: url("../images/mobile/icon/icon_gnbClose.png") no-repeat center;
+    background: url("../images/mobile/icon/icon_gnbClose.png") no-repeat;
+    background-position: center;
     background-size: 35px 32px;
   }
   #wrap #header .headerIn .gnb nav {
@@ -688,7 +701,8 @@ html, body {
   }
   #wrap #header .headerIn .gnb nav .gnbItem.category > button {
     padding-left: 35px;
-    background: url("../images/web/icon/icon_category.png") no-repeat left center;
+    background: url("../images/web/icon/icon_category.png") no-repeat;
+    background-position: left center;
   }
   #wrap #header .headerIn .gnb nav .gnbItem.category .gnbItemSub {
     position: fixed;
@@ -761,10 +775,12 @@ html, body {
   }
   #wrap #header .headerIn .gnb nav .gnbItem.login > button {
     width: 35px;
-    background: url("../images/web/icon/icon_login.png") no-repeat center;
+    background: url("../images/web/icon/icon_login.png") no-repeat;
+    background-position: center;
   }
   #wrap #header .headerIn .gnb nav .gnbItem.login > button.on {
-    background-image: url("../images/web/icon/icon_login_on.png");
+    background: url("../images/web/icon/icon_login_on.png") no-repeat;
+    background-position: center;
   }
   #wrap #header .headerIn .gnb nav .gnbItem.login > button span {
     position: absolute;
@@ -844,7 +860,8 @@ html, body {
   }
   #wrap #header .headerIn .gnb nav .gnbItem.search > button {
     width: 35px;
-    background: url("../images/web/icon/icon_search.png") no-repeat center;
+    background: url("../images/web/icon/icon_search.png") no-repeat;
+    background-position: center;
   }
   #wrap #header .headerIn .gnb nav .gnbItem.search > button span {
     position: absolute;
@@ -907,7 +924,8 @@ html, body {
     width: 54px;
     height: 54px;
     margin-left: 5px;
-    background: url("../images/web/icon/icon_gnbSearch.png") no-repeat center;
+    background: url("../images/web/icon/icon_gnbSearch.png") no-repeat;
+    background-position: center;
   }
   #wrap #header .headerIn .gnb nav .gnbItem.search .gnbItemSub .gnbItemSubIn .searchInputArea .searchInput button span {
     position: absolute;
@@ -946,10 +964,12 @@ html, body {
     display: none;
   }
   #wrap #header .headerIn .gnb nav .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-prev {
-    background: url("../images/web/icon/icon_gnbSearchArrowLeft.png") no-repeat left center;
+    background: url("../images/web/icon/icon_gnbSearchArrowLeft.png") no-repeat;
+    background-position: left center;
   }
   #wrap #header .headerIn .gnb nav .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-next {
-    background: url("../images/web/icon/icon_gnbSearchArrowRight.png") no-repeat right center;
+    background: url("../images/web/icon/icon_gnbSearchArrowRight.png") no-repeat;
+    background-position: right center;
   }
   #wrap #header .headerIn .gnb nav .gnbItem.search .gnbItemSub .gnbItemSubIn .searchNodataArea {
     line-height: 45px;
@@ -1019,7 +1039,8 @@ html, body {
   box-sizing: border-box;
   height: 800px;
   padding-top: 192px;
-  background: url("../images/web/bg/bg_topVisualVideo.png") no-repeat center top;
+  background: url("../images/web/bg/bg_topVisualVideo.png") no-repeat;
+  background-position: center top;
 }
 #wrap.mainLayout #container .topVisual .topVisualVideo .title {
   display: none;
@@ -1096,7 +1117,7 @@ html, body {
   #wrap.mainLayout #container .topVisual .topVisualVideo {
     height: 113.3333vw;
     padding: 12.8205vw 6.1538vw 0;
-    background-image: url("../images/mobile/bg/bg_topVisualVideo.png");
+    background: url("../images/mobile/bg/bg_topVisualVideo.png") no-repeat;
     background-size: 100% 100%;
   }
   #wrap.mainLayout #container .topVisual .topVisualVideo .title {

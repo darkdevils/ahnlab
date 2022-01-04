@@ -39,7 +39,8 @@ html, body {
       font-size: 14px;
       @include gtM;
       color: #fff;
-      background: url("../images/web/icon/icon_pageTop.png") no-repeat center top;
+      @include imageUrl(web/icon/icon_pageTop,png);
+      background-position: center top;
     }
   }
 
@@ -109,7 +110,8 @@ html, body {
           display: none;
           width: 35px;
           height: 35px;
-          background: url("../images/web/icon/icon_gnbClose.png") no-repeat center;
+          @include imageUrl(web/icon/icon_gnbClose,png);
+          background-position: center;
           z-index: 12;
 
           span {
@@ -143,7 +145,8 @@ html, body {
 
               > button {
                 padding-left: 35px;
-                background: url("../images/web/icon/icon_category.png") no-repeat left center;
+                @include imageUrl(web/icon/icon_category,png);
+                background-position: left center;
               }
 
               .gnbItemSub {
@@ -232,10 +235,12 @@ html, body {
 
               > button {
                 width: 35px;
-                background: url("../images/web/icon/icon_login.png") no-repeat center;
+                @include imageUrl(web/icon/icon_login,png);
+                background-position: center;
 
                 &.on {
-                  background-image: url("../images/web/icon/icon_login_on.png");
+                  @include imageUrl(web/icon/icon_login_on,png);
+                  background-position: center;
                 }
 
                 span {
@@ -280,27 +285,27 @@ html, body {
                       }
 
                       &.kakao {
-                        background: url("../images/web/sns/sns_kakao.png") no-repeat;
+                        @include imageUrl(web/sns/sns_kakao,png);
                         background-size: 100% 100%;
                       }
 
                       &.naver {
-                        background: url("../images/web/sns/sns_naver.png") no-repeat;
+                        @include imageUrl(web/sns/sns_naver,png);
                         background-size: 100% 100%;
                       }
 
                       &.google {
-                        background: url("../images/web/sns/sns_google.png") no-repeat;
+                        @include imageUrl(web/sns/sns_google,png);
                         background-size: 100% 100%;
                       }
 
                       &.facebook {
-                        background: url("../images/web/sns/sns_facebook.png") no-repeat;
+                        @include imageUrl(web/sns/sns_facebook,png);
                         background-size: 100% 100%;
                       }
 
                       &.twitch {
-                        background: url("../images/web/sns/sns_twitch.png") no-repeat;
+                        @include imageUrl(web/sns/sns_twitch,png);
                         background-size: 100% 100%;
                       }
 
@@ -324,7 +329,8 @@ html, body {
 
               > button  {
                 width: 35px;
-                background: url("../images/web/icon/icon_search.png") no-repeat center;
+                @include imageUrl(web/icon/icon_search,png);
+                background-position: center;
 
                 span {
                   @include blind;
@@ -388,7 +394,8 @@ html, body {
                         width: 54px;
                         height: 54px;
                         margin-left: 5px;
-                        background: url("../images/web/icon/icon_gnbSearch.png") no-repeat center;
+                        @include imageUrl(web/icon/icon_gnbSearch,png);
+                        background-position: center;
 
                         span {
                           @include blind;
@@ -439,11 +446,13 @@ html, body {
                       }
 
                       .swiper-button-prev {
-                        background: url("../images/web/icon/icon_gnbSearchArrowLeft.png") no-repeat left center;
+                        @include imageUrl(web/icon/icon_gnbSearchArrowLeft,png);
+                        background-position: left center;
                       }
 
                       .swiper-button-next {
-                        background: url("../images/web/icon/icon_gnbSearchArrowRight.png") no-repeat right center;
+                        @include imageUrl(web/icon/icon_gnbSearchArrowRight,png);
+                        background-position: right center;
                       }
                     }
                   }
@@ -558,7 +567,8 @@ html, body {
         line-height: 9px;
         padding-top: 13px;
         font-size: 8px;
-        background: url("../images/mobile/icon/icon_pageTop.png") no-repeat center top;
+        @include imageUrl(web/icon/icon_pageTop,png);
+        background-position: center top;
         background-size: 21px 10px;
       }
     }
@@ -587,7 +597,8 @@ html, body {
           display: block;
           width: 50px;
           height: 50px;
-          background: url("../images/mobile/icon/icon_pageBack.png") no-repeat center;
+          @include imageUrl(mobile/icon/icon_pageBack,png);
+          background-position: center;
           background-size: 12px 21px;
 
           span {
@@ -618,7 +629,8 @@ html, body {
             display: block;
             width: 60px;
             height: 50px;
-            background: url("../images/mobile/icon/icon_gnbOpen.png") no-repeat center;
+            @include imageUrl(mobile/icon/icon_gnbOpen,png);
+            background-position: center;
             background-size: 27px 20px;
           }
 
@@ -629,7 +641,8 @@ html, body {
             display: none;
             width: 35px;
             height: 32px;
-            background: url("../images/mobile/icon/icon_gnbClose.png") no-repeat center;
+            @include imageUrl(mobile/icon/icon_gnbClose,png);
+            background-position: center;
             background-size: 35px 32px;
           }
 
@@ -678,7 +691,8 @@ html, body {
 
                 > button {
                   padding-left: 35px;
-                  background: url("../images/web/icon/icon_category.png") no-repeat left center;
+                  @include imageUrl(web/icon/icon_category,png);
+                  background-position: left center;
                 }
 
                 .gnbItemSub {
@@ -767,10 +781,12 @@ html, body {
 
                 > button {
                   width: 35px;
-                  background: url("../images/web/icon/icon_login.png") no-repeat center;
+                  @include imageUrl(web/icon/icon_login,png);
+                  background-position: center;
 
                   &.on {
-                    background-image: url("../images/web/icon/icon_login_on.png");
+                    @include imageUrl(web/icon/icon_login_on,png);
+                    background-position: center;
                   }
 
                   span {
@@ -815,27 +831,27 @@ html, body {
                         }
 
                         &.kakao {
-                          background: url("../images/web/sns/sns_kakao.png") no-repeat;
+                          @include imageUrl(web/sns/sns_kakao,png);
                           background-size: 100% 100%;
                         }
 
                         &.naver {
-                          background: url("../images/web/sns/sns_naver.png") no-repeat;
+                          @include imageUrl(web/sns/sns_naver,png);
                           background-size: 100% 100%;
                         }
 
                         &.google {
-                          background: url("../images/web/sns/sns_google.png") no-repeat;
+                          @include imageUrl(web/sns/sns_google,png);
                           background-size: 100% 100%;
                         }
 
                         &.facebook {
-                          background: url("../images/web/sns/sns_facebook.png") no-repeat;
+                          @include imageUrl(web/sns/sns_facebook,png);
                           background-size: 100% 100%;
                         }
 
                         &.twitch {
-                          background: url("../images/web/sns/sns_twitch.png") no-repeat;
+                          @include imageUrl(web/sns/sns_twitch,png);
                           background-size: 100% 100%;
                         }
 
@@ -859,7 +875,8 @@ html, body {
 
                 > button  {
                   width: 35px;
-                  background: url("../images/web/icon/icon_search.png") no-repeat center;
+                  @include imageUrl(web/icon/icon_search,png);
+                  background-position: center;
 
                   span {
                     @include blind;
@@ -923,7 +940,8 @@ html, body {
                           width: 54px;
                           height: 54px;
                           margin-left: 5px;
-                          background: url("../images/web/icon/icon_gnbSearch.png") no-repeat center;
+                          @include imageUrl(web/icon/icon_gnbSearch,png);
+                          background-position: center;
 
                           span {
                             @include blind;
@@ -974,11 +992,13 @@ html, body {
                         }
 
                         .swiper-button-prev {
-                          background: url("../images/web/icon/icon_gnbSearchArrowLeft.png") no-repeat left center;
+                          @include imageUrl(web/icon/icon_gnbSearchArrowLeft,png);
+                          background-position: left center;
                         }
 
                         .swiper-button-next {
-                          background: url("../images/web/icon/icon_gnbSearchArrowRight.png") no-repeat right center;
+                          @include imageUrl(web/icon/icon_gnbSearchArrowRight,png);
+                          background-position: right center;
                         }
                       }
                     }
