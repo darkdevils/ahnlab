@@ -1,16 +1,32 @@
 @charset "UTF-8";
 
 /* font-family */
-@mixin nsM {
-  font-family: "NotoSansCJKkrMedium", sans-serif;
-}
-
 @mixin nsR {
   font-family: "NotoSansCJKkrRegular", sans-serif;
 }
 
+@mixin nsM {
+  font-family: "NotoSansCJKkrMedium", sans-serif;
+}
+
+@mixin nsB {
+  font-family: "NotoSansCJKkrBold", sans-serif;
+}
+
+@mixin nsBk {
+  font-family: "NotoSansCJKkrBlack", sans-serif;
+}
+
 @mixin gtM {
   font-family: "GothamMedium", sans-serif;
+}
+
+@mixin gtB {
+  font-family: "GothamBold", sans-serif;
+}
+
+@mixin gtBk {
+  font-family: "GothamBlack", sans-serif;
 }
 
 /* blind */
@@ -32,4 +48,15 @@ $mobileWidthNumber: auto;
 
 @mixin contentMinWidth($number) {
   min-width: $number;
+}
+
+/* color */
+$colorOrange: #E76B1A;
+$colorRed: #E62214;
+
+@mixin colorOrange {
+  color: $colorOrange;
+}
+@mixin colorRed {
+  color: $colorRed;
 }

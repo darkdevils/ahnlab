@@ -16,13 +16,136 @@
         <!-- header -->
         <hader id="header">
             <div class="headerIn">
+                <a href="#" class="pageBack"><span>이전 페이지</span></a>
                 <h1 class="logoText"><a href="#">국민의당 대통령 후보 안철수</a></h1>
                 <div class="gnb">
-                    <button type="button" class="gnbBtn"><span>메뉴열기</span></button>
+                    <button type="button" class="gnbOpenBtn"><span>메뉴 열기</span></button>
                     <nav>
-                        <a href="#" class="active">안철수는?</a>
-                        <a href="#">안철수의 오늘</a>
+                        <div class="gnbItem category">
+                            <button type="button">전체카테고리</button>
+                            <div class="gnbItemSub">
+                                <div class="gnbItemSubIn">
+                                    <div class="gnbItemTitle">전체카테고리</div>
+                                    <ul class="gnbItemSubBox">
+                                        <li><a href="#">안철수는</a></li>
+                                        <li><a href="#">안철수의 약속</a></li>
+                                        <li><a href="#">안철수의 오늘</a></li>
+                                    </ul>
+                                    <ul class="gnbItemSubBox">
+                                        <li><a href="#">영상</a></li>
+                                        <li><a href="#" class="live">라이브 보기</a></li>
+                                        <li><a href="#">내말 좀 들어줘</a></li>
+                                    </ul>
+                                    <ul class="gnbItemSubBox">
+                                        <li><a href="#">철수마켓</a></li>
+                                        <li><a href="#">폴리버스 입장</a></li>
+                                    </ul>
+                                    <ul class="gnbItemSubBox">
+                                        <li><a href="#">캠프 자원봉사 신청</a></li>
+                                        <li><a href="#" class="peoplepartyHomepage">국민의당 홈페이지</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gnbItem">
+                            <a href="#">안철수는</a>
+                        </div>
+                        <div class="gnbItem">
+                            <a href="#">안철수의 약속</a>
+                        </div>
+                        <div class="gnbItem">
+                            <a href="#">안철수의 오늘</a>
+                        </div>
+                        <div class="gnbItem login">
+                            <!-- login 완료시 class="on" 추가 -->
+                            <button type="button" class="on"><span>로그인</span></button>
+                            <div class="gnbItemSub">
+                                <div class="gnbItemSubIn">
+                                    <div class="gnbItemTitle">로그인</div>
+                                    <div class="gnbItemSns">
+                                        <a href="#" class="kakao"><span>카카오톡 간편 로그인</span></a>
+                                        <a href="#" class="naver"><span>네이버 간편 로그인</span></a>
+                                        <a href="#" class="google"><span>구글 간편 로그인</span></a>
+                                        <a href="#" class="facebook"><span>페이스북 간편 로그인</span></a>
+                                        <a href="#" class="twitch"><span>트위치 간편 로그인</span></a>
+                                    </div>
+                                    <div class="gnbItemContext">
+                                        불법/악성 콘텐츠를 방지하기 위해 실명을 확인합니다.<br />
+                                        SNS로 로그인하여 간편하게 이용하실 수 있습니다.<br />
+                                        원하시는 SNS를 선택하시고 로그인 해주세요.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gnbItem search">
+                            <button type="button"><span>검색</span></button>
+                            <div class="gnbItemSub">
+                                <div class="gnbItemSubIn">
+                                    <div class="searchTitleArea">검색하가</div>
+                                    <div class="searchInputArea">
+                                        <span class="searchText">검색어를 입력하세요</span>
+                                        <span class="searchInput">
+                                            <input type="text" />
+                                            <button type="button"><span>검색</span></button>
+                                        </span>
+                                    </div>
+                                    <div class="searchNodataArea">
+                                        <span>입력하신 검색어 “ㅋㅇㅇ힌” (와)과</span>
+                                        <span>일치하는 결과가 없습니다.</span>
+                                    </div>
+                                    <div class="swiperDataArea">
+                                        <div class="swiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="../images/temp/photoH_01.png" alt="썸네일01" />
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="../images/temp/photoH_02.png" alt="썸네일02" />
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="../images/temp/photoH_03.png" alt="썸네일03" />
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="../images/temp/photoH_01.png" alt="썸네일04" />
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="../images/temp/photoH_02.png" alt="썸네일05" />
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="../images/temp/photoH_03.png" alt="썸네일06" />
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-button-next"></div>
+                                            <div class="swiper-button-prev"></div>
+                                        </div>
+                                        <script>
+                                            var swiper = new Swiper(".swiperDataArea .swiper", {
+                                                slidesPerView: 5,
+                                                spaceBetween: 18,
+                                                navigation: {
+                                                    nextEl: ".swiper-button-next",
+                                                    prevEl: ".swiper-button-prev",
+                                                },
+                                            });
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </nav>
+                    <button type="button" class="gnbCloseBtn"><span>메뉴 닫기</span></button>
                 </div>
             </div>
         </hader>
@@ -30,48 +153,60 @@
         <!-- container -->
         <div id="container">
             <div class="topVisual">
+                <div class="topVisualSwiper">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="imgWeb" style="background: url('../images/temp/visual_sub_web.png') no-repeat center top;"></div>
+                                <div class="imgMobile" style="background: url('../images/temp/visual_sub_mobile.png') no-repeat center top;"></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="imgWeb" style="background: url('../images/temp/visual_sub_web.png') no-repeat center top;"></div>
+                                <div class="imgMobile" style="background: url('../images/temp/visual_sub_mobile.png') no-repeat center top;"></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="imgWeb" style="background: url('../images/temp/visual_sub_web.png') no-repeat center top;"></div>
+                                <div class="imgMobile" style="background: url('../images/temp/visual_sub_mobile.png') no-repeat center top;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    let options = {};
+                    if ( $(".topVisualSwiper .swiper-slide").length == 1 ) {
+                        options = {}
+                    } else {
+                        options = {
+                            loop: true,
+                            speed : 600,
+                            autoplay: {
+                                delay: 3000,
+                                disableOnInteraction: false,
+                            },
+                        }
+                    }
+                    var swiper = new Swiper(".topVisualSwiper .swiper", options);
+                </script>
             </div>
             <div class="content">
-                content<br>content<br>content
+                content<br>content<br>content<br>content<br>content<br>
+                content<br>content<br>content<br>content<br>content<br>
+                content<br>content<br>content<br>content<br>content<br>
+                content<br>content<br>content<br>content<br>content<br>
+                content<br>content<br>content<br>content<br>content
             </div>
         </div>
         <!-- //container -->
         <!-- footer -->
         <footer id="footer">
             <div class="footerIn">
+                <div class="homepageLink">
+                    <a href="https://peopleparty.kr/">국민의당 홈페이지</a>
+                </div>
                 <div class="tel">
-                    <a href="tel:02-022-02222">02.022.02222</a>
+                    <a href="tel:02-022-02222">02-022-02222</a>
                 </div>
-                <div class="copyright">Copyright &copy; 국민의당 대통령 후보 안철수 <span>All Rights Reserved.</span></div>
-                <div class="snsLink">
-                    <a href="#" class="snsItem">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48.147" height="48.148" viewBox="0 0 48.147 48.148">
-                            <path id="패스_28" data-name="패스 28" d="M24.074,0A24.074,24.074,0,1,0,48.147,24.074,24.074,24.074,0,0,0,24.074,0M31.9,15.169l-2.838,0c-2.224,0-2.654,1.058-2.654,2.608V21.2h5.3l-.691,5.358H26.407V40.3H20.874V26.557H16.248V21.2h4.626V17.248c0-4.585,2.8-7.081,6.889-7.081a38.71,38.71,0,0,1,4.136.21Z" fill="#fff"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="snsItem">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48.148" height="48.148" viewBox="0 0 48.148 48.148">
-                            <path id="패스_34" data-name="패스 34" d="M88.852,12.828h-12a5.318,5.318,0,0,0-5.317,5.316v12a5.32,5.32,0,0,0,5.317,5.316h12a5.317,5.317,0,0,0,5.315-5.316v-12a5.315,5.315,0,0,0-5.315-5.316m-6,18.512a7.2,7.2,0,1,1,7.2-7.2,7.2,7.2,0,0,1-7.2,7.2M90.29,18.349a1.677,1.677,0,1,1,1.677-1.677,1.677,1.677,0,0,1-1.677,1.677" transform="translate(-58.779)" fill="#fff"/>
-                            <path id="패스_35" data-name="패스 35" d="M82.853,0a24.074,24.074,0,1,0,24.074,24.074A24.074,24.074,0,0,0,82.853,0m13.87,29.938a8,8,0,0,1-8.006,8H76.989a8,8,0,0,1-8.006-8V18.211a8.005,8.005,0,0,1,8.006-8.005H88.717a8.005,8.005,0,0,1,8.006,8.005Z" transform="translate(-58.779)" fill="#fff"/>
-                            <path id="패스_36" data-name="패스 36" d="M82.851,19.476a4.667,4.667,0,1,0,4.667,4.668,4.666,4.666,0,0,0-4.667-4.668" transform="translate(-58.779)" fill="#fff"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="snsItem">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48.148" height="48.149" viewBox="0 0 48.148 48.149">
-                            <path id="패스_37" data-name="패스 37" d="M141.631,0a24.074,24.074,0,1,0,24.074,24.074A24.074,24.074,0,0,0,141.631,0m12.2,24.219a47.6,47.6,0,0,1-.369,5.36,3.223,3.223,0,0,1-2.946,2.836c-.924.138-5.369.314-8.9.314l.016,0c-3.529,0-7.974-.172-8.9-.31a3.215,3.215,0,0,1-2.942-2.836,46.56,46.56,0,0,1-.373-5.36v-.289a46.5,46.5,0,0,1,.373-5.357,3.22,3.22,0,0,1,2.942-2.84c.923-.137,5.364-.313,8.888-.313s7.967.176,8.89.313a3.224,3.224,0,0,1,2.946,2.84,47.539,47.539,0,0,1,.369,5.357Z" transform="translate(-117.557 0.001)" fill="#fff"/>
-                            <path id="패스_38" data-name="패스 38" d="M138.7,27.2l5.852-3.2L138.7,20.945Z" transform="translate(-117.557 0.001)" fill="#fff"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="snsItem">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48.148" height="48.148" viewBox="0 0 48.148 48.148">
-                            <path id="패스_29" data-name="패스 29" d="M191.525,21.134a2.6,2.6,0,0,0-1.668.775V18.8H187.9v8.155h1.976v-.639a1.877,1.877,0,0,0,1.646.845,2.888,2.888,0,0,0,2.756-3.05s-.1-2.98-2.756-2.98m-.433,4.3a1.257,1.257,0,1,1,1.257-1.256,1.256,1.256,0,0,1-1.257,1.256" transform="translate(-176.335)" fill="#fff"/>
-                            <path id="패스_30" data-name="패스 30" d="M194.912,18.615v1.891s.89-.04.89,1.625v4.827h1.888V21.684s.082-3.069-2.778-3.069" transform="translate(-176.335)" fill="#fff"/>
-                            <path id="패스_31" data-name="패스 31" d="M200.409,0a24.074,24.074,0,1,0,24.074,24.074A24.074,24.074,0,0,0,200.409,0M216.4,29.419a5.061,5.061,0,0,1-5.053,5.066h-7.535L201.24,38.67a.55.55,0,0,1-.088.127.86.86,0,0,1-1.492-.006.694.694,0,0,1-.082-.121l-2.572-4.185h-7.537a5.056,5.056,0,0,1-5.048-5.066V17.4a5.06,5.06,0,0,1,5.048-5.071h21.875A5.065,5.065,0,0,1,216.4,17.4Z" transform="translate(-176.335)" fill="#fff"/>
-                            <path id="패스_32" data-name="패스 32" d="M202.3,21.163s-3.235,0-3.235,3.018a2.925,2.925,0,0,0,3.235,2.983s3.309-.006,3.309-2.983a2.97,2.97,0,0,0-3.309-3.018m0,4.274a1.257,1.257,0,1,1,1.257-1.256,1.256,1.256,0,0,1-1.257,1.256" transform="translate(-176.335)" fill="#fff"/>
-                            <path id="패스_33" data-name="패스 33" d="M211.014,21.909a2.144,2.144,0,0,0-1.644-.746,2.7,2.7,0,0,0-2.768,3s-.029,2.905,2.691,2.905a2.255,2.255,0,0,0,1.721-.746v.456s.139,1.431-1.247,1.431h-.474v1.733h.763a2.842,2.842,0,0,0,2.861-3.056V21.354h-1.9Zm-1.17,3.528a1.257,1.257,0,1,1,1.257-1.256,1.258,1.258,0,0,1-1.257,1.256" transform="translate(-176.335)" fill="#fff"/>
-                        </svg>
-                    </a>
-                </div>
+                <div class="copyright">Copyright &copy; 국민의당 대통령 후보 안철수 All Rights Reserved.</div>
             </div>
         </footer>
         <!-- //footer -->

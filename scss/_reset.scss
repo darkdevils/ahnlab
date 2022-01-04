@@ -2,17 +2,40 @@
 
 /* fonts */
 @font-face{
-  font-family: "NotoSansCJKkrMedium";
-  src: url("../fonts/NotoSansCJKkr-Medium.ttf") format("truetype");
-}
-@font-face{
   font-family: "NotoSansCJKkrRegular";
   src: url("../fonts/NotoSansCJKkr-Regular.ttf") format("truetype");
 }
+
+@font-face{
+  font-family: "NotoSansCJKkrMedium";
+  src: url("../fonts/NotoSansCJKkr-Medium.ttf") format("truetype");
+}
+
+@font-face{
+  font-family: "NotoSansCJKkrBold";
+  src: url("../fonts/NotoSansCJKkr-Bold.ttf") format("truetype");
+}
+
+@font-face{
+  font-family: "NotoSansCJKkrBlack";
+  src: url("../fonts/NotoSansCJKkr-Black.ttf") format("truetype");
+}
+
 @font-face{
   font-family: "GothamMedium";
   src: url("../fonts/Gotham-Medium.ttf") format("truetype");
 }
+
+@font-face{
+  font-family: "GothamBold";
+  src: url("../fonts/Gotham-Bold.ttf") format("truetype");
+}
+
+@font-face{
+  font-family: "GothamBlack";
+  src: url("../fonts/Gotham-Black.ttf") format("truetype");
+}
+
 
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -71,4 +94,5 @@ button {
   padding: 0;
   border: 0 none;
   cursor: pointer;
+  background-color: transparent;
 }
