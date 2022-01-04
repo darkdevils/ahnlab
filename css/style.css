@@ -644,7 +644,7 @@ html, body {
     position: fixed;
     right: 35px;
     top: 23px;
-    display: block;
+    display: none;
     width: 35px;
     height: 32px;
     background: url("../images/mobile/icon/icon_gnbClose.png") no-repeat center;
