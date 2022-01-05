@@ -38,6 +38,14 @@
   overflow: hidden;
 }
 
+@mixin unBlind {
+  position: static;
+  width: auto;
+  height: auto;
+  clip: none;
+  overflow: visible;
+}
+
 /* content width, min-width */
 $webWidthNumber: 1200px;
 $mobileWidthNumber: auto;
@@ -51,7 +59,7 @@ $mobileWidthNumber: auto;
 }
 
 /* color */
-$colorOrange: #E76B1A;
+$colorOrange: #EA5504;
 $colorRed: #E62214;
 
 @mixin colorOrange {

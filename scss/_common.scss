@@ -64,7 +64,7 @@ html, body {
       background-color: rgba(0, 0, 0, 0.8);
     }
 
-    &.scroll.gnbOpen {
+    &.scroll.gnbOpenWeb, &.scroll.gnbOpenMobile {
       background-color: transparent;
     }
 
@@ -120,559 +120,16 @@ html, body {
         }
 
         nav {
-          overflow: hidden;
           position: absolute;
+          left: auto;
           right: 0;
           top: 51px;
 
-          .gnbItem {
-            float: left;
-
-            & + .gnbItem {
-              margin-left: 45px;
-            }
-
-            a, button {
-              display: block;
-              height: 35px;
-              line-height: 35px;
-              font-size: 24px;
-              @include nsB;
-              color: #fff;
-            }
-
-            &.category {
-
-              > button {
-                padding-left: 35px;
-                @include imageUrl(web/icon/icon_category,png);
-                background-position: left center;
-              }
-
-              .gnbItemSub {
-                position: fixed;
-                left: 0;
-                right: 0;
-                top: 0;
-                display: none;
-                background-color: rgba(0, 0, 0, 0.8);
-                z-index: 11;
-
-                .gnbItemSubIn {
-                  overflow: hidden;
-                  width: 1200px;
-                  padding: 44px 0 70px;
-                  margin: 0 auto;
-
-                  .gnbItemTitle {
-                    line-height: 35px;
-                    margin-bottom: 58px;
-                    font-size: 24px;
-                    @include nsB;
-                  }
-
-                  .gnbItemSubBox {
-                    float: left;
-
-                    & + .gnbItemSubBox {
-                      margin-left: 150px;
-                    }
-
-                    li {
-
-                      & + li {
-                        margin-top: 13px;
-                      }
-
-                      a {
-                        display: inline-block;
-                        vertical-align: top;
-                        line-height: 35px;
-                        font-size: 24px;
-                        @include nsB;
-
-                        &.live {
-                          position: relative;
-
-                          &::after {
-                            content: "";
-                            position: absolute;
-                            right: -18px;
-                            top: -5px;
-                            display: block;
-                            width: 14px;
-                            height: 14px;
-                            border-radius: 7px;
-                            background-color: $colorOrange;
-                          }
-                        }
-
-                        &.peoplepartyHomepage {
-                          @include colorOrange;
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-
-            &.login {
-              position: relative;
-              margin-left: 57px;
-
-              &::after {
-                content: "";
-                position: absolute;
-                left: -27px;
-                top: 50%;
-                display: block;
-                width: 1px;
-                height: 18px;
-                margin-top: -9px;
-                background-color: #fff;
-              }
-
-              > button {
-                width: 35px;
-                @include imageUrl(web/icon/icon_login,png);
-                background-position: center;
-
-                &.on {
-                  @include imageUrl(web/icon/icon_login_on,png);
-                  background-position: center;
-                }
-
-                span {
-                  @include blind;
-                }
-              }
-
-              .gnbItemSub {
-                position: fixed;
-                left: 0;
-                right: 0;
-                top: 0;
-                display: none;
-                background-color: rgba(0, 0, 0, 0.8);
-                z-index: 11;
-
-                .gnbItemSubIn {
-                  overflow: hidden;
-                  width: 1200px;
-                  padding: 44px 0 60px;
-                  margin: 0 auto;
-
-                  .gnbItemTitle {
-                    line-height: 35px;
-                    margin-bottom: 58px;
-                    font-size: 24px;
-                    @include nsB;
-                  }
-
-                  .gnbItemSns {
-                    overflow: hidden;
-                    margin-top: 62px;
-
-                    a {
-                      float: left;
-                      display: block;
-                      width: 62px;
-                      height: 62px;
-
-                      + a {
-                        margin-left: 23px;
-                      }
-
-                      &.kakao {
-                        @include imageUrl(web/sns/sns_kakao,png);
-                        background-size: 100% 100%;
-                      }
-
-                      &.naver {
-                        @include imageUrl(web/sns/sns_naver,png);
-                        background-size: 100% 100%;
-                      }
-
-                      &.google {
-                        @include imageUrl(web/sns/sns_google,png);
-                        background-size: 100% 100%;
-                      }
-
-                      &.facebook {
-                        @include imageUrl(web/sns/sns_facebook,png);
-                        background-size: 100% 100%;
-                      }
-
-                      &.twitch {
-                        @include imageUrl(web/sns/sns_twitch,png);
-                        background-size: 100% 100%;
-                      }
-
-                      span {
-                        @include blind;
-                      }
-                    }
-                  }
-
-                  .gnbItemContext {
-                    line-height: 20px;
-                    margin-top: 39px;
-                    font-size: 15px;
-                  }
-                }
-              }
-            }
-
-            &.search {
-              margin-left: 20px;
-
-              > button  {
-                width: 35px;
-                @include imageUrl(web/icon/icon_search,png);
-                background-position: center;
-
-                span {
-                  @include blind;
-                }
-              }
-
-              .gnbItemSub {
-                position: fixed;
-                left: 0;
-                right: 0;
-                top: 0;
-                display: none;
-                height: 570px;
-                background-color: rgba(0, 0, 0, 0.8);
-                z-index: 11;
-
-                .gnbItemSubIn {
-                  overflow: hidden;
-                  width: 1200px;
-                  padding-top: 120px;
-                  margin: 0 auto;
-
-                  .searchTitleArea {
-                    display: none;
-                  }
-
-                  .searchInputArea {
-                    margin-bottom: 54px;
-
-                    .searchText {
-                      display: inline-block;
-                      vertical-align: top;
-                      line-height: 54px;
-                      margin-right: 20px;
-                      font-size: 31px;
-                      @include nsB;
-                    }
-
-                    .searchInput {
-                      overflow: hidden;
-                      display: inline-block;
-                      vertical-align: top;
-
-                      input {
-                        float: left;
-                        box-sizing: border-box;
-                        width: 338px;
-                        height: 54px;
-                        padding: 0;
-                        border: 0 none;
-                        border-bottom: 3px solid #fff;
-                        outline: none;
-                        font-size: 30px;
-                        @include nsM;
-                        color: #fff;
-                        background-color: transparent;
-                      }
-
-                      button {
-                        float: left;
-                        width: 54px;
-                        height: 54px;
-                        margin-left: 5px;
-                        @include imageUrl(web/icon/icon_gnbSearch,png);
-                        background-position: center;
-
-                        span {
-                          @include blind;
-                        }
-                      }
-                    }
-
-                  }
-
-                  .swiperDataArea {
-                    position: relative;
-                    display: inline-block;
-                    vertical-align: top;
-                    padding: 0 40px;
-
-                    .swiper {
-                      position: static;
-                      width: 1022px;
-                      height: 257px;
-                      margin: 0;
-
-                      .swiper-wrapper {
-
-                        .swiper-slide {
-
-                          a {
-                            display: block;
-                            width: 100%;
-                            height: 100%;
-
-                            img {
-                              display: block;
-                              width: 100%;
-                              height: 100%;
-                            }
-                          }
-                        }
-                      }
-
-                      .swiper-button-prev, .swiper-button-next {
-                        width: 20px;
-                        height: 40px;
-
-                        &::after {
-                          display: none;
-                        }
-
-                      }
-
-                      .swiper-button-prev {
-                        @include imageUrl(web/icon/icon_gnbSearchArrowLeft,png);
-                        background-position: left center;
-                      }
-
-                      .swiper-button-next {
-                        @include imageUrl(web/icon/icon_gnbSearchArrowRight,png);
-                        background-position: right center;
-                      }
-                    }
-                  }
-
-                  .searchNodataArea {
-                    line-height: 45px;
-                    margin-top: -14px;
-                    font-size: 31px;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-
-  /* container */
-  #container {
-    padding-bottom: 190px;
-
-    .topVisual {
-
-      .topVisualSwiper {
-        height: 600px;
-
-        .swiper {
-          height: 100%;
-
-          .imgWeb, .imgMobile {
-            height: 100%;
-          }
-        }
-      }
-    }
-
-    .content {
-      @include contentWidth($webWidthNumber);
-      margin: 0 auto;
-    }
-  }
-
-  /* footer */
-  #footer {
-    margin-top: auto;
-
-    .footerIn {
-      box-sizing: border-box;
-      height: 286px;
-      padding-left: 136px;
-
-      .homepageLink {
-        padding-top: 65px;
-
-        a {
-          display: inline-block;
-          vertical-align: top;
-          line-height: 34px;
-          font-size: 24px;
-          color: #DE5A27;
-        }
-      }
-
-      .tel {
-        margin-top: 9px;
-
-        a {
-          display: inline-block;
-          vertical-align: top;
-          line-height: 52px;
-          @include gtM;
-          font-size: 48px;
-          color: #fff;
-        }
-      }
-
-      .copyright {
-        line-height: 27px;
-        margin-top: 9px;
-        font-size: 19px;
-        color: #fff;
-      }
-    }
-  }
-}
-
-/* color */
-.colorOrange {
-  @include colorOrange;
-}
-.colorRed {
-  @include colorRed;
-}
-
-/* media queries */
-@media (max-width: #{780px}) {
-  #wrap {
-    @include contentMinWidth($mobileWidthNumber);
-
-    /* page top button */
-    .pageTop {
-      right: 24px;
-      bottom: 24px;
-      width: 41px;
-      height: 41px;
-      border-color: #666;
-      background: #666;
-
-      span {
-        height: 9px;
-        line-height: 9px;
-        padding-top: 13px;
-        font-size: 8px;
-        @include imageUrl(web/icon/icon_pageTop,png);
-        background-position: center top;
-        background-size: 21px 10px;
-      }
-    }
-
-    /* swiper image */
-    .imgWeb {
-      display: none;
-    }
-
-    .imgMobile {
-      display: block;
-    }
-
-    /* header */
-    #header {
-      @include contentMinWidth($mobileWidthNumber);
-      height: 50px;
-
-      .headerIn {
-        @include contentWidth($mobileWidthNumber);
-
-        .pageBack {
-          position: absolute;
-          left: 0;
-          top: 0;
-          display: block;
-          width: 50px;
-          height: 50px;
-          @include imageUrl(mobile/icon/icon_pageBack,png);
-          background-position: center;
-          background-size: 12px 21px;
-
-          span {
-            @include blind;
-          }
-        }
-
-        .logoText {
-          display: block;
-          text-align: center;
-          padding: 0;
-
-          a {
-            display: inline-block;
-            vertical-align: top;
-            line-height: 50px;
-            font-size: 18px;
-            @include nsB;
-          }
-        }
-
-        .gnb {
-
-          .gnbOpenBtn {
-            position: absolute;
-            right: 0;
-            top: 0;
-            display: block;
-            width: 60px;
-            height: 50px;
-            @include imageUrl(mobile/icon/icon_gnbOpen,png);
-            background-position: center;
-            background-size: 27px 20px;
-          }
-
-          .gnbCloseBtn {
-            position: fixed;
-            right: 35px;
-            top: 23px;
-            display: none;
-            width: 35px;
-            height: 32px;
-            @include imageUrl(mobile/icon/icon_gnbClose,png);
-            background-position: center;
-            background-size: 35px 32px;
-          }
-
-          nav {
-            overflow: auto;
-            position: fixed;
-            left: 100%;
-            right: auto;
-            top: 0;
-            bottom: 0;
-            width: 100%;
-            background-color: #000;
-
-            display: block;
-
-            &::after {
-              content: "";
-              position: absolute;
-              left: 0;
-              right: 0;
-              top: 0;
-              display: block;
-              height: 78px;
-              background: #000;
-            }
+          .navIn {
+            overflow: hidden;
 
             .gnbItem {
               float: left;
-
-              display: none;
 
               & + .gnbItem {
                 margin-left: 45px;
@@ -733,28 +190,32 @@ html, body {
                         a {
                           display: inline-block;
                           vertical-align: top;
-                          line-height: 35px;
-                          font-size: 24px;
                           @include nsB;
 
-                          &.live {
-                            position: relative;
+                          span {
+                            display: block;
+                            line-height: 35px;
+                            font-size: 24px;
 
-                            &::after {
-                              content: "";
-                              position: absolute;
-                              right: -18px;
-                              top: -5px;
-                              display: block;
-                              width: 14px;
-                              height: 14px;
-                              border-radius: 7px;
-                              background-color: $colorOrange;
+                            &.live {
+                              position: relative;
+
+                              &::after {
+                                content: "";
+                                position: absolute;
+                                right: -18px;
+                                top: -5px;
+                                display: block;
+                                width: 14px;
+                                height: 14px;
+                                border-radius: 7px;
+                                background-color: $colorOrange;
+                              }
                             }
-                          }
 
-                          &.peoplepartyHomepage {
-                            @include colorOrange;
+                            &.peoplepartyHomepage {
+                              @include colorOrange;
+                            }
                           }
                         }
                       }
@@ -804,7 +265,6 @@ html, body {
                   z-index: 11;
 
                   .gnbItemSubIn {
-                    overflow: hidden;
                     width: 1200px;
                     padding: 44px 0 60px;
                     margin: 0 auto;
@@ -889,14 +349,12 @@ html, body {
                   right: 0;
                   top: 0;
                   display: none;
-                  height: 570px;
                   background-color: rgba(0, 0, 0, 0.8);
                   z-index: 11;
 
                   .gnbItemSubIn {
-                    overflow: hidden;
                     width: 1200px;
-                    padding-top: 120px;
+                    padding: 120px 0 60px;
                     margin: 0 auto;
 
                     .searchTitleArea {
@@ -904,7 +362,6 @@ html, body {
                     }
 
                     .searchInputArea {
-                      margin-bottom: 54px;
 
                       .searchText {
                         display: inline-block;
@@ -941,7 +398,6 @@ html, body {
                           height: 54px;
                           margin-left: 5px;
                           @include imageUrl(web/icon/icon_gnbSearch,png);
-
                           background-position: center;
 
                           span {
@@ -957,6 +413,7 @@ html, body {
                       display: inline-block;
                       vertical-align: top;
                       padding: 0 40px;
+                      margin-top: 54px;
 
                       .swiper {
                         position: static;
@@ -1006,8 +463,607 @@ html, body {
 
                     .searchNodataArea {
                       line-height: 45px;
-                      margin-top: -14px;
+                      margin-top: 30px;
                       font-size: 31px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* container */
+  #container {
+    padding-bottom: 190px;
+
+    .topVisual {
+
+      .topVisualSwiper {
+        height: 600px;
+
+        .swiper {
+          height: 100%;
+
+          .swiper-button-prev, .swiper-button-next {
+            width: 80px;
+            height: 80px;
+
+            &::after {
+              display: none;
+            }
+          }
+
+          .swiper-button-prev {
+            left: 0;
+            @include imageUrl(web/icon/icon_topVisualArrowLeft,png);
+            background-position: center;
+          }
+
+          .swiper-button-next {
+            right: 0;
+            @include imageUrl(web/icon/icon_topVisualArrowRight,png);
+            background-position: center;
+          }
+
+          .imgWeb, .imgMobile {
+            height: 100%;
+          }
+        }
+      }
+    }
+
+    .content {
+      @include contentWidth($webWidthNumber);
+      margin: 0 auto;
+    }
+  }
+
+  /* footer */
+  #footer {
+    margin-top: auto;
+
+    .footerIn {
+      box-sizing: border-box;
+      height: 286px;
+      padding-left: 136px;
+
+      .homepageLink {
+        padding-top: 65px;
+
+        a {
+          display: inline-block;
+          vertical-align: top;
+          line-height: 34px;
+          font-size: 24px;
+          color: #DE5A27;
+        }
+      }
+
+      .tel {
+        margin-top: 9px;
+
+        a {
+          display: inline-block;
+          vertical-align: top;
+          line-height: 52px;
+          @include gtM;
+          font-size: 48px;
+          color: #fff;
+        }
+      }
+
+      .copyright {
+        line-height: 27px;
+        margin-top: 9px;
+        font-size: 19px;
+        color: #fff;
+      }
+
+      .adminLogin {
+        margin-top: 27px;
+
+        .adminLoginOpen {
+          display: inline-block;
+          vertical-align: top;
+          line-height: 25px;
+          font-size: 17px;
+          color: #9F9F9F;
+        }
+      }
+    }
+  }
+}
+
+/* color */
+.colorOrange {
+  @include colorOrange;
+}
+.colorRed {
+  @include colorRed;
+}
+
+/* media queries */
+@media (max-width: #{780px}) {
+  #wrap {
+    @include contentMinWidth($mobileWidthNumber);
+
+    /* page top button */
+    .pageTop {
+      right: 24px;
+      bottom: 24px;
+      width: 41px;
+      height: 41px;
+      border-color: #666;
+      background: #666;
+
+      span {
+        height: 9px;
+        line-height: 9px;
+        padding-top: 13px;
+        font-size: 8px;
+        @include imageUrl(web/icon/icon_pageTop,png);
+        background-position: center top;
+        background-size: 21px 10px;
+      }
+    }
+
+    /* swiper image */
+    .imgWeb {
+      display: none;
+    }
+
+    .imgMobile {
+      display: block;
+    }
+
+    /* header */
+    #header {
+      @include contentMinWidth($mobileWidthNumber);
+      height: 50px;
+
+      &.scroll.gnbOpenWeb, &.scroll.gnbOpenMobile {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      .headerIn {
+        @include contentWidth($mobileWidthNumber);
+
+        .pageBack {
+          position: absolute;
+          left: 0;
+          top: 0;
+          display: block;
+          width: 50px;
+          height: 50px;
+          @include imageUrl(mobile/icon/icon_pageBack,png);
+          background-position: center;
+          background-size: 12px 21px;
+
+          span {
+            @include blind;
+          }
+        }
+
+        .logoText {
+          display: block;
+          text-align: center;
+          padding: 0;
+
+          a {
+            display: inline-block;
+            vertical-align: top;
+            line-height: 50px;
+            font-size: 18px;
+            @include nsB;
+          }
+        }
+
+        .gnb {
+
+          .gnbOpenBtn {
+            position: absolute;
+            right: 0;
+            top: 0;
+            display: block;
+            width: 60px;
+            height: 50px;
+            @include imageUrl(mobile/icon/icon_gnbOpen,png);
+            background-position: center;
+            background-size: 27px 20px;
+          }
+
+          .gnbCloseBtn {
+            position: fixed;
+            right: 35px;
+            top: 23px;
+            display: none;
+            width: 35px;
+            height: 32px;
+            @include imageUrl(mobile/icon/icon_gnbClose,png);
+            background-position: center;
+            background-size: 35px 32px;
+          }
+
+          nav {
+            position: fixed;
+            left: 100%;
+            right: auto;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            padding-top: 66px;
+            background-color: #000;
+
+            .navIn {
+              overflow: auto;
+              display: flex;
+              flex-direction: column;
+              height: 100%;
+              -webkit-overflow-scrolling:touch;
+
+              .gnbItem {
+                float: none;
+                display: none;
+
+                & + .gnbItem {
+                  margin-left:  0;
+                }
+
+                &:nth-child(5) {
+                  order: -4;
+                }
+
+                &:nth-child(6) {
+                  order: -4;
+                }
+
+                a, button {
+                  display: block;
+                  height: 35px;
+                  line-height: 35px;
+                  font-size: 24px;
+                  @include nsB;
+                  color: #fff;
+                }
+
+                &.category {
+                  display: block;
+
+                  > button {
+                    display: none;
+                  }
+
+                  .gnbItemSub {
+                    position: static;
+                    left: auto;
+                    right: auto;
+                    top: auto;
+                    display: block;
+                    padding: 0 66px 66px 30px;
+                    background-color: transparent;
+                    z-index: auto;
+
+                    .gnbItemSubIn {
+                      overflow: visible;
+                      width: auto;
+                      padding: 0;
+                      margin: 0;
+                      border-top: 1px solid #707070;
+
+                      .gnbItemTitle {
+                        display: none;
+                      }
+
+                      .gnbItemSubBox {
+                        float: none;
+                        padding: 20px 0 16px;
+                        border-bottom: 1px solid #707070;
+
+                        & + .gnbItemSubBox {
+                          margin-left: 0;
+                        }
+
+                        li {
+
+                          & + li {
+                            margin-top: 18px;
+                          }
+
+                          a {
+                            display: block;
+
+                            span {
+                              display: inline-block;
+                              vertical-align: top;
+                              line-height: 28px;
+                              font-size: 19px;
+
+                              &.live {
+                                position: relative;
+
+                                &::after {
+                                  right: -12px;
+                                  top: -2px;
+                                  width: 8px;
+                                  height: 8px;
+                                  border-radius: 4px;
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+
+                &.login {
+                  display: block;
+                  padding: 0 66px 5px 30px;
+
+                  &::after {
+                    display: none;
+                  }
+
+                  > button {
+                    display: block;
+                    text-align: left;
+                    width: 100%;
+                    height: auto;
+                    padding-left: 25px;
+                    @include imageUrl(mobile/icon/icon_login,png);
+                    background-position: left center;
+                    background-size: 18px 16px;
+
+                    &.on {
+                      @include imageUrl(mobile/icon/icon_login_on,png);
+                      background-position: left center;
+                      background-size: 18px 16px;
+
+                      span {
+
+                        &.loginText {
+                          display: none;
+                        }
+
+                        &.welcomeText {
+                          display: block;
+                        }
+                      }
+                    }
+
+                    span {
+                      @include unBlind;
+                      display: block;
+                      height: 30px;
+                      line-height: 30px;
+                      font-size: 15px;
+                      @include nsB;
+
+                      &.welcomeText {
+                        display: none;
+                      }
+                    }
+                  }
+
+                  .gnbItemSub {
+                    position: static;
+                    left: auto;
+                    right: auto;
+                    top: auto;
+                    box-sizing: border-box;
+                    width: 100vw;
+                    margin-left: -30px !important;
+                    padding: 0 0 15px 30px;
+                    background-color: transparent;
+                    z-index: auto;
+
+                    .gnbItemSubIn {
+                      width: auto;
+                      padding: 0;
+                      margin: 0;
+
+                      .gnbItemTitle {
+                        display: none;
+                      }
+
+                      .gnbItemSns {
+                        overflow: hidden;
+                        margin-top: 15px;
+
+                        a {
+                          width: 50px;
+                          height: 50px;
+
+                          + a {
+                            margin-left: 12px;
+                          }
+
+                          &.kakao {
+                            @include imageUrl(mobile/sns/sns_kakao,png);
+                            background-size: 50px 50px;
+                          }
+
+                          &.naver {
+                            @include imageUrl(mobile/sns/sns_naver,png);
+                            background-size: 50px 50px;
+                          }
+
+                          &.google {
+                            @include imageUrl(mobile/sns/sns_google,png);
+                            background-size: 50px 50px;
+                          }
+
+                          &.facebook {
+                            @include imageUrl(mobile/sns/sns_facebook,png);
+                            background-size: 50px 50px;
+                          }
+
+                          &.twitch {
+                            @include imageUrl(mobile/sns/sns_twitch,png);
+                            background-size: 50px 50px;
+                          }
+                        }
+                      }
+
+                      .gnbItemContext {
+                        line-height: 20px;
+                        margin-top: 25px;
+                        font-size: 15px;
+                      }
+                    }
+                  }
+                }
+
+                &.search {
+                  display: block;
+                  padding: 0 66px 20px 30px;
+                  margin-left: 0;
+
+                  > button  {
+                    display: block;
+                    text-align: left;
+                    width: 100%;
+                    height: auto;
+                    padding-left: 25px;
+                    @include imageUrl(mobile/icon/icon_search,png);
+                    background-position: left center;
+                    background-size: 15px 16px;
+
+                    span {
+                      @include unBlind;
+                      display: block;
+                      height: 30px;
+                      line-height: 30px;
+                      font-size: 15px;
+                      @include nsB;
+                    }
+                  }
+
+                  .gnbItemSub {
+                    position: static;
+                    left: auto;
+                    right: auto;
+                    top: auto;
+                    background-color: transparent;
+                    z-index: auto;
+
+                    .gnbItemSubIn {
+                      width: auto;
+                      padding: 10px 0 10px;
+                      margin: 0;
+
+                      .searchTitleArea {
+                        display: none;
+                      }
+
+                      .searchInputArea {
+
+                        .searchText {
+                          display: none;
+                        }
+
+                        .searchInput {
+                          overflow: hidden;
+                          display: inline-block;
+                          vertical-align: top;
+
+                          input {
+                            width: 170px;
+                            height: 30px;
+                            border-bottom: 2px solid #fff;
+                            font-size: 15px;
+                          }
+
+                          button {
+                            float: left;
+                            width: 30px;
+                            height: 30px;
+                            margin-left: 5px;
+                            @include imageUrl(mobile/icon/icon_gnbSearch,png);
+                            background-position: center;
+                            background-size: 23px 24px;
+
+                            span {
+                              @include blind;
+                            }
+                          }
+                        }
+
+                      }
+
+                      .swiperDataArea {
+                        position: relative;
+                        display: inline-block;
+                        vertical-align: top;
+                        box-sizing: border-box;
+                        width: 100vw;
+                        padding: 0 30px 0 30px;
+                        margin: 28px 0 0 -30px;
+
+                        .swiper {
+                          position: static;
+                          width: 100%;
+                          height: 100%;
+                          margin: 0;
+
+                          .swiper-wrapper {
+
+                            .swiper-slide {
+
+                              a {
+                                display: block;
+                                width: 100%;
+                                height: 100%;
+
+                                img {
+                                  display: block;
+                                  width: 100%;
+                                  height: 100%;
+                                }
+                              }
+                            }
+                          }
+
+                          .swiper-button-prev, .swiper-button-next {
+                            width: 30px;
+                            height: 40px;
+
+                            &::after {
+                              display: none;
+                            }
+
+                          }
+
+                          .swiper-button-prev {
+                            left: 0;
+                            @include imageUrl(mobile/icon/icon_gnbSearchArrowLeft,png);
+                            background-position: center center;
+                            background-size: 7px 12px;
+                          }
+
+                          .swiper-button-next {
+                            right: 0;
+                            @include imageUrl(mobile/icon/icon_gnbSearchArrowRight,png);
+                            background-position: center center;
+                            background-size: 7px 12px;
+                          }
+                        }
+                      }
+
+                      .searchNodataArea {
+                        line-height: 21px;
+                        margin-top: 24px;
+                        font-size: 15px;
+
+                        span {
+                          display: block;
+                        }
+                      }
                     }
                   }
                 }
@@ -1028,6 +1084,23 @@ html, body {
           height: 95.5128vw;
 
           .swiper {
+
+            .swiper-button-prev, .swiper-button-next {
+              width: 10.2564vw;
+              height: 10.2564vw;
+            }
+
+            .swiper-button-prev {
+              @include imageUrl(mobile/icon/icon_topVisualArrowLeft,png);
+              background-position: center;
+              background-size: 4.6153vw 8.7179vw;
+            }
+
+            .swiper-button-next {
+              @include imageUrl(mobile/icon/icon_topVisualArrowRight,png);
+              background-position: center;
+              background-size: 4.6153vw 8.7179vw;
+            }
 
             .imgWeb, .imgMobile {
               background-size: 100% 100% !important;
@@ -1070,6 +1143,10 @@ html, body {
           line-height: 14px;
           margin-top: 5px;
           font-size: 10px;
+        }
+
+        .adminLogin {
+          display: none;
         }
       }
     }
