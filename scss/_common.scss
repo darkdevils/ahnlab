@@ -941,6 +941,7 @@ html, body {
                           height: 54px;
                           margin-left: 5px;
                           @include imageUrl(web/icon/icon_gnbSearch,png);
+
                           background-position: center;
 
                           span {
