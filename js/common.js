@@ -3,14 +3,16 @@ let common = {
     init : function(){
         this.scrollFunction(); // scroll 이벤트
         this.resizeFunction(); // resize 이벤트
-        this.webMobileFunction(); // web mobile 구분 이벤트 (width: 768px)
+        this.webMobileFunction(); // web mobile 구분 이벤트 (width: 780px)
         this.leftRightScrolls(); // 가로 scroll 시 header 이동
         this.pageTopBtn(); // page top button 생성
         this.pageTopMove(); // page top 이동
         this.gnbDim(); // scroll 시 gnb dim 처리
         this.gnbWebOpen(); // gnb web open
         this.gnbWebClose(); // gnb web close
-        //this.gnbOpenCloseMobile(); // gnb open,close mobile
+        this.gnbMobileOpen(); // gnb mobile open
+        this.gnbMobileClose(); // gnb mobile close
+        this.gnbMobileLoginSearchSlide(); // gnb mobile login, search 메뉴 slide
     },
 
     // scroll 이벤트
@@ -34,31 +36,41 @@ let common = {
         let $this = this;
 
         $(window).resize(function () {
-            // web mobile 구분 이벤트 (width: 768px)
+            // web mobile 구분 이벤트 (width: 780px)
             $this.webMobileFunction();
         });
     },
 
-    // web mobile 이벤트 (width: 768px)
+    // web mobile 이벤트 (width: 780px)
     webMobileFunction : function () {
         let windowWidth = $(window).outerWidth(true);
-        let mobileWidth = 768;
+        let mobileWidth = 780;
 
         if (windowWidth <= mobileWidth) {
+            // web mobile 구분 class
             $("#wrap").removeClass("web");
             $("#wrap").addClass("mobile");
+
+            // mobile width 로 resize 시 gnb 빠른 닫기
+            this.gnbWebCloseResize();
         } else {
+            // web mobile 구분 class
             $("#wrap").addClass("web");
             $("#wrap").removeClass("mobile");
+
+            // web width 로 resize 시 gnb 빠른 닫기
+            this.gnbMobileCloseResize();
         }
     },
 
     // 가로 scroll 시 header 이동
     leftRightScrolls : function(){
         let scrollLeft = $(window).scrollLeft();
-        let $header = $("#header");
 
-        $header.css("margin-left", -(scrollLeft));
+        $("#header").css("margin-left", -(scrollLeft));
+        $(".gnb .category .gnbItemSub").css("margin-left", -(scrollLeft));
+        $(".gnb .login .gnbItemSub").css("margin-left", -(scrollLeft));
+        $(".gnb .search .gnbItemSub").css("margin-left", -(scrollLeft));
     },
 
     // page top button 생성
@@ -120,15 +132,12 @@ let common = {
         $(document).on("click", "#wrap.web .gnb .category > button, #wrap.web .gnb .login > button, #wrap.web .gnb .search > button", function(){
             let $this = $(this);
             let $gnbItemSub = $this.closest(".gnbItem").find(".gnbItemSub");
-            let $header = $("#header");
-            let gnbOpenCheck = $header.is(".gnbOpen");
             let slideSpeed = 300;
 
-            if (!gnbOpenCheck) {
-                $gnbItemSub.slideDown(slideSpeed, function () {
-                    $(".gnbCloseBtn").show();
-                });
-            }
+            $("#header").addClass("gnbOpenWeb");
+            $gnbItemSub.slideDown(slideSpeed, function () {
+                $(".gnbCloseBtn").show();
+            });
         });
     },
 
@@ -139,31 +148,85 @@ let common = {
             let $gnbItemSub = $this.closest(".gnb").find(".gnbItemSub");
             let slideSpeed = 300;
 
+            $("#header").removeClass("gnbOpenWeb");
             $(".gnbCloseBtn").hide();
-            $gnbItemSub.slideUp(slideSpeed);
+            $gnbItemSub.slideUp(slideSpeed, function () {
+                $(".gnb .gnbItemSub").removeAttr("style");
+            });
         });
     },
 
+    // mobile width 로 resize 시 gnb 빠른 닫기
+    gnbWebCloseResize : function () {
+        let gnbOpencheck = $("#header").is(".gnbOpenWeb");
 
+        if (gnbOpencheck) {
+            $("#header").removeClass("gnbOpenWeb");
+            $(".gnbCloseBtn").hide();
+            $(".gnb .gnbItemSub").removeAttr("style");
+        }
+    },
 
-
-
-    // gnb open,close mobile
-    gnbOpenCloseMobile : function () {
-        $(document).on("click", ".gnb .gnbOpen, .gnb .gnbClose", function(){
-            let openCheck = $(".gnb").is(".open");
+    // gnb mobile open
+    gnbMobileOpen : function () {
+        $(document).on("click", "#wrap.mobile .gnb .gnbOpenBtn", function(){
             let slideSpeed = 300;
 
-            if (openCheck) {
-                $(".gnb").removeClass("open");
-                $(".gnb nav").stop().animate({
-                    left: "100%"
-                }, slideSpeed);
+            $("body").css({"overflow" : "hidden", "touch-action" : "none"});
+            $("#header").addClass("gnbOpenMobile");
+            $(".pageTop").css({"z-index" : "-1"});
+            $(".gnb nav").stop().animate({
+                left: "0%"
+            }, slideSpeed, function () {
+                $(".gnb .gnbCloseBtn").show();
+            });
+        });
+    },
+
+    // gnb mobile close
+    gnbMobileClose : function () {
+        $(document).on("click", "#wrap.mobile .gnb .gnbCloseBtn", function(){
+            let slideSpeed = 300;
+
+            $("body").removeAttr("style");
+            $("#header").removeClass("gnbOpenMobile");
+            $(".gnb .gnbCloseBtn").hide();
+            $(".gnb nav").stop().animate({
+                left: "100%"
+            }, slideSpeed, function () {
+                $(".gnb nav").removeAttr("style");
+                $(".gnb .gnbItemSub").removeAttr("style");
+                $(".pageTop").css({"z-index" : "20"});
+            });
+        });
+    },
+
+    // web width 로 resize 시 gnb 빠른 닫기
+    gnbMobileCloseResize : function () {
+        let gnbOpencheck = $("#header").is(".gnbOpenMobile");
+
+        if (gnbOpencheck) {
+            $("body").removeAttr("style");
+            $("#header").removeClass("gnbOpenMobile");
+            $(".gnb .gnbCloseBtn").hide();
+            $(".gnb nav").removeAttr("style");
+            $(".gnb .gnbItemSub").removeAttr("style");
+            $(".pageTop").css({"z-index" : "20"});
+        }
+    },
+
+    // gnb mobile login, search 메뉴 slide
+    gnbMobileLoginSearchSlide : function () {
+        $(document).on("click", "#wrap.mobile .gnb .login > button, #wrap.mobile .gnb .search > button", function () {
+            let $this = $(this);
+            let $gnbItemSub = $this.closest(".gnbItem").find(".gnbItemSub");
+            let $gnbItemSubCheck = $gnbItemSub.is(":visible");
+            let slideSpeed = 300;
+
+            if ($gnbItemSubCheck) {
+                $gnbItemSub.stop().slideUp(slideSpeed);
             } else {
-                $(".gnb").addClass("open");
-                $(".gnb nav").stop().animate({
-                    left: "0%"
-                }, slideSpeed);
+                $gnbItemSub.stop().slideDown(slideSpeed);
             }
         });
     },

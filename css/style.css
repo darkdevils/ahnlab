@@ -160,7 +160,7 @@ html, body {
 #wrap #header.scroll {
   background-color: rgba(0, 0, 0, 0.8);
 }
-#wrap #header.scroll.gnbOpen {
+#wrap #header.scroll.gnbOpenWeb, #wrap #header.scroll.gnbOpenMobile {
   background-color: transparent;
 }
 #wrap #header .headerIn {
@@ -214,18 +214,21 @@ html, body {
   overflow: hidden;
 }
 #wrap #header .headerIn .gnb nav {
-  overflow: hidden;
   position: absolute;
+  left: auto;
   right: 0;
   top: 51px;
 }
-#wrap #header .headerIn .gnb nav .gnbItem {
+#wrap #header .headerIn .gnb nav .navIn {
+  overflow: hidden;
+}
+#wrap #header .headerIn .gnb nav .navIn .gnbItem {
   float: left;
 }
-#wrap #header .headerIn .gnb nav .gnbItem + .gnbItem {
+#wrap #header .headerIn .gnb nav .navIn .gnbItem + .gnbItem {
   margin-left: 45px;
 }
-#wrap #header .headerIn .gnb nav .gnbItem a, #wrap #header .headerIn .gnb nav .gnbItem button {
+#wrap #header .headerIn .gnb nav .navIn .gnbItem a, #wrap #header .headerIn .gnb nav .navIn .gnbItem button {
   display: block;
   height: 35px;
   line-height: 35px;
@@ -233,12 +236,12 @@ html, body {
   font-family: "NotoSansCJKkrBold", sans-serif;
   color: #fff;
 }
-#wrap #header .headerIn .gnb nav .gnbItem.category > button {
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.category > button {
   padding-left: 35px;
   background: url("../images/web/icon/icon_category.png") no-repeat;
   background-position: left center;
 }
-#wrap #header .headerIn .gnb nav .gnbItem.category .gnbItemSub {
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.category .gnbItemSub {
   position: fixed;
   left: 0;
   right: 0;
@@ -247,38 +250,41 @@ html, body {
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 11;
 }
-#wrap #header .headerIn .gnb nav .gnbItem.category .gnbItemSub .gnbItemSubIn {
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.category .gnbItemSub .gnbItemSubIn {
   overflow: hidden;
   width: 1200px;
   padding: 44px 0 70px;
   margin: 0 auto;
 }
-#wrap #header .headerIn .gnb nav .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemTitle {
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemTitle {
   line-height: 35px;
   margin-bottom: 58px;
   font-size: 24px;
   font-family: "NotoSansCJKkrBold", sans-serif;
 }
-#wrap #header .headerIn .gnb nav .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemSubBox {
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemSubBox {
   float: left;
 }
-#wrap #header .headerIn .gnb nav .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemSubBox + .gnbItemSubBox {
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemSubBox + .gnbItemSubBox {
   margin-left: 150px;
 }
-#wrap #header .headerIn .gnb nav .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemSubBox li + li {
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemSubBox li + li {
   margin-top: 13px;
 }
-#wrap #header .headerIn .gnb nav .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemSubBox li a {
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemSubBox li a {
   display: inline-block;
   vertical-align: top;
-  line-height: 35px;
-  font-size: 24px;
   font-family: "NotoSansCJKkrBold", sans-serif;
 }
-#wrap #header .headerIn .gnb nav .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemSubBox li a.live {
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemSubBox li a span {
+  display: block;
+  line-height: 35px;
+  font-size: 24px;
+}
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemSubBox li a span.live {
   position: relative;
 }
-#wrap #header .headerIn .gnb nav .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemSubBox li a.live::after {
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemSubBox li a span.live::after {
   content: "";
   position: absolute;
   right: -18px;
@@ -287,16 +293,16 @@ html, body {
   width: 14px;
   height: 14px;
   border-radius: 7px;
-  background-color: #E76B1A;
+  background-color: #EA5504;
 }
-#wrap #header .headerIn .gnb nav .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemSubBox li a.peoplepartyHomepage {
-  color: #E76B1A;
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemSubBox li a span.peoplepartyHomepage {
+  color: #EA5504;
 }
-#wrap #header .headerIn .gnb nav .gnbItem.login {
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.login {
   position: relative;
   margin-left: 57px;
 }
-#wrap #header .headerIn .gnb nav .gnbItem.login::after {
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.login::after {
   content: "";
   position: absolute;
   left: -27px;
@@ -307,23 +313,23 @@ html, body {
   margin-top: -9px;
   background-color: #fff;
 }
-#wrap #header .headerIn .gnb nav .gnbItem.login > button {
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.login > button {
   width: 35px;
   background: url("../images/web/icon/icon_login.png") no-repeat;
   background-position: center;
 }
-#wrap #header .headerIn .gnb nav .gnbItem.login > button.on {
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.login > button.on {
   background: url("../images/web/icon/icon_login_on.png") no-repeat;
   background-position: center;
 }
-#wrap #header .headerIn .gnb nav .gnbItem.login > button span {
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.login > button span {
   position: absolute;
   width: 1px;
   height: 1px;
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-#wrap #header .headerIn .gnb nav .gnbItem.login .gnbItemSub {
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub {
   position: fixed;
   left: 0;
   right: 0;
@@ -332,101 +338,95 @@ html, body {
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 11;
 }
-#wrap #header .headerIn .gnb nav .gnbItem.login .gnbItemSub .gnbItemSubIn {
-  overflow: hidden;
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn {
   width: 1200px;
   padding: 44px 0 60px;
   margin: 0 auto;
 }
-#wrap #header .headerIn .gnb nav .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemTitle {
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemTitle {
   line-height: 35px;
   margin-bottom: 58px;
   font-size: 24px;
   font-family: "NotoSansCJKkrBold", sans-serif;
 }
-#wrap #header .headerIn .gnb nav .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns {
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns {
   overflow: hidden;
   margin-top: 62px;
 }
-#wrap #header .headerIn .gnb nav .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a {
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a {
   float: left;
   display: block;
   width: 62px;
   height: 62px;
 }
-#wrap #header .headerIn .gnb nav .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a + a {
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a + a {
   margin-left: 23px;
 }
-#wrap #header .headerIn .gnb nav .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a.kakao {
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a.kakao {
   background: url("../images/web/sns/sns_kakao.png") no-repeat;
   background-size: 100% 100%;
 }
-#wrap #header .headerIn .gnb nav .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a.naver {
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a.naver {
   background: url("../images/web/sns/sns_naver.png") no-repeat;
   background-size: 100% 100%;
 }
-#wrap #header .headerIn .gnb nav .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a.google {
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a.google {
   background: url("../images/web/sns/sns_google.png") no-repeat;
   background-size: 100% 100%;
 }
-#wrap #header .headerIn .gnb nav .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a.facebook {
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a.facebook {
   background: url("../images/web/sns/sns_facebook.png") no-repeat;
   background-size: 100% 100%;
 }
-#wrap #header .headerIn .gnb nav .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a.twitch {
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a.twitch {
   background: url("../images/web/sns/sns_twitch.png") no-repeat;
   background-size: 100% 100%;
 }
-#wrap #header .headerIn .gnb nav .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a span {
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a span {
   position: absolute;
   width: 1px;
   height: 1px;
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-#wrap #header .headerIn .gnb nav .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemContext {
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemContext {
   line-height: 20px;
   margin-top: 39px;
   font-size: 15px;
 }
-#wrap #header .headerIn .gnb nav .gnbItem.search {
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.search {
   margin-left: 20px;
 }
-#wrap #header .headerIn .gnb nav .gnbItem.search > button {
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.search > button {
   width: 35px;
   background: url("../images/web/icon/icon_search.png") no-repeat;
   background-position: center;
 }
-#wrap #header .headerIn .gnb nav .gnbItem.search > button span {
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.search > button span {
   position: absolute;
   width: 1px;
   height: 1px;
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-#wrap #header .headerIn .gnb nav .gnbItem.search .gnbItemSub {
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub {
   position: fixed;
   left: 0;
   right: 0;
   top: 0;
   display: none;
-  height: 570px;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 11;
 }
-#wrap #header .headerIn .gnb nav .gnbItem.search .gnbItemSub .gnbItemSubIn {
-  overflow: hidden;
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn {
   width: 1200px;
-  padding-top: 120px;
+  padding: 120px 0 60px;
   margin: 0 auto;
 }
-#wrap #header .headerIn .gnb nav .gnbItem.search .gnbItemSub .gnbItemSubIn .searchTitleArea {
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .searchTitleArea {
   display: none;
 }
-#wrap #header .headerIn .gnb nav .gnbItem.search .gnbItemSub .gnbItemSubIn .searchInputArea {
-  margin-bottom: 54px;
-}
-#wrap #header .headerIn .gnb nav .gnbItem.search .gnbItemSub .gnbItemSubIn .searchInputArea .searchText {
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .searchInputArea .searchText {
   display: inline-block;
   vertical-align: top;
   line-height: 54px;
@@ -434,12 +434,12 @@ html, body {
   font-size: 31px;
   font-family: "NotoSansCJKkrBold", sans-serif;
 }
-#wrap #header .headerIn .gnb nav .gnbItem.search .gnbItemSub .gnbItemSubIn .searchInputArea .searchInput {
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .searchInputArea .searchInput {
   overflow: hidden;
   display: inline-block;
   vertical-align: top;
 }
-#wrap #header .headerIn .gnb nav .gnbItem.search .gnbItemSub .gnbItemSubIn .searchInputArea .searchInput input {
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .searchInputArea .searchInput input {
   float: left;
   box-sizing: border-box;
   width: 338px;
@@ -453,7 +453,7 @@ html, body {
   color: #fff;
   background-color: transparent;
 }
-#wrap #header .headerIn .gnb nav .gnbItem.search .gnbItemSub .gnbItemSubIn .searchInputArea .searchInput button {
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .searchInputArea .searchInput button {
   float: left;
   width: 54px;
   height: 54px;
@@ -461,53 +461,54 @@ html, body {
   background: url("../images/web/icon/icon_gnbSearch.png") no-repeat;
   background-position: center;
 }
-#wrap #header .headerIn .gnb nav .gnbItem.search .gnbItemSub .gnbItemSubIn .searchInputArea .searchInput button span {
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .searchInputArea .searchInput button span {
   position: absolute;
   width: 1px;
   height: 1px;
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-#wrap #header .headerIn .gnb nav .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea {
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea {
   position: relative;
   display: inline-block;
   vertical-align: top;
   padding: 0 40px;
+  margin-top: 54px;
 }
-#wrap #header .headerIn .gnb nav .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper {
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper {
   position: static;
   width: 1022px;
   height: 257px;
   margin: 0;
 }
-#wrap #header .headerIn .gnb nav .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-wrapper .swiper-slide a {
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-wrapper .swiper-slide a {
   display: block;
   width: 100%;
   height: 100%;
 }
-#wrap #header .headerIn .gnb nav .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-wrapper .swiper-slide a img {
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-wrapper .swiper-slide a img {
   display: block;
   width: 100%;
   height: 100%;
 }
-#wrap #header .headerIn .gnb nav .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-prev, #wrap #header .headerIn .gnb nav .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-next {
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-prev, #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-next {
   width: 20px;
   height: 40px;
 }
-#wrap #header .headerIn .gnb nav .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-prev::after, #wrap #header .headerIn .gnb nav .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-next::after {
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-prev::after, #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-next::after {
   display: none;
 }
-#wrap #header .headerIn .gnb nav .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-prev {
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-prev {
   background: url("../images/web/icon/icon_gnbSearchArrowLeft.png") no-repeat;
   background-position: left center;
 }
-#wrap #header .headerIn .gnb nav .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-next {
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-next {
   background: url("../images/web/icon/icon_gnbSearchArrowRight.png") no-repeat;
   background-position: right center;
 }
-#wrap #header .headerIn .gnb nav .gnbItem.search .gnbItemSub .gnbItemSubIn .searchNodataArea {
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .searchNodataArea {
   line-height: 45px;
-  margin-top: -14px;
+  margin-top: 30px;
   font-size: 31px;
 }
 #wrap #container {
@@ -518,6 +519,23 @@ html, body {
 }
 #wrap #container .topVisual .topVisualSwiper .swiper {
   height: 100%;
+}
+#wrap #container .topVisual .topVisualSwiper .swiper .swiper-button-prev, #wrap #container .topVisual .topVisualSwiper .swiper .swiper-button-next {
+  width: 80px;
+  height: 80px;
+}
+#wrap #container .topVisual .topVisualSwiper .swiper .swiper-button-prev::after, #wrap #container .topVisual .topVisualSwiper .swiper .swiper-button-next::after {
+  display: none;
+}
+#wrap #container .topVisual .topVisualSwiper .swiper .swiper-button-prev {
+  left: 0;
+  background: url("../images/web/icon/icon_topVisualArrowLeft.png") no-repeat;
+  background-position: center;
+}
+#wrap #container .topVisual .topVisualSwiper .swiper .swiper-button-next {
+  right: 0;
+  background: url("../images/web/icon/icon_topVisualArrowRight.png") no-repeat;
+  background-position: center;
 }
 #wrap #container .topVisual .topVisualSwiper .swiper .imgWeb, #wrap #container .topVisual .topVisualSwiper .swiper .imgMobile {
   height: 100%;
@@ -561,10 +579,20 @@ html, body {
   font-size: 19px;
   color: #fff;
 }
+#wrap #footer .footerIn .adminLogin {
+  margin-top: 27px;
+}
+#wrap #footer .footerIn .adminLogin .adminLoginOpen {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 25px;
+  font-size: 17px;
+  color: #9F9F9F;
+}
 
 /* color */
 .colorOrange {
-  color: #E76B1A;
+  color: #EA5504;
 }
 
 .colorRed {
@@ -607,6 +635,9 @@ html, body {
   #wrap #header {
     min-width: auto;
     height: 50px;
+  }
+  #wrap #header.scroll.gnbOpenWeb, #wrap #header.scroll.gnbOpenMobile {
+    background-color: rgba(0, 0, 0, 0.8);
   }
   #wrap #header .headerIn {
     width: auto;
@@ -664,34 +695,36 @@ html, body {
     background-size: 35px 32px;
   }
   #wrap #header .headerIn .gnb nav {
-    overflow: auto;
     position: fixed;
     left: 100%;
     right: auto;
     top: 0;
     bottom: 0;
     width: 100%;
+    padding-top: 66px;
     background-color: #000;
-    display: block;
   }
-  #wrap #header .headerIn .gnb nav::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    display: block;
-    height: 78px;
-    background: #000;
+  #wrap #header .headerIn .gnb nav .navIn {
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
   }
-  #wrap #header .headerIn .gnb nav .gnbItem {
-    float: left;
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem {
+    float: none;
     display: none;
   }
-  #wrap #header .headerIn .gnb nav .gnbItem + .gnbItem {
-    margin-left: 45px;
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem + .gnbItem {
+    margin-left: 0;
   }
-  #wrap #header .headerIn .gnb nav .gnbItem a, #wrap #header .headerIn .gnb nav .gnbItem button {
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem:nth-child(5) {
+    order: -4;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem:nth-child(6) {
+    order: -4;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem a, #wrap #header .headerIn .gnb nav .navIn .gnbItem button {
     display: block;
     height: 35px;
     line-height: 35px;
@@ -699,288 +732,305 @@ html, body {
     font-family: "NotoSansCJKkrBold", sans-serif;
     color: #fff;
   }
-  #wrap #header .headerIn .gnb nav .gnbItem.category > button {
-    padding-left: 35px;
-    background: url("../images/web/icon/icon_category.png") no-repeat;
-    background-position: left center;
-  }
-  #wrap #header .headerIn .gnb nav .gnbItem.category .gnbItemSub {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    display: none;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 11;
-  }
-  #wrap #header .headerIn .gnb nav .gnbItem.category .gnbItemSub .gnbItemSubIn {
-    overflow: hidden;
-    width: 1200px;
-    padding: 44px 0 70px;
-    margin: 0 auto;
-  }
-  #wrap #header .headerIn .gnb nav .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemTitle {
-    line-height: 35px;
-    margin-bottom: 58px;
-    font-size: 24px;
-    font-family: "NotoSansCJKkrBold", sans-serif;
-  }
-  #wrap #header .headerIn .gnb nav .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemSubBox {
-    float: left;
-  }
-  #wrap #header .headerIn .gnb nav .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemSubBox + .gnbItemSubBox {
-    margin-left: 150px;
-  }
-  #wrap #header .headerIn .gnb nav .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemSubBox li + li {
-    margin-top: 13px;
-  }
-  #wrap #header .headerIn .gnb nav .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemSubBox li a {
-    display: inline-block;
-    vertical-align: top;
-    line-height: 35px;
-    font-size: 24px;
-    font-family: "NotoSansCJKkrBold", sans-serif;
-  }
-  #wrap #header .headerIn .gnb nav .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemSubBox li a.live {
-    position: relative;
-  }
-  #wrap #header .headerIn .gnb nav .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemSubBox li a.live::after {
-    content: "";
-    position: absolute;
-    right: -18px;
-    top: -5px;
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.category {
     display: block;
-    width: 14px;
-    height: 14px;
-    border-radius: 7px;
-    background-color: #E76B1A;
   }
-  #wrap #header .headerIn .gnb nav .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemSubBox li a.peoplepartyHomepage {
-    color: #E76B1A;
-  }
-  #wrap #header .headerIn .gnb nav .gnbItem.login {
-    position: relative;
-    margin-left: 57px;
-  }
-  #wrap #header .headerIn .gnb nav .gnbItem.login::after {
-    content: "";
-    position: absolute;
-    left: -27px;
-    top: 50%;
-    display: block;
-    width: 1px;
-    height: 18px;
-    margin-top: -9px;
-    background-color: #fff;
-  }
-  #wrap #header .headerIn .gnb nav .gnbItem.login > button {
-    width: 35px;
-    background: url("../images/web/icon/icon_login.png") no-repeat;
-    background-position: center;
-  }
-  #wrap #header .headerIn .gnb nav .gnbItem.login > button.on {
-    background: url("../images/web/icon/icon_login_on.png") no-repeat;
-    background-position: center;
-  }
-  #wrap #header .headerIn .gnb nav .gnbItem.login > button span {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-  }
-  #wrap #header .headerIn .gnb nav .gnbItem.login .gnbItemSub {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    display: none;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 11;
-  }
-  #wrap #header .headerIn .gnb nav .gnbItem.login .gnbItemSub .gnbItemSubIn {
-    overflow: hidden;
-    width: 1200px;
-    padding: 44px 0 60px;
-    margin: 0 auto;
-  }
-  #wrap #header .headerIn .gnb nav .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemTitle {
-    line-height: 35px;
-    margin-bottom: 58px;
-    font-size: 24px;
-    font-family: "NotoSansCJKkrBold", sans-serif;
-  }
-  #wrap #header .headerIn .gnb nav .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns {
-    overflow: hidden;
-    margin-top: 62px;
-  }
-  #wrap #header .headerIn .gnb nav .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a {
-    float: left;
-    display: block;
-    width: 62px;
-    height: 62px;
-  }
-  #wrap #header .headerIn .gnb nav .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a + a {
-    margin-left: 23px;
-  }
-  #wrap #header .headerIn .gnb nav .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a.kakao {
-    background: url("../images/web/sns/sns_kakao.png") no-repeat;
-    background-size: 100% 100%;
-  }
-  #wrap #header .headerIn .gnb nav .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a.naver {
-    background: url("../images/web/sns/sns_naver.png") no-repeat;
-    background-size: 100% 100%;
-  }
-  #wrap #header .headerIn .gnb nav .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a.google {
-    background: url("../images/web/sns/sns_google.png") no-repeat;
-    background-size: 100% 100%;
-  }
-  #wrap #header .headerIn .gnb nav .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a.facebook {
-    background: url("../images/web/sns/sns_facebook.png") no-repeat;
-    background-size: 100% 100%;
-  }
-  #wrap #header .headerIn .gnb nav .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a.twitch {
-    background: url("../images/web/sns/sns_twitch.png") no-repeat;
-    background-size: 100% 100%;
-  }
-  #wrap #header .headerIn .gnb nav .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a span {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-  }
-  #wrap #header .headerIn .gnb nav .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemContext {
-    line-height: 20px;
-    margin-top: 39px;
-    font-size: 15px;
-  }
-  #wrap #header .headerIn .gnb nav .gnbItem.search {
-    margin-left: 20px;
-  }
-  #wrap #header .headerIn .gnb nav .gnbItem.search > button {
-    width: 35px;
-    background: url("../images/web/icon/icon_search.png") no-repeat;
-    background-position: center;
-  }
-  #wrap #header .headerIn .gnb nav .gnbItem.search > button span {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-  }
-  #wrap #header .headerIn .gnb nav .gnbItem.search .gnbItemSub {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    display: none;
-    height: 570px;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 11;
-  }
-  #wrap #header .headerIn .gnb nav .gnbItem.search .gnbItemSub .gnbItemSubIn {
-    overflow: hidden;
-    width: 1200px;
-    padding-top: 120px;
-    margin: 0 auto;
-  }
-  #wrap #header .headerIn .gnb nav .gnbItem.search .gnbItemSub .gnbItemSubIn .searchTitleArea {
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.category > button {
     display: none;
   }
-  #wrap #header .headerIn .gnb nav .gnbItem.search .gnbItemSub .gnbItemSubIn .searchInputArea {
-    margin-bottom: 54px;
-  }
-  #wrap #header .headerIn .gnb nav .gnbItem.search .gnbItemSub .gnbItemSubIn .searchInputArea .searchText {
-    display: inline-block;
-    vertical-align: top;
-    line-height: 54px;
-    margin-right: 20px;
-    font-size: 31px;
-    font-family: "NotoSansCJKkrBold", sans-serif;
-  }
-  #wrap #header .headerIn .gnb nav .gnbItem.search .gnbItemSub .gnbItemSubIn .searchInputArea .searchInput {
-    overflow: hidden;
-    display: inline-block;
-    vertical-align: top;
-  }
-  #wrap #header .headerIn .gnb nav .gnbItem.search .gnbItemSub .gnbItemSubIn .searchInputArea .searchInput input {
-    float: left;
-    box-sizing: border-box;
-    width: 338px;
-    height: 54px;
-    padding: 0;
-    border: 0 none;
-    border-bottom: 3px solid #fff;
-    outline: none;
-    font-size: 30px;
-    font-family: "NotoSansCJKkrMedium", sans-serif;
-    color: #fff;
-    background-color: transparent;
-  }
-  #wrap #header .headerIn .gnb nav .gnbItem.search .gnbItemSub .gnbItemSubIn .searchInputArea .searchInput button {
-    float: left;
-    width: 54px;
-    height: 54px;
-    margin-left: 5px;
-    background: url("../images/web/icon/icon_gnbSearch.png") no-repeat;
-    background-position: center;
-  }
-  #wrap #header .headerIn .gnb nav .gnbItem.search .gnbItemSub .gnbItemSubIn .searchInputArea .searchInput button span {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-  }
-  #wrap #header .headerIn .gnb nav .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea {
-    position: relative;
-    display: inline-block;
-    vertical-align: top;
-    padding: 0 40px;
-  }
-  #wrap #header .headerIn .gnb nav .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper {
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.category .gnbItemSub {
     position: static;
-    width: 1022px;
-    height: 257px;
+    left: auto;
+    right: auto;
+    top: auto;
+    display: block;
+    padding: 0 66px 66px 30px;
+    background-color: transparent;
+    z-index: auto;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.category .gnbItemSub .gnbItemSubIn {
+    overflow: visible;
+    width: auto;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid #707070;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemTitle {
+    display: none;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemSubBox {
+    float: none;
+    padding: 20px 0 16px;
+    border-bottom: 1px solid #707070;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemSubBox + .gnbItemSubBox {
+    margin-left: 0;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemSubBox li + li {
+    margin-top: 18px;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemSubBox li a {
+    display: block;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemSubBox li a span {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 28px;
+    font-size: 19px;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemSubBox li a span.live {
+    position: relative;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemSubBox li a span.live::after {
+    right: -12px;
+    top: -2px;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login {
+    display: block;
+    padding: 0 66px 5px 30px;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login::after {
+    display: none;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login > button {
+    display: block;
+    text-align: left;
+    width: 100%;
+    height: auto;
+    padding-left: 25px;
+    background: url("../images/mobile/icon/icon_login.png") no-repeat;
+    background-position: left center;
+    background-size: 18px 16px;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login > button.on {
+    background: url("../images/mobile/icon/icon_login_on.png") no-repeat;
+    background-position: left center;
+    background-size: 18px 16px;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login > button.on span.loginText {
+    display: none;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login > button.on span.welcomeText {
+    display: block;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login > button span {
+    position: static;
+    width: auto;
+    height: auto;
+    clip: none;
+    overflow: visible;
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    font-size: 15px;
+    font-family: "NotoSansCJKkrBold", sans-serif;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login > button span.welcomeText {
+    display: none;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub {
+    position: static;
+    left: auto;
+    right: auto;
+    top: auto;
+    box-sizing: border-box;
+    width: 100vw;
+    margin-left: -30px !important;
+    padding: 0 0 15px 30px;
+    background-color: transparent;
+    z-index: auto;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn {
+    width: auto;
+    padding: 0;
     margin: 0;
   }
-  #wrap #header .headerIn .gnb nav .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-wrapper .swiper-slide a {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-  #wrap #header .headerIn .gnb nav .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-wrapper .swiper-slide a img {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-  #wrap #header .headerIn .gnb nav .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-prev, #wrap #header .headerIn .gnb nav .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-next {
-    width: 20px;
-    height: 40px;
-  }
-  #wrap #header .headerIn .gnb nav .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-prev::after, #wrap #header .headerIn .gnb nav .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-next::after {
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemTitle {
     display: none;
   }
-  #wrap #header .headerIn .gnb nav .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-prev {
-    background: url("../images/web/icon/icon_gnbSearchArrowLeft.png") no-repeat;
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns {
+    overflow: hidden;
+    margin-top: 15px;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a {
+    width: 50px;
+    height: 50px;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a + a {
+    margin-left: 12px;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a.kakao {
+    background: url("../images/mobile/sns/sns_kakao.png") no-repeat;
+    background-size: 50px 50px;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a.naver {
+    background: url("../images/mobile/sns/sns_naver.png") no-repeat;
+    background-size: 50px 50px;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a.google {
+    background: url("../images/mobile/sns/sns_google.png") no-repeat;
+    background-size: 50px 50px;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a.facebook {
+    background: url("../images/mobile/sns/sns_facebook.png") no-repeat;
+    background-size: 50px 50px;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a.twitch {
+    background: url("../images/mobile/sns/sns_twitch.png") no-repeat;
+    background-size: 50px 50px;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemContext {
+    line-height: 20px;
+    margin-top: 25px;
+    font-size: 15px;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search {
+    display: block;
+    padding: 0 66px 20px 30px;
+    margin-left: 0;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search > button {
+    display: block;
+    text-align: left;
+    width: 100%;
+    height: auto;
+    padding-left: 25px;
+    background: url("../images/mobile/icon/icon_search.png") no-repeat;
     background-position: left center;
+    background-size: 15px 16px;
   }
-  #wrap #header .headerIn .gnb nav .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-next {
-    background: url("../images/web/icon/icon_gnbSearchArrowRight.png") no-repeat;
-    background-position: right center;
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search > button span {
+    position: static;
+    width: auto;
+    height: auto;
+    clip: none;
+    overflow: visible;
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    font-size: 15px;
+    font-family: "NotoSansCJKkrBold", sans-serif;
   }
-  #wrap #header .headerIn .gnb nav .gnbItem.search .gnbItemSub .gnbItemSubIn .searchNodataArea {
-    line-height: 45px;
-    margin-top: -14px;
-    font-size: 31px;
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub {
+    position: static;
+    left: auto;
+    right: auto;
+    top: auto;
+    background-color: transparent;
+    z-index: auto;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn {
+    width: auto;
+    padding: 10px 0 10px;
+    margin: 0;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .searchTitleArea {
+    display: none;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .searchInputArea .searchText {
+    display: none;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .searchInputArea .searchInput {
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: top;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .searchInputArea .searchInput input {
+    width: 170px;
+    height: 30px;
+    border-bottom: 2px solid #fff;
+    font-size: 15px;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .searchInputArea .searchInput button {
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    background: url("../images/mobile/icon/icon_gnbSearch.png") no-repeat;
+    background-position: center;
+    background-size: 23px 24px;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .searchInputArea .searchInput button span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    width: 100vw;
+    padding: 0 30px 0 30px;
+    margin: 28px 0 0 -30px;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper {
+    position: static;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-wrapper .swiper-slide a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-wrapper .swiper-slide a img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-prev, #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-next {
+    width: 30px;
+    height: 40px;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-prev::after, #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-next::after {
+    display: none;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-prev {
+    left: 0;
+    background: url("../images/mobile/icon/icon_gnbSearchArrowLeft.png") no-repeat;
+    background-position: center center;
+    background-size: 7px 12px;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-next {
+    right: 0;
+    background: url("../images/mobile/icon/icon_gnbSearchArrowRight.png") no-repeat;
+    background-position: center center;
+    background-size: 7px 12px;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .searchNodataArea {
+    line-height: 21px;
+    margin-top: 24px;
+    font-size: 15px;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .searchNodataArea span {
+    display: block;
   }
   #wrap #container {
     padding-bottom: 40px;
   }
   #wrap #container .topVisual .topVisualSwiper {
     height: 95.5128vw;
+  }
+  #wrap #container .topVisual .topVisualSwiper .swiper .swiper-button-prev, #wrap #container .topVisual .topVisualSwiper .swiper .swiper-button-next {
+    width: 10.2564vw;
+    height: 10.2564vw;
+  }
+  #wrap #container .topVisual .topVisualSwiper .swiper .swiper-button-prev {
+    background: url("../images/mobile/icon/icon_topVisualArrowLeft.png") no-repeat;
+    background-position: center;
+    background-size: 4.6153vw 8.7179vw;
+  }
+  #wrap #container .topVisual .topVisualSwiper .swiper .swiper-button-next {
+    background: url("../images/mobile/icon/icon_topVisualArrowRight.png") no-repeat;
+    background-position: center;
+    background-size: 4.6153vw 8.7179vw;
   }
   #wrap #container .topVisual .topVisualSwiper .swiper .imgWeb, #wrap #container .topVisual .topVisualSwiper .swiper .imgMobile {
     background-size: 100% 100% !important;
@@ -1011,6 +1061,9 @@ html, body {
     margin-top: 5px;
     font-size: 10px;
   }
+  #wrap #footer .footerIn .adminLogin {
+    display: none;
+  }
 }
 /* layout */
 #wrap.mainLayout {
@@ -1018,18 +1071,12 @@ html, body {
   /* container */
   /* footer */
 }
-#wrap.mainLayout #header .headerIn {
-  width: auto;
-}
 #wrap.mainLayout #header .headerIn .pageBack {
   display: none;
 }
 #wrap.mainLayout #header .headerIn .logoText {
   text-align: left;
   padding-left: 24px;
-}
-#wrap.mainLayout #container {
-  background-color: #141414;
 }
 #wrap.mainLayout #container .topVisual .topVisualSwiper {
   height: 800px;
@@ -1112,13 +1159,13 @@ html, body {
     /* footer */
   }
   #wrap.mainLayout #container .topVisual .topVisualSwiper {
-    height: 113.3333vw;
+    height: 108.9743vw;
   }
   #wrap.mainLayout #container .topVisual .topVisualVideo {
-    height: 113.3333vw;
-    padding: 12.8205vw 6.1538vw 0;
-    background: url("../images/mobile/bg/bg_topVisualVideo.png") no-repeat;
-    background-size: 100% 100%;
+    box-sizing: border-box;
+    height: 108.9743vw;
+    padding: 50px 6.1538vw 0;
+    background: #000;
   }
   #wrap.mainLayout #container .topVisual .topVisualVideo .title {
     display: block;
@@ -1154,7 +1201,7 @@ html, body {
   }
   #wrap.mainLayout #container .topVisual .topVisualVideo .video {
     display: block;
-    margin-top: 20px;
+    margin-top: 5.3846vw;
     border: 5px solid #3B3A3A;
   }
   #wrap.mainLayout #container .topVisual .topVisualVideo .video .videoHeightAuto {
@@ -1176,8 +1223,8 @@ html, body {
   }
   #wrap.mainLayout #container .topVisual .topVisualVideo .context .textLarge {
     text-align: center;
-    line-height: 13.0769vw;
-    font-size: 9.1025vw;
+    line-height: 12vw;
+    font-size: 7.3vw;
     font-family: "NotoSansCJKkrBlack", sans-serif;
   }
   #wrap.mainLayout #container .topVisual .topVisualVideo .context .textSamll {

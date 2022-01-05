@@ -9,7 +9,6 @@
   #header {
 
     .headerIn {
-      @include contentWidth($mobileWidthNumber);
 
       .pageBack {
         display: none;
@@ -24,6 +23,9 @@
 
         nav {
 
+          .navIn {
+
+          }
         }
       }
     }
@@ -32,7 +34,6 @@
 
   /* container */
   #container {
-    background-color: #141414;
 
     .topVisual {
 
@@ -151,14 +152,14 @@
       .topVisual {
 
         .topVisualSwiper {
-          height: 113.3333vw;
+          height: 108.9743vw;
         }
 
         .topVisualVideo {
-          height: 113.3333vw;
-          padding: 12.8205vw 6.1538vw 0;
-          @include imageUrl(mobile/bg/bg_topVisualVideo,png);
-          background-size: 100% 100%;
+          box-sizing: border-box;
+          height: 108.9743vw;
+          padding: 50px 6.1538vw 0;
+          background: #000;
 
           .title {
             display: block;
@@ -199,7 +200,7 @@
 
           .video {
             display: block;
-            margin-top: 20px;
+            margin-top: 5.3846vw;
             border: 5px solid #3B3A3A;
 
             .videoHeightAuto {
@@ -224,8 +225,8 @@
 
             .textLarge {
               text-align: center;
-              line-height: 13.0769vw;
-              font-size: 9.1025vw;
+              line-height: 12vw;
+              font-size: 7.3vw;
               @include nsBk;
             }
 
