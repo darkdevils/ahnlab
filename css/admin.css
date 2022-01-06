@@ -1,3 +1,345 @@
+@charset "UTF-8";
+/* fonts */
+@font-face {
+  font-family: "NotoSansCJKkrRegular";
+  src: url("../fonts/NotoSansCJKkr-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "NotoSansCJKkrMedium";
+  src: url("../fonts/NotoSansCJKkr-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "NotoSansCJKkrBold";
+  src: url("../fonts/NotoSansCJKkr-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "NotoSansCJKkrBlack";
+  src: url("../fonts/NotoSansCJKkr-Black.ttf") format("truetype");
+}
+@font-face {
+  font-family: "GothamMedium";
+  src: url("../fonts/Gotham-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "GothamBold";
+  src: url("../fonts/Gotham-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "GothamBlack";
+  src: url("../fonts/Gotham-Black.ttf") format("truetype");
+}
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
 
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 추가 */
+a {
+  text-decoration: none;
+}
+
+button {
+  padding: 0;
+  border: 0 none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+/* font-family */
+/* blind */
+/* content width, min-width */
+/* color */
+/* layout */
+html, body {
+  font-family: "NotoSansCJKkrRegular", sans-serif;
+  height: 100%;
+  font-size: 22px;
+  letter-spacing: -0.075em;
+  color: #fff;
+}
+
+/* wrap */
+#wrap {
+  display: flex;
+  min-width: 1630px;
+  min-height: 100%;
+  background-color: #000;
+  /* lnb */
+  /* container */
+  /* button */
+}
+#wrap #lnb {
+  box-sizing: border-box;
+  width: 290px;
+  padding: 60px 0;
+  border: 1px solid #707070;
+}
+#wrap #lnb .login {
+  padding: 0 0 0 53px;
+}
+#wrap #lnb .login a {
+  display: inline-block;
+  vertical-align: top;
+}
+#wrap #lnb .login a span {
+  display: block;
+  box-sizing: border-box;
+  height: 38px;
+  line-height: 26px;
+  padding: 9px 0 0 47px;
+  font-size: 18px;
+  font-family: "NotoSansCJKkrMedium", sans-serif;
+  color: #fff;
+  background: url("../admin/images/icon/icon_login.png") no-repeat;
+  background-position: left center;
+}
+#wrap #lnb .visitorArea {
+  margin-top: 30px;
+  padding: 0 76px 0 56px;
+}
+#wrap #lnb .visitorArea .visitorTotal {
+  overflow: hidden;
+}
+#wrap #lnb .visitorArea .visitorTotal .title {
+  float: left;
+  display: block;
+  line-height: 19px;
+  font-size: 13px;
+  font-family: "NotoSansCJKkrMedium", sans-serif;
+  color: #9F9F9F;
+}
+#wrap #lnb .visitorArea .visitorTotal .number {
+  float: right;
+  display: block;
+  line-height: 19px;
+  padding-right: 1px;
+  font-size: 12px;
+  font-family: "GothamMedium", sans-serif;
+  color: #EA5504;
+}
+#wrap #lnb .visitorArea .visitorToday {
+  overflow: hidden;
+  margin-top: 3px;
+}
+#wrap #lnb .visitorArea .visitorToday .title {
+  float: left;
+  display: block;
+  line-height: 19px;
+  font-size: 13px;
+  font-family: "NotoSansCJKkrMedium", sans-serif;
+  color: #9F9F9F;
+}
+#wrap #lnb .visitorArea .visitorToday .number {
+  float: right;
+  display: block;
+  line-height: 19px;
+  padding-right: 1px;
+  font-size: 12px;
+  font-family: "GothamMedium", sans-serif;
+}
+#wrap #lnb .logoText {
+  margin-top: 20px;
+  padding-left: 50px;
+}
+#wrap #lnb .logoText a {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 49px;
+  font-size: 40px;
+  font-family: "NotoSansCJKkrBold", sans-serif;
+  color: #EA5504;
+  letter-spacing: -0.08em;
+}
+#wrap #lnb nav {
+  margin-top: 40px;
+}
+#wrap #lnb nav .menuList > li {
+  border-top: 1px solid #707070;
+}
+#wrap #lnb nav .menuList > li > a {
+  display: block;
+  padding-left: 53px;
+}
+#wrap #lnb nav .menuList > li > a span {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 50px;
+  font-size: 22px;
+  font-family: "NotoSansCJKkrBold", sans-serif;
+  color: #fff;
+}
+#wrap #lnb nav .menuList > li > a:hover span {
+  color: #8C8D8D;
+}
+#wrap #lnb nav .menuList > li .menuListSub {
+  padding: 11px 0;
+  border-top: 1px solid #707070;
+}
+#wrap #lnb nav .menuList > li .menuListSub li a {
+  display: block;
+  padding-left: 53px;
+}
+#wrap #lnb nav .menuList > li .menuListSub li a span {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 34px;
+  font-size: 14px;
+  font-family: "NotoSansCJKkrBold", sans-serif;
+  color: #fff;
+}
+#wrap #lnb nav .menuList > li .menuListSub li a:hover span {
+  color: #8C8D8D;
+}
+#wrap #container {
+  width: 1200px;
+  padding: 70px 70px 100px;
+}
+#wrap #container .topContent .mainTitle {
+  padding-bottom: 41px;
+  font-size: 28px;
+  font-family: "NotoSansCJKkrMedium", sans-serif;
+}
+#wrap .anBtnSmall {
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  width: 100px;
+  height: 44px;
+  border: 1px solid transparent;
+  font-size: 18px;
+  font-family: "NotoSansCJKkrMedium", sans-serif;
+  color: #fff;
+  background-color: #141414;
+}
+#wrap .anBtnSmall.line {
+  border: 1px solid #606060;
+}
+#wrap .anBtnSmall span {
+  display: inline-block;
+  vertical-align: top;
+  height: 42px;
+  line-height: 42px;
+}
+/* wrap */
+#wrap.mainLayout {
+  min-width: auto;
+  /* loginArea */
+}
+#wrap.mainLayout .loginArea {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-bottom: 60px;
+}
+#wrap.mainLayout .loginArea .loginAreaIn {
+  box-sizing: border-box;
+  width: 586px;
+  height: 616px;
+  padding: 423px 300px 0 10px;
+  background: url("../admin/images/bg/bg_login.png") no-repeat;
+  background-position: left bottom;
+}
+#wrap.mainLayout .loginArea .loginAreaIn .loginTitle {
+  line-height: 26px;
+  font-size: 18px;
+  font-family: "NotoSansCJKkrMedium", sans-serif;
+}
+#wrap.mainLayout .loginArea .loginAreaIn .idPwArea {
+  margin-top: 13px;
+}
+#wrap.mainLayout .loginArea .loginAreaIn .idPwArea .idPwLine {
+  display: flex;
+}
+#wrap.mainLayout .loginArea .loginAreaIn .idPwArea .idPwLine + .idPwLine {
+  margin-top: 4px;
+}
+#wrap.mainLayout .loginArea .loginAreaIn .idPwArea .idPwLine .idPwTitle {
+  width: 75px;
+  line-height: 38px;
+  font-size: 14px;
+  font-family: "NotoSansCJKkrMedium", sans-serif;
+}
+#wrap.mainLayout .loginArea .loginAreaIn .idPwArea .idPwLine .idPwInput {
+  flex: 1;
+}
+#wrap.mainLayout .loginArea .loginAreaIn .idPwArea .idPwLine .idPwInput input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  border: 1px solid #6A6A6A;
+  color: #fff;
+  background-color: #434343;
+}
+#wrap.mainLayout .loginArea .loginAreaIn .loginSubmit {
+  padding-left: 75px;
+  margin-top: 24px;
+}
+#wrap.mainLayout .loginArea .loginAreaIn .loginSubmit .loginBtn {
+  display: block;
+  text-align: center;
+  box-sizing: border-box;
+  height: 50px;
+  border: 2px solid #fff;
+  background-color: #000;
+}
+#wrap.mainLayout .loginArea .loginAreaIn .loginSubmit .loginBtn span {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 46px;
+  font-size: 16px;
+  font-family: "NotoSansCJKkrBold", sans-serif;
+  color: #fff;
+}
 
 /*# sourceMappingURL=admin.css.map */

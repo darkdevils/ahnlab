@@ -35,7 +35,7 @@
                                     <ul class="gnbItemSubBox">
                                         <li><a href="#"><span>영상</span></a></li>
                                         <li><a href="#"><span class="live">라이브 보기</span></a></li>
-                                        <li><a href="#"><span>내말 좀 들어줘</span></a></li>
+                                        <li><a href="#"><span>커뮤니티</span></a></li>
                                     </ul>
                                     <ul class="gnbItemSubBox">
                                         <li><a href="#" target="_blank"><span>철수마켓</span></a></li>
@@ -58,11 +58,16 @@
                             <a href="#">안철수의 오늘</a>
                         </div>
                         <div class="gnbItem login">
-                            <!-- login 완료시 class="on" 추가 -->
-                            <button type="button" class="on">
+                            <!-- login 이전 -->
+                            <button type="button">
                                 <span class="loginText">로그인</span>
-                                <span class="welcomeText">안녕하세요</span>
                             </button>
+                            <!-- login 이후 -->
+                            <!--
+                            <div class="welcome">
+                                <span class="welcomeText">안녕하세요</span>
+                            </div>
+                             -->
                             <div class="gnbItemSub">
                                 <div class="gnbItemSubIn">
                                     <div class="gnbItemTitle">로그인</div>
@@ -234,6 +239,7 @@
             </div>
 
             <!-- topVisualVideoBg -->
+            <!--
             <div class="topVisualVideoBg">
                 <div class="video">
                     <video muted="" autoplay="" playsinline="" loop="" preload="auto" id="mov01">
@@ -249,13 +255,476 @@
                     </div>
                 </div>
             </div>
+            -->
         </div>
         <div class="content">
-            content<br>content<br>content<br>content<br>content<br>
-            content<br>content<br>content<br>content<br>content<br>
-            content<br>content<br>content<br>content<br>content<br>
-            content<br>content<br>content<br>content<br>content<br>
-            content<br>content<br>content<br>content<br>content
+            <div class="photoNumberArea">
+                <!-- TOP10 컨텐츠 -->
+                <div class="mainTitleArea">
+                    <span class="title">TOP10 컨텐츠</span>
+                </div>
+                <div class="top10Swiper swiperArea">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/web/number/number01.png" alt="1" class="numberWeb" />
+                                    <img src="../images/mobile/number/number01.png" alt="1" class="numberMobile" />
+                                    <img src="../images/temp/photoH_01.png" alt="TOP1" class="topImage" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/web/number/number02.png" alt="2" class="numberWeb" />
+                                    <img src="../images/mobile/number/number02.png" alt="2" class="numberMobile" />
+                                    <img src="../images/temp/photoH_02.png" alt="TOP2" class="topImage" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/web/number/number03.png" alt="3" class="numberWeb" />
+                                    <img src="../images/mobile/number/number03.png" alt="3" class="numberMobile" />
+                                    <img src="../images/temp/photoH_03.png" alt="TOP3" class="topImage" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/web/number/number04.png" alt="4" class="numberWeb" />
+                                    <img src="../images/mobile/number/number04.png" alt="4" class="numberMobile" />
+                                    <img src="../images/temp/photoH_01.png" alt="TOP4" class="topImage" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/web/number/number05.png" alt="5" class="numberWeb" />
+                                    <img src="../images/mobile/number/number05.png" alt="5" class="numberMobile" />
+                                    <img src="../images/temp/photoH_02.png" alt="TOP5" class="topImage" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/web/number/number06.png" alt="6" class="numberWeb" />
+                                    <img src="../images/mobile/number/number06.png" alt="6" class="numberMobile" />
+                                    <img src="../images/temp/photoH_03.png" alt="TOP6" class="topImage" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/web/number/number07.png" alt="7" class="numberWeb" />
+                                    <img src="../images/mobile/number/number07.png" alt="7" class="numberMobile" />
+                                    <img src="../images/temp/photoH_01.png" alt="TOP7" class="topImage" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/web/number/number08.png" alt="8" class="numberWeb" />
+                                    <img src="../images/mobile/number/number08.png" alt="8" class="numberMobile" />
+                                    <img src="../images/temp/photoH_02.png" alt="TOP8" class="topImage" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/web/number/number09.png" alt="9" class="numberWeb" />
+                                    <img src="../images/mobile/number/number09.png" alt="9" class="numberMobile" />
+                                    <img src="../images/temp/photoH_03.png" alt="TOP9" class="topImage" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/web/number/number10.png" alt="10" class="numberWeb" />
+                                    <img src="../images/mobile/number/number10.png" alt="10" class="numberMobile" />
+                                    <img src="../images/temp/photoH_01.png" alt="TOP10" class="topImage" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+                <!-- //TOP10 컨텐츠 -->
+
+                <script>
+                    var swiperTop = new Swiper(".photoNumberArea .swiper", {
+                        breakpoints: {
+                            781: {
+                                slidesPerView: 5,
+                                spaceBetween: 26,
+                            },
+                            1: {
+                                slidesPerView: 2.8,
+                                spaceBetween: 0,
+                            }
+                        },
+                        navigation: {
+                            nextEl: ".swiper-button-next",
+                            prevEl: ".swiper-button-prev",
+                        },
+                    });
+                </script>
+            </div>
+
+            <div class="photoWidthArea">
+                <!-- 안철수의 약속 -->
+                <div class="mainTitleArea">
+                    <span class="title">안철수의 약속</span>
+                    <a href="a" class="moreLink">전체보기</a>
+                </div>
+                <div class="anPromisedSwiper swiperArea">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/temp/photoW_01.png" alt="안철수의 약속01" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/temp/photoW_02.png" alt="안철수의 약속02" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/temp/photoW_03.png" alt="안철수의 약속03" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/temp/photoW_01.png" alt="안철수의 약속04" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/temp/photoW_02.png" alt="안철수의 약속05" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/temp/photoW_03.png" alt="안철수의 약속06" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+                <!-- //안철수의 약속 -->
+
+                <!-- 안철수의 오늘 -->
+                <div class="mainTitleArea">
+                    <span class="title">안철수의 오늘</span>
+                    <a href="a" class="moreLink">전체보기</a>
+                </div>
+                <div class="anTodaySwiper swiperArea">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/temp/photoW_01.png" alt="안철수의 오늘01" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/temp/photoW_02.png" alt="안철수의 오늘02" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/temp/photoW_03.png" alt="안철수의 오늘03" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/temp/photoW_01.png" alt="안철수의 오늘04" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/temp/photoW_02.png" alt="안철수의 오늘05" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/temp/photoW_03.png" alt="안철수의 오늘06" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+                <!-- //안철수의 오늘 -->
+
+                <!-- 커뮤니티 -->
+                <div class="mainTitleArea">
+                    <span class="title">커뮤니티</span>
+                    <a href="a" class="moreLink">전체보기</a>
+                </div>
+                <div class="communitySwiper swiperArea">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/web/bg/bg_community.png" />
+                                    <span class="text">정권교체 안철수 소통하기, 자랑하기, 공유하기 한곳에 다 모았다!</span>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/web/bg/bg_community.png" />
+                                    <span class="text">정권교체 안철수 소통하기, 자랑하기, 공유하기 한곳에 다 모았다!</span>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/web/bg/bg_community.png" />
+                                    <span class="text">정권교체 안철수 소통하기, 자랑하기, 공유하기 한곳에 다 모았다!</span>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/web/bg/bg_community.png" />
+                                    <span class="text">정권교체 안철수 소통하기, 자랑하기, 공유하기 한곳에 다 모았다!</span>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/web/bg/bg_community.png" />
+                                    <span class="text">정권교체 안철수 소통하기, 자랑하기, 공유하기 한곳에 다 모았다!</span>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/web/bg/bg_community.png" />
+                                    <span class="text">정권교체 안철수 소통하기, 자랑하기, 공유하기 한곳에 다 모았다!</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+                <!-- //커뮤니티 -->
+
+                <script>
+                    var swiperWidth = new Swiper(".photoWidthArea .swiper", {
+                        breakpoints: {
+                            781: {
+                                slidesPerView: 3.5,
+                                spaceBetween: 30,
+                            },
+                            1: {
+                                slidesPerView: 2.2,
+                                spaceBetween: 10,
+                            }
+                        },
+                        navigation: {
+                            nextEl: ".swiper-button-next",
+                            prevEl: ".swiper-button-prev",
+                        },
+                    });
+                </script>
+            </div>
+
+            <div class="photoHeightArea">
+                <!-- 안철수 출마선언 -->
+                <div class="mainTitleArea">
+                    <span class="title">안철수 출마선언</span>
+                    <a href="a" class="moreLink">전체보기</a>
+                </div>
+                <div class="anCandidacySwiper swiperArea">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/temp/photoH_01.png" alt="안철수 출마선언01" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/temp/photoH_02.png" alt="안철수 출마선언02" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/temp/photoH_03.png" alt="안철수 출마선언03" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/temp/photoH_01.png" alt="안철수 출마선언04" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/temp/photoH_02.png" alt="안철수 출마선언05" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/temp/photoH_03.png" alt="안철수 출마선언06" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/temp/photoH_01.png" alt="안철수 출마선언07" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/temp/photoH_02.png" alt="안철수 출마선언08" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/temp/photoH_03.png" alt="안철수 출마선언09" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+                <!-- //안철수의 약속 -->
+
+                <!-- 안철수 출연 -->
+                <div class="mainTitleArea">
+                    <span class="title">안철수 출연</span>
+                    <a href="a" class="moreLink">전체보기</a>
+                </div>
+                <div class="anAppearanceSwiper swiperArea">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/temp/photoH_01.png" alt="안철수 출연01" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/temp/photoH_02.png" alt="안철수 출연02" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/temp/photoH_03.png" alt="안철수 출연03" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/temp/photoH_01.png" alt="안철수 출연04" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/temp/photoH_02.png" alt="안철수 출연05" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/temp/photoH_03.png" alt="안철수 출연06" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/temp/photoH_01.png" alt="안철수 출연07" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/temp/photoH_02.png" alt="안철수 출연08" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/temp/photoH_03.png" alt="안철수 출연09" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+                <!-- //안철수 출연 -->
+
+                <!-- 슬기로운 격리생활 -->
+                <div class="mainTitleArea">
+                    <span class="title">슬기로운 격리생활</span>
+                    <a href="a" class="moreLink">전체보기</a>
+                </div>
+                <div class="anIsolationSwiper swiperArea">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/temp/photoH_01.png" alt="슬기로운 격리생활01" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/temp/photoH_02.png" alt="슬기로운 격리생활02" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/temp/photoH_03.png" alt="슬기로운 격리생활03" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/temp/photoH_01.png" alt="슬기로운 격리생활04" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/temp/photoH_02.png" alt="슬기로운 격리생활05" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/temp/photoH_03.png" alt="슬기로운 격리생활06" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/temp/photoH_01.png" alt="슬기로운 격리생활07" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/temp/photoH_02.png" alt="슬기로운 격리생활08" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/temp/photoH_03.png" alt="슬기로운 격리생활09" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+                <!-- //슬기로운 격리생활 -->
+
+                <script>
+                    var swiperHeight = new Swiper(".photoHeightArea .swiper", {
+                        breakpoints: {
+                            781: {
+                                slidesPerView: 5.25,
+                                spaceBetween: 30,
+                            },
+                            1: {
+                                slidesPerView: 3.2,
+                                spaceBetween: 10,
+                            }
+                        },
+                        navigation: {
+                            nextEl: ".swiper-button-next",
+                            prevEl: ".swiper-button-prev",
+                        },
+                    });
+                </script>
+            </div>
         </div>
     </div>
     <!-- //container -->
@@ -266,7 +735,7 @@
                 <a href="https://peopleparty.kr/">국민의당 홈페이지</a>
             </div>
             <div class="tel">
-                <a href="tel:02-022-02222">02-022-02222</a>
+                <a href="tel:02-6925-4646">02-6925-4646</a>
             </div>
             <div class="copyright">Copyright &copy; 국민의당 대통령 후보 안철수 All Rights Reserved.</div>
             <div class="adminLogin">

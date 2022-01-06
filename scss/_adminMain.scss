@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+/* wrap */
+#wrap.mainLayout {
+  min-width: auto;
+
+  /* loginArea */
+  .loginArea {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding-bottom: 60px;
+
+    .loginAreaIn {
+      box-sizing: border-box;
+      width: 586px;
+      height: 616px;
+      padding: 423px 300px 0 10px;
+      @include imageUrlAdmin(bg/bg_login,png);
+      background-position: left bottom;
+
+      .loginTitle {
+        line-height: 26px;
+        font-size: 18px;
+        @include nsM;
+      }
+
+      .idPwArea {
+        margin-top: 13px;
+
+        .idPwLine {
+          display: flex;
+
+          & + .idPwLine {
+            margin-top: 4px;
+          }
+
+          .idPwTitle {
+            width: 75px;
+            line-height: 38px;
+            font-size: 14px;
+            @include nsM;
+          }
+
+          .idPwInput {
+            flex: 1;
+
+            input {
+              box-sizing: border-box;
+              width: 100%;
+              height: 100%;
+              padding: 0 10px;
+              border: 1px solid #6A6A6A;
+              color: #fff;
+              background-color: #434343;
+            }
+          }
+        }
+      }
+
+      .loginSubmit {
+        padding-left: 75px;
+        margin-top: 24px;
+
+        .loginBtn {
+          display: block;
+          text-align: center;
+          box-sizing: border-box;
+          height: 50px;
+          border: 2px solid #fff;
+          background-color: #000;
+
+          span {
+            display: inline-block;
+            vertical-align: top;
+            line-height: 46px;
+            font-size: 16px;
+            @include nsB;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}

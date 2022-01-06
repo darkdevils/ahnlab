@@ -1,0 +1,233 @@
+@charset "UTF-8";
+
+/* layout */
+html, body {
+  @include nsR;
+  height: 100%;
+  font-size: 22px;
+  letter-spacing: -0.075em;
+  color: #fff;
+}
+
+/* wrap */
+#wrap {
+  display: flex;
+  min-width: 1630px;
+  min-height: 100%;
+  background-color: #000;
+
+  /* lnb */
+  #lnb {
+    box-sizing: border-box;
+    width: 290px;
+    padding: 60px 0;
+    border: 1px solid #707070;
+
+    .login {
+      padding: 0 0 0 53px;
+
+      a {
+        display: inline-block;
+        vertical-align: top;
+
+        span {
+          display: block;
+          box-sizing: border-box;
+          height: 38px;
+          line-height: 26px;
+          padding: 9px 0 0 47px;
+          font-size: 18px;
+          @include nsM;
+          color: #fff;
+          @include imageUrlAdmin(icon/icon_login,png);
+          background-position: left center;
+        }
+      }
+    }
+
+    .visitorArea {
+      margin-top: 30px;
+      padding: 0 76px 0 56px;
+
+      .visitorTotal {
+        overflow: hidden;
+
+        .title {
+          float: left;
+          display: block;
+          line-height: 19px;
+          font-size: 13px;
+          @include nsM;
+          color: #9F9F9F;
+        }
+
+        .number {
+          float: right;
+          display: block;
+          line-height: 19px;
+          padding-right: 1px;
+          font-size: 12px;
+          @include gtM;
+          @include colorOrange;
+        }
+      }
+
+      .visitorToday {
+        overflow: hidden;
+        margin-top: 3px;
+
+        .title {
+          float: left;
+          display: block;
+          line-height: 19px;
+          font-size: 13px;
+          @include nsM;
+          color: #9F9F9F;
+        }
+
+        .number {
+          float: right;
+          display: block;
+          line-height: 19px;
+          padding-right: 1px;
+          font-size: 12px;
+          @include gtM;
+        }
+      }
+    }
+
+    .logoText {
+      margin-top: 20px;
+      padding-left: 50px;
+
+      a {
+        display: inline-block;
+        vertical-align: top;
+        line-height: 49px;
+        font-size: 40px;
+        @include nsB;
+        @include colorOrange;
+        letter-spacing: -0.08em;
+      }
+    }
+
+    nav {
+      margin-top: 40px;
+
+      .menuList {
+
+        > li {
+          border-top: 1px solid #707070;
+
+          > a {
+            display: block;
+            padding-left: 53px;
+
+            span {
+              display: inline-block;
+              vertical-align: top;
+              line-height: 50px;
+              font-size: 22px;
+              @include nsB;
+              color: #fff;
+            }
+
+            &:hover {
+
+              span {
+                color: #8C8D8D;
+              }
+            }
+          }
+
+          .menuListSub {
+            padding: 11px 0;
+            border-top: 1px solid #707070;
+
+            li {
+
+              a {
+                display: block;
+                padding-left: 53px;
+
+                span {
+                  display: inline-block;
+                  vertical-align: top;
+                  line-height: 34px;
+                  font-size: 14px;
+                  @include nsB;
+                  color: #fff;
+                }
+
+                &:hover {
+
+                  span {
+                    color: #8C8D8D;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* container */
+  #container {
+    width: 1200px;
+    padding: 70px 70px 100px;
+
+    .topContent {
+
+      .mainTitle {
+        padding-bottom: 41px;
+        font-size: 28px;
+        @include nsM;
+      }
+    }
+
+    .content {
+
+    }
+  }
+
+  /* button */
+  .anBtnSmall {
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    width: 100px;
+    height: 44px;
+    border: 1px solid transparent;
+    font-size: 18px;
+    @include nsM;
+    color: #fff;
+    background-color: #141414;
+
+    &.line {
+      border: 1px solid #606060;
+    }
+
+    span {
+      display: inline-block;
+      vertical-align: top;
+      height: 42px;
+      line-height: 42px;
+    }
+  }
+
+  .anBtnMedium {
+
+    span {
+
+    }
+  }
+
+  .anBtnLarge {
+
+    span {
+
+    }
+  }
+}

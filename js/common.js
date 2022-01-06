@@ -135,7 +135,7 @@ let common = {
             let slideSpeed = 300;
 
             $("#header").addClass("gnbOpenWeb");
-            $gnbItemSub.slideDown(slideSpeed, function () {
+            $gnbItemSub.stop().slideDown(slideSpeed, function () {
                 $(".gnbCloseBtn").show();
             });
         });
@@ -150,8 +150,8 @@ let common = {
 
             $("#header").removeClass("gnbOpenWeb");
             $(".gnbCloseBtn").hide();
-            $gnbItemSub.slideUp(slideSpeed, function () {
-                $(".gnb .gnbItemSub").removeAttr("style");
+            $gnbItemSub.stop().slideUp(slideSpeed, function () {
+                $(this).removeAttr("style");
             });
         });
     },

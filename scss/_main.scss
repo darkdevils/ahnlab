@@ -1,34 +1,10 @@
 @charset "UTF-8";
 
-
-
 /* layout */
 #wrap.mainLayout {
 
   /* header */
   #header {
-
-    .headerIn {
-
-      .pageBack {
-        display: none;
-      }
-
-      .logoText {
-        text-align: left;
-        padding-left: 24px;
-      }
-
-      .gnb {
-
-        nav {
-
-          .navIn {
-
-          }
-        }
-      }
-    }
 
   }
 
@@ -128,6 +104,205 @@
     .content {
       @include contentWidth($mobileWidthNumber);
       margin: 0;
+
+      .mainTitleArea {
+        overflow: hidden;
+        padding: 0 100px 17px 100px;
+
+        .title {
+          float: left;
+          display: block;
+          line-height: 58px;
+          font-size: 40px;
+          @include nsB;
+        }
+
+        .moreLink {
+          float: right;
+          display: block;
+          line-height: 44px;
+          margin-top: 14px;
+          padding-right: 24px;
+          font-size: 30px;
+          color: #fff;
+          @include nsM;
+          @include imageUrl(web/icon/icon_moreLink,png);
+          background-position: right center;
+        }
+      }
+
+      .photoNumberArea, .photoWidthArea, .photoHeightArea {
+
+        .swiper-button-prev, .swiper-button-next {
+          width: 100px;
+          height: 100px;
+
+          &::after {
+            display: none;
+          }
+        }
+
+        .swiper-button-prev {
+          left: 0;
+          margin-top: -50px;
+          @include imageUrl(web/icon/icon_mainSwiperArrowLeft,png);
+          background-position: 20px center;
+        }
+
+        .swiper-button-next {
+          right: 0;
+          margin-top: -50px;
+          @include imageUrl(web/icon/icon_mainSwiperArrowRight,png);
+          background-position: right 20px center;
+        }
+      }
+
+      .photoNumberArea {
+        margin-top: 37px;
+
+        .mainTitleArea {
+          padding-bottom: 70px;
+        }
+
+        .swiperArea {
+          overflow: hidden;
+          position: relative;
+          padding: 0 100px;
+
+          .swiper {
+            overflow: visible;
+            position: static;
+
+            .swiper-wrapper {
+
+              .swiper-slide {
+
+                a {
+                  overflow: hidden;
+                  position: relative;
+                  display: block;
+
+                  .numberWeb {
+                    display: block;
+                    width: 100%;
+                  }
+
+                  .numberMobile {
+                    position: relative;
+                    display: none;
+                    width: 100%;
+                  }
+
+                  .topImage {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    display: block;
+                    height: 100%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .photoWidthArea {
+        margin-top: 57px;
+
+        .mainTitleArea {
+          padding-top: 42px;
+        }
+
+        .swiperArea {
+          overflow: hidden;
+          position: relative;
+          padding: 0 100px;
+
+          .swiper {
+            overflow: visible;
+            position: static;
+
+            .swiper-wrapper {
+
+              .swiper-slide {
+
+                a {
+                  display: block;
+
+                  img {
+                    display: block;
+                    width: 100%;
+                  }
+                }
+              }
+            }
+          }
+
+          &.communitySwiper {
+
+            .swiper-slide {
+
+              a {
+                position: relative;
+
+                .text {
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  display: -webkit-box;
+                  -webkit-box-orient: vertical;
+                  -webkit-line-clamp: 3;
+                  position: absolute;
+                  left: 50%;
+                  top: 50%;
+                  transform: translate(-50%, -50%);
+                  width: 15vw;
+                  max-height: 6.9vw;
+                  line-height: 2.3vw;
+                  font-size: 2vw;
+                  color: #fff;
+                  @include nsM;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .photoHeightArea {
+        margin-top: 60px;
+
+        .mainTitleArea {
+          padding-top: 76px;
+        }
+
+        .swiperArea {
+          overflow: hidden;
+          position: relative;
+          padding: 0 100px;
+
+          .swiper {
+            overflow: visible;
+            position: static;
+
+            .swiper-wrapper {
+
+              .swiper-slide {
+
+                a {
+                  display: block;
+
+                  img {
+                    display: block;
+                    width: 100%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 
@@ -138,12 +313,59 @@
 }
 
 /* media queries */
-@media (max-width: #{780px}) {
+@media (min-width: 781px) and (max-width: 1199px) {
+  /* wrap */
+  #wrap.mainLayout {
+
+    /* container */
+    #container {
+
+      .content {
+
+        .photoWidthArea {
+
+          .swiperArea {
+
+            &.communitySwiper {
+
+              .swiper-slide {
+
+                a {
+
+                  .text {
+                    width: 180px;
+                    max-height: 84px;
+                    line-height: 28px;
+                    font-size: 24px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  /* wrap */
   #wrap.mainLayout {
 
     /* header */
     #header {
 
+      .headerIn {
+
+        .pageBack {
+          display: none;
+        }
+
+        .logoText {
+          text-align: left;
+          padding-left: 24px;
+        }
+      }
     }
 
     /* container */
@@ -266,6 +488,118 @@
 
       .content {
 
+        .mainTitleArea {
+          overflow: hidden;
+          padding: 0 3.2051vw 5px 3.2051vw;
+
+          .title {
+            line-height: 22px;
+            font-size: 15px;
+          }
+
+          .moreLink {
+            line-height: 14px;
+            margin-top: 4px;
+            padding-right: 8px;
+            font-size: 5px;
+            @include imageUrl(mobile/icon/icon_moreLink,png);
+            background-position: right center;
+            background-size: 4px 6px;
+          }
+        }
+
+        .photoNumberArea, .photoWidthArea, .photoHeightArea {
+
+          .swiper-button-prev, .swiper-button-next {
+            display: none;
+          }
+        }
+
+        .photoNumberArea {
+          margin-top: 15px;
+
+          .mainTitleArea {
+            padding-bottom: 15px;
+          }
+
+          .swiperArea {
+            padding: 0 3.2051vw;
+
+            .swiper {
+
+              .swiper-wrapper {
+
+                .swiper-slide {
+
+                  a {
+
+                    .numberWeb {
+                      display: none;
+                    }
+
+                    .numberMobile {
+                      display: block;
+                      z-index: 1;
+                    }
+
+                    .topImage {
+                    }
+                  }
+
+                  &:first-child {
+
+                    a {
+
+                      .number {
+                        left: 0;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .photoWidthArea {
+          margin-top: 18px;
+
+          .mainTitleArea {
+            padding-top: 18px;
+          }
+
+          .swiperArea {
+            padding: 0 3.2051vw;
+
+            &.communitySwiper {
+
+              .swiper-slide {
+
+                a {
+
+                  .text {
+                    width: 25vw;
+                    max-height: 12.9vw;
+                    line-height: 4.3vw;
+                    font-size: 3.6vw;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .photoHeightArea {
+          margin-top: 15px;
+
+          .mainTitleArea {
+            padding-top: 15px;
+          }
+
+          .swiperArea {
+            padding: 0 3.2051vw;
+          }
+        }
       }
     }
 

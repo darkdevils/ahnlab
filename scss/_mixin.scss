@@ -72,6 +72,9 @@ $colorRed: #E62214;
 @mixin imageUrl($imgUrl, $type: png) {
   background: url("../images/" + $imgUrl +"." + $type) no-repeat;
 }
+@mixin imageUrlAdmin($imgUrl, $type: png) {
+  background: url("../admin/images/" + $imgUrl +"." + $type) no-repeat;
+}
 //@include imageUrl(common/logo_scroll,png) 사용법;
 
 // Margin , Padding
