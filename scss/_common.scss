@@ -855,7 +855,7 @@ html, body {
                     width: 100%;
                     height: auto;
                     padding-left: 25px;
-                    @include imageUrl(mobile/icon/icon_login_on,png);
+                    @include imageUrl('mobile/icon/icon_login_on');
                     background-position: left center;
                     background-size: 18px 16px;
 

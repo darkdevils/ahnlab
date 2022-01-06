@@ -1,5 +1,13 @@
 @charset "UTF-8";
 
+.blind {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden
+}
 h2.title {
   padding: 75px 0 0;
   @include nsM;
@@ -81,29 +89,38 @@ h2.title {
       flex-wrap: wrap;
       justify-content: space-between;
       li {
+        position: relative;
         width: 540px;
         &:nth-child(even) {
           margin-top: 54px;
         }
+        .btnLike {
+          position: absolute;
+          right: 12px;
+          top: 12px;
+          width: 54px;
+          height: 50px;
+          @include imageUrl('web/icon/icon_like_off');
+          background-position: center;
+          background-size: 27px 25px;
+          padding: 10px;
+          z-index: 2;
+          &.on {
+            @include imageUrl('web/icon/icon_like_on');
+            background-position: center;
+            background-size: 27px 25px;
+          }
+        }
         a {
           display: block;
           position: relative;
+          z-index : 0;
           img {
             position: relative;
             width: 540px;
             height: 317px;
-          }
-          &:hover {
-            &:before {
-              content: "";
-              position: absolute;
-              left: 0;
-              top: 0;
-              width: 100%;
-              height: 317px;
-              border: 12px solid #e86b1b;
-              box-sizing: border-box;
-              z-index: 2;
+            &.mobile {
+              display: none;
             }
           }
         }
@@ -136,6 +153,165 @@ h2.title {
         width: 100%;
         height: 3px;
         background: #fff;
+      }
+    }
+  }
+}
+
+/* 안철수의 약속-상세 */
+.promiseAhn-detail {
+  h2.title {
+    strong {
+      font-size: 27px;
+    }
+    span {
+      font-size: 18px;
+    }
+  }
+}
+.detailWrap {
+  h3.title {
+    display: block;
+    font-size: 50px;
+    @include nsM;
+    padding-bottom: 22px;
+  }
+  .justifyWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px 0 50px;
+    color: #b3b3b3;
+    &__left {
+      .writeTitle {
+        font-size: 19px;
+        @include nsM;
+        margin-right: 17px;
+      }
+      .date {
+        font-size: 18px;
+        @include gtM;
+      }
+      .btnLink {
+        font-size: 24px;
+        margin-right: 15px;
+        color: #b3b3b3;
+      }
+    }
+    &__right {
+      padding: 0 5px 0 0;
+      .num {
+        position: relative;
+        font-size: 17px;
+        @include gtM;
+      }
+      .btnLike {
+        width: 22px;
+        height: 21px;
+        margin-left: 10px;
+        @include imageUrl('web/icon/icon_like_off02');
+        background-size: contain;
+        vertical-align: top;
+        &.on {
+          @include imageUrl('web/icon/icon_like_on02');
+          background-size: contain;
+        }
+      }
+    }
+  }
+  &__content {
+    padding: 0 0 50px 0;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+  }
+  .visualImage {
+    margin: 0 0 60px;
+  }
+  .textWrap {
+    .bigText {
+      font-size: 40px;
+      line-height: 57px;
+      @include nsM;
+    }
+    dl,ol,ul,li,span {
+      display: block;
+      font-size: 22px;
+      color: #6a6a6a;
+      line-height: 32px;
+    }
+  }
+}
+.paginationWrap {
+  h3.title {
+    font-size: 30px;
+    @include nsB;
+    color: #fff;
+  }
+  ul {
+    display: flex;
+    justify-content: space-between;
+    li {
+      position: relative;
+      width: 386px;
+      .text {
+        display: block;
+        margin-top: 30px;
+        font-size: 24px;
+        line-height: 30px;
+        @include nsM;
+        color: #848484;
+      }
+      .btnLike {
+
+      }
+    }
+  }
+  .pagination {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 95px 0 0;
+    a {
+      display: inline-block;
+      width: 35px;
+      height: 35px;
+      line-height: 35px;
+      border: 1px solid #707070;
+      color: #666666;
+      font-size: 17px;
+      @include gtM;
+      box-sizing: border-box;
+      margin: 0 6px;
+      &.current {
+        border-color: #EA5517;
+        color: #fff;
+      }
+      &.previous,&.next {
+        position: relative;
+        width: auto;
+        border: 0;
+        font-size: 23px;
+        @include nsM;
+        color: #fff;
+        &:after {
+          content: "";
+          position: absolute;
+          top: 10px;
+          width: 15px;
+          height: 15px;
+          display: block;
+          border: 1px solid #fff;
+          border-top: none;
+          border-right: none;
+          transform: rotate(45deg);
+        }
+      }
+      &.previous:after {
+        left: -18px;
+      }
+      &.next:after {
+        right: -18px;
+        transform: rotate(-135deg);
       }
     }
   }
@@ -209,4 +385,180 @@ h2.title {
   }
 
   /* 안철수의 약속 */
+  .promiseAhn__list {
+    padding-left: calc(48px / 2);
+    padding-right: calc(48px / 2);
+    ul {
+      display: block;
+      li {
+        position: relative;
+        width: 100%;
+        margin-top: 20px;
+        &:nth-child(even) {
+          margin-top: 20px;
+        }
+        a {
+          img {
+            display: none;
+            width: 100%;
+            height: 100%;
+            &.mobile {
+              display: block;
+            }
+          }
+          span {
+            font-size: calc(40px / 2);
+            opacity: 1;
+            margin-top: 20px;
+            line-height: calc(48px / 2);
+          }
+        }
+        .btnLike {
+          width: 31px;
+          height: 29px;
+          top: 5px;
+          right: 5px;
+          background-position: center;
+          background-size: 15.5px 14.5px;
+          &.on {
+            width: 31px;
+            height: 29px;
+            background-position: center;
+            background-size: 15.5px 14.5px;
+          }
+        }
+      }
+    }
+  }
+  .promiseAhn .btnMore {
+    margin-top: 20px;
+    button {
+      span {
+        font-size: calc(35px / 2);
+      }
+      &:after {
+        height: 2px;
+      }
+    }
+  }
+  /* 안철수의 약속-상세 */
+  .promiseAhn-detail {
+    padding: 70px 24px 0;
+    &.topVisual {
+      display: none;
+    }
+    h2.title {
+      display: none;
+    }
+  }
+  .detailWrap {
+    h3.title {
+      font-size: calc(42px / 2);
+      line-height: 48px;
+    }
+    .justifyWrap {
+      padding-bottom: 30px;
+      &__left {
+        .writeTitle {
+          display: none;
+        }
+        .btnLink {
+          width: calc(35px / 2);
+          font-size: calc(32px / 2);
+          color: #fff;
+          margin-right: calc(15px / 2);
+        }
+      }
+      &__right {
+        display: flex;
+        align-items: center;
+        .num {
+          font-size: calc(23px / 2);
+        }
+        .btnLike {
+          position: relative;
+          top: 3px;
+          width: calc(35px / 2);
+        }
+      }
+    }
+
+    &__content {
+      font-size: calc(23px / 2);
+      .visualImage {
+        margin-bottom: 30px;
+        img {
+          width: 100%;
+        }
+      }
+      .textWrap {
+        .bigText {
+          font-size: calc(40px / 2);
+          line-height: 30px;
+        }
+        dl,ol,ul,li,span {
+          font-size: calc(30px / 2);
+          line-height: 25px;
+        }
+      }
+      .img {
+        img {
+          width: 100%;
+        }
+        &.mgTop60 {
+          margin-top: 30px !important;
+        }
+      }
+      .mgTop80 {
+        margin-top: 40px !important;
+      }
+    }
+  }
+  .paginationWrap {
+    position: relative;
+    overflow: hidden;
+
+    &__list {
+      overflow-x: auto;
+      overflow-y: hidden;
+      ul {
+        display: block;
+        justify-content: normal;
+        white-space: nowrap;
+        li {
+          display: inline-block;
+          width: calc(396px / 2);
+          img {
+            width: 100%;
+          }
+          .text {
+            margin-top: calc(25px / 2);
+            font-size: calc(30px / 2);
+            white-space: normal;
+            line-height: calc(41px / 2);
+          }
+          + li {
+            margin-left: 7px;
+          }
+        }
+      }
+    }
+    .pagination {
+      padding-top: 30px;
+      a {
+        width: calc(55px / 2);
+        height: calc(55px / 2);
+        font-size: calc(27px / 2);
+        line-height: calc(55px / 2);
+        &.previous,&.next {
+          font-size: calc(36px / 2);
+          &:after {
+            width: calc(19px / 2);
+            height: calc(19px / 2);
+
+          }
+        }
+      }
+    }
+  }
 }
