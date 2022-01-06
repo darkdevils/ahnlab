@@ -39,7 +39,7 @@ html, body {
       font-size: 14px;
       @include gtM;
       color: #fff;
-      @include imageUrl('web/icon/icon_pageTop');
+      @include imageUrl("web/icon/icon_pageTop");
       background-position: center top;
     }
   }
@@ -117,7 +117,7 @@ html, body {
           display: none;
           width: 35px;
           height: 35px;
-          @include imageUrl('web/icon/icon_gnbClose');
+          @include imageUrl("web/icon/icon_gnbClose");
           background-position: center;
           z-index: 22;
 
@@ -162,7 +162,7 @@ html, body {
 
                 > button {
                   padding-left: 35px;
-                  @include imageUrl('web/icon/icon_category');
+                  @include imageUrl("web/icon/icon_category");
                   background-position: left center;
                 }
 
@@ -256,7 +256,7 @@ html, body {
 
                 > button {
                   width: 35px;
-                  @include imageUrl('web/icon/icon_login');
+                  @include imageUrl("web/icon/icon_login");
                   background-position: center;
 
                   span {
@@ -267,10 +267,10 @@ html, body {
                 .welcome {
                   width: 35px;
                   height: 35px;
-                  @include imageUrl(web/icon/icon_login_on,png);
+                  @include imageUrl("web/icon/icon_login_on");
                   background-position: center;
                   &.on {
-                    @include imageUrl('web/icon/icon_login_on');
+                    @include imageUrl("web/icon/icon_login_on");
                     background-position: center;
                   }
 
@@ -315,27 +315,27 @@ html, body {
                         }
 
                         &.kakao {
-                          @include imageUrl('web/sns/sns_kakao');
+                          @include imageUrl("web/sns/sns_kakao");
                           background-size: 100% 100%;
                         }
 
                         &.naver {
-                          @include imageUrl('web/sns/sns_naver');
+                          @include imageUrl("web/sns/sns_naver");
                           background-size: 100% 100%;
                         }
 
                         &.google {
-                          @include imageUrl('web/sns/sns_google');
+                          @include imageUrl("web/sns/sns_google");
                           background-size: 100% 100%;
                         }
 
                         &.facebook {
-                          @include imageUrl('web/sns/sns_facebook');
+                          @include imageUrl("web/sns/sns_facebook");
                           background-size: 100% 100%;
                         }
 
                         &.twitch {
-                          @include imageUrl('web/sns/sns_twitch');
+                          @include imageUrl("web/sns/sns_twitch");
                           background-size: 100% 100%;
                         }
 
@@ -359,7 +359,7 @@ html, body {
 
                 > button  {
                   width: 35px;
-                  @include imageUrl('web/icon/icon_search');
+                  @include imageUrl("web/icon/icon_search");
                   background-position: center;
 
                   span {
@@ -421,7 +421,7 @@ html, body {
                           width: 54px;
                           height: 54px;
                           margin-left: 5px;
-                          @include imageUrl('web/icon/icon_gnbSearch');
+                          @include imageUrl("web/icon/icon_gnbSearch");
                           background-position: center;
 
                           span {
@@ -474,12 +474,12 @@ html, body {
                         }
 
                         .swiper-button-prev {
-                          @include imageUrl('web/icon/icon_gnbSearchArrowLeft');
+                          @include imageUrl("web/icon/icon_gnbSearchArrowLeft");
                           background-position: left center;
                         }
 
                         .swiper-button-next {
-                          @include imageUrl('web/icon/icon_gnbSearchArrowRight');
+                          @include imageUrl("web/icon/icon_gnbSearchArrowRight");
                           background-position: right center;
                         }
                       }
@@ -523,13 +523,13 @@ html, body {
 
           .swiper-button-prev {
             left: 0;
-            @include imageUrl('web/icon/icon_topVisualArrowLeft');
+            @include imageUrl("web/icon/icon_topVisualArrowLeft");
             background-position: center;
           }
 
           .swiper-button-next {
             right: 0;
-            @include imageUrl('web/icon/icon_topVisualArrowRight');
+            @include imageUrl("web/icon/icon_topVisualArrowRight");
             background-position: center;
           }
 
@@ -617,55 +617,55 @@ html, body {
 
     /* page top button */
     .pageTop {
-      right: 24px;
-      bottom: 24px;
-      width: 41px;
-      height: 41px;
-      border-color: #666;
-      background: #666;
+      right        : 24px;
+      bottom       : 24px;
+      width        : 41px;
+      height       : 41px;
+      border-color : #666;
+      background   : #666;
 
       span {
-        height: 9px;
-        line-height: 9px;
-        padding-top: 13px;
-        font-size: 8px;
-        @include imageUrl(web/icon/icon_pageTop,png);
-        background-position: center top;
-        background-size: 21px 10px;
+        height              : 9px;
+        line-height         : 9px;
+        padding-top         : 13px;
+        font-size           : 8px;
+        @include imageUrl("web/icon/icon_pageTop");
+        background-position : center top;
+        background-size     : 21px 10px;
       }
     }
 
     /* swiper image */
     .imgWeb {
-      display: none;
+      display : none;
     }
 
     .imgMobile {
-      display: block;
+      display : block;
     }
 
     /* header */
     #header {
       @include contentMinWidth($mobileWidthNumber);
-      height: 50px;
+      height : 50px;
 
       &.scroll.gnbOpenWeb, &.scroll.gnbOpenMobile {
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color : rgba(0, 0, 0, 0.8);
       }
 
       .headerIn {
         @include contentWidth($mobileWidthNumber);
 
         .pageBack {
-          position: absolute;
-          left: 0;
-          top: 0;
-          display: block;
-          width: 50px;
-          height: 50px;
-          @include imageUrl('mobile/icon/icon_pageBack');
-          background-position: center;
-          background-size: 12px 21px;
+          position            : absolute;
+          left                : 0;
+          top                 : 0;
+          display             : block;
+          width               : 50px;
+          height              : 50px;
+          @include imageUrl("mobile/icon/icon_pageBack");
+          background-position : center;
+          background-size     : 12px 21px;
 
           span {
             @include blind;
@@ -673,15 +673,15 @@ html, body {
         }
 
         .logoText {
-          display: block;
-          text-align: center;
-          padding: 0;
+          display    : block;
+          text-align : center;
+          padding    : 0;
 
           a {
-            display: inline-block;
-            vertical-align: top;
-            line-height: 50px;
-            font-size: 18px;
+            display        : inline-block;
+            vertical-align : top;
+            line-height    : 50px;
+            font-size      : 18px;
             @include nsB;
           }
         }
@@ -689,132 +689,132 @@ html, body {
         .gnb {
 
           .gnbOpenBtn {
-            position: absolute;
-            right: 0;
-            top: 0;
-            display: block;
-            width: 60px;
-            height: 50px;
-            @include imageUrl(mobile/icon/icon_gnbOpen,png);
-            background-position: center;
-            background-size: 27px 20px;
+            position            : absolute;
+            right               : 0;
+            top                 : 0;
+            display             : block;
+            width               : 60px;
+            height              : 50px;
+            @include imageUrl("mobile/icon/icon_gnbOpen");
+            background-position : center;
+            background-size     : 27px 20px;
           }
 
           .gnbCloseBtn {
-            position: fixed;
-            right: 35px;
-            top: 23px;
-            display: none;
-            width: 35px;
-            height: 32px;
-            @include imageUrl('mobile/icon/icon_gnbClose');
-            background-position: center;
-            background-size: 35px 32px;
+            position            : fixed;
+            right               : 35px;
+            top                 : 23px;
+            display             : none;
+            width               : 35px;
+            height              : 32px;
+            @include imageUrl("mobile/icon/icon_gnbClose");
+            background-position : center;
+            background-size     : 35px 32px;
           }
 
           nav {
-            position: fixed;
-            left: 100%;
-            right: auto;
-            top: 0;
-            bottom: 0;
-            width: 100%;
-            padding-top: 66px;
-            background-color: #000;
+            position         : fixed;
+            left             : 100%;
+            right            : auto;
+            top              : 0;
+            bottom           : 0;
+            width            : 100%;
+            padding-top      : 66px;
+            background-color : #000;
 
             .navIn {
-              overflow: auto;
-              display: flex;
-              flex-direction: column;
-              height: 100%;
-              -webkit-overflow-scrolling:touch;
+              overflow                   : auto;
+              display                    : flex;
+              flex-direction             : column;
+              height                     : 100%;
+              -webkit-overflow-scrolling : touch;
 
               .gnbItem {
-                float: none;
-                display: none;
+                float   : none;
+                display : none;
 
                 & + .gnbItem {
-                  margin-left:  0;
+                  margin-left : 0;
                 }
 
                 &:nth-child(5) {
-                  order: -4;
+                  order : -4;
                 }
 
                 &:nth-child(6) {
-                  order: -4;
+                  order : -4;
                 }
 
                 a, button {
-                  display: block;
-                  height: 35px;
-                  line-height: 35px;
-                  font-size: 24px;
+                  display     : block;
+                  height      : 35px;
+                  line-height : 35px;
+                  font-size   : 24px;
                   @include nsB;
-                  color: #fff;
+                  color       : #fff;
                 }
 
                 &.category {
-                  display: block;
+                  display : block;
 
                   > button {
-                    display: none;
+                    display : none;
                   }
 
                   .gnbItemSub {
-                    position: static;
-                    left: auto;
-                    right: auto;
-                    top: auto;
-                    display: block;
-                    padding: 0 66px 66px 30px;
-                    background-color: transparent;
-                    z-index: auto;
+                    position         : static;
+                    left             : auto;
+                    right            : auto;
+                    top              : auto;
+                    display          : block;
+                    padding          : 0 66px 66px 30px;
+                    background-color : transparent;
+                    z-index          : auto;
 
                     .gnbItemSubIn {
-                      overflow: visible;
-                      width: auto;
-                      padding: 0;
-                      margin: 0;
-                      border-top: 1px solid #707070;
+                      overflow   : visible;
+                      width      : auto;
+                      padding    : 0;
+                      margin     : 0;
+                      border-top : 1px solid #707070;
 
                       .gnbItemTitle {
-                        display: none;
+                        display : none;
                       }
 
                       .gnbItemSubBox {
-                        float: none;
-                        padding: 20px 0 16px;
-                        border-bottom: 1px solid #707070;
+                        float         : none;
+                        padding       : 20px 0 16px;
+                        border-bottom : 1px solid #707070;
 
                         & + .gnbItemSubBox {
-                          margin-left: 0;
+                          margin-left : 0;
                         }
 
                         li {
 
                           & + li {
-                            margin-top: 18px;
+                            margin-top : 18px;
                           }
 
                           a {
-                            display: block;
+                            display : block;
 
                             span {
-                              display: inline-block;
-                              vertical-align: top;
-                              line-height: 28px;
-                              font-size: 19px;
+                              display        : inline-block;
+                              vertical-align : top;
+                              line-height    : 28px;
+                              font-size      : 19px;
 
                               &.live {
-                                position: relative;
+                                position : relative;
 
                                 &::after {
-                                  right: -12px;
-                                  top: -2px;
-                                  width: 8px;
-                                  height: 8px;
-                                  border-radius: 4px;
+                                  right         : -12px;
+                                  top           : -2px;
+                                  width         : 8px;
+                                  height        : 8px;
+                                  border-radius : 4px;
                                 }
                               }
                             }
@@ -826,269 +826,271 @@ html, body {
                 }
 
                 &.login {
-                  display: block;
-                  padding: 0 66px 5px 30px;
+                  display : block;
+                  padding : 0 66px 5px 30px;
 
                   &::after {
-                    display: none;
+                    display : none;
                   }
 
                   > button {
-                    display: block;
-                    text-align: left;
-                    width: 100%;
-                    height: auto;
-                    padding-left: 25px;
-                    @include imageUrl('mobile/icon/icon_login');
-                    background-position: left center;
-                    background-size: 18px 16px;
+                    display             : block;
+                    text-align          : left;
+                    width               : 100%;
+                    height              : auto;
+                    padding-left        : 25px;
+                    @include imageUrl("mobile/icon/icon_login");
+                    background-position : left center;
+                    background-size     : 18px 16px;
 
                     span {
                       @include unBlind;
-                      display: block;
-                      height: 30px;
-                      line-height: 30px;
-                      font-size: 15px;
+                      display     : block;
+                      height      : 30px;
+                      line-height : 30px;
+                      font-size   : 15px;
                       @include nsB;
                     }
                   }
 
                   .welcome {
-                    display: block;
-                    text-align: left;
-                    width: 100%;
-                    height: auto;
-                    padding-left: 25px;
-                    @include imageUrl('mobile/icon/icon_login_on');
-                    background-position: left center;
-                    background-size: 18px 16px;
+                    display             : block;
+                    text-align          : left;
+                    width               : 100%;
+                    height              : auto;
+                    padding-left        : 25px;
+                    @include imageUrl("mobile/icon/icon_login_on");
+                    background-position : left center;
+                    background-size     : 18px 16px;
+
                     &.on {
-                      @include imageUrl('mobile/icon/icon_login_on');
-                      background-position: left center;
-                      background-size: 18px 16px;
+                      @include imageUrl("mobile/icon/icon_login_on");
+                      background-position : left center;
+                      background-size     : 18px 16px;
 
-                    .welcomeText {
-                      @include unBlind;
-                      display: block;
-                      height: 30px;
-                      line-height: 30px;
-                      font-size: 15px;
-                      @include nsB;
-                    }
-                  }
-
-                  .gnbItemSub {
-                    position: static;
-                    left: auto;
-                    right: auto;
-                    top: auto;
-                    box-sizing: border-box;
-                    width: 100vw;
-                    margin-left: -30px !important;
-                    padding: 0 0 15px 30px;
-                    background-color: transparent;
-                    z-index: auto;
-
-                    .gnbItemSubIn {
-                      width: auto;
-                      padding: 0;
-                      margin: 0;
-
-                      .gnbItemTitle {
-                        display: none;
-                      }
-
-                      .gnbItemSns {
-                        overflow: hidden;
-                        margin-top: 15px;
-
-                        a {
-                          width: 50px;
-                          height: 50px;
-
-                          + a {
-                            margin-left: 12px;
-                          }
-
-                          &.kakao {
-                            @include imageUrl('mobile/sns/sns_kakao');
-                            background-size: 50px 50px;
-                          }
-
-                          &.naver {
-                            @include imageUrl('mobile/sns/sns_naver');
-                            background-size: 50px 50px;
-                          }
-
-                          &.google {
-                            @include imageUrl('mobile/sns/sns_google');
-                            background-size: 50px 50px;
-                          }
-
-                          &.facebook {
-                            @include imageUrl('mobile/sns/sns_facebook');
-                            background-size: 50px 50px;
-                          }
-
-                          &.twitch {
-                            @include imageUrl('mobile/sns/sns_twitch');
-                            background-size: 50px 50px;
-                          }
-                        }
-                      }
-
-                      .gnbItemContext {
-                        line-height: 20px;
-                        margin-top: 25px;
-                        font-size: 15px;
+                      .welcomeText {
+                        @include unBlind;
+                        display     : block;
+                        height      : 30px;
+                        line-height : 30px;
+                        font-size   : 15px;
+                        @include nsB;
                       }
                     }
-                  }
-                }
 
-                &.search {
-                  display: block;
-                  padding: 0 66px 20px 30px;
-                  margin-left: 0;
+                    .gnbItemSub {
+                      position         : static;
+                      left             : auto;
+                      right            : auto;
+                      top              : auto;
+                      box-sizing       : border-box;
+                      width            : 100vw;
+                      margin-left      : -30px !important;
+                      padding          : 0 0 15px 30px;
+                      background-color : transparent;
+                      z-index          : auto;
 
-                  > button  {
-                    display: block;
-                    text-align: left;
-                    width: 100%;
-                    height: auto;
-                    padding-left: 25px;
-                    @include imageUrl('mobile/icon/icon_search');
-                    background-position: left center;
-                    background-size: 15px 16px;
+                      .gnbItemSubIn {
+                        width   : auto;
+                        padding : 0;
+                        margin  : 0;
 
-                    span {
-                      @include unBlind;
-                      display: block;
-                      height: 30px;
-                      line-height: 30px;
-                      font-size: 15px;
-                      @include nsB;
-                    }
-                  }
-
-                  .gnbItemSub {
-                    position: static;
-                    left: auto;
-                    right: auto;
-                    top: auto;
-                    background-color: transparent;
-                    z-index: auto;
-
-                    .gnbItemSubIn {
-                      width: auto;
-                      padding: 10px 0 10px;
-                      margin: 0;
-
-                      .searchTitleArea {
-                        display: none;
-                      }
-
-                      .searchInputArea {
-
-                        .searchText {
-                          display: none;
+                        .gnbItemTitle {
+                          display : none;
                         }
 
-                        .searchInput {
-                          overflow: hidden;
-                          display: inline-block;
-                          vertical-align: top;
+                        .gnbItemSns {
+                          overflow   : hidden;
+                          margin-top : 15px;
 
-                          input {
-                            width: 170px;
-                            height: 30px;
-                            border-bottom: 2px solid #fff;
-                            font-size: 15px;
-                          }
+                          a {
+                            width  : 50px;
+                            height : 50px;
 
-                          button {
-                            float: left;
-                            width: 30px;
-                            height: 30px;
-                            margin-left: 5px;
-                            @include imageUrl('mobile/icon/icon_gnbSearch');
-                            background-position: center;
-                            background-size: 23px 24px;
+                            + a {
+                              margin-left : 12px;
+                            }
 
-                            span {
-                              @include blind;
+                            &.kakao {
+                              @include imageUrl("mobile/sns/sns_kakao");
+                              background-size : 50px 50px;
+                            }
+
+                            &.naver {
+                              @include imageUrl("mobile/sns/sns_naver");
+                              background-size : 50px 50px;
+                            }
+
+                            &.google {
+                              @include imageUrl("mobile/sns/sns_google");
+                              background-size : 50px 50px;
+                            }
+
+                            &.facebook {
+                              @include imageUrl("mobile/sns/sns_facebook");
+                              background-size : 50px 50px;
+                            }
+
+                            &.twitch {
+                              @include imageUrl("mobile/sns/sns_twitch");
+                              background-size : 50px 50px;
                             }
                           }
                         }
 
+                        .gnbItemContext {
+                          line-height : 20px;
+                          margin-top  : 25px;
+                          font-size   : 15px;
+                        }
                       }
+                    }
+                  }
 
-                      .swiperDataArea {
-                        position: relative;
-                        display: inline-block;
-                        vertical-align: top;
-                        box-sizing: border-box;
-                        width: 100vw;
-                        padding: 0 30px 0 30px;
-                        margin: 28px 0 0 -30px;
+                  &.search {
+                    display     : block;
+                    padding     : 0 66px 20px 30px;
+                    margin-left : 0;
 
-                        .swiper {
-                          position: static;
-                          width: 100%;
-                          height: 100%;
-                          margin: 0;
+                    > button {
+                      display             : block;
+                      text-align          : left;
+                      width               : 100%;
+                      height              : auto;
+                      padding-left        : 25px;
+                      @include imageUrl("mobile/icon/icon_search");
+                      background-position : left center;
+                      background-size     : 15px 16px;
 
-                          .swiper-wrapper {
+                      span {
+                        @include unBlind;
+                        display     : block;
+                        height      : 30px;
+                        line-height : 30px;
+                        font-size   : 15px;
+                        @include nsB;
+                      }
+                    }
 
-                            .swiper-slide {
+                    .gnbItemSub {
+                      position         : static;
+                      left             : auto;
+                      right            : auto;
+                      top              : auto;
+                      background-color : transparent;
+                      z-index          : auto;
 
-                              a {
-                                display: block;
-                                width: 100%;
-                                height: 100%;
+                      .gnbItemSubIn {
+                        width   : auto;
+                        padding : 10px 0 10px;
+                        margin  : 0;
 
-                                img {
-                                  display: block;
-                                  width: 100%;
-                                  height: 100%;
-                                }
+                        .searchTitleArea {
+                          display : none;
+                        }
+
+                        .searchInputArea {
+
+                          .searchText {
+                            display : none;
+                          }
+
+                          .searchInput {
+                            overflow       : hidden;
+                            display        : inline-block;
+                            vertical-align : top;
+
+                            input {
+                              width         : 170px;
+                              height        : 30px;
+                              border-bottom : 2px solid #fff;
+                              font-size     : 15px;
+                            }
+
+                            button {
+                              float               : left;
+                              width               : 30px;
+                              height              : 30px;
+                              margin-left         : 5px;
+                              @include imageUrl("mobile/icon/icon_gnbSearch");
+                              background-position : center;
+                              background-size     : 23px 24px;
+
+                              span {
+                                @include blind;
                               }
                             }
                           }
 
-                          .swiper-button-prev, .swiper-button-next {
-                            width: 30px;
-                            height: 40px;
+                        }
 
-                            &::after {
-                              display: none;
+                        .swiperDataArea {
+                          position       : relative;
+                          display        : inline-block;
+                          vertical-align : top;
+                          box-sizing     : border-box;
+                          width          : 100vw;
+                          padding        : 0 30px 0 30px;
+                          margin         : 28px 0 0 -30px;
+
+                          .swiper {
+                            position : static;
+                            width    : 100%;
+                            height   : 100%;
+                            margin   : 0;
+
+                            .swiper-wrapper {
+
+                              .swiper-slide {
+
+                                a {
+                                  display : block;
+                                  width   : 100%;
+                                  height  : 100%;
+
+                                  img {
+                                    display : block;
+                                    width   : 100%;
+                                    height  : 100%;
+                                  }
+                                }
+                              }
                             }
 
-                          }
+                            .swiper-button-prev, .swiper-button-next {
+                              width  : 30px;
+                              height : 40px;
 
-                          .swiper-button-prev {
-                            left: 0;
-                            @include imageUrl('mobile/icon/icon_gnbSearchArrowLeft');
-                            background-position: center center;
-                            background-size: 7px 12px;
-                          }
+                              &::after {
+                                display : none;
+                              }
 
-                          .swiper-button-next {
-                            right: 0;
-                            @include imageUrl('mobile/icon/icon_gnbSearchArrowRight');
-                            background-position: center center;
-                            background-size: 7px 12px;
+                            }
+
+                            .swiper-button-prev {
+                              left                : 0;
+                              @include imageUrl("mobile/icon/icon_gnbSearchArrowLeft");
+                              background-position : center center;
+                              background-size     : 7px 12px;
+                            }
+
+                            .swiper-button-next {
+                              right               : 0;
+                              @include imageUrl("mobile/icon/icon_gnbSearchArrowRight");
+                              background-position : center center;
+                              background-size     : 7px 12px;
+                            }
                           }
                         }
-                      }
 
-                      .searchNodataArea {
-                        line-height: 21px;
-                        margin-top: 24px;
-                        font-size: 15px;
+                        .searchNodataArea {
+                          line-height : 21px;
+                          margin-top  : 24px;
+                          font-size   : 15px;
 
-                        span {
-                          display: block;
+                          span {
+                            display : block;
+                          }
                         }
                       }
                     }
@@ -1099,82 +1101,82 @@ html, body {
           }
         }
       }
-    }
 
-    /* container */
-    #container {
-      padding-bottom: 40px;
+      /* container */
+      #container {
+        padding-bottom : 40px;
 
-      .topVisual {
+        .topVisual {
 
-        .topVisualSwiper {
-          height: 95.5128vw;
+          .topVisualSwiper {
+            height : 95.5128vw;
 
-          .swiper {
+            .swiper {
 
-            .swiper-button-prev, .swiper-button-next {
-              width: 10.2564vw;
-              height: 10.2564vw;
-            }
+              .swiper-button-prev, .swiper-button-next {
+                width  : 10.2564vw;
+                height : 10.2564vw;
+              }
 
-            .swiper-button-prev {
-              @include imageUrl('mobile/icon/icon_topVisualArrowLeft');
-              background-position: center;
-              background-size: 4.6153vw 8.7179vw;
-            }
+              .swiper-button-prev {
+                @include imageUrl("mobile/icon/icon_topVisualArrowLeft");
+                background-position : center;
+                background-size     : 4.6153vw 8.7179vw;
+              }
 
-            .swiper-button-next {
-              @include imageUrl('mobile/icon/icon_topVisualArrowRight');
-              background-position: center;
-              background-size: 4.6153vw 8.7179vw;
-              display: none;
-            }
+              .swiper-button-next {
+                @include imageUrl("mobile/icon/icon_topVisualArrowRight");
+                background-position : center;
+                background-size     : 4.6153vw 8.7179vw;
+                display             : none;
+              }
 
-            .imgWeb, .imgMobile {
-              background-size: 100% 100% !important;
+              .imgWeb, .imgMobile {
+                background-size : 100% 100% !important;
+              }
             }
           }
+        }
+
+        .content {
+          @include contentWidth($mobileWidthNumber);
         }
       }
 
-      .content {
-        @include contentWidth($mobileWidthNumber);
-      }
-    }
+      /* footer */
+      #footer {
 
-    /* footer */
-    #footer {
+        .footerIn {
+          height       : 143px;
+          padding-left : 36px;
 
-      .footerIn {
-        height: 143px;
-        padding-left: 36px;
+          .homepageLink {
+            padding-top : 33px;
 
-        .homepageLink {
-          padding-top: 33px;
-
-          a {
-            line-height: 17px;
-            font-size: 12px;
+            a {
+              line-height : 17px;
+              font-size   : 12px;
+            }
           }
-        }
 
-        .tel {
-          margin-top: 5px;
+          .tel {
+            margin-top : 5px;
 
-          a {
-            line-height: 26px;
-            font-size: 24px;
+            a {
+              line-height : 26px;
+              font-size   : 24px;
+            }
           }
-        }
 
-        .copyright {
-          line-height: 14px;
-          margin-top: 5px;
-          font-size: 10px;
-        }
+          .copyright {
+            line-height : 14px;
+            margin-top  : 5px;
+            font-size   : 10px;
+          }
 
-        .adminLogin {
-          display: none;
+          .adminLogin {
+            display : none;
+          }
         }
       }
     }

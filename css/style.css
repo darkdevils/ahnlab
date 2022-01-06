@@ -2111,7 +2111,7 @@ html, body {
   width: 100%;
   min-width: 1200px;
   height: 130px;
-  z-index: 20;
+  z-index: 10;
 }
 #wrap #header.scroll {
   background-color: rgba(0, 0, 0, 0.8);
@@ -2284,6 +2284,10 @@ html, body {
 #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .welcome {
   width: 35px;
   height: 35px;
+  background: url("../images/web/icon/icon_login_on.png") no-repeat;
+  background-position: center;
+}
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.login .welcome.on {
   background: url("../images/web/icon/icon_login_on.png") no-repeat;
   background-position: center;
 }
@@ -2571,8 +2575,6 @@ html, body {
     /* page top button */
     /* swiper image */
     /* header */
-    /* container */
-    /* footer */
   }
   #wrap .pageTop {
     right: 24px;
@@ -2600,6 +2602,8 @@ html, body {
   #wrap #header {
     min-width: auto;
     height: 50px;
+    /* container */
+    /* footer */
   }
   #wrap #header.scroll.gnbOpenWeb, #wrap #header.scroll.gnbOpenMobile {
     background-color: rgba(0, 0, 0, 0.8);
@@ -2792,7 +2796,12 @@ html, body {
     background-position: left center;
     background-size: 18px 16px;
   }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .welcome .welcomeText {
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .welcome.on {
+    background: url("../images/mobile/icon/icon_login_on.png") no-repeat;
+    background-position: left center;
+    background-size: 18px 16px;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .welcome.on .welcomeText {
     position: static;
     width: auto;
     height: auto;
@@ -2804,7 +2813,7 @@ html, body {
     font-size: 15px;
     font-family: "NotoSansCJKkrBold", sans-serif;
   }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub {
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .welcome .gnbItemSub {
     position: static;
     left: auto;
     right: auto;
@@ -2816,56 +2825,56 @@ html, body {
     background-color: transparent;
     z-index: auto;
   }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn {
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .welcome .gnbItemSub .gnbItemSubIn {
     width: auto;
     padding: 0;
     margin: 0;
   }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemTitle {
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .welcome .gnbItemSub .gnbItemSubIn .gnbItemTitle {
     display: none;
   }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns {
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .welcome .gnbItemSub .gnbItemSubIn .gnbItemSns {
     overflow: hidden;
     margin-top: 15px;
   }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a {
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .welcome .gnbItemSub .gnbItemSubIn .gnbItemSns a {
     width: 50px;
     height: 50px;
   }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a + a {
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .welcome .gnbItemSub .gnbItemSubIn .gnbItemSns a + a {
     margin-left: 12px;
   }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a.kakao {
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .welcome .gnbItemSub .gnbItemSubIn .gnbItemSns a.kakao {
     background: url("../images/mobile/sns/sns_kakao.png") no-repeat;
     background-size: 50px 50px;
   }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a.naver {
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .welcome .gnbItemSub .gnbItemSubIn .gnbItemSns a.naver {
     background: url("../images/mobile/sns/sns_naver.png") no-repeat;
     background-size: 50px 50px;
   }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a.google {
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .welcome .gnbItemSub .gnbItemSubIn .gnbItemSns a.google {
     background: url("../images/mobile/sns/sns_google.png") no-repeat;
     background-size: 50px 50px;
   }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a.facebook {
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .welcome .gnbItemSub .gnbItemSubIn .gnbItemSns a.facebook {
     background: url("../images/mobile/sns/sns_facebook.png") no-repeat;
     background-size: 50px 50px;
   }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a.twitch {
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .welcome .gnbItemSub .gnbItemSubIn .gnbItemSns a.twitch {
     background: url("../images/mobile/sns/sns_twitch.png") no-repeat;
     background-size: 50px 50px;
   }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemContext {
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .welcome .gnbItemSub .gnbItemSubIn .gnbItemContext {
     line-height: 20px;
     margin-top: 25px;
     font-size: 15px;
   }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search {
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login.search {
     display: block;
     padding: 0 66px 20px 30px;
     margin-left: 0;
   }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search > button {
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login.search > button {
     display: block;
     text-align: left;
     width: 100%;
@@ -2875,7 +2884,7 @@ html, body {
     background-position: left center;
     background-size: 15px 16px;
   }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search > button span {
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login.search > button span {
     position: static;
     width: auto;
     height: auto;
@@ -2887,7 +2896,7 @@ html, body {
     font-size: 15px;
     font-family: "NotoSansCJKkrBold", sans-serif;
   }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub {
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login.search .gnbItemSub {
     position: static;
     left: auto;
     right: auto;
@@ -2895,29 +2904,29 @@ html, body {
     background-color: transparent;
     z-index: auto;
   }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn {
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login.search .gnbItemSub .gnbItemSubIn {
     width: auto;
     padding: 10px 0 10px;
     margin: 0;
   }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .searchTitleArea {
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login.search .gnbItemSub .gnbItemSubIn .searchTitleArea {
     display: none;
   }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .searchInputArea .searchText {
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login.search .gnbItemSub .gnbItemSubIn .searchInputArea .searchText {
     display: none;
   }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .searchInputArea .searchInput {
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login.search .gnbItemSub .gnbItemSubIn .searchInputArea .searchInput {
     overflow: hidden;
     display: inline-block;
     vertical-align: top;
   }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .searchInputArea .searchInput input {
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login.search .gnbItemSub .gnbItemSubIn .searchInputArea .searchInput input {
     width: 170px;
     height: 30px;
     border-bottom: 2px solid #fff;
     font-size: 15px;
   }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .searchInputArea .searchInput button {
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login.search .gnbItemSub .gnbItemSubIn .searchInputArea .searchInput button {
     float: left;
     width: 30px;
     height: 30px;
@@ -2926,14 +2935,14 @@ html, body {
     background-position: center;
     background-size: 23px 24px;
   }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .searchInputArea .searchInput button span {
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login.search .gnbItemSub .gnbItemSubIn .searchInputArea .searchInput button span {
     position: absolute;
     width: 1px;
     height: 1px;
     clip: rect(0 0 0 0);
     overflow: hidden;
   }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea {
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login.search .gnbItemSub .gnbItemSubIn .swiperDataArea {
     position: relative;
     display: inline-block;
     vertical-align: top;
@@ -2942,88 +2951,100 @@ html, body {
     padding: 0 30px 0 30px;
     margin: 28px 0 0 -30px;
   }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper {
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper {
     position: static;
     width: 100%;
     height: 100%;
     margin: 0;
   }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-wrapper .swiper-slide a {
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-wrapper .swiper-slide a {
     display: block;
     width: 100%;
     height: 100%;
   }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-wrapper .swiper-slide a img {
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-wrapper .swiper-slide a img {
     display: block;
     width: 100%;
     height: 100%;
   }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-prev, #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-next {
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-prev, #wrap #header .headerIn .gnb nav .navIn .gnbItem.login.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-next {
     width: 30px;
     height: 40px;
   }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-prev::after, #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-next::after {
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-prev::after, #wrap #header .headerIn .gnb nav .navIn .gnbItem.login.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-next::after {
     display: none;
   }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-prev {
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-prev {
     left: 0;
     background: url("../images/mobile/icon/icon_gnbSearchArrowLeft.png") no-repeat;
     background-position: center center;
     background-size: 7px 12px;
   }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-next {
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-next {
     right: 0;
     background: url("../images/mobile/icon/icon_gnbSearchArrowRight.png") no-repeat;
     background-position: center center;
     background-size: 7px 12px;
   }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .searchNodataArea {
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login.search .gnbItemSub .gnbItemSubIn .searchNodataArea {
     line-height: 21px;
     margin-top: 24px;
     font-size: 15px;
   }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .searchNodataArea span {
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login.search .gnbItemSub .gnbItemSubIn .searchNodataArea span {
     display: block;
   }
-  #wrap #container {
+  #wrap #header #container {
     padding-bottom: 40px;
   }
-  #wrap #container .topVisual .topVisualSwiper {
+  #wrap #header #container .topVisual .topVisualSwiper {
     height: 95.5128vw;
   }
-  #wrap #container .topVisual .topVisualSwiper .swiper .swiper-button-prev, #wrap #container .topVisual .topVisualSwiper .swiper .swiper-button-next {
+  #wrap #header #container .topVisual .topVisualSwiper .swiper .swiper-button-prev, #wrap #header #container .topVisual .topVisualSwiper .swiper .swiper-button-next {
+    width: 10.2564vw;
+    height: 10.2564vw;
+  }
+  #wrap #header #container .topVisual .topVisualSwiper .swiper .swiper-button-prev {
+    background: url("../images/mobile/icon/icon_topVisualArrowLeft.png") no-repeat;
+    background-position: center;
+    background-size: 4.6153vw 8.7179vw;
+  }
+  #wrap #header #container .topVisual .topVisualSwiper .swiper .swiper-button-next {
+    background: url("../images/mobile/icon/icon_topVisualArrowRight.png") no-repeat;
+    background-position: center;
+    background-size: 4.6153vw 8.7179vw;
     display: none;
   }
-  #wrap #container .topVisual .topVisualSwiper .swiper .imgWeb, #wrap #container .topVisual .topVisualSwiper .swiper .imgMobile {
+  #wrap #header #container .topVisual .topVisualSwiper .swiper .imgWeb, #wrap #header #container .topVisual .topVisualSwiper .swiper .imgMobile {
     background-size: 100% 100% !important;
   }
-  #wrap #container .content {
+  #wrap #header #container .content {
     width: auto;
   }
-  #wrap #footer .footerIn {
+  #wrap #header #footer .footerIn {
     height: 143px;
     padding-left: 36px;
   }
-  #wrap #footer .footerIn .homepageLink {
+  #wrap #header #footer .footerIn .homepageLink {
     padding-top: 33px;
   }
-  #wrap #footer .footerIn .homepageLink a {
+  #wrap #header #footer .footerIn .homepageLink a {
     line-height: 17px;
     font-size: 12px;
   }
-  #wrap #footer .footerIn .tel {
+  #wrap #header #footer .footerIn .tel {
     margin-top: 5px;
   }
-  #wrap #footer .footerIn .tel a {
+  #wrap #header #footer .footerIn .tel a {
     line-height: 26px;
     font-size: 24px;
   }
-  #wrap #footer .footerIn .copyright {
+  #wrap #header #footer .footerIn .copyright {
     line-height: 14px;
     margin-top: 5px;
     font-size: 10px;
   }
-  #wrap #footer .footerIn .adminLogin {
+  #wrap #header #footer .footerIn .adminLogin {
     display: none;
   }
 }
