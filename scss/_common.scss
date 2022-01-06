@@ -39,7 +39,7 @@ html, body {
       font-size: 14px;
       @include gtM;
       color: #fff;
-      @include imageUrl(web/icon/icon_pageTop,png);
+      @include imageUrl('web/icon/icon_pageTop');
       background-position: center top;
     }
   }
@@ -110,7 +110,7 @@ html, body {
           display: none;
           width: 35px;
           height: 35px;
-          @include imageUrl(web/icon/icon_gnbClose,png);
+          @include imageUrl('web/icon/icon_gnbClose');
           background-position: center;
           z-index: 12;
 
@@ -148,7 +148,7 @@ html, body {
 
                 > button {
                   padding-left: 35px;
-                  @include imageUrl(web/icon/icon_category,png);
+                  @include imageUrl('web/icon/icon_category');
                   background-position: left center;
                 }
 
@@ -242,11 +242,11 @@ html, body {
 
                 > button {
                   width: 35px;
-                  @include imageUrl(web/icon/icon_login,png);
+                  @include imageUrl('web/icon/icon_login');
                   background-position: center;
 
                   &.on {
-                    @include imageUrl(web/icon/icon_login_on,png);
+                    @include imageUrl('web/icon/icon_login_on');
                     background-position: center;
                   }
 
@@ -291,27 +291,27 @@ html, body {
                         }
 
                         &.kakao {
-                          @include imageUrl(web/sns/sns_kakao,png);
+                          @include imageUrl('web/sns/sns_kakao');
                           background-size: 100% 100%;
                         }
 
                         &.naver {
-                          @include imageUrl(web/sns/sns_naver,png);
+                          @include imageUrl('web/sns/sns_naver');
                           background-size: 100% 100%;
                         }
 
                         &.google {
-                          @include imageUrl(web/sns/sns_google,png);
+                          @include imageUrl('web/sns/sns_google');
                           background-size: 100% 100%;
                         }
 
                         &.facebook {
-                          @include imageUrl(web/sns/sns_facebook,png);
+                          @include imageUrl('web/sns/sns_facebook');
                           background-size: 100% 100%;
                         }
 
                         &.twitch {
-                          @include imageUrl(web/sns/sns_twitch,png);
+                          @include imageUrl('web/sns/sns_twitch');
                           background-size: 100% 100%;
                         }
 
@@ -335,7 +335,7 @@ html, body {
 
                 > button  {
                   width: 35px;
-                  @include imageUrl(web/icon/icon_search,png);
+                  @include imageUrl('web/icon/icon_search');
                   background-position: center;
 
                   span {
@@ -397,7 +397,7 @@ html, body {
                           width: 54px;
                           height: 54px;
                           margin-left: 5px;
-                          @include imageUrl(web/icon/icon_gnbSearch,png);
+                          @include imageUrl('web/icon/icon_gnbSearch');
                           background-position: center;
 
                           span {
@@ -450,12 +450,12 @@ html, body {
                         }
 
                         .swiper-button-prev {
-                          @include imageUrl(web/icon/icon_gnbSearchArrowLeft,png);
+                          @include imageUrl('web/icon/icon_gnbSearchArrowLeft');
                           background-position: left center;
                         }
 
                         .swiper-button-next {
-                          @include imageUrl(web/icon/icon_gnbSearchArrowRight,png);
+                          @include imageUrl('web/icon/icon_gnbSearchArrowRight');
                           background-position: right center;
                         }
                       }
@@ -499,13 +499,13 @@ html, body {
 
           .swiper-button-prev {
             left: 0;
-            @include imageUrl(web/icon/icon_topVisualArrowLeft,png);
+            @include imageUrl('web/icon/icon_topVisualArrowLeft');
             background-position: center;
           }
 
           .swiper-button-next {
             right: 0;
-            @include imageUrl(web/icon/icon_topVisualArrowRight,png);
+            @include imageUrl('web/icon/icon_topVisualArrowRight');
             background-position: center;
           }
 
@@ -605,7 +605,7 @@ html, body {
         line-height: 9px;
         padding-top: 13px;
         font-size: 8px;
-        @include imageUrl(web/icon/icon_pageTop,png);
+        @include imageUrl('web/icon/icon_pageTop');
         background-position: center top;
         background-size: 21px 10px;
       }
@@ -639,7 +639,7 @@ html, body {
           display: block;
           width: 50px;
           height: 50px;
-          @include imageUrl(mobile/icon/icon_pageBack,png);
+          @include imageUrl('mobile/icon/icon_pageBack');
           background-position: center;
           background-size: 12px 21px;
 
@@ -671,7 +671,7 @@ html, body {
             display: block;
             width: 60px;
             height: 50px;
-            @include imageUrl(mobile/icon/icon_gnbOpen,png);
+            @include imageUrl('mobile/icon/icon_gnbOpen');
             background-position: center;
             background-size: 27px 20px;
           }
@@ -683,7 +683,7 @@ html, body {
             display: none;
             width: 35px;
             height: 32px;
-            @include imageUrl(mobile/icon/icon_gnbClose,png);
+            @include imageUrl('mobile/icon/icon_gnbClose');
             background-position: center;
             background-size: 35px 32px;
           }
@@ -815,12 +815,12 @@ html, body {
                     width: 100%;
                     height: auto;
                     padding-left: 25px;
-                    @include imageUrl(mobile/icon/icon_login,png);
+                    @include imageUrl('mobile/icon/icon_login');
                     background-position: left center;
                     background-size: 18px 16px;
 
                     &.on {
-                      @include imageUrl(mobile/icon/icon_login_on,png);
+                      @include imageUrl('mobile/icon/icon_login_on');
                       background-position: left center;
                       background-size: 18px 16px;
 
@@ -884,27 +884,27 @@ html, body {
                           }
 
                           &.kakao {
-                            @include imageUrl(mobile/sns/sns_kakao,png);
+                            @include imageUrl('mobile/sns/sns_kakao');
                             background-size: 50px 50px;
                           }
 
                           &.naver {
-                            @include imageUrl(mobile/sns/sns_naver,png);
+                            @include imageUrl('mobile/sns/sns_naver');
                             background-size: 50px 50px;
                           }
 
                           &.google {
-                            @include imageUrl(mobile/sns/sns_google,png);
+                            @include imageUrl('mobile/sns/sns_google');
                             background-size: 50px 50px;
                           }
 
                           &.facebook {
-                            @include imageUrl(mobile/sns/sns_facebook,png);
+                            @include imageUrl('mobile/sns/sns_facebook');
                             background-size: 50px 50px;
                           }
 
                           &.twitch {
-                            @include imageUrl(mobile/sns/sns_twitch,png);
+                            @include imageUrl('mobile/sns/sns_twitch');
                             background-size: 50px 50px;
                           }
                         }
@@ -930,7 +930,7 @@ html, body {
                     width: 100%;
                     height: auto;
                     padding-left: 25px;
-                    @include imageUrl(mobile/icon/icon_search,png);
+                    @include imageUrl('mobile/icon/icon_search');
                     background-position: left center;
                     background-size: 15px 16px;
 
@@ -984,7 +984,7 @@ html, body {
                             width: 30px;
                             height: 30px;
                             margin-left: 5px;
-                            @include imageUrl(mobile/icon/icon_gnbSearch,png);
+                            @include imageUrl('mobile/icon/icon_gnbSearch');
                             background-position: center;
                             background-size: 23px 24px;
 
@@ -1041,14 +1041,14 @@ html, body {
 
                           .swiper-button-prev {
                             left: 0;
-                            @include imageUrl(mobile/icon/icon_gnbSearchArrowLeft,png);
+                            @include imageUrl('mobile/icon/icon_gnbSearchArrowLeft');
                             background-position: center center;
                             background-size: 7px 12px;
                           }
 
                           .swiper-button-next {
                             right: 0;
-                            @include imageUrl(mobile/icon/icon_gnbSearchArrowRight,png);
+                            @include imageUrl('mobile/icon/icon_gnbSearchArrowRight');
                             background-position: center center;
                             background-size: 7px 12px;
                           }
@@ -1091,13 +1091,13 @@ html, body {
             }
 
             .swiper-button-prev {
-              @include imageUrl(mobile/icon/icon_topVisualArrowLeft,png);
+              @include imageUrl('mobile/icon/icon_topVisualArrowLeft');
               background-position: center;
               background-size: 4.6153vw 8.7179vw;
             }
 
             .swiper-button-next {
-              @include imageUrl(mobile/icon/icon_topVisualArrowRight,png);
+              @include imageUrl('mobile/icon/icon_topVisualArrowRight');
               background-position: center;
               background-size: 4.6153vw 8.7179vw;
             }

@@ -73,3 +73,31 @@ $colorRed: #E62214;
   background: url("../images/" + $imgUrl +"." + $type) no-repeat;
 }
 //@include imageUrl(common/logo_scroll,png) 사용법;
+
+// Margin , Padding
+@for $i from 0 through 60 {
+  .mgTop#{$i*5} {
+    margin-top: 5px * $i !important;
+  }
+  .mgBottom#{$i*5} {
+    margin-bottom: 5px * $i !important;
+  }
+  .mgLeft#{$i*5} {
+    margin-left: 5px * $i !important;
+  }
+  .mgRight#{$i*5} {
+    margin-right: 5px * $i !important;
+  }
+  .padTop#{$i*5} {
+    padding-top: 5px * $i !important;
+  }
+  .padBottom#{$i*5} {
+    padding-bottom: 5px * $i !important;
+  }
+  .padLeft#{$i*5} {
+    padding-left: 5px * $i !important;
+  }
+  .padRight#{$i*5} {
+    padding-right: 5px * $i !important;
+  }
+}
