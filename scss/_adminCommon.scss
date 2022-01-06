@@ -131,6 +131,13 @@ html, body {
               @include nsB;
               color: #fff;
             }
+
+            &:hover {
+
+              span {
+                color: #8C8D8D;
+              }
+            }
           }
 
           .menuListSub {
@@ -151,6 +158,13 @@ html, body {
                   @include nsB;
                   color: #fff;
                 }
+
+                &:hover {
+
+                  span {
+                    color: #8C8D8D;
+                  }
+                }
               }
             }
           }
@@ -166,14 +180,53 @@ html, body {
 
     .topContent {
 
-      .contentTitle {
-        padding-bottom: 55px;
+      .mainTitle {
+        padding-bottom: 41px;
         font-size: 28px;
         @include nsM;
       }
     }
 
     .content {
+
+    }
+  }
+
+  /* button */
+  .anBtnSmall {
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    width: 100px;
+    height: 44px;
+    border: 1px solid transparent;
+    font-size: 18px;
+    @include nsM;
+    color: #fff;
+    background-color: #141414;
+
+    &.line {
+      border: 1px solid #606060;
+    }
+
+    span {
+      display: inline-block;
+      vertical-align: top;
+      height: 42px;
+      line-height: 42px;
+    }
+  }
+
+  .anBtnMedium {
+
+    span {
+
+    }
+  }
+
+  .anBtnLarge {
+
+    span {
 
     }
   }

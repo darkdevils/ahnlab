@@ -28,7 +28,7 @@ html, body {
     height: 85px;
     border: 1px solid #fff;
     background: #000;
-    z-index: 20;
+    z-index: 30;
 
     span {
       display: block;
@@ -49,6 +49,17 @@ html, body {
     display: none;
   }
 
+  /* swiper 드래그 color */
+  .swiper {
+
+    .swiper-wrapper {
+
+      *::selection {
+        background: transparent;
+      }
+    }
+  }
+
   /* header */
   #header {
     position: fixed;
@@ -58,14 +69,10 @@ html, body {
     width: 100%;
     @include contentMinWidth($webWidthNumber);
     height: 130px;
-    z-index: 10;
+    z-index: 20;
 
     &.scroll {
       background-color: rgba(0, 0, 0, 0.8);
-    }
-
-    &.scroll.gnbOpenWeb, &.scroll.gnbOpenMobile {
-      background-color: transparent;
     }
 
     .headerIn {
@@ -112,7 +119,7 @@ html, body {
           height: 35px;
           @include imageUrl(web/icon/icon_gnbClose,png);
           background-position: center;
-          z-index: 12;
+          z-index: 22;
 
           span {
             @include blind;
@@ -142,6 +149,13 @@ html, body {
                 font-size: 24px;
                 @include nsB;
                 color: #fff;
+
+                &:hover {
+
+                  span {
+                    color: #8C8D8D;
+                  }
+                }
               }
 
               &.category {
@@ -159,7 +173,7 @@ html, body {
                   top: 0;
                   display: none;
                   background-color: rgba(0, 0, 0, 0.8);
-                  z-index: 11;
+                  z-index: 21;
 
                   .gnbItemSubIn {
                     overflow: hidden;
@@ -245,10 +259,16 @@ html, body {
                   @include imageUrl(web/icon/icon_login,png);
                   background-position: center;
 
-                  &.on {
-                    @include imageUrl(web/icon/icon_login_on,png);
-                    background-position: center;
+                  span {
+                    @include blind;
                   }
+                }
+
+                .welcome {
+                  width: 35px;
+                  height: 35px;
+                  @include imageUrl(web/icon/icon_login_on,png);
+                  background-position: center;
 
                   span {
                     @include blind;
@@ -262,7 +282,7 @@ html, body {
                   top: 0;
                   display: none;
                   background-color: rgba(0, 0, 0, 0.8);
-                  z-index: 11;
+                  z-index: 21;
 
                   .gnbItemSubIn {
                     width: 1200px;
@@ -350,7 +370,7 @@ html, body {
                   top: 0;
                   display: none;
                   background-color: rgba(0, 0, 0, 0.8);
-                  z-index: 11;
+                  z-index: 21;
 
                   .gnbItemSubIn {
                     width: 1200px;
@@ -478,7 +498,7 @@ html, body {
 
   /* container */
   #container {
-    padding-bottom: 190px;
+    padding-bottom: 180px;
 
     .topVisual {
 
@@ -587,7 +607,7 @@ html, body {
 }
 
 /* media queries */
-@media (max-width: #{780px}) {
+@media (max-width: 780px) {
   #wrap {
     @include contentMinWidth($mobileWidthNumber);
 
@@ -819,23 +839,6 @@ html, body {
                     background-position: left center;
                     background-size: 18px 16px;
 
-                    &.on {
-                      @include imageUrl(mobile/icon/icon_login_on,png);
-                      background-position: left center;
-                      background-size: 18px 16px;
-
-                      span {
-
-                        &.loginText {
-                          display: none;
-                        }
-
-                        &.welcomeText {
-                          display: block;
-                        }
-                      }
-                    }
-
                     span {
                       @include unBlind;
                       display: block;
@@ -843,10 +846,26 @@ html, body {
                       line-height: 30px;
                       font-size: 15px;
                       @include nsB;
+                    }
+                  }
 
-                      &.welcomeText {
-                        display: none;
-                      }
+                  .welcome {
+                    display: block;
+                    text-align: left;
+                    width: 100%;
+                    height: auto;
+                    padding-left: 25px;
+                    @include imageUrl(mobile/icon/icon_login_on,png);
+                    background-position: left center;
+                    background-size: 18px 16px;
+
+                    .welcomeText {
+                      @include unBlind;
+                      display: block;
+                      height: 30px;
+                      line-height: 30px;
+                      font-size: 15px;
+                      @include nsB;
                     }
                   }
 
@@ -1086,20 +1105,7 @@ html, body {
           .swiper {
 
             .swiper-button-prev, .swiper-button-next {
-              width: 10.2564vw;
-              height: 10.2564vw;
-            }
-
-            .swiper-button-prev {
-              @include imageUrl(mobile/icon/icon_topVisualArrowLeft,png);
-              background-position: center;
-              background-size: 4.6153vw 8.7179vw;
-            }
-
-            .swiper-button-next {
-              @include imageUrl(mobile/icon/icon_topVisualArrowRight,png);
-              background-position: center;
-              background-size: 4.6153vw 8.7179vw;
+              display: none;
             }
 
             .imgWeb, .imgMobile {

@@ -115,6 +115,7 @@ html, body {
   background-color: #000;
   /* lnb */
   /* container */
+  /* button */
 }
 #wrap #lnb {
   box-sizing: border-box;
@@ -216,6 +217,9 @@ html, body {
   font-family: "NotoSansCJKkrBold", sans-serif;
   color: #fff;
 }
+#wrap #lnb nav .menuList > li > a:hover span {
+  color: #8C8D8D;
+}
 #wrap #lnb nav .menuList > li .menuListSub {
   padding: 11px 0;
   border-top: 1px solid #707070;
@@ -232,14 +236,38 @@ html, body {
   font-family: "NotoSansCJKkrBold", sans-serif;
   color: #fff;
 }
+#wrap #lnb nav .menuList > li .menuListSub li a:hover span {
+  color: #8C8D8D;
+}
 #wrap #container {
   width: 1200px;
   padding: 70px 70px 100px;
 }
-#wrap #container .topContent .contentTitle {
-  padding-bottom: 55px;
+#wrap #container .topContent .mainTitle {
+  padding-bottom: 41px;
   font-size: 28px;
   font-family: "NotoSansCJKkrMedium", sans-serif;
+}
+#wrap .anBtnSmall {
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  width: 100px;
+  height: 44px;
+  border: 1px solid transparent;
+  font-size: 18px;
+  font-family: "NotoSansCJKkrMedium", sans-serif;
+  color: #fff;
+  background-color: #141414;
+}
+#wrap .anBtnSmall.line {
+  border: 1px solid #606060;
+}
+#wrap .anBtnSmall span {
+  display: inline-block;
+  vertical-align: top;
+  height: 42px;
+  line-height: 42px;
 }
 /* wrap */
 #wrap.mainLayout {
