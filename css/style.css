@@ -3169,6 +3169,7 @@ html, body {
   display: block;
 }
 #wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide a .numberWeb {
+  position: relative;
   display: block;
   width: 100%;
 }
