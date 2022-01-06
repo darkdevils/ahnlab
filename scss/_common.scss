@@ -69,7 +69,7 @@ html, body {
     width: 100%;
     @include contentMinWidth($webWidthNumber);
     height: 130px;
-    z-index: 10;
+    z-index: 20;
 
     &.scroll {
       background-color: rgba(0, 0, 0, 0.8);
@@ -269,10 +269,6 @@ html, body {
                   height: 35px;
                   @include imageUrl("web/icon/icon_login_on");
                   background-position: center;
-                  &.on {
-                    @include imageUrl("web/icon/icon_login_on");
-                    background-position: center;
-                  }
 
                   span {
                     @include blind;
@@ -854,19 +850,14 @@ html, body {
                   }
 
                   .welcome {
-                    display             : block;
-                    text-align          : left;
-                    width               : 100%;
-                    height              : auto;
-                    padding-left        : 25px;
-                    @include imageUrl("mobile/icon/icon_login_on");
-                    background-position : left center;
-                    background-size     : 18px 16px;
-
-                    &.on {
-                      @include imageUrl("mobile/icon/icon_login_on");
-                      background-position : left center;
-                      background-size     : 18px 16px;
+                    display: block;
+                    text-align: left;
+                    width: 100%;
+                    height: auto;
+                    padding-left: 25px;
+                    @include imageUrl(mobile/icon/icon_login_on,png);
+                    background-position: left center;
+                    background-size: 18px 16px;
 
                       .welcomeText {
                         @include unBlind;
@@ -1113,23 +1104,9 @@ html, body {
 
             .swiper {
 
-              .swiper-button-prev, .swiper-button-next {
-                width  : 10.2564vw;
-                height : 10.2564vw;
-              }
-
-              .swiper-button-prev {
-                @include imageUrl("mobile/icon/icon_topVisualArrowLeft");
-                background-position : center;
-                background-size     : 4.6153vw 8.7179vw;
-              }
-
-              .swiper-button-next {
-                @include imageUrl("mobile/icon/icon_topVisualArrowRight");
-                background-position : center;
-                background-size     : 4.6153vw 8.7179vw;
-                display             : none;
-              }
+            .swiper-button-prev, .swiper-button-next {
+              display: none;
+            }
 
               .imgWeb, .imgMobile {
                 background-size : 100% 100% !important;
@@ -1174,9 +1151,8 @@ html, body {
             font-size   : 10px;
           }
 
-          .adminLogin {
-            display : none;
-          }
+        .adminLogin {
+          display: none;
         }
       }
     }
