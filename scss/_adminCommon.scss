@@ -223,6 +223,7 @@ html, body {
       .contentSubTitle {
         overflow: hidden;
         margin-top: 100px;
+        border-bottom: 1px solid #D8D8D8;
 
         .alignLeft {
           float: left;
@@ -259,6 +260,242 @@ html, body {
   }
   .colorRed {
     @include colorRed;
+  }
+
+  /* selectbox */
+  .anSelect {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    height: 53px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      display: block;
+      width: 22px;
+      height: 13px;
+      margin-top: -6px;
+      @include imageUrlAdmin("icon/icon_select");
+    }
+
+    select {
+      display: block;
+      box-sizing: border-box;
+      height: 100%;
+      padding: 0 50px 0 29px;
+      border: 1px solid #7F8080;
+      outline: 0 none;
+      color: #fff;
+      font-size: 18px;
+      @include nsM;
+      background-color: #000;
+
+      border-radius:0; /* 아이폰 사파리 보더 없애기 */
+      -webkit-appearance:none; /* 화살표 없애기 for chrome*/
+      -moz-appearance:none; /* 화살표 없애기 for firefox*/
+      appearance:none /* 화살표 없애기 공통*/
+    }
+  }
+
+  /* input text */
+  .anInputText {
+    display: inline-block;
+    vertical-align: top;
+    height: 53px;
+
+    input {
+      display: block;
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      padding: 0 29px;
+      border: 1px solid #7F8080;
+      font-size: 18px;
+      @include nsM;
+      color: #fff;
+      background-color: #000;
+    }
+  }
+
+  .anInputTextSmall {
+    display: inline-block;
+    vertical-align: top;
+    width: 54px;
+    height: 34px;
+
+    input {
+      display: block;
+      text-align: center;
+      box-sizing: border-box;
+      height: 100%;
+      width: 100%;
+      border: 1px solid #707070;
+      font-size: 18px;
+      @include gtM;
+      color: #fff;
+      background-color: #3E3E3E;
+    }
+  }
+
+  /* input file */
+  .fileSearch {
+    display: inline-flex;
+    vertical-align: top;
+    width: 700px;
+    height: 53px;
+
+    .uploadName {
+      flex: 1;
+      display: block;
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      padding: 0 29px;
+      border: 1px solid #7F8080;
+      outline: 0 none;
+      font-size: 18px;
+      @include nsM;
+      color: #fff;
+      background-color: #000;
+    }
+
+    label {
+      display: inline-block;
+      text-align: center;
+      vertical-align: top;
+      box-sizing: border-box;
+      width: 120px;
+      height: 53px;
+      margin-left: 13px;
+      border: 1px solid #EA5504;
+      background-color: #141414;
+
+      span {
+        display: inline-block;
+        vertical-align: top;
+        height: 51px;
+        line-height: 51px;
+        font-size: 18px;
+        font-family: "NotoSansCJKkrMedium", sans-serif;
+        color: #fff;
+      }
+    }
+
+    input[type="file"] {
+     @include blind;
+    }
+  }
+
+  /* input checkbox */
+  .anInputCheck {
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+
+    input {
+      @include blind;
+
+      &:checked {
+
+        & + .text {
+          @include imageUrlAdmin("icon/icon_checkOn");
+          background-position: left 8px;
+
+          &.none {
+            background-position: left 0;
+          }
+        }
+      }
+    }
+
+    .text {
+      position: relative;
+      display: block;
+      min-height: 40px;
+      line-height: 40px;
+      padding-left: 33px;
+      font-size: 28px;
+      @include nsM;
+      color: #B3B3B3;
+      @include imageUrlAdmin("icon/icon_check");
+      background-position: left 8px;
+
+      &.none {
+        width: 23px;
+        height: 23px;
+        min-height: auto;
+        padding: 0;
+        background-position: left 0;
+      }
+    }
+  }
+
+  /* input radio tab */
+  .radioTab {
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: top;
+    border: 1px solid #585858;
+
+    .anInputRadio {
+      float: left;
+      display: block;
+      cursor: pointer;
+
+      & + .anInputRadio {
+        border-left: 1px solid #585858;
+      }
+
+      input {
+        @include blind;
+
+        &:checked {
+
+          & + .text {
+            background-color: $colorOrange;
+          }
+        }
+      }
+
+      .text {
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+        height: 52px;
+        line-height: 52px;
+        padding: 0 25px;
+        font-size: 19px;
+        @include nsB;
+        color: #fff;
+        background-color: #000;
+      }
+    }
+  }
+
+  /* textarea */
+  .anTextarea {
+    box-sizing: border-box;
+    height: 400px;
+    padding: 23px 34px;
+    border: 1px solid #3B3C3C;
+    background-color: #0A0A0A;
+
+    textarea {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 0 none;
+      outline: 0 none;
+      padding: 0;
+      font-size: 14px;
+      color: #fff;
+      resize: none;
+      background-color: transparent;
+    }
   }
 
   /* button */
@@ -301,6 +538,10 @@ html, body {
       font-size: 18px;
       @include nsM;
       color: #fff;
+    }
+
+    &.solid {
+      background-color: #EA5504;
     }
   }
 
@@ -430,145 +671,9 @@ html, body {
         margin-left: 5px;
       }
     }
-  }
 
-  /* selectbox */
-  .anSelect {
-    position: relative;
-    display: inline-block;
-    vertical-align: top;
-    box-sizing: border-box;
-    height: 53px;
-
-    &:after {
-      content: "";
-      position: absolute;
-      right: 16px;
-      top: 50%;
-      display: block;
-      width: 22px;
-      height: 13px;
-      margin-top: -6px;
-      @include imageUrlAdmin("icon/icon_select");
-    }
-
-    select {
-      display: block;
-      box-sizing: border-box;
-      height: 100%;
-      padding: 0 50px 0 29px;
-      border: 1px solid #fff;
-      color: #fff;
-      font-size: 18px;
-      @include nsM;
-      background-color: #000;
-
-      border-radius:0; /* 아이폰 사파리 보더 없애기 */
-      -webkit-appearance:none; /* 화살표 없애기 for chrome*/
-      -moz-appearance:none; /* 화살표 없애기 for firefox*/
-      appearance:none /* 화살표 없애기 공통*/
-    }
-  }
-
-  /* input text */
-  .anInputText {
-    height: 53px;
-
-    input {
-      display: block;
-      box-sizing: border-box;
-      height: 100%;
-      padding: 0 29px;
-      border: 1px solid #fff;
-      font-size: 18px;
-      @include nsM;
-      color: #fff;
-      background-color: #000;
-    }
-  }
-
-  /* input checkbox */
-  .anInputCheck {
-    display: inline-block;
-    vertical-align: top;
-    cursor: pointer;
-
-    input {
-      @include blind;
-
-      &:checked {
-
-        & + .text {
-          @include imageUrlAdmin("icon/icon_checkOn");
-          background-position: left 8px;
-
-          &.none {
-            background-position: left 0;
-          }
-        }
-      }
-    }
-
-    .text {
-      position: relative;
-      display: block;
-      min-height: 40px;
-      line-height: 40px;
-      padding-left: 33px;
-      font-size: 28px;
-      @include nsM;
-      @include imageUrlAdmin("icon/icon_check");
-      background-position: left 8px;
-
-      &.none {
-        width: 23px;
-        height: 23px;
-        min-height: auto;
-        padding: 0;
-        background-position: left 0;
-      }
-    }
-  }
-
-  /* radioTab */
-  .radioTab {
-    overflow: hidden;
-    display: inline-block;
-    vertical-align: top;
-    border: 1px solid #585858;
-
-    .anInputRadio {
-      float: left;
-      display: block;
-      cursor: pointer;
-
-      & + .anInputRadio {
-        border-left: 1px solid #585858;
-      }
-
-      input {
-        @include blind;
-
-        &:checked {
-
-          & + .text {
-            background-color: $colorOrange;
-          }
-        }
-      }
-
-      .text {
-        display: inline-block;
-        vertical-align: top;
-        text-align: center;
-        height: 52px;
-        line-height: 52px;
-        padding: 0 25px;
-        font-size: 19px;
-        @include nsB;
-        color: #fff;
-        background-color: #000;
-      }
+    .radioTab {
+      margin-top: 2px;
     }
   }
 
@@ -818,22 +923,304 @@ html, body {
         overflow:hidden;
         text-overflow:ellipsis;
         white-space:nowrap;
+        color: #fff;
+      }
+    }
+  }
+
+  .tableArea02 {
+    margin-top: 32px;
+
+    & + .bannerTitle {
+      border-top: 0 none;
+    }
+
+    table {
+      width: 100%;
+      table-layout: fixed;
+      border-top: 1px solid #777;
+
+      tbody {
+
+        tr {
+
+          > * {
+            box-sizing: border-box;
+            vertical-align: top;
+            text-align: left;
+            height: 82px;
+            line-height: 53px;
+            padding: 14px 18px;
+            border-bottom: 1px solid #777;
+            font-size: 18px;
+            color: #B3B3B3;
+          }
+
+          th {
+            @include nsM;
+            color: #fff;
+          }
+
+          td {
+            padding-left: 0;
+          }
+        }
+      }
+    }
+
+    .anSelect + .fileSearch {
+      margin-left: 13px;
+    }
+  }
+
+  /* list hegiht 03 */
+  .ListHeight03, .ListWidth02, .ListWidth03 {
+
+    .contextArea {
+
+      .title {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        line-height: 40px;
+        height: 80px;
+      }
+
+      .anInputCheck {
+
+        .text {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          height: 80px;
+        }
       }
     }
   }
 
   /* list hegiht 03 */
   .ListHeight03 {
+    padding-top: 44px;
 
+    ul {
+
+      &::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+      li {
+        float: left;
+        width: 383px;
+
+        &:nth-child(3n+2) {
+          margin-left: 25px;
+        }
+
+        &:nth-child(3n+3) {
+          margin-left: 26px;
+        }
+
+        .image {
+          display: block;
+          height: 518px;
+
+          img {
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .contextArea {
+          padding: 24px 0 28px;
+        }
+      }
+    }
   }
 
   /* list width 02 */
   .ListWidth02 {
+    padding-top: 96px;
 
+    ul {
+
+      &::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+      li {
+        float: left;
+        width: 540px;
+
+        &:nth-child(2n+2) {
+          margin-left: 119px;
+        }
+
+        .image {
+          display: block;
+          height: 317px;
+
+          img {
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .contextArea {
+          padding: 29px 0 60px;
+
+          .title {
+            font-size: 28px;
+            font-family: "NotoSansCJKkrMedium", sans-serif;
+            color: #B3B3B3;
+          }
+
+          &.categoryType {
+            padding-top: 12px;
+          }
+        }
+      }
+    }
+
+    .iconInsta, .iconFace, .iconNaver, .iconPressRelease, .iconProgram {
+      display: block;
+      line-height: 32px;
+      padding-left: 36px;
+      margin: 0 0 15px -1px;
+      font-size: 22px;
+    }
+
+    .iconInsta {
+      @include imageUrlAdmin("icon/icon_instagram");
+      background-position: left center;
+    }
+
+    .iconFace {
+      @include imageUrlAdmin("icon/icon_facebook");
+      background-position: left center;
+    }
+
+    .iconNaver {
+      @include imageUrlAdmin("icon/icon_naver");
+      background-position: left center;
+    }
+
+    .iconPressRelease, .iconProgram {
+      @include imageUrlAdmin("icon/icon_an");
+      background-position: left center;
+    }
   }
 
   /* list width 03 */
   .ListWidth03 {
+    padding-top: 40px;
 
+    ul {
+
+      &::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+      li {
+        float: left;
+        width: 384px;
+        margin-left: 23px;
+
+        &:nth-child(3n+1) {
+          margin-left: 0;
+        }
+
+        .image {
+          display: block;
+          height: 226px;
+
+          img {
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .contextArea {
+          padding: 18px 0 60px;
+
+          .infoArea {
+            overflow: hidden;
+
+            .alignLeft {
+              float: left;
+
+              > * + * {
+                margin-left: 12px;
+              }
+            }
+
+            .alignRight {
+              float: right;
+
+              > * + * {
+                margin-left: 12px;
+              }
+            }
+
+            .name, .date, .time, .like {
+              float: left;
+              display: block;
+              line-height: 24px;
+            }
+
+            .name {
+              font-size: 18px;
+              @include gtM;
+              color: #fff;
+            }
+
+            .date {
+              font-size: 18px;
+              @include gtM;
+              color: #B3B3B3;
+            }
+
+            .time {
+              font-size: 18px;
+              @include gtM;
+              color: #B3B3B3;
+            }
+
+            .like {
+              padding-right: 34px;
+              font-size: 18px;
+              letter-spacing: 0;
+              @include gtM;
+              color: #B3B3B3;
+              @include imageUrlAdmin("icon/icon_like01");
+              background-position: right 7px top 4px;
+            }
+          }
+
+          .title {
+            margin-top: 14px;
+            font-size: 28px;
+            font-family: "NotoSansCJKkrMedium", sans-serif;
+            color: #B3B3B3;
+          }
+
+          .anInputCheck {
+            margin-top: 14px;
+          }
+        }
+      }
+    }
   }
 }

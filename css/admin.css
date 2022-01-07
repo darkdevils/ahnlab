@@ -2068,14 +2068,17 @@ html, body {
   /* lnb */
   /* container */
   /* color */
-  /* button */
   /* selectbox */
   /* input text */
+  /* input file */
   /* input checkbox */
-  /* radioTab */
+  /* input radio tab */
+  /* textarea */
+  /* button */
   /* search area */
   /* paging */
   /* table */
+  /* list hegiht 03 */
   /* list hegiht 03 */
   /* list width 02 */
   /* list width 03 */
@@ -2240,6 +2243,7 @@ html, body {
 #wrap #container .content .contentSubTitle {
   overflow: hidden;
   margin-top: 100px;
+  border-bottom: 1px solid #D8D8D8;
 }
 #wrap #container .content .contentSubTitle .alignLeft {
   float: left;
@@ -2268,6 +2272,218 @@ html, body {
 }
 #wrap .colorRed {
   color: #E62214;
+}
+#wrap .anSelect {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  height: 53px;
+}
+#wrap .anSelect:after {
+  content: "";
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  display: block;
+  width: 22px;
+  height: 13px;
+  margin-top: -6px;
+  background: url("../admin/images/icon/icon_select.png") no-repeat;
+}
+#wrap .anSelect select {
+  display: block;
+  box-sizing: border-box;
+  height: 100%;
+  padding: 0 50px 0 29px;
+  border: 1px solid #7F8080;
+  outline: 0 none;
+  color: #fff;
+  font-size: 18px;
+  font-family: "NotoSansCJKkrMedium", sans-serif;
+  background-color: #000;
+  border-radius: 0;
+  /* 아이폰 사파리 보더 없애기 */
+  -webkit-appearance: none;
+  /* 화살표 없애기 for chrome*/
+  -moz-appearance: none;
+  /* 화살표 없애기 for firefox*/
+  appearance: none;
+}
+#wrap .anInputText {
+  display: inline-block;
+  vertical-align: top;
+  height: 53px;
+}
+#wrap .anInputText input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 0 29px;
+  border: 1px solid #7F8080;
+  font-size: 18px;
+  font-family: "NotoSansCJKkrMedium", sans-serif;
+  color: #fff;
+  background-color: #000;
+}
+#wrap .anInputTextSmall {
+  display: inline-block;
+  vertical-align: top;
+  width: 54px;
+  height: 34px;
+}
+#wrap .anInputTextSmall input {
+  display: block;
+  text-align: center;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  border: 1px solid #707070;
+  font-size: 18px;
+  font-family: "GothamMedium", sans-serif;
+  color: #fff;
+  background-color: #3E3E3E;
+}
+#wrap .fileSearch {
+  display: inline-flex;
+  vertical-align: top;
+  width: 700px;
+  height: 53px;
+}
+#wrap .fileSearch .uploadName {
+  flex: 1;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 0 29px;
+  border: 1px solid #7F8080;
+  outline: 0 none;
+  font-size: 18px;
+  font-family: "NotoSansCJKkrMedium", sans-serif;
+  color: #fff;
+  background-color: #000;
+}
+#wrap .fileSearch label {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  box-sizing: border-box;
+  width: 120px;
+  height: 53px;
+  margin-left: 13px;
+  border: 1px solid #EA5504;
+  background-color: #141414;
+}
+#wrap .fileSearch label span {
+  display: inline-block;
+  vertical-align: top;
+  height: 51px;
+  line-height: 51px;
+  font-size: 18px;
+  font-family: "NotoSansCJKkrMedium", sans-serif;
+  color: #fff;
+}
+#wrap .fileSearch input[type=file] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+#wrap .anInputCheck {
+  display: inline-block;
+  vertical-align: top;
+  cursor: pointer;
+}
+#wrap .anInputCheck input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+#wrap .anInputCheck input:checked + .text {
+  background: url("../admin/images/icon/icon_checkOn.png") no-repeat;
+  background-position: left 8px;
+}
+#wrap .anInputCheck input:checked + .text.none {
+  background-position: left 0;
+}
+#wrap .anInputCheck .text {
+  position: relative;
+  display: block;
+  min-height: 40px;
+  line-height: 40px;
+  padding-left: 33px;
+  font-size: 28px;
+  font-family: "NotoSansCJKkrMedium", sans-serif;
+  color: #B3B3B3;
+  background: url("../admin/images/icon/icon_check.png") no-repeat;
+  background-position: left 8px;
+}
+#wrap .anInputCheck .text.none {
+  width: 23px;
+  height: 23px;
+  min-height: auto;
+  padding: 0;
+  background-position: left 0;
+}
+#wrap .radioTab {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: top;
+  border: 1px solid #585858;
+}
+#wrap .radioTab .anInputRadio {
+  float: left;
+  display: block;
+  cursor: pointer;
+}
+#wrap .radioTab .anInputRadio + .anInputRadio {
+  border-left: 1px solid #585858;
+}
+#wrap .radioTab .anInputRadio input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+#wrap .radioTab .anInputRadio input:checked + .text {
+  background-color: #EA5504;
+}
+#wrap .radioTab .anInputRadio .text {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  height: 52px;
+  line-height: 52px;
+  padding: 0 25px;
+  font-size: 19px;
+  font-family: "NotoSansCJKkrBold", sans-serif;
+  color: #fff;
+  background-color: #000;
+}
+#wrap .anTextarea {
+  box-sizing: border-box;
+  height: 400px;
+  padding: 23px 34px;
+  border: 1px solid #3B3C3C;
+  background-color: #0A0A0A;
+}
+#wrap .anTextarea textarea {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0 none;
+  outline: 0 none;
+  padding: 0;
+  font-size: 14px;
+  color: #fff;
+  resize: none;
+  background-color: transparent;
 }
 #wrap .anBtnS {
   display: inline-block;
@@ -2306,6 +2522,9 @@ html, body {
   font-size: 18px;
   font-family: "NotoSansCJKkrMedium", sans-serif;
   color: #fff;
+}
+#wrap .anBtnM.solid {
+  background-color: #EA5504;
 }
 #wrap .anBtnL {
   display: inline-block;
@@ -2412,128 +2631,8 @@ html, body {
 #wrap .buttonArea .alignRight .boardBtn + .boardBtn {
   margin-left: 5px;
 }
-#wrap .anSelect {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  box-sizing: border-box;
-  height: 53px;
-}
-#wrap .anSelect:after {
-  content: "";
-  position: absolute;
-  right: 16px;
-  top: 50%;
-  display: block;
-  width: 22px;
-  height: 13px;
-  margin-top: -6px;
-  background: url("../admin/images/icon/icon_select.png") no-repeat;
-}
-#wrap .anSelect select {
-  display: block;
-  box-sizing: border-box;
-  height: 100%;
-  padding: 0 50px 0 29px;
-  border: 1px solid #fff;
-  color: #fff;
-  font-size: 18px;
-  font-family: "NotoSansCJKkrMedium", sans-serif;
-  background-color: #000;
-  border-radius: 0;
-  /* 아이폰 사파리 보더 없애기 */
-  -webkit-appearance: none;
-  /* 화살표 없애기 for chrome*/
-  -moz-appearance: none;
-  /* 화살표 없애기 for firefox*/
-  appearance: none;
-}
-#wrap .anInputText {
-  height: 53px;
-}
-#wrap .anInputText input {
-  display: block;
-  box-sizing: border-box;
-  height: 100%;
-  padding: 0 29px;
-  border: 1px solid #fff;
-  font-size: 18px;
-  font-family: "NotoSansCJKkrMedium", sans-serif;
-  color: #fff;
-  background-color: #000;
-}
-#wrap .anInputCheck {
-  display: inline-block;
-  vertical-align: top;
-  cursor: pointer;
-}
-#wrap .anInputCheck input {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-#wrap .anInputCheck input:checked + .text {
-  background: url("../admin/images/icon/icon_checkOn.png") no-repeat;
-  background-position: left 8px;
-}
-#wrap .anInputCheck input:checked + .text.none {
-  background-position: left 0;
-}
-#wrap .anInputCheck .text {
-  position: relative;
-  display: block;
-  min-height: 40px;
-  line-height: 40px;
-  padding-left: 33px;
-  font-size: 28px;
-  font-family: "NotoSansCJKkrMedium", sans-serif;
-  background: url("../admin/images/icon/icon_check.png") no-repeat;
-  background-position: left 8px;
-}
-#wrap .anInputCheck .text.none {
-  width: 23px;
-  height: 23px;
-  min-height: auto;
-  padding: 0;
-  background-position: left 0;
-}
-#wrap .radioTab {
-  overflow: hidden;
-  display: inline-block;
-  vertical-align: top;
-  border: 1px solid #585858;
-}
-#wrap .radioTab .anInputRadio {
-  float: left;
-  display: block;
-  cursor: pointer;
-}
-#wrap .radioTab .anInputRadio + .anInputRadio {
-  border-left: 1px solid #585858;
-}
-#wrap .radioTab .anInputRadio input {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-#wrap .radioTab .anInputRadio input:checked + .text {
-  background-color: #EA5504;
-}
-#wrap .radioTab .anInputRadio .text {
-  display: inline-block;
-  vertical-align: top;
-  text-align: center;
-  height: 52px;
-  line-height: 52px;
-  padding: 0 25px;
-  font-size: 19px;
-  font-family: "NotoSansCJKkrBold", sans-serif;
-  color: #fff;
-  background-color: #000;
+#wrap .buttonArea .radioTab {
+  margin-top: 2px;
 }
 #wrap .searchArea {
   display: flex;
@@ -2728,7 +2827,227 @@ html, body {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  color: #fff;
 }
+#wrap .tableArea02 {
+  margin-top: 32px;
+}
+#wrap .tableArea02 + .bannerTitle {
+  border-top: 0 none;
+}
+#wrap .tableArea02 table {
+  width: 100%;
+  table-layout: fixed;
+  border-top: 1px solid #777;
+}
+#wrap .tableArea02 table tbody tr > * {
+  box-sizing: border-box;
+  vertical-align: top;
+  text-align: left;
+  height: 82px;
+  line-height: 53px;
+  padding: 14px 18px;
+  border-bottom: 1px solid #777;
+  font-size: 18px;
+  color: #B3B3B3;
+}
+#wrap .tableArea02 table tbody tr th {
+  font-family: "NotoSansCJKkrMedium", sans-serif;
+  color: #fff;
+}
+#wrap .tableArea02 table tbody tr td {
+  padding-left: 0;
+}
+#wrap .tableArea02 .anSelect + .fileSearch {
+  margin-left: 13px;
+}
+#wrap .ListHeight03 .contextArea .title, #wrap .ListWidth02 .contextArea .title, #wrap .ListWidth03 .contextArea .title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-height: 40px;
+  height: 80px;
+}
+#wrap .ListHeight03 .contextArea .anInputCheck .text, #wrap .ListWidth02 .contextArea .anInputCheck .text, #wrap .ListWidth03 .contextArea .anInputCheck .text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  height: 80px;
+}
+#wrap .ListHeight03 {
+  padding-top: 44px;
+}
+#wrap .ListHeight03 ul::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#wrap .ListHeight03 ul li {
+  float: left;
+  width: 383px;
+}
+#wrap .ListHeight03 ul li:nth-child(3n+2) {
+  margin-left: 25px;
+}
+#wrap .ListHeight03 ul li:nth-child(3n+3) {
+  margin-left: 26px;
+}
+#wrap .ListHeight03 ul li .image {
+  display: block;
+  height: 518px;
+}
+#wrap .ListHeight03 ul li .image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#wrap .ListHeight03 ul li .contextArea {
+  padding: 24px 0 28px;
+}
+#wrap .ListWidth02 {
+  padding-top: 96px;
+}
+#wrap .ListWidth02 ul::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#wrap .ListWidth02 ul li {
+  float: left;
+  width: 540px;
+}
+#wrap .ListWidth02 ul li:nth-child(2n+2) {
+  margin-left: 119px;
+}
+#wrap .ListWidth02 ul li .image {
+  display: block;
+  height: 317px;
+}
+#wrap .ListWidth02 ul li .image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#wrap .ListWidth02 ul li .contextArea {
+  padding: 29px 0 60px;
+}
+#wrap .ListWidth02 ul li .contextArea .title {
+  font-size: 28px;
+  font-family: "NotoSansCJKkrMedium", sans-serif;
+  color: #B3B3B3;
+}
+#wrap .ListWidth02 ul li .contextArea.categoryType {
+  padding-top: 12px;
+}
+#wrap .ListWidth02 .iconInsta, #wrap .ListWidth02 .iconFace, #wrap .ListWidth02 .iconNaver, #wrap .ListWidth02 .iconPressRelease, #wrap .ListWidth02 .iconProgram {
+  display: block;
+  line-height: 32px;
+  padding-left: 36px;
+  margin: 0 0 15px -1px;
+  font-size: 22px;
+}
+#wrap .ListWidth02 .iconInsta {
+  background: url("../admin/images/icon/icon_instagram.png") no-repeat;
+  background-position: left center;
+}
+#wrap .ListWidth02 .iconFace {
+  background: url("../admin/images/icon/icon_facebook.png") no-repeat;
+  background-position: left center;
+}
+#wrap .ListWidth02 .iconNaver {
+  background: url("../admin/images/icon/icon_naver.png") no-repeat;
+  background-position: left center;
+}
+#wrap .ListWidth02 .iconPressRelease, #wrap .ListWidth02 .iconProgram {
+  background: url("../admin/images/icon/icon_an.png") no-repeat;
+  background-position: left center;
+}
+#wrap .ListWidth03 {
+  padding-top: 40px;
+}
+#wrap .ListWidth03 ul::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#wrap .ListWidth03 ul li {
+  float: left;
+  width: 384px;
+  margin-left: 23px;
+}
+#wrap .ListWidth03 ul li:nth-child(3n+1) {
+  margin-left: 0;
+}
+#wrap .ListWidth03 ul li .image {
+  display: block;
+  height: 226px;
+}
+#wrap .ListWidth03 ul li .image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#wrap .ListWidth03 ul li .contextArea {
+  padding: 18px 0 60px;
+}
+#wrap .ListWidth03 ul li .contextArea .infoArea {
+  overflow: hidden;
+}
+#wrap .ListWidth03 ul li .contextArea .infoArea .alignLeft {
+  float: left;
+}
+#wrap .ListWidth03 ul li .contextArea .infoArea .alignLeft > * + * {
+  margin-left: 12px;
+}
+#wrap .ListWidth03 ul li .contextArea .infoArea .alignRight {
+  float: right;
+}
+#wrap .ListWidth03 ul li .contextArea .infoArea .alignRight > * + * {
+  margin-left: 12px;
+}
+#wrap .ListWidth03 ul li .contextArea .infoArea .name, #wrap .ListWidth03 ul li .contextArea .infoArea .date, #wrap .ListWidth03 ul li .contextArea .infoArea .time, #wrap .ListWidth03 ul li .contextArea .infoArea .like {
+  float: left;
+  display: block;
+  line-height: 24px;
+}
+#wrap .ListWidth03 ul li .contextArea .infoArea .name {
+  font-size: 18px;
+  font-family: "GothamMedium", sans-serif;
+  color: #fff;
+}
+#wrap .ListWidth03 ul li .contextArea .infoArea .date {
+  font-size: 18px;
+  font-family: "GothamMedium", sans-serif;
+  color: #B3B3B3;
+}
+#wrap .ListWidth03 ul li .contextArea .infoArea .time {
+  font-size: 18px;
+  font-family: "GothamMedium", sans-serif;
+  color: #B3B3B3;
+}
+#wrap .ListWidth03 ul li .contextArea .infoArea .like {
+  padding-right: 34px;
+  font-size: 18px;
+  letter-spacing: 0;
+  font-family: "GothamMedium", sans-serif;
+  color: #B3B3B3;
+  background: url("../admin/images/icon/icon_like01.png") no-repeat;
+  background-position: right 7px top 4px;
+}
+#wrap .ListWidth03 ul li .contextArea .title {
+  margin-top: 14px;
+  font-size: 28px;
+  font-family: "NotoSansCJKkrMedium", sans-serif;
+  color: #B3B3B3;
+}
+#wrap .ListWidth03 ul li .contextArea .anInputCheck {
+  margin-top: 14px;
+}
+
 /* wrap */
 #wrap.mainLayout {
   min-width: auto;
@@ -2800,6 +3119,95 @@ html, body {
   font-size: 16px;
   font-family: "NotoSansCJKkrBold", sans-serif;
   color: #fff;
+}
+
+#wrap #container {
+  /* 메인배너 관리 */
+  /* 안철수는 */
+}
+#wrap #container .anMainBanner .bannerArea {
+  margin-top: 34px;
+}
+#wrap #container .anMainBanner .bannerArea .bannerTitle {
+  box-sizing: border-box;
+  height: 71px;
+  line-height: 71px;
+  padding: 0 18px;
+  border-top: 1px solid #777;
+  font-size: 20px;
+  font-family: "NotoSansCJKkrMedium", sans-serif;
+  color: #B6B6B6;
+}
+#wrap #container .anMainBanner .bannerArea .tableArea02 {
+  margin-top: 0;
+}
+#wrap #container .anMainBanner .bannerArea .imagesArea {
+  overflow: hidden;
+}
+#wrap #container .anMainBanner .bannerArea .imagesArea .webImage .title, #wrap #container .anMainBanner .bannerArea .imagesArea .mobileImage .title {
+  color: #fff;
+}
+#wrap #container .anMainBanner .bannerArea .imagesArea .webImage .image, #wrap #container .anMainBanner .bannerArea .imagesArea .mobileImage .image {
+  margin-top: 15px;
+  height: 280px;
+  border: 1px solid #464646;
+  background-color: #1F1F1F;
+}
+#wrap #container .anMainBanner .bannerArea .imagesArea .webImage .image img, #wrap #container .anMainBanner .bannerArea .imagesArea .mobileImage .image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#wrap #container .anMainBanner .bannerArea .imagesArea .webImage .imageSize, #wrap #container .anMainBanner .bannerArea .imagesArea .mobileImage .imageSize {
+  line-height: 26px;
+  margin-top: 16px;
+}
+#wrap #container .anMainBanner .bannerArea .imagesArea .webImage .imageFunction, #wrap #container .anMainBanner .bannerArea .imagesArea .mobileImage .imageFunction {
+  overflow: hidden;
+  margin: 24px 0;
+}
+#wrap #container .anMainBanner .bannerArea .imagesArea .webImage .imageFunction button, #wrap #container .anMainBanner .bannerArea .imagesArea .mobileImage .imageFunction button {
+  float: left;
+}
+#wrap #container .anMainBanner .bannerArea .imagesArea .webImage .imageFunction button + button, #wrap #container .anMainBanner .bannerArea .imagesArea .mobileImage .imageFunction button + button {
+  margin-left: 16px;
+}
+#wrap #container .anMainBanner .bannerArea .imagesArea .webImage {
+  float: left;
+  width: 674px;
+}
+#wrap #container .anMainBanner .bannerArea .imagesArea .mobileImage {
+  float: left;
+  width: 259px;
+  margin-left: 30px;
+}
+#wrap #container .anVideoContent .videoContent {
+  box-sizing: border-box;
+  width: 567px;
+  height: 320px;
+  margin-top: 17px;
+  border: 1px solid #464646;
+  background: url("../admin/images/bg/bg_video.png") no-repeat;
+  background-position: center;
+  background-color: #1F1F1F;
+}
+#wrap #container .anVideoContent .videoContent iframe {
+  display: block;
+  width: 100%;
+  height: 318px;
+}
+#wrap #container .anVideoContent .imageFunction {
+  overflow: hidden;
+  margin: 18px 0 26px;
+}
+#wrap #container .anVideoContent .imageFunction button {
+  float: left;
+}
+#wrap #container .anVideoContent .imageFunction button + button {
+  margin-left: 16px;
+}
+#wrap #container .anVideoContent .vidoeSubmit {
+  padding-left: 160px;
 }
 
 /*# sourceMappingURL=admin.css.map */
