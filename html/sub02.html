@@ -169,25 +169,33 @@
             <div class="topVisualSwiper">
                 <div class="swiper">
                     <div class="swiper-wrapper">
+                        <!-- 안철수는, 안철수의 약속, 안철수의 오늘 -->
                         <div class="swiper-slide">
-                            <div class="imgWeb" style="background: url('../images/temp/visual_sub_web.png') no-repeat center top;"></div>
-                            <div class="imgMobile" style="background: url('../images/temp/visual_sub_mobile.png') no-repeat center top;"></div>
+                            <div class="imgWeb" style="background: url('../images/web/visual/visual_sub01.png') no-repeat center top;"></div>
+                            <div class="imgMobile" style="background: url('../images/mobile/visual/visual_sub01.png') no-repeat center top;"></div>
                         </div>
+
+                        <!-- 커뮤니티, 영상, 라이브 -->
+                        <!--
                         <div class="swiper-slide">
-                            <div class="imgWeb" style="background: url('../images/temp/visual_sub_web.png') no-repeat center top;"></div>
-                            <div class="imgMobile" style="background: url('../images/temp/visual_sub_mobile.png') no-repeat center top;"></div>
+                            <div class="imgWeb" style="background: url('../images/web/visual/visual_sub02.png') no-repeat center top;"></div>
+                            <div class="imgMobile" style="background: url('../images/mobile/visual/visual_sub02.png') no-repeat center top;"></div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="imgWeb" style="background: url('../images/temp/visual_sub_web.png') no-repeat center top;"></div>
-                            <div class="imgMobile" style="background: url('../images/temp/visual_sub_mobile.png') no-repeat center top;"></div>
-                        </div>
+                        -->
                     </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
             </div>
             <script>
                 let options = {};
                 if ( $(".topVisualSwiper .swiper-slide").length == 1 ) {
-                    options = {}
+                    options = {
+                        navigation: {
+                            nextEl: ".swiper-button-next",
+                            prevEl: ".swiper-button-prev",
+                        },
+                    }
                 } else {
                     options = {
                         loop: true,
@@ -195,6 +203,10 @@
                         autoplay: {
                             delay: 3000,
                             disableOnInteraction: false,
+                        },
+                        navigation: {
+                            nextEl: ".swiper-button-next",
+                            prevEl: ".swiper-button-prev",
                         },
                     }
                 }
@@ -268,7 +280,7 @@
                 <a href="https://peopleparty.kr/">국민의당 홈페이지</a>
             </div>
             <div class="tel">
-                <a href="tel:02-022-02222">02-022-02222</a>
+                <a href="tel:02-6925-4646">02-6925-4646</a>
             </div>
             <div class="copyright">Copyright &copy; 국민의당 대통령 후보 안철수 All Rights Reserved.</div>
             <div class="adminLogin">

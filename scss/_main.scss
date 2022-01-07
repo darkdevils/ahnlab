@@ -11,6 +11,28 @@
   /* container */
   #container {
 
+    /* youtube height auto */
+    .videoHeightAuto {
+      width: auto;
+
+      .videoContent {
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 30px;
+        height: 0;
+        overflow: hidden;
+
+        iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    /* 공통 top visual 영역 */
     .topVisual {
 
       .topVisualSwiper {
@@ -20,27 +42,19 @@
       .topVisualVideo {
         text-align: center;
         box-sizing: border-box;
-        height: 800px;
-        padding-top: 192px;
+        padding: 190px 0 100px;
         @include imageUrl(web/bg/bg_topVisualVideo,png);
-        background-position: center top;
+        background-position: center center;
+        background-size: auto 100%;
 
         .title {
           display: none;
         }
 
-        .video {
+        .videoHeightAuto {
+          width: 1025px;
           display: inline-block;
           vertical-align: top;
-
-          .videoHeightAuto {
-
-            iframe {
-              vertical-align: top;
-              width: 1005px;
-              height: 556px;
-            }
-          }
         }
       }
 
@@ -119,10 +133,16 @@
           margin-top: 14px;
           padding-right: 24px;
           font-size: 30px;
-          color: #fff;
+          color: #BCBCBC;
           @include nsM;
           @include imageUrl(web/icon/icon_moreLink,png);
           background-position: right center;
+
+          &:hover {
+            color: #fff;
+            @include imageUrl(web/icon/icon_moreLink_on,png);
+            background-position: right center;
+          }
         }
       }
 
@@ -293,6 +313,42 @@
   }
 }
 
+/* mobile hover 방지 */
+@media (hover: none) {
+  #wrap.mainLayout {
+
+    /* header */
+    #header {
+
+    }
+
+    /* container */
+    #container {
+
+      .content {
+
+        .mainTitleArea {
+
+          .moreLink {
+
+            &:hover {
+              color: #BCBCBC;
+              @include imageUrl(mobile/icon/icon_moreLink,png);
+              background-position: right center;
+              background-size: 4px 6px;
+            }
+          }
+        }
+      }
+    }
+
+    /* footer */
+    #footer {
+
+    }
+  }
+}
+
 /* media queries */
 @media (min-width: 781px) and (max-width: 1199px) {
   /* wrap */
@@ -361,13 +417,13 @@
         .topVisualVideo {
           box-sizing: border-box;
           height: auto;
-          padding: 50px 6.1538vw 0;
+          padding: 50px 0 0;
           background: #000;
 
           .title {
             display: block;
             text-align: center;
-            margin-top: 5.1282vw;
+            margin: 5.1282vw 0 3.4615vw;
 
             span {
               position: relative;
@@ -401,26 +457,29 @@
             }
           }
 
-          .video {
+          .videoHeightAuto {
+            width: auto;
             display: block;
-            margin-top: 5.3846vw;
+            vertical-align: baseline;
 
-            .videoHeightAuto {
-              overflow: hidden;
-              position: relative;
-              height: 0;
-              padding-bottom: 56.25%;
+            .videoContent {
+              position: static;
+              padding-bottom: 0;
+              padding-top: 0;
+              height: auto;
+              overflow: visible;
 
               iframe {
-                position: absolute;
-                left: 0;
-                top: 0;
+                position: static;
+                top: auto;
+                left: auto;
                 width: 100%;
-                height: 100%;
+                height: 56.2vw;
+                display: block;
+                vertical-align: top;
               }
             }
           }
-
         }
 
         .topVisualVideoBg {

@@ -60,6 +60,14 @@ html, body {
     }
   }
 
+  /* color */
+  .colorOrange {
+    @include colorOrange;
+  }
+  .colorRed {
+    @include colorRed;
+  }
+
   /* header */
   #header {
     position: fixed;
@@ -97,6 +105,10 @@ html, body {
           font-size: 30px;
           @include nsB;
           color: #fff;
+
+          &:hover {
+            @include colorOrange;
+          }
         }
       }
 
@@ -151,6 +163,7 @@ html, body {
                 color: #fff;
 
                 &:hover {
+                  color: #8C8D8D;
 
                   span {
                     color: #8C8D8D;
@@ -164,6 +177,11 @@ html, body {
                   padding-left: 35px;
                   @include imageUrl("web/icon/icon_category");
                   background-position: left center;
+
+                  &:hover {
+                    @include imageUrl("web/icon/icon_category_on");
+                    background-position: left center;
+                  }
                 }
 
                 .gnbItemSub {
@@ -258,6 +276,11 @@ html, body {
                   width: 35px;
                   @include imageUrl("web/icon/icon_login");
                   background-position: center;
+
+                  &:hover {
+                    @include imageUrl("web/icon/icon_login_on");
+                    background-position: center;
+                  }
 
                   span {
                     @include blind;
@@ -358,6 +381,11 @@ html, body {
                   @include imageUrl("web/icon/icon_search");
                   background-position: center;
 
+                  &:hover {
+                    @include imageUrl("web/icon/icon_search_on");
+                    background-position: center;
+                  }
+
                   span {
                     @include blind;
                   }
@@ -402,7 +430,7 @@ html, body {
                           box-sizing: border-box;
                           width: 338px;
                           height: 54px;
-                          padding: 0;
+                          padding: 0 10px;
                           border: 0 none;
                           border-bottom: 3px solid #fff;
                           outline: none;
@@ -598,12 +626,84 @@ html, body {
   }
 }
 
-/* color */
-.colorOrange {
-  @include colorOrange;
-}
-.colorRed {
-  @include colorRed;
+/* mobile hover 방지 */
+@media (hover: none) {
+  #wrap {
+
+    /* header */
+    #header {
+
+      .headerIn {
+
+        .logoText {
+
+          a {
+
+            &:hover {
+              color: #fff;
+            }
+          }
+        }
+
+        .gnb {
+
+          nav {
+
+            .navIn {
+
+              .gnbItem {
+
+                a, button {
+
+                  &:hover {
+                    color: #fff;
+
+                    span {
+                      color: #fff;
+                    }
+                  }
+                }
+
+                &.login {
+
+                  > button {
+
+                    &:hover {
+                      @include imageUrl("mobile/icon/icon_login");
+                      background-position: left center;
+                      background-size: 18px 16px;
+                    }
+                  }
+                }
+
+                &.search {
+
+                  > button  {
+
+                    &:hover {
+                      @include imageUrl("mobile/icon/icon_search");
+                      background-position: left center;
+                      background-size: 15px 16px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    /* container */
+    #container {
+
+    }
+
+    /* footer */
+    #footer {
+
+    }
+  }
 }
 
 /* media queries */
@@ -994,6 +1094,7 @@ html, body {
                             input {
                               width         : 170px;
                               height        : 30px;
+                              padding       : 0 5px;
                               border-bottom : 2px solid #fff;
                               font-size     : 15px;
                             }

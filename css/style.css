@@ -2069,6 +2069,7 @@ html, body {
   /* page top button */
   /* swiper image */
   /* swiper 드래그 color */
+  /* color */
   /* header */
   /* container */
   /* footer */
@@ -2102,6 +2103,12 @@ html, body {
 }
 #wrap .swiper .swiper-wrapper *::selection {
   background: transparent;
+}
+#wrap .colorOrange {
+  color: #EA5504;
+}
+#wrap .colorRed {
+  color: #E62214;
 }
 #wrap #header {
   position: fixed;
@@ -2137,6 +2144,9 @@ html, body {
   font-size: 30px;
   font-family: "NotoSansCJKkrBold", sans-serif;
   color: #fff;
+}
+#wrap #header .headerIn .logoText a:hover {
+  color: #EA5504;
 }
 #wrap #header .headerIn .gnb .gnbOpenBtn {
   display: none;
@@ -2189,12 +2199,19 @@ html, body {
   font-family: "NotoSansCJKkrBold", sans-serif;
   color: #fff;
 }
+#wrap #header .headerIn .gnb nav .navIn .gnbItem a:hover, #wrap #header .headerIn .gnb nav .navIn .gnbItem button:hover {
+  color: #8C8D8D;
+}
 #wrap #header .headerIn .gnb nav .navIn .gnbItem a:hover span, #wrap #header .headerIn .gnb nav .navIn .gnbItem button:hover span {
   color: #8C8D8D;
 }
 #wrap #header .headerIn .gnb nav .navIn .gnbItem.category > button {
   padding-left: 35px;
   background: url("../images/web/icon/icon_category.png") no-repeat;
+  background-position: left center;
+}
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.category > button:hover {
+  background: url("../images/web/icon/icon_category_on.png") no-repeat;
   background-position: left center;
 }
 #wrap #header .headerIn .gnb nav .navIn .gnbItem.category .gnbItemSub {
@@ -2272,6 +2289,10 @@ html, body {
 #wrap #header .headerIn .gnb nav .navIn .gnbItem.login > button {
   width: 35px;
   background: url("../images/web/icon/icon_login.png") no-repeat;
+  background-position: center;
+}
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.login > button:hover {
+  background: url("../images/web/icon/icon_login_on.png") no-repeat;
   background-position: center;
 }
 #wrap #header .headerIn .gnb nav .navIn .gnbItem.login > button span {
@@ -2367,6 +2388,10 @@ html, body {
   background: url("../images/web/icon/icon_search.png") no-repeat;
   background-position: center;
 }
+#wrap #header .headerIn .gnb nav .navIn .gnbItem.search > button:hover {
+  background: url("../images/web/icon/icon_search_on.png") no-repeat;
+  background-position: center;
+}
 #wrap #header .headerIn .gnb nav .navIn .gnbItem.search > button span {
   position: absolute;
   width: 1px;
@@ -2409,7 +2434,7 @@ html, body {
   box-sizing: border-box;
   width: 338px;
   height: 54px;
-  padding: 0;
+  padding: 0 10px;
   border: 0 none;
   border-bottom: 3px solid #fff;
   outline: none;
@@ -2555,15 +2580,33 @@ html, body {
   color: #9F9F9F;
 }
 
-/* color */
-.colorOrange {
-  color: #EA5504;
+/* mobile hover 방지 */
+@media (hover: none) {
+  #wrap {
+    /* header */
+    /* container */
+    /* footer */
+  }
+  #wrap #header .headerIn .logoText a:hover {
+    color: #fff;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem a:hover, #wrap #header .headerIn .gnb nav .navIn .gnbItem button:hover {
+    color: #fff;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem a:hover span, #wrap #header .headerIn .gnb nav .navIn .gnbItem button:hover span {
+    color: #fff;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login > button:hover {
+    background: url("../images/mobile/icon/icon_login.png") no-repeat;
+    background-position: left center;
+    background-size: 18px 16px;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search > button:hover {
+    background: url("../images/mobile/icon/icon_search.png") no-repeat;
+    background-position: left center;
+    background-size: 15px 16px;
+  }
 }
-
-.colorRed {
-  color: #E62214;
-}
-
 /* media queries */
 @media (max-width: 780px) {
   #wrap {
@@ -2914,6 +2957,7 @@ html, body {
   #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .searchInputArea .searchInput input {
     width: 170px;
     height: 30px;
+    padding: 0 5px;
     border-bottom: 2px solid #fff;
     font-size: 15px;
   }
@@ -3033,28 +3077,45 @@ html, body {
   /* container */
   /* footer */
 }
+#wrap.mainLayout #container {
+  /* youtube height auto */
+  /* 공통 top visual 영역 */
+}
+#wrap.mainLayout #container .videoHeightAuto {
+  width: auto;
+}
+#wrap.mainLayout #container .videoHeightAuto .videoContent {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+#wrap.mainLayout #container .videoHeightAuto .videoContent iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 #wrap.mainLayout #container .topVisual .topVisualSwiper {
   height: 800px;
 }
 #wrap.mainLayout #container .topVisual .topVisualVideo {
   text-align: center;
   box-sizing: border-box;
-  height: 800px;
-  padding-top: 192px;
+  padding: 190px 0 100px;
   background: url("../images/web/bg/bg_topVisualVideo.png") no-repeat;
-  background-position: center top;
+  background-position: center center;
+  background-size: auto 100%;
 }
 #wrap.mainLayout #container .topVisual .topVisualVideo .title {
   display: none;
 }
-#wrap.mainLayout #container .topVisual .topVisualVideo .video {
+#wrap.mainLayout #container .topVisual .topVisualVideo .videoHeightAuto {
+  width: 1025px;
   display: inline-block;
   vertical-align: top;
-}
-#wrap.mainLayout #container .topVisual .topVisualVideo .video .videoHeightAuto iframe {
-  vertical-align: top;
-  width: 1005px;
-  height: 556px;
 }
 #wrap.mainLayout #container .topVisual .topVisualVideoBg {
   position: relative;
@@ -3121,9 +3182,14 @@ html, body {
   margin-top: 14px;
   padding-right: 24px;
   font-size: 30px;
-  color: #fff;
+  color: #BCBCBC;
   font-family: "NotoSansCJKkrMedium", sans-serif;
   background: url("../images/web/icon/icon_moreLink.png") no-repeat;
+  background-position: right center;
+}
+#wrap.mainLayout #container .content .mainTitleArea .moreLink:hover {
+  color: #fff;
+  background: url("../images/web/icon/icon_moreLink_on.png") no-repeat;
   background-position: right center;
 }
 #wrap.mainLayout #container .content .photoNumberArea .swiper-button-prev, #wrap.mainLayout #container .content .photoNumberArea .swiper-button-next, #wrap.mainLayout #container .content .photoWidthArea .swiper-button-prev, #wrap.mainLayout #container .content .photoWidthArea .swiper-button-next, #wrap.mainLayout #container .content .photoHeightArea .swiper-button-prev, #wrap.mainLayout #container .content .photoHeightArea .swiper-button-next {
@@ -3229,6 +3295,20 @@ html, body {
   display: block;
   width: 100%;
 }
+/* mobile hover 방지 */
+@media (hover: none) {
+  #wrap.mainLayout {
+    /* header */
+    /* container */
+    /* footer */
+  }
+  #wrap.mainLayout #container .content .mainTitleArea .moreLink:hover {
+    color: #BCBCBC;
+    background: url("../images/mobile/icon/icon_moreLink.png") no-repeat;
+    background-position: right center;
+    background-size: 4px 6px;
+  }
+}
 /* media queries */
 @media (min-width: 781px) and (max-width: 1199px) {
   /* wrap */
@@ -3262,13 +3342,13 @@ html, body {
   #wrap.mainLayout #container .topVisual .topVisualVideo {
     box-sizing: border-box;
     height: auto;
-    padding: 50px 6.1538vw 0;
+    padding: 50px 0 0;
     background: #000;
   }
   #wrap.mainLayout #container .topVisual .topVisualVideo .title {
     display: block;
     text-align: center;
-    margin-top: 5.1282vw;
+    margin: 5.1282vw 0 3.4615vw;
   }
   #wrap.mainLayout #container .topVisual .topVisualVideo .title span {
     position: relative;
@@ -3297,22 +3377,26 @@ html, body {
     font-family: "GothamBold", sans-serif;
     background-color: #E62214;
   }
-  #wrap.mainLayout #container .topVisual .topVisualVideo .video {
+  #wrap.mainLayout #container .topVisual .topVisualVideo .videoHeightAuto {
+    width: auto;
     display: block;
-    margin-top: 5.3846vw;
+    vertical-align: baseline;
   }
-  #wrap.mainLayout #container .topVisual .topVisualVideo .video .videoHeightAuto {
-    overflow: hidden;
-    position: relative;
-    height: 0;
-    padding-bottom: 56.25%;
+  #wrap.mainLayout #container .topVisual .topVisualVideo .videoHeightAuto .videoContent {
+    position: static;
+    padding-bottom: 0;
+    padding-top: 0;
+    height: auto;
+    overflow: visible;
   }
-  #wrap.mainLayout #container .topVisual .topVisualVideo .video .videoHeightAuto iframe {
-    position: absolute;
-    left: 0;
-    top: 0;
+  #wrap.mainLayout #container .topVisual .topVisualVideo .videoHeightAuto .videoContent iframe {
+    position: static;
+    top: auto;
+    left: auto;
     width: 100%;
-    height: 100%;
+    height: 56.2vw;
+    display: block;
+    vertical-align: top;
   }
   #wrap.mainLayout #container .topVisual .topVisualVideoBg {
     padding-top: 50px;
