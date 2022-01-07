@@ -189,45 +189,651 @@ html, body {
 
     .content {
 
+      .contentTitle {
+        overflow: hidden;
+
+        .alignLeft {
+          float: left;
+        }
+
+        .alignRight {
+          float: right;
+        }
+
+        .title {
+          display: inline-block;
+          vertical-align: top;
+          line-height: 49px;
+          padding-top: 9px;
+          margin-right: 24px;
+          font-size: 34px;
+          @include nsB;
+        }
+
+        .subText {
+          display: inline-block;
+          vertical-align: top;
+          line-height: 36px;
+          padding-top: 22px;
+          font-size: 25px;
+          @include nsM;
+        }
+      }
+
+      .contentSubTitle {
+        overflow: hidden;
+        margin-top: 100px;
+
+        .alignLeft {
+          float: left;
+        }
+
+        .alignRight {
+          float: right;
+        }
+
+        .title {
+          display: inline-block;
+          vertical-align: top;
+          line-height: 29px;
+          padding: 18px 0;
+          font-size: 20px;
+          @include nsM;
+        }
+
+        .totalNumber {
+          display: inline-block;
+          vertical-align: top;
+          line-height: 29px;
+          padding: 18px 0;
+          font-size: 18px;
+          @include nsM;
+        }
+      }
     }
   }
 
+  /* color */
+  .colorOrange {
+    @include colorOrange;
+  }
+  .colorRed {
+    @include colorRed;
+  }
+
   /* button */
-  .anBtnSmall {
+  .anBtnS {
     display: inline-block;
+    text-align: center;
     vertical-align: top;
     box-sizing: border-box;
     width: 100px;
     height: 44px;
-    border: 1px solid transparent;
-    font-size: 18px;
-    @include nsM;
-    color: #fff;
+    border: 1px solid #606060;
     background-color: #141414;
-
-    &.line {
-      border: 1px solid #606060;
-    }
 
     span {
       display: inline-block;
       vertical-align: top;
       height: 42px;
       line-height: 42px;
+      font-size: 18px;
+      @include nsM;
+      color: #fff;
     }
   }
 
-  .anBtnMedium {
+  .anBtnM {
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    box-sizing: border-box;
+    width: 120px;
+    height: 53px;
+    border: 1px solid $colorOrange;
+    background-color: #141414;
 
     span {
-
+      display: inline-block;
+      vertical-align: top;
+      height: 51px;
+      line-height: 51px;
+      font-size: 18px;
+      @include nsM;
+      color: #fff;
     }
   }
 
-  .anBtnLarge {
+  .anBtnL {
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    box-sizing: border-box;
+    width: 200px;
+    height: 58px;
+    border: 1px solid $colorOrange;
+    background-color: $colorOrange;
+
+    &.line {
+      border: 1px solid #fff;
+    }
 
     span {
-
+      display: inline-block;
+      vertical-align: top;
+      height: 56px;
+      line-height: 56px;
+      font-size: 20px;
+      @include nsB;
+      color: #fff;
     }
+  }
+
+  .anBtnMore {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 5px 13px 5px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      boottom: 0;
+      display: block;
+      height: 3px;
+      background-color: #fff;
+    }
+
+    span {
+      display: block;
+      height: 45px;
+      line-height: 45px;
+      font-size: 31px;
+      @include nsB;
+      color: #fff;
+    }
+  }
+
+  .anBtnModify,
+  .anBtnDelete,
+  .anBtnRegister {
+    display: inline-block;
+    vertical-align: top;
+    width: 90px;
+    height: 90px;
+    background-color: $colorOrange;
+
+    span {
+      display: inline-block;
+      vertical-align: top;
+      line-height: 25px;
+      padding-top: 45px;
+      font-size: 17px;
+      @include nsM;
+      color: #fff;
+    }
+  }
+
+  .anBtnModify {
+
+    span {
+      @include imageUrlAdmin(icon/icon_modify,png);
+      background-position: center top;
+    }
+  }
+
+  .anBtnDelete {
+
+    span {
+      @include imageUrlAdmin(icon/icon_delete,png);
+      background-position: center top;
+    }
+  }
+
+  .anBtnRegister {
+
+    span {
+      @include imageUrlAdmin(icon/icon_register,png);
+      background-position: center top;
+    }
+  }
+
+  .buttonArea {
+    overflow: hidden;
+    text-align: center;
+    margin-top: 30px;
+
+    .alignLeft {
+      float: left;
+    }
+
+    .alignCenter {
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .alignRight {
+      float: right;
+    }
+
+    .alignLeft,
+    .alignCenter,
+    .alignRight {
+
+      button, a {
+        float: left;
+      }
+
+      .boardBtn + .boardBtn {
+        margin-left: 5px;
+      }
+    }
+  }
+
+  /* selectbox */
+  .anSelect {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    height: 53px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      display: block;
+      width: 22px;
+      height: 13px;
+      margin-top: -6px;
+      @include imageUrlAdmin("icon/icon_select");
+    }
+
+    select {
+      display: block;
+      box-sizing: border-box;
+      height: 100%;
+      padding: 0 50px 0 29px;
+      border: 1px solid #fff;
+      color: #fff;
+      font-size: 18px;
+      @include nsM;
+      background-color: #000;
+
+      border-radius:0; /* 아이폰 사파리 보더 없애기 */
+      -webkit-appearance:none; /* 화살표 없애기 for chrome*/
+      -moz-appearance:none; /* 화살표 없애기 for firefox*/
+      appearance:none /* 화살표 없애기 공통*/
+    }
+  }
+
+  /* input text */
+  .anInputText {
+    height: 53px;
+
+    input {
+      display: block;
+      box-sizing: border-box;
+      height: 100%;
+      padding: 0 29px;
+      border: 1px solid #fff;
+      font-size: 18px;
+      @include nsM;
+      color: #fff;
+      background-color: #000;
+    }
+  }
+
+  /* input checkbox */
+  .anInputCheck {
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+
+    input {
+      @include blind;
+
+      &:checked {
+
+        & + .text {
+          @include imageUrlAdmin("icon/icon_checkOn");
+          background-position: left 8px;
+
+          &.none {
+            background-position: left 0;
+          }
+        }
+      }
+    }
+
+    .text {
+      position: relative;
+      display: block;
+      min-height: 40px;
+      line-height: 40px;
+      padding-left: 33px;
+      font-size: 28px;
+      @include nsM;
+      @include imageUrlAdmin("icon/icon_check");
+      background-position: left 8px;
+
+      &.none {
+        width: 23px;
+        height: 23px;
+        min-height: auto;
+        padding: 0;
+        background-position: left 0;
+      }
+    }
+  }
+
+  /* radioTab */
+  .radioTab {
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: top;
+    border: 1px solid #585858;
+
+    .anInputRadio {
+      float: left;
+      display: block;
+      cursor: pointer;
+
+      & + .anInputRadio {
+        border-left: 1px solid #585858;
+      }
+
+      input {
+        @include blind;
+
+        &:checked {
+
+          & + .text {
+            background-color: $colorOrange;
+          }
+        }
+      }
+
+      .text {
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+        height: 52px;
+        line-height: 52px;
+        padding: 0 25px;
+        font-size: 19px;
+        @include nsB;
+        color: #fff;
+        background-color: #000;
+      }
+    }
+  }
+
+  /* search area */
+  .searchArea {
+    display: flex;
+    width: 320px;
+
+    .searchTitle {
+      display: block;
+      height: 35px;
+      line-height: 35px;
+      margin-right: 16px;
+      font-size: 23px;
+      @include nsB;
+    }
+
+    .searchInput {
+      flex: 1;
+
+      input {
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        height: 35px;
+        padding: 0 10px;
+        border: 0 none;
+        border-bottom: 1px solid #fff;
+        font-size: 18px;
+        @include nsM;
+        color: #fff;
+        background-color: transparent;
+        outline: none;
+      }
+    }
+
+    .searchBtn {
+      display: block;
+      width: 32px;
+      height: 35px;
+      margin-left: 12px;
+      @include imageUrlAdmin(icon/icon_search,png);
+      background-position: right center;
+
+      span {
+        @include blind;
+      }
+    }
+  }
+
+  /* paging */
+  .paddingList {
+    overflow: hidden;
+
+    li {
+      float: left;
+
+      & + li {
+        margin-left: 13px;
+      }
+
+      &.prevBtn {
+
+        a {
+          line-height: 35px;
+          padding-left: 20px;
+          font-size: 23px;
+          @include nsM;
+          color: #fff;
+          @include imageUrlAdmin(icon/icon_pagingLeft,png);
+          background-position: left center;
+        }
+      }
+
+      &.nextBtn {
+
+        a {
+          line-height: 35px;
+          padding-right: 20px;
+          font-size: 23px;
+          @include nsM;
+          color: #fff;
+          @include imageUrlAdmin(icon/icon_pagingRight,png);
+          background-position: right center;
+        }
+      }
+
+      &.number {
+
+        a {
+          box-sizing: border-box;
+          text-align: center;
+          width: 35px;
+          line-height: 33px;
+          border: 1px solid #707070;
+          font-size: 17px;
+          @include gtB;
+          color: #666;
+        }
+
+        &.on {
+
+          a {
+            border-color: $colorOrange;
+            color: #fff;
+          }
+
+        }
+      }
+
+      a {
+        display: block;
+        height: 35px;
+      }
+    }
+  }
+
+  .pagingArea {
+    position: relative;
+    text-align: center;
+
+    .alignCenter {
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .alignRight {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  /* table */
+  .tableArea {
+    margin-top: 30px;
+
+    .tableTitle {
+      overflow: hidden;
+      padding-top: 40px;
+      margin-bottom: 20px;
+      border-top: 1px solid #D8D8D8;
+
+      .alignLeft {
+        float: left;
+
+        .title {
+          display: inline-block;
+          vertical-align: top;
+          line-height: 35px;
+          margin-right: 12px;
+          font-size: 24px;
+          @include nsB;
+        }
+
+        .subText {
+          display: inline-block;
+          vertical-align: top;
+          line-height: 26px;
+          padding-top: 9px;
+          font-size: 18px;
+          @include nsM;
+        }
+      }
+    }
+
+    table {
+      table-layout: fixed;
+      width: 100%;
+      border-top: 1px solid #D8D8D8;
+
+      thead {
+
+        tr {
+
+          > * {
+            vertical-align: middle;
+            height: 64px;
+            font-size: 18px;
+            @include nsB;
+            border-bottom: 1px solid #D8D8D8;
+            background-color: $colorOrange;
+          }
+        }
+      }
+
+      tbody {
+
+        tr {
+
+          > * {
+            text-align: center;
+            vertical-align: middle;
+            height: 50px;
+            border-bottom: 1px solid #D8D8D8;
+            font-size: 20px;
+          }
+        }
+      }
+
+      .tbAlignLeft {
+        text-align: left;
+
+        * {
+          text-align: left;
+        }
+      }
+
+      .tbAlignRight {
+        text-align: right;
+
+        * {
+          text-align: right;
+        }
+      }
+
+      .numberBox {
+        display: inline-block;
+        text-align: center;
+        box-sizing: border-box;
+        width: 54px;
+        height: 34px;
+        line-height: 32px;
+        border: 1px solid #707070;
+        font-size: 18px;
+        @include gtB;
+        background-color: #3E3E3E;
+      }
+
+      .tableDelBtn {
+        display: inline-block;
+        text-align: center;
+        box-sizing: border-box;
+        width: 66px;
+        height: 34px;
+        line-height: 32px;
+        border: 1px solid #707070;
+        font-size: 18px;
+        @include gtB;
+        color: #fff;
+        background-color: #3E3E3E;
+      }
+
+      .textEllipsis {
+        display: block;
+        padding:0 5px;
+        overflow:hidden;
+        text-overflow:ellipsis;
+        white-space:nowrap;
+      }
+    }
+  }
+
+  /* list hegiht 03 */
+  .ListHeight03 {
+
+  }
+
+  /* list width 02 */
+  .ListWidth02 {
+
+  }
+
+  /* list width 03 */
+  .ListWidth03 {
+
   }
 }

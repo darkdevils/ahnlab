@@ -110,25 +110,135 @@
             </div>
             <div class="content">
                 <!-- contentTitle -->
-                <div class="contentTitl">
+                <div class="contentTitle">
                     <div class="alignLeft">
                         <span class="title">콘텐츠관리</span>
                         <span class="subText">콘텐츠 작성 및 수정</span>
                     </div>
                     <div class="alignRight">
-                        <button type="button"><span></span></button>
+                        <button type="button" class="anBtnL line"><span>콘텐츠 작성하기</span></button>
                     </div>
                 </div>
 
                 <!-- contentSubTitle -->
                 <div class="contentSubTitle">
                     <div class="alignLeft">
-                        <span class="title"></span>
+                        <span class="title">우선순위를 지정할 콘텐츠를 선택하세요! 5개까지만 선택이 됩니다.</span>
                     </div>
                     <div class="alignRight">
-                        <span class=""><span class="colorOrange"></span></span>
+                        <span class="totalNumber">총 <span class="colorOrange">100개</span>의 콘텐츠</span>
                     </div>
                 </div>
+
+                <!-- table -->
+                <div class="tableArea">
+                    <div class="tableTitle">
+                        <div class="alignLeft">
+                            <div class="title">전시할 콘텐츠</div>
+                            <div class="subText">우선순위를 지정할 콘텐츠를 선택하세요! 5개까지만 선택이 됩니다.</div>
+                        </div>
+                    </div>
+                    <table>
+                        <colgroup>
+                            <col style="width: 10%" />
+                            <col />
+                            <col style="width: 8%" />
+                            <col style="width: 8%" />
+                            <col style="width: 8%" />
+                            <col style="width: 12%" />
+                            <col style="width: 10%" />
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>전시순서</th>
+                            <th>콘텐츠 제목</th>
+                            <th>좋아요</th>
+                            <th>조회수</th>
+                            <th>댓글수</th>
+                            <th>발행날짜</th>
+                            <th>삭제</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <span class="numberBox">01</span>
+                            </td>
+                            <td class="tbAlignLeft">
+                                <div class="textEllipsis">[안심정책] 안심하는 노후, 행복한 노후 안철수가, 행복한 노후 안철수가, 행복한 노후 안철수가</div>
+                            </td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2022.02.02</td>
+                            <td>
+                                <button type="button" class="tableDelBtn"><span>제외</span></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="numberBox">02</span>
+                            </td>
+                            <td class="tbAlignLeft">
+                                <div class="textEllipsis">[안심정책] 안심하는 노후, 행복한 노후 안철수가, 행복한 노후 안철수가, 행복한 노후 안철수가</div>
+                            </td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2022.02.02</td>
+                            <td>
+                                <button type="button" class="tableDelBtn"><span>제외</span></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="numberBox">03</span>
+                            </td>
+                            <td class="tbAlignLeft">
+                                <div class="textEllipsis">[안심정책] 안심하는 노후, 행복한 노후 안철수가, 행복한 노후 안철수가, 행복한 노후 안철수가</div>
+                            </td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2022.02.02</td>
+                            <td>
+                                <button type="button" class="tableDelBtn"><span>제외</span></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="numberBox">04</span>
+                            </td>
+                            <td class="tbAlignLeft">
+                                <div class="textEllipsis">[안심정책] 안심하는 노후, 행복한 노후 안철수가, 행복한 노후 안철수가, 행복한 노후 안철수가</div>
+                            </td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2022.02.02</td>
+                            <td>
+                                <button type="button" class="tableDelBtn"><span>제외</span></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="numberBox">05</span>
+                            </td>
+                            <td class="tbAlignLeft">
+                                <div class="textEllipsis">[안심정책] 안심하는 노후, 행복한 노후 안철수가, 행복한 노후 안철수가, 행복한 노후 안철수가</div>
+                            </td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2022.02.02</td>
+                            <td>
+                                <button type="button" class="tableDelBtn"><span>제외</span></button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <br /><br />
 
                 <!-- list hegiht 03 -->
                 <div class="ListHeight03">
@@ -148,7 +258,7 @@
                 <br /><br />
 
                 <!-- list width 02 -->
-                <div class="ListWidth03">
+                <div class="ListWidth02">
                     <ul class="alignLeft">
                         <li>
                             <a href="#">
@@ -181,126 +291,62 @@
                 </div>
                 <br /><br />
 
-                <!-- table -->
-                <div class="tableArea">
-                    <table>
-                        <colgroup>
-                            <col style="width: 10%" />
-                            <col />
-                            <col style="width: 10%" />
-                            <col style="width: 10%" />
-                            <col style="width: 10%" />
-                            <col style="width: 10%" />
-                            <col style="width: 10%" />
-                        </colgroup>
-                        <thead>
-                        <tr>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <br /><br />
-
                 <!-- selectbox -->
                 <div class="anSelect">
                     <select>
-                        <option></option>
-                        <option></option>
-                        <option></option>
+                        <option>안철수 출마선언</option>
+                        <option>안철수 출마선언</option>
+                        <option>안철수 출마선언</option>
                     </select>
                 </div>
                 <br /><br />
 
                 <!-- input text -->
                 <div class="anInputText">
-                    <input type="text" />
+                    <input type="text" placeholder="링크를 삽입하세요" />
                 </div>
                 <br /><br />
 
                 <!-- input checkbox -->
-                <label class="anInputText">
+                <label class="anInputCheck">
                     <input type="checkbox" />
-                    <span class="text"></span>
+                    <span class="text none"></span>
+                </label>
+                <br /><br />
+                <label class="anInputCheck">
+                    <input type="checkbox" />
+                    <span class="text">뽑을 사람없는 놈놈놈 대선! 시대교체 해야합니다</span>
+                </label>
+                <br /><br />
+                <label class="anInputCheck">
+                    <input type="checkbox" checked />
+                    <span class="text">뽑을 사람없는 놈놈놈 대선! 시대교체 해야합니다</span>
                 </label>
                 <br /><br />
 
                 <!-- input radio tab -->
                 <div class="radioTab">
-                    <label class="anInputText">
+                    <label class="anInputRadio">
                         <input type="radio" name="radioTab01" checked />
                         <span class="text">전체 보기</span>
                     </label>
-                    <label class="anInputText">
+                    <label class="anInputRadio">
                         <input type="radio" name="radioTab01" />
                         <span class="text">인스타그램</span>
                     </label>
-                    <label class="anInputText">
+                    <label class="anInputRadio">
                         <input type="radio" name="radioTab01" />
                         <span class="text">페이스북</span>
                     </label>
-                    <label class="anInputText">
+                    <label class="anInputRadio">
                         <input type="radio" name="radioTab01" />
                         <span class="text">블로그</span>
                     </label>
-                    <label class="anInputText">
+                    <label class="anInputRadio">
                         <input type="radio" name="radioTab01" />
                         <span class="text">보도자료</span>
                     </label>
-                    <label class="anInputText">
+                    <label class="anInputRadio">
                         <input type="radio" name="radioTab01" />
                         <span class="text">일정</span>
                     </label>
@@ -308,62 +354,68 @@
                 <br /><br />
 
                 <!-- button -->
-                <button type="button" class="anBtnSmall"><span>삭제</span></button>
-                <button type="button" class="anBtnMedium"><span>확인</span></button>
-                <button type="button" class="anBtnLarge"><span>적용하기</span></button>
-                <button type="button" class="anBtnLarge line"><span>적용하기</span></button>
+                <button type="button" class="anBtnS"><span>삭제</span></button>
+                <button type="button" class="anBtnM"><span>확인</span></button>
+                <button type="button" class="anBtnL"><span>적용하기</span></button>
+                <button type="button" class="anBtnL line"><span>콘텐츠 작성하기</span></button>
                 <br /><br />
 
-                <a href="#" class="anBtnSmall"><span>삭제</span></a>
-                <a href="#" class="anBtnMedium"><span>확인</span></a>
-                <a href="#" class="anBtnLarge"><span>적용하기</span></a>
-                <a href="#" class="anBtnLarge line"><span>적용하기</span></a>
+                <a href="#" class="anBtnS"><span>삭제</span></a>
+                <a href="#" class="anBtnM"><span>확인</span></a>
+                <a href="#" class="anBtnL"><span>적용하기</span></a>
+                <a href="#" class="anBtnL line"><span>콘텐츠 작성하기</span></a>
                 <br /><br />
 
                 <div class="buttonArea">
                     <div class="alignLeft">
                         <div class="radioTab">
-                            <label class="anInputText">
-                                <input type="radio" name="radioTab01" checked />
+                            <label class="anInputRadio">
+                                <input type="radio" name="radioTab02" checked />
                                 <span class="text">전체 보기</span>
                             </label>
-                            <label class="anInputText">
-                                <input type="radio" name="radioTab01" />
+                            <label class="anInputRadio">
+                                <input type="radio" name="radioTab02" />
                                 <span class="text">인스타그램</span>
                             </label>
-                            <label class="anInputText">
-                                <input type="radio" name="radioTab01" />
+                            <label class="anInputRadio">
+                                <input type="radio" name="radioTab02" />
                                 <span class="text">페이스북</span>
                             </label>
-                            <label class="anInputText">
-                                <input type="radio" name="radioTab01" />
+                            <label class="anInputRadio">
+                                <input type="radio" name="radioTab02" />
                                 <span class="text">블로그</span>
                             </label>
-                            <label class="anInputText">
-                                <input type="radio" name="radioTab01" />
+                            <label class="anInputRadio">
+                                <input type="radio" name="radioTab02" />
                                 <span class="text">보도자료</span>
                             </label>
-                            <label class="anInputText">
-                                <input type="radio" name="radioTab01" />
+                            <label class="anInputRadio">
+                                <input type="radio" name="radioTab02" />
                                 <span class="text">일정</span>
                             </label>
                         </div>
                     </div>
                     <div class="alignRight">
-                        <button type="button" class="anBtnLarge line"><span>콘텐츠 작성하기</span></button>
+                        <button type="button" class="anBtnL line"><span>콘텐츠 작성하기</span></button>
                     </div>
                 </div>
                 <br /><br />
 
                 <div class="buttonArea">
                     <div class="alignLeft">
-                        <button type="button" class="anBtnLarge"><span>적용하기</span></button>
+                        <button type="button" class="anBtnL"><span>적용하기</span></button>
                     </div>
+                </div>
+
+                <div class="buttonArea">
                     <div class="alignCenter">
-                        <button type="button" class="anBtnLarge"><span>적용하기</span></button>
+                        <button type="button" class="anBtnL"><span>적용하기</span></button>
                     </div>
+                </div>
+
+                <div class="buttonArea">
                     <div class="alignRight">
-                        <button type="button" class="anBtnLarge"><span>적용하기</span></button>
+                        <button type="button" class="anBtnL"><span>적용하기</span></button>
                     </div>
                 </div>
                 <br /><br />
@@ -375,11 +427,12 @@
                 </div>
                 <br /><br />
 
+                <!-- 게시판 쓰기, 수정 버튼 -->
                 <div class="buttonArea">
                     <div class="alignRight">
-                        <button type="button" class="anBtnModify"><span>수정하기</span></button>
-                        <button type="button" class="anBtnDelete"><span>삭제하기</span></button>
-                        <button type="button" class="anBtnRegister"><span>발행하기</span></button>
+                        <button type="button" class="anBtnModify boardBtn"><span>수정하기</span></button>
+                        <button type="button" class="anBtnDelete boardBtn"><span>삭제하기</span></button>
+                        <button type="button" class="anBtnRegister boardBtn"><span>발행하기</span></button>
                     </div>
                 </div>
                 <br /><br />
@@ -387,7 +440,7 @@
                 <!-- paging -->
                 <div class="pagingArea">
                     <div class="alignCenter">
-                        <ul>
+                        <ul class="paddingList">
                             <li class="prevBtn"><a href="#"><span>이전</span></a></li>
                             <li class="number on"><a href="#">1</a></li>
                             <li class="number"><a href="#">2</a></li>
@@ -399,10 +452,8 @@
                     </div>
                     <div class="alignRight">
                         <div class="searchArea">
-                            <div class="searcTitle">
-                                <span>검색</span>
-                            </div>
-                            <div class="searcInput">
+                            <div class="searchTitle">검색</div>
+                            <div class="searchInput">
                                 <input type="text" />
                             </div>
                             <button type="button" class="searchBtn">

@@ -32,7 +32,6 @@
         .video {
           display: inline-block;
           vertical-align: top;
-          border: 10px solid #3B3A3A;
 
           .videoHeightAuto {
 
@@ -43,11 +42,6 @@
             }
           }
         }
-
-        .context {
-          display: none;
-        }
-
       }
 
       .topVisualVideoBg {
@@ -107,7 +101,7 @@
 
       .mainTitleArea {
         overflow: hidden;
-        padding: 0 100px 17px 100px;
+        padding: 45px 100px 20px 100px;
 
         .title {
           float: left;
@@ -115,6 +109,7 @@
           line-height: 58px;
           font-size: 40px;
           @include nsB;
+          letter-spacing: normal;
         }
 
         .moreLink {
@@ -158,11 +153,6 @@
       }
 
       .photoNumberArea {
-        margin-top: 37px;
-
-        .mainTitleArea {
-          padding-bottom: 70px;
-        }
 
         .swiperArea {
           overflow: hidden;
@@ -210,11 +200,6 @@
       }
 
       .photoWidthArea {
-        margin-top: 57px;
-
-        .mainTitleArea {
-          padding-top: 42px;
-        }
 
         .swiperArea {
           overflow: hidden;
@@ -272,11 +257,6 @@
       }
 
       .photoHeightArea {
-        margin-top: 60px;
-
-        .mainTitleArea {
-          padding-top: 76px;
-        }
 
         .swiperArea {
           overflow: hidden;
@@ -380,7 +360,7 @@
 
         .topVisualVideo {
           box-sizing: border-box;
-          height: 108.9743vw;
+          height: auto;
           padding: 50px 6.1538vw 0;
           background: #000;
 
@@ -424,7 +404,6 @@
           .video {
             display: block;
             margin-top: 5.3846vw;
-            border: 5px solid #3B3A3A;
 
             .videoHeightAuto {
               overflow: hidden;
@@ -439,26 +418,6 @@
                 width: 100%;
                 height: 100%;
               }
-            }
-          }
-
-          .context {
-            display: block;
-            margin-top: 4.3589vw;
-
-            .textLarge {
-              text-align: center;
-              line-height: 12vw;
-              font-size: 7.3vw;
-              @include nsBk;
-            }
-
-            .textSamll {
-              text-align: center;
-              line-height: 4.3589vw;
-              margin-top: 0.5128vw;
-              font-size: 2.9487vw;
-              @include nsBk;
             }
           }
 
@@ -491,7 +450,7 @@
 
         .mainTitleArea {
           overflow: hidden;
-          padding: 0 3.2051vw 5px 3.2051vw;
+          padding: 5vw 3.2051vw 1.6666vw 3.2051vw;
 
           .title {
             line-height: 22px;
@@ -517,11 +476,6 @@
         }
 
         .photoNumberArea {
-          margin-top: 15px;
-
-          .mainTitleArea {
-            padding-bottom: 15px;
-          }
 
           .swiperArea {
             padding: 0 3.2051vw;
@@ -563,11 +517,6 @@
         }
 
         .photoWidthArea {
-          margin-top: 18px;
-
-          .mainTitleArea {
-            padding-top: 18px;
-          }
 
           .swiperArea {
             padding: 0 3.2051vw;
@@ -591,11 +540,6 @@
         }
 
         .photoHeightArea {
-          margin-top: 15px;
-
-          .mainTitleArea {
-            padding-top: 15px;
-          }
 
           .swiperArea {
             padding: 0 3.2051vw;

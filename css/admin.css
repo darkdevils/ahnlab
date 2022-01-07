@@ -2067,7 +2067,18 @@ html, body {
   background-color: #000;
   /* lnb */
   /* container */
+  /* color */
   /* button */
+  /* selectbox */
+  /* input text */
+  /* input checkbox */
+  /* radioTab */
+  /* search area */
+  /* paging */
+  /* table */
+  /* list hegiht 03 */
+  /* list width 02 */
+  /* list width 03 */
 }
 #wrap #lnb {
   box-sizing: border-box;
@@ -2200,26 +2211,523 @@ html, body {
   font-size: 28px;
   font-family: "NotoSansCJKkrMedium", sans-serif;
 }
-#wrap .anBtnSmall {
+#wrap #container .content .contentTitle {
+  overflow: hidden;
+}
+#wrap #container .content .contentTitle .alignLeft {
+  float: left;
+}
+#wrap #container .content .contentTitle .alignRight {
+  float: right;
+}
+#wrap #container .content .contentTitle .title {
   display: inline-block;
+  vertical-align: top;
+  line-height: 49px;
+  padding-top: 9px;
+  margin-right: 24px;
+  font-size: 34px;
+  font-family: "NotoSansCJKkrBold", sans-serif;
+}
+#wrap #container .content .contentTitle .subText {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 36px;
+  padding-top: 22px;
+  font-size: 25px;
+  font-family: "NotoSansCJKkrMedium", sans-serif;
+}
+#wrap #container .content .contentSubTitle {
+  overflow: hidden;
+  margin-top: 100px;
+}
+#wrap #container .content .contentSubTitle .alignLeft {
+  float: left;
+}
+#wrap #container .content .contentSubTitle .alignRight {
+  float: right;
+}
+#wrap #container .content .contentSubTitle .title {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 29px;
+  padding: 18px 0;
+  font-size: 20px;
+  font-family: "NotoSansCJKkrMedium", sans-serif;
+}
+#wrap #container .content .contentSubTitle .totalNumber {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 29px;
+  padding: 18px 0;
+  font-size: 18px;
+  font-family: "NotoSansCJKkrMedium", sans-serif;
+}
+#wrap .colorOrange {
+  color: #EA5504;
+}
+#wrap .colorRed {
+  color: #E62214;
+}
+#wrap .anBtnS {
+  display: inline-block;
+  text-align: center;
   vertical-align: top;
   box-sizing: border-box;
   width: 100px;
   height: 44px;
-  border: 1px solid transparent;
-  font-size: 18px;
-  font-family: "NotoSansCJKkrMedium", sans-serif;
-  color: #fff;
+  border: 1px solid #606060;
   background-color: #141414;
 }
-#wrap .anBtnSmall.line {
-  border: 1px solid #606060;
-}
-#wrap .anBtnSmall span {
+#wrap .anBtnS span {
   display: inline-block;
   vertical-align: top;
   height: 42px;
   line-height: 42px;
+  font-size: 18px;
+  font-family: "NotoSansCJKkrMedium", sans-serif;
+  color: #fff;
+}
+#wrap .anBtnM {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  box-sizing: border-box;
+  width: 120px;
+  height: 53px;
+  border: 1px solid #EA5504;
+  background-color: #141414;
+}
+#wrap .anBtnM span {
+  display: inline-block;
+  vertical-align: top;
+  height: 51px;
+  line-height: 51px;
+  font-size: 18px;
+  font-family: "NotoSansCJKkrMedium", sans-serif;
+  color: #fff;
+}
+#wrap .anBtnL {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  box-sizing: border-box;
+  width: 200px;
+  height: 58px;
+  border: 1px solid #EA5504;
+  background-color: #EA5504;
+}
+#wrap .anBtnL.line {
+  border: 1px solid #fff;
+}
+#wrap .anBtnL span {
+  display: inline-block;
+  vertical-align: top;
+  height: 56px;
+  line-height: 56px;
+  font-size: 20px;
+  font-family: "NotoSansCJKkrBold", sans-serif;
+  color: #fff;
+}
+#wrap .anBtnMore {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 5px 13px 5px;
+}
+#wrap .anBtnMore::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  boottom: 0;
+  display: block;
+  height: 3px;
+  background-color: #fff;
+}
+#wrap .anBtnMore span {
+  display: block;
+  height: 45px;
+  line-height: 45px;
+  font-size: 31px;
+  font-family: "NotoSansCJKkrBold", sans-serif;
+  color: #fff;
+}
+#wrap .anBtnModify,
+#wrap .anBtnDelete,
+#wrap .anBtnRegister {
+  display: inline-block;
+  vertical-align: top;
+  width: 90px;
+  height: 90px;
+  background-color: #EA5504;
+}
+#wrap .anBtnModify span,
+#wrap .anBtnDelete span,
+#wrap .anBtnRegister span {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 25px;
+  padding-top: 45px;
+  font-size: 17px;
+  font-family: "NotoSansCJKkrMedium", sans-serif;
+  color: #fff;
+}
+#wrap .anBtnModify span {
+  background: url("../admin/images/icon/icon_modify.png") no-repeat;
+  background-position: center top;
+}
+#wrap .anBtnDelete span {
+  background: url("../admin/images/icon/icon_delete.png") no-repeat;
+  background-position: center top;
+}
+#wrap .anBtnRegister span {
+  background: url("../admin/images/icon/icon_register.png") no-repeat;
+  background-position: center top;
+}
+#wrap .buttonArea {
+  overflow: hidden;
+  text-align: center;
+  margin-top: 30px;
+}
+#wrap .buttonArea .alignLeft {
+  float: left;
+}
+#wrap .buttonArea .alignCenter {
+  display: inline-block;
+  vertical-align: top;
+}
+#wrap .buttonArea .alignRight {
+  float: right;
+}
+#wrap .buttonArea .alignLeft button, #wrap .buttonArea .alignLeft a,
+#wrap .buttonArea .alignCenter button,
+#wrap .buttonArea .alignCenter a,
+#wrap .buttonArea .alignRight button,
+#wrap .buttonArea .alignRight a {
+  float: left;
+}
+#wrap .buttonArea .alignLeft .boardBtn + .boardBtn,
+#wrap .buttonArea .alignCenter .boardBtn + .boardBtn,
+#wrap .buttonArea .alignRight .boardBtn + .boardBtn {
+  margin-left: 5px;
+}
+#wrap .anSelect {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  height: 53px;
+}
+#wrap .anSelect:after {
+  content: "";
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  display: block;
+  width: 22px;
+  height: 13px;
+  margin-top: -6px;
+  background: url("../admin/images/icon/icon_select.png") no-repeat;
+}
+#wrap .anSelect select {
+  display: block;
+  box-sizing: border-box;
+  height: 100%;
+  padding: 0 50px 0 29px;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 18px;
+  font-family: "NotoSansCJKkrMedium", sans-serif;
+  background-color: #000;
+  border-radius: 0;
+  /* 아이폰 사파리 보더 없애기 */
+  -webkit-appearance: none;
+  /* 화살표 없애기 for chrome*/
+  -moz-appearance: none;
+  /* 화살표 없애기 for firefox*/
+  appearance: none;
+}
+#wrap .anInputText {
+  height: 53px;
+}
+#wrap .anInputText input {
+  display: block;
+  box-sizing: border-box;
+  height: 100%;
+  padding: 0 29px;
+  border: 1px solid #fff;
+  font-size: 18px;
+  font-family: "NotoSansCJKkrMedium", sans-serif;
+  color: #fff;
+  background-color: #000;
+}
+#wrap .anInputCheck {
+  display: inline-block;
+  vertical-align: top;
+  cursor: pointer;
+}
+#wrap .anInputCheck input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+#wrap .anInputCheck input:checked + .text {
+  background: url("../admin/images/icon/icon_checkOn.png") no-repeat;
+  background-position: left 8px;
+}
+#wrap .anInputCheck input:checked + .text.none {
+  background-position: left 0;
+}
+#wrap .anInputCheck .text {
+  position: relative;
+  display: block;
+  min-height: 40px;
+  line-height: 40px;
+  padding-left: 33px;
+  font-size: 28px;
+  font-family: "NotoSansCJKkrMedium", sans-serif;
+  background: url("../admin/images/icon/icon_check.png") no-repeat;
+  background-position: left 8px;
+}
+#wrap .anInputCheck .text.none {
+  width: 23px;
+  height: 23px;
+  min-height: auto;
+  padding: 0;
+  background-position: left 0;
+}
+#wrap .radioTab {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: top;
+  border: 1px solid #585858;
+}
+#wrap .radioTab .anInputRadio {
+  float: left;
+  display: block;
+  cursor: pointer;
+}
+#wrap .radioTab .anInputRadio + .anInputRadio {
+  border-left: 1px solid #585858;
+}
+#wrap .radioTab .anInputRadio input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+#wrap .radioTab .anInputRadio input:checked + .text {
+  background-color: #EA5504;
+}
+#wrap .radioTab .anInputRadio .text {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  height: 52px;
+  line-height: 52px;
+  padding: 0 25px;
+  font-size: 19px;
+  font-family: "NotoSansCJKkrBold", sans-serif;
+  color: #fff;
+  background-color: #000;
+}
+#wrap .searchArea {
+  display: flex;
+  width: 320px;
+}
+#wrap .searchArea .searchTitle {
+  display: block;
+  height: 35px;
+  line-height: 35px;
+  margin-right: 16px;
+  font-size: 23px;
+  font-family: "NotoSansCJKkrBold", sans-serif;
+}
+#wrap .searchArea .searchInput {
+  flex: 1;
+}
+#wrap .searchArea .searchInput input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 35px;
+  padding: 0 10px;
+  border: 0 none;
+  border-bottom: 1px solid #fff;
+  font-size: 18px;
+  font-family: "NotoSansCJKkrMedium", sans-serif;
+  color: #fff;
+  background-color: transparent;
+  outline: none;
+}
+#wrap .searchArea .searchBtn {
+  display: block;
+  width: 32px;
+  height: 35px;
+  margin-left: 12px;
+  background: url("../admin/images/icon/icon_search.png") no-repeat;
+  background-position: right center;
+}
+#wrap .searchArea .searchBtn span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+#wrap .paddingList {
+  overflow: hidden;
+}
+#wrap .paddingList li {
+  float: left;
+}
+#wrap .paddingList li + li {
+  margin-left: 13px;
+}
+#wrap .paddingList li.prevBtn a {
+  line-height: 35px;
+  padding-left: 20px;
+  font-size: 23px;
+  font-family: "NotoSansCJKkrMedium", sans-serif;
+  color: #fff;
+  background: url("../admin/images/icon/icon_pagingLeft.png") no-repeat;
+  background-position: left center;
+}
+#wrap .paddingList li.nextBtn a {
+  line-height: 35px;
+  padding-right: 20px;
+  font-size: 23px;
+  font-family: "NotoSansCJKkrMedium", sans-serif;
+  color: #fff;
+  background: url("../admin/images/icon/icon_pagingRight.png") no-repeat;
+  background-position: right center;
+}
+#wrap .paddingList li.number a {
+  box-sizing: border-box;
+  text-align: center;
+  width: 35px;
+  line-height: 33px;
+  border: 1px solid #707070;
+  font-size: 17px;
+  font-family: "GothamBold", sans-serif;
+  color: #666;
+}
+#wrap .paddingList li.number.on a {
+  border-color: #EA5504;
+  color: #fff;
+}
+#wrap .paddingList li a {
+  display: block;
+  height: 35px;
+}
+#wrap .pagingArea {
+  position: relative;
+  text-align: center;
+}
+#wrap .pagingArea .alignCenter {
+  display: inline-block;
+  vertical-align: top;
+}
+#wrap .pagingArea .alignRight {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+#wrap .tableArea {
+  margin-top: 30px;
+}
+#wrap .tableArea .tableTitle {
+  overflow: hidden;
+  padding-top: 40px;
+  margin-bottom: 20px;
+  border-top: 1px solid #D8D8D8;
+}
+#wrap .tableArea .tableTitle .alignLeft {
+  float: left;
+}
+#wrap .tableArea .tableTitle .alignLeft .title {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 35px;
+  margin-right: 12px;
+  font-size: 24px;
+  font-family: "NotoSansCJKkrBold", sans-serif;
+}
+#wrap .tableArea .tableTitle .alignLeft .subText {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 26px;
+  padding-top: 9px;
+  font-size: 18px;
+  font-family: "NotoSansCJKkrMedium", sans-serif;
+}
+#wrap .tableArea table {
+  table-layout: fixed;
+  width: 100%;
+  border-top: 1px solid #D8D8D8;
+}
+#wrap .tableArea table thead tr > * {
+  vertical-align: middle;
+  height: 64px;
+  font-size: 18px;
+  font-family: "NotoSansCJKkrBold", sans-serif;
+  border-bottom: 1px solid #D8D8D8;
+  background-color: #EA5504;
+}
+#wrap .tableArea table tbody tr > * {
+  text-align: center;
+  vertical-align: middle;
+  height: 50px;
+  border-bottom: 1px solid #D8D8D8;
+  font-size: 20px;
+}
+#wrap .tableArea table .tbAlignLeft {
+  text-align: left;
+}
+#wrap .tableArea table .tbAlignLeft * {
+  text-align: left;
+}
+#wrap .tableArea table .tbAlignRight {
+  text-align: right;
+}
+#wrap .tableArea table .tbAlignRight * {
+  text-align: right;
+}
+#wrap .tableArea table .numberBox {
+  display: inline-block;
+  text-align: center;
+  box-sizing: border-box;
+  width: 54px;
+  height: 34px;
+  line-height: 32px;
+  border: 1px solid #707070;
+  font-size: 18px;
+  font-family: "GothamBold", sans-serif;
+  background-color: #3E3E3E;
+}
+#wrap .tableArea table .tableDelBtn {
+  display: inline-block;
+  text-align: center;
+  box-sizing: border-box;
+  width: 66px;
+  height: 34px;
+  line-height: 32px;
+  border: 1px solid #707070;
+  font-size: 18px;
+  font-family: "GothamBold", sans-serif;
+  color: #fff;
+  background-color: #3E3E3E;
+}
+#wrap .tableArea table .textEllipsis {
+  display: block;
+  padding: 0 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 /* wrap */
 #wrap.mainLayout {
