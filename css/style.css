@@ -3543,19 +3543,19 @@ h2.title span {
 }
 
 /* 안철수의 약속 */
-.promiseAhn__list ul {
+.listWrap__list ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.promiseAhn__list ul li {
+.listWrap__list ul li {
   position: relative;
   width: 540px;
 }
-.promiseAhn__list ul li:nth-child(even) {
+.listWrap__list ul li:nth-child(even) {
   margin-top: 54px;
 }
-.promiseAhn__list ul li .btnLike {
+.listWrap__list ul li .btnLike {
   position: absolute;
   right: 12px;
   top: 12px;
@@ -3567,45 +3567,85 @@ h2.title span {
   padding: 10px;
   z-index: 2;
 }
-.promiseAhn__list ul li .btnLike.on {
+.listWrap__list ul li .btnLike.on {
   background: url("../images/web/icon/icon_like_on.png") no-repeat;
   background-position: center;
   background-size: 27px 25px;
 }
-.promiseAhn__list ul li a {
+.listWrap__list ul li a {
   display: block;
   position: relative;
   z-index: 0;
 }
-.promiseAhn__list ul li a img {
+.listWrap__list ul li a img {
   position: relative;
   width: 540px;
   height: 317px;
 }
-.promiseAhn__list ul li a img.mobile {
+.listWrap__list ul li a img.mobile {
   display: none;
 }
-.promiseAhn__list ul li span {
+.listWrap__list ul li .txt {
   display: block;
   margin-top: 29px;
   font-size: 28px;
   line-height: 48px;
+  padding: 0 5px;
   color: #fff;
   opacity: 0.7;
 }
-.promiseAhn .btnMore {
+.listWrap__list ul li .sns {
+  position: relative;
+  display: block;
+  padding: 12px 5px 0 41px;
+  font-size: 22px;
+  font-family: "NotoSansCJKkrRegular", sans-serif;
+  color: #fff;
+}
+.listWrap__list ul li .sns + .txt {
+  margin-top: 10px;
+}
+.listWrap__list ul li .sns:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 31px;
+  height: 31px;
+}
+.listWrap__list ul li .sns-naver:after {
+  background: url("../images/web/icon/icon_naver.png") no-repeat;
+  background-size: contain;
+}
+.listWrap__list ul li .sns-facebook:after {
+  background: url("../images/web/icon/icon_facebook.png") no-repeat;
+  background-size: contain;
+}
+.listWrap__list ul li .sns-instagram:after {
+  background: url("../images/web/icon/icon_instagram.png") no-repeat;
+  background-size: contain;
+}
+.listWrap__list ul li .sns-ahn:after {
+  background: url("../images/web/icon/icon_ahn.png") no-repeat;
+  background-size: contain;
+}
+.listWrap__list ul li .sns-media:after {
+  background: url("../images/web/icon/icon_media.png") no-repeat;
+  background-size: contain;
+}
+.listWrap .btnMore {
   margin-top: 100px;
   text-align: center;
 }
-.promiseAhn .btnMore button {
+.listWrap .btnMore button {
   position: relative;
 }
-.promiseAhn .btnMore button span {
+.listWrap .btnMore button span {
   color: #fff;
   font-size: 31px;
   font-family: "NotoSansCJKkrBold", sans-serif;
 }
-.promiseAhn .btnMore button:after {
+.listWrap .btnMore button:after {
   content: "";
   position: absolute;
   left: 0;
@@ -3633,7 +3673,7 @@ h2.title span {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 17px 0 50px;
+  padding: 17px 0 0;
   color: #b3b3b3;
 }
 .detailWrap .justifyWrap__left .writeTitle {
@@ -3676,20 +3716,19 @@ h2.title span {
   border-bottom: 1px solid #333;
 }
 .detailWrap .visualImage {
-  margin: 0 0 60px;
+  margin: 45px 0 0;
 }
-.detailWrap .textWrap .bigText {
-  font-size: 40px;
-  line-height: 57px;
-  font-family: "NotoSansCJKkrMedium", sans-serif;
-}
-.detailWrap .textWrap dl, .detailWrap .textWrap ol, .detailWrap .textWrap ul, .detailWrap .textWrap li, .detailWrap .textWrap span {
+.detailWrap .text {
   display: block;
+  margin: 60px 0 0;
   font-size: 22px;
   color: #6a6a6a;
   line-height: 32px;
 }
 
+.paginationWrap {
+  margin-top: 120px;
+}
 .paginationWrap h3.title {
   font-size: 30px;
   font-family: "NotoSansCJKkrBold", sans-serif;
@@ -3761,6 +3800,60 @@ h2.title span {
   transform: rotate(-135deg);
 }
 
+/* 안철수의 오늘 */
+.tabWrap {
+  margin-bottom: 50px;
+}
+.tabWrap ul {
+  display: flex;
+}
+.tabWrap ul li {
+  width: 120px;
+  height: 54px;
+  line-height: 54px;
+  border: 1px solid #585858;
+  box-sizing: border-box;
+  text-align: center;
+}
+.tabWrap ul li + li {
+  margin-left: -1px;
+}
+.tabWrap ul li a {
+  font-size: 19px;
+  font-family: "NotoSansCJKkrBold", sans-serif;
+  color: #fff;
+}
+.tabWrap ul li.on {
+  background-color: #EA5517;
+}
+
+/* 커뮤니티 */
+.community__list ul {
+  display: flex;
+  flex-flow: wrap;
+}
+.community__list ul li {
+  width: 384px;
+}
+.community__list ul li .justifyWrap {
+  display: flex;
+  justify-content: space-between;
+  color: #b3b3b3;
+}
+.community__list ul li .justifyWrap__left {
+  font-size: 18px;
+}
+.community__list ul li .justifyWrap__left .name {
+  margin-right: 12px;
+}
+.community__list ul li .justifyWrap__left .date {
+  font-family: "GothamMedium", sans-serif;
+}
+.community__list ul li .justifyWrap__right {
+  font-size: 18px;
+  font-family: "GothamMedium", sans-serif;
+}
+
 @media (max-width: 780px) {
   h2.title {
     padding-top: 35px;
@@ -3826,57 +3919,87 @@ h2.title span {
   }
 
   /* 안철수의 약속 */
-  .promiseAhn__list {
+  .listWrap__list {
     padding-left: 24px;
     padding-right: 24px;
   }
-  .promiseAhn__list ul {
+  .listWrap__list ul {
     display: block;
   }
-  .promiseAhn__list ul li {
+  .listWrap__list ul li {
     position: relative;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 30px;
   }
-  .promiseAhn__list ul li:nth-child(even) {
-    margin-top: 20px;
+  .listWrap__list ul li:nth-child(even) {
+    margin-top: 30px;
   }
-  .promiseAhn__list ul li a img {
-    display: none;
+  .listWrap__list ul li a img {
     width: 100%;
     height: 100%;
   }
-  .promiseAhn__list ul li a img.mobile {
-    display: block;
-  }
-  .promiseAhn__list ul li a span {
+  .listWrap__list ul li a span {
     font-size: 20px;
     opacity: 1;
-    margin-top: 20px;
+    margin-top: 13px;
     line-height: 24px;
   }
-  .promiseAhn__list ul li .btnLike {
+  .listWrap__list ul li .btnLike {
     width: 31px;
     height: 29px;
-    top: 5px;
-    right: 5px;
+    top: 2.7%;
+    right: 2.5%;
     background-position: center;
     background-size: 15.5px 14.5px;
   }
-  .promiseAhn__list ul li .btnLike.on {
+  .listWrap__list ul li .btnLike.on {
     width: 31px;
     height: 29px;
     background-position: center;
     background-size: 15.5px 14.5px;
+  }
+  .listWrap__list ul li .sns {
+    padding: 0 0 0 23px;
+    font-size: 12px;
+  }
+  .listWrap__list ul li .sns + .txt {
+    margin-top: 15px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .listWrap__list ul li .sns:after {
+    top: 3px;
+    width: 18px;
+    height: 18px;
+  }
+  .listWrap__list ul li .sns-naver:after {
+    background: url("../images/mobile/icon/icon_naver.png") no-repeat;
+    background-size: contain;
+  }
+  .listWrap__list ul li .sns-facebook:after {
+    background: url("../images/mobile/icon/icon_facebook.png") no-repeat;
+    background-size: contain;
+  }
+  .listWrap__list ul li .sns-instagram:after {
+    background: url("../images/mobile/icon/icon_instagram.png") no-repeat;
+    background-size: contain;
+  }
+  .listWrap__list ul li .sns-ahn:after {
+    background: url("../images/mobile/icon/icon_ahn.png") no-repeat;
+    background-size: contain;
+  }
+  .listWrap__list ul li .sns-media:after {
+    background: url("../images/mobile/icon/icon_media.png") no-repeat;
+    background-size: contain;
   }
 
-  .promiseAhn .btnMore {
+  .listWrap .btnMore {
     margin-top: 20px;
   }
-  .promiseAhn .btnMore button span {
+  .listWrap .btnMore button span {
     font-size: 17.5px;
   }
-  .promiseAhn .btnMore button:after {
+  .listWrap .btnMore button:after {
     height: 2px;
   }
 
@@ -3896,7 +4019,7 @@ h2.title span {
     line-height: 48px;
   }
   .detailWrap .justifyWrap {
-    padding-bottom: 30px;
+    padding-bottom: 10px;
   }
   .detailWrap .justifyWrap__left .writeTitle {
     display: none;
@@ -3923,32 +4046,24 @@ h2.title span {
     font-size: 11.5px;
   }
   .detailWrap__content .visualImage {
-    margin-bottom: 30px;
+    margin-top: 30px;
   }
   .detailWrap__content .visualImage img {
     width: 100%;
   }
-  .detailWrap__content .textWrap .bigText {
-    font-size: 20px;
-    line-height: 30px;
-  }
-  .detailWrap__content .textWrap dl, .detailWrap__content .textWrap ol, .detailWrap__content .textWrap ul, .detailWrap__content .textWrap li, .detailWrap__content .textWrap span {
+  .detailWrap__content .text {
+    margin-top: 30px;
     font-size: 15px;
     line-height: 25px;
   }
   .detailWrap__content .img img {
     width: 100%;
   }
-  .detailWrap__content .img.mgTop60 {
-    margin-top: 30px !important;
-  }
-  .detailWrap__content .mgTop80 {
-    margin-top: 40px !important;
-  }
 
   .paginationWrap {
     position: relative;
     overflow: hidden;
+    margin-top: 52.5px;
   }
   .paginationWrap__list {
     overflow-x: auto;
@@ -3990,6 +4105,36 @@ h2.title span {
   .paginationWrap .pagination a.previous:after, .paginationWrap .pagination a.next:after {
     width: 9.5px;
     height: 9.5px;
+  }
+
+  /* 안철수의 오늘 */
+  .tabWrap {
+    margin-bottom: 38.5px;
+    padding-left: 23.5px;
+  }
+  .tabWrap ul {
+    display: flex;
+    flex-flow: wrap;
+    width: 252px;
+  }
+  .tabWrap ul li {
+    width: 84.5px;
+    height: 38px;
+    line-height: 31px;
+  }
+  .tabWrap ul li + li {
+    margin-left: -1px;
+  }
+  .tabWrap ul li:nth-child(-n+3) {
+    margin-bottom: -1px;
+  }
+  .tabWrap ul li:nth-child(4) {
+    margin-left: 0;
+  }
+  .tabWrap ul li a {
+    font-size: 13.5px;
+    font-family: "NotoSansCJKkrBold", sans-serif;
+    color: #fff;
   }
 }
 

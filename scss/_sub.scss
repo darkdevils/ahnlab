@@ -82,7 +82,7 @@ h2.title {
 }
 
 /* 안철수의 약속 */
-.promiseAhn {
+.listWrap {
   &__list {
     ul {
       display: flex;
@@ -124,13 +124,53 @@ h2.title {
             }
           }
         }
-        span {
+        .txt {
           display: block;
           margin-top: 29px;
           font-size: 28px;
           line-height: 48px;
+          padding: 0 5px;
           color: #fff;
           opacity: 0.7;
+        }
+        .sns {
+          position: relative;
+          display: block;
+          padding: 12px 5px 0 41px;
+          font-size: 22px;
+          @include nsR;
+          color: #fff;
+          + .txt {
+            margin-top: 10px;
+          }
+          &:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 31px;
+            height: 31px;
+          }
+          &-naver:after {
+            @include imageUrl('web/icon/icon_naver');
+            background-size: contain;
+          }
+          &-facebook:after {
+            @include imageUrl('web/icon/icon_facebook');
+            background-size: contain;
+          }
+          &-instagram:after {
+            @include imageUrl('web/icon/icon_instagram');
+            background-size: contain;
+          }
+          &-ahn:after {
+            @include imageUrl('web/icon/icon_ahn');
+            background-size: contain;
+          }
+          &-media:after {
+            @include imageUrl('web/icon/icon_media');
+            background-size: contain;
+          }
         }
       }
     }
@@ -180,7 +220,7 @@ h2.title {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 17px 0 50px;
+    padding: 17px 0 0;
     color: #b3b3b3;
     &__left {
       .writeTitle {
@@ -225,23 +265,18 @@ h2.title {
     border-bottom: 1px solid #333;
   }
   .visualImage {
-    margin: 0 0 60px;
+    margin: 45px 0 0;
   }
-  .textWrap {
-    .bigText {
-      font-size: 40px;
-      line-height: 57px;
-      @include nsM;
-    }
-    dl,ol,ul,li,span {
-      display: block;
-      font-size: 22px;
-      color: #6a6a6a;
-      line-height: 32px;
-    }
+  .text {
+    display: block;
+    margin: 60px 0 0;
+    font-size: 22px;
+    color: #6a6a6a;
+    line-height: 32px;
   }
 }
 .paginationWrap {
+  margin-top: 120px;
   h3.title {
     font-size: 30px;
     @include nsB;
@@ -317,6 +352,64 @@ h2.title {
   }
 }
 
+/* 안철수의 오늘 */
+.tabWrap {
+  margin-bottom: 50px;
+  ul {
+    display: flex;
+    li {
+      width: 120px;
+      height: 54px;
+      line-height: 54px;
+      border: 1px solid #585858;
+      box-sizing: border-box;
+      text-align: center;
+      + li {
+        margin-left: -1px;
+      }
+      a {
+        font-size: 19px;
+        @include nsB;
+        color: #fff;
+      }
+      &.on {
+        background-color: #EA5517;
+      }
+    }
+  }
+}
+
+/* 커뮤니티 */
+.community {
+  &__list {
+    ul {
+      display: flex;
+      flex-flow: wrap;
+      li {
+        width: 384px;
+        .justifyWrap {
+          display: flex;
+          justify-content: space-between;
+          color: #b3b3b3;
+          &__left {
+            font-size: 18px;
+            .name {
+              margin-right: 12px;
+            }
+            .date {
+              @include gtM;
+            }
+          }
+          &__right {
+            font-size: 18px;
+            @include gtM;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 780px) {
   h2.title {
     padding-top: calc(70px / 2);
@@ -385,7 +478,7 @@ h2.title {
   }
 
   /* 안철수의 약속 */
-  .promiseAhn__list {
+  .listWrap__list {
     padding-left: calc(48px / 2);
     padding-right: calc(48px / 2);
     ul {
@@ -393,31 +486,27 @@ h2.title {
       li {
         position: relative;
         width: 100%;
-        margin-top: 20px;
+        margin-top: 30px;
         &:nth-child(even) {
-          margin-top: 20px;
+          margin-top: 30px;
         }
         a {
           img {
-            display: none;
             width: 100%;
             height: 100%;
-            &.mobile {
-              display: block;
-            }
           }
           span {
             font-size: calc(40px / 2);
             opacity: 1;
-            margin-top: 20px;
+            margin-top: 13px;
             line-height: calc(48px / 2);
           }
         }
         .btnLike {
           width: 31px;
           height: 29px;
-          top: 5px;
-          right: 5px;
+          top: 2.7%;
+          right: 2.5%;
           background-position: center;
           background-size: 15.5px 14.5px;
           &.on {
@@ -427,10 +516,44 @@ h2.title {
             background-size: 15.5px 14.5px;
           }
         }
+        .sns {
+          padding: 0 0 0 23px;
+          font-size: calc(24px / 2);
+          + .txt {
+            margin-top: 15px;
+            font-size: calc(40px / 2);
+            line-height: calc(48px / 2);
+          }
+          &:after {
+            top: 3px;
+            width: calc(36px / 2);
+            height: calc(36px / 2);
+          }
+          &-naver:after {
+            @include imageUrl('mobile/icon/icon_naver');
+            background-size: contain;
+          }
+          &-facebook:after {
+            @include imageUrl('mobile/icon/icon_facebook');
+            background-size: contain;
+          }
+          &-instagram:after {
+            @include imageUrl('mobile/icon/icon_instagram');
+            background-size: contain;
+          }
+          &-ahn:after {
+            @include imageUrl('mobile/icon/icon_ahn');
+            background-size: contain;
+          }
+          &-media:after {
+            @include imageUrl('mobile/icon/icon_media');
+            background-size: contain;
+          }
+        }
       }
     }
   }
-  .promiseAhn .btnMore {
+  .listWrap .btnMore {
     margin-top: 20px;
     button {
       span {
@@ -457,7 +580,7 @@ h2.title {
       line-height: 48px;
     }
     .justifyWrap {
-      padding-bottom: 30px;
+      padding-bottom: 10px;
       &__left {
         .writeTitle {
           display: none;
@@ -486,37 +609,27 @@ h2.title {
     &__content {
       font-size: calc(23px / 2);
       .visualImage {
-        margin-bottom: 30px;
+        margin-top: 30px;
         img {
           width: 100%;
         }
       }
-      .textWrap {
-        .bigText {
-          font-size: calc(40px / 2);
-          line-height: 30px;
-        }
-        dl,ol,ul,li,span {
-          font-size: calc(30px / 2);
-          line-height: 25px;
-        }
+      .text {
+        margin-top: 30px;
+        font-size: calc(30px / 2);
+        line-height: 25px;
       }
       .img {
         img {
           width: 100%;
         }
-        &.mgTop60 {
-          margin-top: 30px !important;
-        }
-      }
-      .mgTop80 {
-        margin-top: 40px !important;
       }
     }
   }
   .paginationWrap {
     position: relative;
     overflow: hidden;
+    margin-top: calc(105px / 2);
 
     &__list {
       overflow-x: auto;
@@ -557,6 +670,36 @@ h2.title {
             height: calc(19px / 2);
 
           }
+        }
+      }
+    }
+  }
+
+  /* 안철수의 오늘 */
+  .tabWrap {
+    margin-bottom: calc(77px / 2);
+    padding-left: calc(47px / 2);
+    ul {
+      display: flex;
+      flex-flow: wrap;
+      width: 252px;
+      li {
+        width: calc(169px / 2);
+        height: calc(76px / 2);
+        line-height: calc(62px / 2);
+        + li {
+          margin-left: -1px;
+        }
+        &:nth-child(-n + 3) {
+          margin-bottom: -1px;
+        }
+        &:nth-child(4) {
+          margin-left: 0;
+        }
+        a {
+          font-size: calc(27px / 2);
+          @include nsB;
+          color: #fff;
         }
       }
     }
