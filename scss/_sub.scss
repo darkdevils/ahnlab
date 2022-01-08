@@ -301,59 +301,60 @@ h2.title {
       }
     }
   }
-  .pagination {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    padding: 95px 0 0;
-    a {
-      display: inline-block;
-      width: 35px;
-      height: 35px;
-      line-height: 35px;
-      border: 1px solid #707070;
-      color: #666666;
-      font-size: 17px;
-      @include gtM;
-      box-sizing: border-box;
-      margin: 0 6px;
-      &.current {
-        border-color: #EA5517;
-        color: #fff;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 95px 0 0;
+  a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #707070;
+    color: #666666;
+    font-size: 17px;
+    @include gtM;
+    box-sizing: border-box;
+    margin: 0 6px;
+    &.current {
+      border-color: #EA5517;
+      color: #fff;
+    }
+    &.previous,&.next {
+      position: relative;
+      width: auto;
+      border: 0;
+      font-size: 23px;
+      @include nsM;
+      color: #fff;
+      &:after {
+        content: "";
+        position: absolute;
+        top: 10px;
+        width: 15px;
+        height: 15px;
+        display: block;
+        border: 1px solid #fff;
+        border-top: none;
+        border-right: none;
+        transform: rotate(45deg);
       }
-      &.previous,&.next {
-        position: relative;
-        width: auto;
-        border: 0;
-        font-size: 23px;
-        @include nsM;
-        color: #fff;
-        &:after {
-          content: "";
-          position: absolute;
-          top: 10px;
-          width: 15px;
-          height: 15px;
-          display: block;
-          border: 1px solid #fff;
-          border-top: none;
-          border-right: none;
-          transform: rotate(45deg);
-        }
-      }
-      &.previous:after {
-        left: -18px;
-      }
-      &.next:after {
-        right: -18px;
-        transform: rotate(-135deg);
-      }
+    }
+    &.previous:after {
+      left: -18px;
+    }
+    &.next:after {
+      right: -18px;
+      transform: rotate(-135deg);
     }
   }
 }
 
 /* 안철수의 오늘 */
 .tabWrap {
+  position: relative;
   margin-bottom: 50px;
   ul {
     display: flex;
@@ -381,16 +382,28 @@ h2.title {
 
 /* 커뮤니티 */
 .community {
+  .btnWriting {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 191px;
+    height: 54px;
+    @include imageUrl('web/sub/btnWriting');
+    background-size: contain;
+  }
   &__list {
     ul {
       display: flex;
       flex-flow: wrap;
+      justify-content: space-between;
       li {
         width: 384px;
+        margin-bottom: 60px;
         .justifyWrap {
           display: flex;
           justify-content: space-between;
           color: #b3b3b3;
+          margin-top: 20px;
           &__left {
             font-size: 18px;
             .name {
@@ -403,6 +416,31 @@ h2.title {
           &__right {
             font-size: 18px;
             @include gtM;
+            .btnLike {
+              margin-left: 7px;
+              width: 19px;
+              height: 18px;
+              @include imageUrl('web/sub/icon_like_19x18_off');
+              background-size: contain;
+              vertical-align: top;
+              &.on {
+                @include imageUrl('web/sub/icon_like_19x18_on');
+              }
+            }
+          }
+        }
+        .txt {
+          display: -webkit-box;
+          font-size: 28px;
+          margin-top: 15px;
+          white-space: normal;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          line-height: 40px;
+          color: #b3b3b3;
+          .category {
+            color: #EA5517;
           }
         }
       }
@@ -656,20 +694,20 @@ h2.title {
         }
       }
     }
-    .pagination {
-      padding-top: 30px;
-      a {
-        width: calc(55px / 2);
-        height: calc(55px / 2);
-        font-size: calc(27px / 2);
-        line-height: calc(55px / 2);
-        &.previous,&.next {
-          font-size: calc(36px / 2);
-          &:after {
-            width: calc(19px / 2);
-            height: calc(19px / 2);
+  }
+  .pagination {
+    padding-top: 30px;
+    a {
+      width: calc(55px / 2);
+      height: calc(55px / 2);
+      font-size: calc(27px / 2);
+      line-height: calc(55px / 2);
+      &.previous,&.next {
+        font-size: calc(36px / 2);
+        &:after {
+          width: calc(19px / 2);
+          height: calc(19px / 2);
 
-          }
         }
       }
     }
@@ -700,6 +738,77 @@ h2.title {
           font-size: calc(27px / 2);
           @include nsB;
           color: #fff;
+        }
+      }
+    }
+  }
+
+  /* 커뮤니티 */
+  .community {
+    .tabWrap {
+      padding-right: calc(47px / 2);
+    }
+    .btnWriting {
+      position: relative;
+      right: initial;
+      display: block;
+      width: 100%;
+      height: 41px;
+      margin-top: 22px;
+      border: 1px solid #fff;
+      background: none;
+      box-sizing: border-box;
+      &:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: calc(15px / 2);
+        width: calc(143px / 2);
+        height: calc(52px / 2);
+        margin-left: calc(-143px / 4);
+        @include imageUrl('mobile/sub/text_writing');
+        background-size: contain;
+      }
+    }
+    &__list {
+      ul {
+        padding-left: calc(48px / 2);
+        padding-right: calc(48px / 2);
+        img {
+          width: 100%;
+        }
+        li {
+          margin-bottom: calc(50px / 2);
+          .justifyWrap {
+            margin-top: 10px;
+            &__left {
+              font-size: calc(23px / 2);
+              .name {
+                margin-right: 10px;
+              }
+            }
+            &__right {
+              font-size: calc(23px / 2);
+              .btnLike {
+                margin-left: 5px;
+                width: calc(31px / 2);
+                height: calc(29px / 2);
+                @include imageUrl('mobile/sub/icon_like_31x29_off');
+                background-size: contain;
+                vertical-align: top;
+                &.on {
+                  @include imageUrl('mobile/sub/icon_like_31x29_on');
+                  background-size: contain;
+                }
+              }
+            }
+          }
+          .txt {
+            display: -webkit-box;
+            font-size: calc(40px / 2);
+            margin-top: calc(15px / 2);
+            line-height: calc(48px / 2);
+          }
         }
       }
     }
