@@ -71,6 +71,10 @@
           border: 2px solid #fff;
           background-color: #000;
 
+          &:hover {
+            background-color: $colorOrange;
+          }
+
           span {
             display: inline-block;
             vertical-align: top;

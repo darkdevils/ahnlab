@@ -252,6 +252,74 @@ html, body {
           @include nsM;
         }
       }
+
+      .detailWrap {
+        margin-top: 32px;
+        padding-top: 33px;
+        border-top: 1px solid #777;
+
+        h3.title {
+          display: block;
+          line-height: 72px;
+          font-size: 50px;
+          @include nsM;
+          padding-bottom: 13px;
+        }
+
+        .justifyWrap {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 17px 0 0;
+          color: #b3b3b3;
+          &__left {
+            .writeTitle {
+              font-size: 19px;
+              @include nsM;
+              margin-right: 17px;
+            }
+            .date {
+              font-size: 18px;
+              @include gtM;
+            }
+            .btnLink {
+              font-size: 24px;
+              margin-right: 15px;
+              color: #b3b3b3;
+            }
+          }
+          &__right {
+            padding: 0 5px 0 0;
+            .num {
+              display: block;
+              line-height: 22px;
+              padding-right: 31px;
+              font-size: 17px;
+              @include gtM;
+              @include imageUrlAdmin("icon/icon_like02");
+              background-position: right bottom;
+            }
+          }
+        }
+
+        &__content {
+          padding: 0 0 50px 0;
+          border-top: 1px solid #333;
+          border-bottom: 1px solid #333;
+        }
+
+        .visualImage {
+          margin: 45px 0 0;
+        }
+
+        .text {
+          display: block;
+          margin: 60px 0 0;
+          font-size: 22px;
+          color: #6a6a6a;
+          line-height: 32px;
+        }
+      }
     }
   }
 
@@ -827,68 +895,51 @@ html, body {
   }
 
   /* paging */
-  .paddingList {
-    overflow: hidden;
-
-    li {
-      float: left;
-
-      & + li {
-        margin-left: 13px;
+  .pagination {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    a {
+      display: inline-block;
+      width: 35px;
+      height: 35px;
+      line-height: 35px;
+      border: 1px solid #707070;
+      color: #666666;
+      font-size: 17px;
+      @include gtM;
+      box-sizing: border-box;
+      margin: 0 6px;
+      &.current {
+        border-color: #EA5517;
+        color: #fff;
       }
-
-      &.prevBtn {
-
-        a {
-          line-height: 35px;
-          padding-left: 20px;
-          font-size: 23px;
-          @include nsM;
-          color: #fff;
-          @include imageUrlAdmin(icon/icon_pagingLeft,png);
-          background-position: left center;
+      &.previous,&.next {
+        position: relative;
+        width: auto;
+        border: 0;
+        font-size: 23px;
+        @include nsM;
+        color: #fff;
+        &:after {
+          content: "";
+          position: absolute;
+          top: 10px;
+          width: 15px;
+          height: 15px;
+          display: block;
+          border: 1px solid #fff;
+          border-top: none;
+          border-right: none;
+          transform: rotate(45deg);
         }
       }
-
-      &.nextBtn {
-
-        a {
-          line-height: 35px;
-          padding-right: 20px;
-          font-size: 23px;
-          @include nsM;
-          color: #fff;
-          @include imageUrlAdmin(icon/icon_pagingRight,png);
-          background-position: right center;
-        }
+      &.previous:after {
+        left: -18px;
       }
-
-      &.number {
-
-        a {
-          box-sizing: border-box;
-          text-align: center;
-          width: 35px;
-          line-height: 33px;
-          border: 1px solid #707070;
-          font-size: 17px;
-          @include gtB;
-          color: #666;
-        }
-
-        &.on {
-
-          a {
-            border-color: $colorOrange;
-            color: #fff;
-          }
-
-        }
-      }
-
-      a {
-        display: block;
-        height: 35px;
+      &.next:after {
+        right: -18px;
+        transform: rotate(-135deg);
       }
     }
   }

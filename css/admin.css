@@ -2271,6 +2271,66 @@ html, body {
   font-size: 18px;
   font-family: "NotoSansCJKkrMedium", sans-serif;
 }
+#wrap #container .content .detailWrap {
+  margin-top: 32px;
+  padding-top: 33px;
+  border-top: 1px solid #777;
+}
+#wrap #container .content .detailWrap h3.title {
+  display: block;
+  line-height: 72px;
+  font-size: 50px;
+  font-family: "NotoSansCJKkrMedium", sans-serif;
+  padding-bottom: 13px;
+}
+#wrap #container .content .detailWrap .justifyWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 17px 0 0;
+  color: #b3b3b3;
+}
+#wrap #container .content .detailWrap .justifyWrap__left .writeTitle {
+  font-size: 19px;
+  font-family: "NotoSansCJKkrMedium", sans-serif;
+  margin-right: 17px;
+}
+#wrap #container .content .detailWrap .justifyWrap__left .date {
+  font-size: 18px;
+  font-family: "GothamMedium", sans-serif;
+}
+#wrap #container .content .detailWrap .justifyWrap__left .btnLink {
+  font-size: 24px;
+  margin-right: 15px;
+  color: #b3b3b3;
+}
+#wrap #container .content .detailWrap .justifyWrap__right {
+  padding: 0 5px 0 0;
+}
+#wrap #container .content .detailWrap .justifyWrap__right .num {
+  display: block;
+  line-height: 22px;
+  padding-right: 31px;
+  font-size: 17px;
+  font-family: "GothamMedium", sans-serif;
+  background: url("../admin/images/icon/icon_like02.png") no-repeat;
+  background-position: right bottom;
+}
+#wrap #container .content .detailWrap__content {
+  padding: 0 0 50px 0;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+#wrap #container .content .detailWrap .visualImage {
+  margin: 45px 0 0;
+}
+#wrap #container .content .detailWrap .text {
+  display: block;
+  margin: 60px 0 0;
+  font-size: 22px;
+  color: #6a6a6a;
+  line-height: 32px;
+}
 #wrap .colorOrange {
   color: #EA5504;
 }
@@ -2768,50 +2828,53 @@ html, body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-#wrap .paddingList {
-  overflow: hidden;
-}
-#wrap .paddingList li {
-  float: left;
-}
-#wrap .paddingList li + li {
-  margin-left: 13px;
-}
-#wrap .paddingList li.prevBtn a {
-  line-height: 35px;
-  padding-left: 20px;
-  font-size: 23px;
-  font-family: "NotoSansCJKkrMedium", sans-serif;
-  color: #fff;
-  background: url("../admin/images/icon/icon_pagingLeft.png") no-repeat;
-  background-position: left center;
-}
-#wrap .paddingList li.nextBtn a {
-  line-height: 35px;
-  padding-right: 20px;
-  font-size: 23px;
-  font-family: "NotoSansCJKkrMedium", sans-serif;
-  color: #fff;
-  background: url("../admin/images/icon/icon_pagingRight.png") no-repeat;
-  background-position: right center;
-}
-#wrap .paddingList li.number a {
-  box-sizing: border-box;
+#wrap .pagination {
+  display: flex;
+  justify-content: center;
   text-align: center;
-  width: 35px;
-  line-height: 33px;
-  border: 1px solid #707070;
-  font-size: 17px;
-  font-family: "GothamBold", sans-serif;
-  color: #666;
 }
-#wrap .paddingList li.number.on a {
-  border-color: #EA5504;
+#wrap .pagination a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  border: 1px solid #707070;
+  color: #666666;
+  font-size: 17px;
+  font-family: "GothamMedium", sans-serif;
+  box-sizing: border-box;
+  margin: 0 6px;
+}
+#wrap .pagination a.current {
+  border-color: #EA5517;
   color: #fff;
 }
-#wrap .paddingList li a {
+#wrap .pagination a.previous, #wrap .pagination a.next {
+  position: relative;
+  width: auto;
+  border: 0;
+  font-size: 23px;
+  font-family: "NotoSansCJKkrMedium", sans-serif;
+  color: #fff;
+}
+#wrap .pagination a.previous:after, #wrap .pagination a.next:after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  width: 15px;
+  height: 15px;
   display: block;
-  height: 35px;
+  border: 1px solid #fff;
+  border-top: none;
+  border-right: none;
+  transform: rotate(45deg);
+}
+#wrap .pagination a.previous:after {
+  left: -18px;
+}
+#wrap .pagination a.next:after {
+  right: -18px;
+  transform: rotate(-135deg);
 }
 #wrap .pagingArea {
   position: relative;
@@ -3332,6 +3395,9 @@ html, body {
   border: 2px solid #fff;
   background-color: #000;
 }
+#wrap.mainLayout .loginArea .loginAreaIn .loginSubmit .loginBtn:hover {
+  background-color: #EA5504;
+}
 #wrap.mainLayout .loginArea .loginAreaIn .loginSubmit .loginBtn span {
   display: inline-block;
   vertical-align: top;
@@ -3416,6 +3482,12 @@ html, body {
 }
 #wrap #container .ahncheolsooContent .vidoeSubmit {
   padding-left: 160px;
+}
+#wrap #container .ahnTodayContent .pagingArea {
+  margin-top: 65px;
+}
+#wrap #container .ahnCommunityContent .pagingArea {
+  margin-top: 68px;
 }
 
 /*# sourceMappingURL=admin.css.map */
