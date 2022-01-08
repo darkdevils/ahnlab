@@ -2058,6 +2058,14 @@ html, body {
   letter-spacing: -0.075em;
   color: #fff;
 }
+html .opening, body .opening {
+  width: 100%;
+  height: 100%;
+  background: url("../images/web/bg/bg_openingWeb.png") no-repeat;
+  background-color: #000;
+  background-position: center center;
+  background-size: contain;
+}
 
 #wrap {
   display: flex;
@@ -2609,6 +2617,13 @@ html, body {
 }
 /* media queries */
 @media (max-width: 780px) {
+  html .opening, body .opening {
+    background: url("../images/mobile/bg/bg_openingMobile.png") no-repeat;
+    background-color: #000;
+    background-position: center center;
+    background-size: contain;
+  }
+
   #wrap {
     min-width: auto;
     /* page top button */
@@ -3100,6 +3115,10 @@ html, body {
 }
 #wrap.mainLayout #container .topVisual .topVisualSwiper {
   height: 800px;
+}
+#wrap.mainLayout #container .topVisual .topVisualSwiper .imgLink {
+  display: block;
+  height: 100%;
 }
 #wrap.mainLayout #container .topVisual .topVisualVideo {
   text-align: center;

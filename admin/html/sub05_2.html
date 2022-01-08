@@ -98,22 +98,81 @@
         <!-- container -->
         <div id="container">
             <div class="topContent">
-                <h2 class="mainTitle">메인배너 관리</h2>
+                <h2 class="mainTitle">안철수의 오늘 - 작성</h2>
             </div>
-            <div class="content ahnMainBanner">
+            <div class="content ahnTodayContent">
                 <!-- contentTitle -->
                 <div class="contentTitle">
                     <div class="alignLeft">
-                        <span class="title">메인배너 콘텐츠 관리</span>
-                        <span class="subText">메인페이지 상단 배너입니다. 2개까지 배너 적용이 가능합니다.</span>
-                    </div>
-                    <div class="alignRight">
-                        <button type="button" class="ahnBtnL line"><span>전체 적용하기</span></button>
+                        <span class="title">콘텐츠관리</span>
+                        <span class="subText">콘텐츠 작성 및 수정</span>
                     </div>
                 </div>
 
-                <div class="bannerArea">
-                    <div class="bannerTitle">첫번째 배너</div>
+                <div class="tableArea02">
+                    <table>
+                        <colgroup>
+                            <col style="width: 160px" />
+                            <col />
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th>제목</th>
+                            <td>
+                                <div class="ahnInputText form100">
+                                    <input type="text" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>카테고리</th>
+                            <td>
+                                <div class="formType01">
+                                    <div class="ahnSelect">
+                                        <select>
+                                            <option>인스타그램</option>
+                                            <option>페이스북</option>
+                                            <option>블로그</option>
+                                            <option>보도자료</option>
+                                            <option>일정</option>
+                                        </select>
+                                    </div>
+                                    <button type="button" class="ahnBtnM"><span>확인</span></button>
+                                </div>
+                                <span class="tableText">본문 삽입은 일정, 보도자료만 가능합니다.</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>링크</th>
+                            <td>
+                                <div class="ahnInputText formWidth02">
+                                    <input type="text" placeholder="링크를 삽입하세요" />
+                                </div>
+                                <span class="tableText">새창으로 띄웁니다</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>썸네일</th>
+                            <td>
+                                <div class="imageWidthBox">
+                                    <div class="imageBox">
+                                        <div class="image">
+                                            <img src="../images/temp/photoW_01.png" />
+                                        </div>
+                                        <div class="tableText">최소권장 사이즈 : 540* 317 pixel</div>
+                                    </div>
+                                    <div class="imageFunction">
+                                        <button type="button" class="ahnBtnS"><span>수정</span></button>
+                                        <button type="button" class="ahnBtnS"><span>삭제</span></button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="contentAddArea">
                     <div class="tableArea02">
                         <table>
                             <colgroup>
@@ -122,49 +181,27 @@
                             </colgroup>
                             <tbody>
                             <tr>
-                                <th>링크</th>
+                                <th>콘텐츠 이미지</th>
                                 <td>
-                                    <div class="formType02">
+                                    <div class="formType01">
                                         <div class="ahnInputText">
-                                            <input type="text" placeholder="URL을 입력하세요" />
+                                            <input type="text" />
                                         </div>
                                         <button type="button" class="ahnBtnM"><span>확인</span></button>
                                     </div>
                                 </td>
                             </tr>
                             <tr>
-                                <th>미리보기</th>
-                                <td>
-                                    <div class="imagesArea">
-                                        <div class="webImage">
-                                            <div class="title">PC 이미지</div>
-                                            <div class="image">
-                                                <img src="../images/temp/visual_main_web.png" />
-                                            </div>
-                                            <div class="imageSize">권장사이즈 : 1920*800</div>
-                                            <div class="imageFunction">
-                                                <button type="button" class="ahnBtnS"><span>수정</span></button>
-                                                <button type="button" class="ahnBtnS"><span>삭제</span></button>
-                                            </div>
-                                        </div>
-                                        <div class="mobileImage">
-                                            <div class="title">모바일 이미지</div>
-                                            <div class="image">
-                                                <img src="../images/temp/visual_main_mobile.png" />
-                                            </div>
-                                            <div class="imageSize">권장사이즈 : 780*850</div>
-                                            <div class="imageFunction">
-                                                <button type="button" class="ahnBtnS"><span>수정</span></button>
-                                                <button type="button" class="ahnBtnS"><span>삭제</span></button>
-                                            </div>
-                                        </div>
+                                <td colspan="2">
+                                    <div class="thText">콘텐츠 작성</div>
+                                    <div class="ahnTextarea">
+                                        <textarea placeholder="콘텐츠 작성"></textarea>
                                     </div>
                                 </td>
                             </tr>
                             </tbody>
                         </table>
                     </div>
-                    <div class="bannerTitle">두번째 배너</div>
                     <div class="tableArea02">
                         <table>
                             <colgroup>
@@ -173,53 +210,37 @@
                             </colgroup>
                             <tbody>
                             <tr>
-                                <th>링크</th>
+                                <th>콘텐츠 이미지</th>
                                 <td>
-                                    <div class="formType02">
+                                    <div class="formType01">
                                         <div class="ahnInputText">
-                                            <input type="text" placeholder="URL을 입력하세요" />
+                                            <input type="text" />
                                         </div>
                                         <button type="button" class="ahnBtnM"><span>확인</span></button>
                                     </div>
                                 </td>
                             </tr>
                             <tr>
-                                <th>미리보기</th>
-                                <td>
-                                    <div class="imagesArea">
-                                        <div class="webImage">
-                                            <div class="title">PC 이미지</div>
-                                            <div class="image">
-
-                                            </div>
-                                            <div class="imageSize">권장사이즈 : 1920*800</div>
-                                            <div class="imageFunction">
-                                                <button type="button" class="ahnBtnS"><span>수정</span></button>
-                                                <button type="button" class="ahnBtnS"><span>삭제</span></button>
-                                            </div>
-                                        </div>
-                                        <div class="mobileImage">
-                                            <div class="title">모바일 이미지</div>
-                                            <div class="image">
-
-                                            </div>
-                                            <div class="imageSize">권장사이즈 : 780*850</div>
-                                            <div class="imageFunction">
-                                                <button type="button" class="ahnBtnS"><span>수정</span></button>
-                                                <button type="button" class="ahnBtnS"><span>삭제</span></button>
-                                            </div>
-                                        </div>
+                                <td colspan="2">
+                                    <div class="thText">콘텐츠 작성</div>
+                                    <div class="ahnTextarea">
+                                        <textarea placeholder="콘텐츠 작성"></textarea>
                                     </div>
                                 </td>
                             </tr>
                             </tbody>
                         </table>
                     </div>
+                    <div class="btnFuntion">
+                        <button type="button" class="ahnBtnM solid"><span>글 추가하기</span></button>
+                    </div>
                 </div>
 
-                <div class="buttonArea">
+                <div class="buttonArea mdrType01">
                     <div class="alignRight">
-                        <button type="button" class="ahnBtnL line"><span>전체 적용하기</span></button>
+                        <button type="button" class="ahnBtnModify boardBtn"><span>수정하기</span></button>
+                        <button type="button" class="ahnBtnDelete boardBtn"><span>삭제하기</span></button>
+                        <button type="button" class="ahnBtnRegister boardBtn"><span>발행하기</span></button>
                     </div>
                 </div>
             </div>
