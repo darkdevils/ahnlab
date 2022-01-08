@@ -217,6 +217,7 @@ html, body {
           padding-top: 22px;
           font-size: 25px;
           @include nsM;
+          color: #7D7D7D;
         }
       }
 
@@ -263,7 +264,7 @@ html, body {
   }
 
   /* selectbox */
-  .anSelect {
+  .ahnSelect {
     position: relative;
     display: inline-block;
     vertical-align: top;
@@ -285,8 +286,9 @@ html, body {
     select {
       display: block;
       box-sizing: border-box;
+      width: 100%;
       height: 100%;
-      padding: 0 50px 0 29px;
+      padding: 0 50px 0 17px;
       border: 1px solid #7F8080;
       outline: 0 none;
       color: #fff;
@@ -302,18 +304,31 @@ html, body {
   }
 
   /* input text */
-  .anInputText {
+  .ahnInputText {
     display: inline-block;
     vertical-align: top;
     height: 53px;
+
+    &.form100 {
+      display: block;
+    }
+
+    &.formWidth01 {
+      width: 427px;
+    }
+
+    &.formWidth02 {
+      width: 560px;
+    }
 
     input {
       display: block;
       box-sizing: border-box;
       width: 100%;
       height: 100%;
-      padding: 0 29px;
+      padding: 0 17px;
       border: 1px solid #7F8080;
+      outline: 0 none;
       font-size: 18px;
       @include nsM;
       color: #fff;
@@ -321,7 +336,7 @@ html, body {
     }
   }
 
-  .anInputTextSmall {
+  .ahnInputTextSmall {
     display: inline-block;
     vertical-align: top;
     width: 54px;
@@ -342,10 +357,42 @@ html, body {
   }
 
   /* input file */
+  .fileModify {
+    display: inline-block;
+    vertical-align: top;
+    width: 100px;
+    height: 44px;
+
+    label {
+      display: block;
+      text-align: center;
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      border: 1px solid #606060;
+      cursor: pointer;
+      background-color: #141414;
+
+      span {
+        display: inline-block;
+        vertical-align: top;
+        height: 42px;
+        line-height: 42px;
+        font-size: 18px;
+        font-family: "NotoSansCJKkrMedium", sans-serif;
+        color: #fff;
+      }
+    }
+
+    input[type="file"] {
+      @include blind;
+    }
+  }
+
   .fileSearch {
     display: inline-flex;
     vertical-align: top;
-    width: 700px;
+    width: 693px;
     height: 53px;
 
     .uploadName {
@@ -372,6 +419,7 @@ html, body {
       height: 53px;
       margin-left: 13px;
       border: 1px solid #EA5504;
+      cursor: pointer;
       background-color: #141414;
 
       span {
@@ -386,12 +434,58 @@ html, body {
     }
 
     input[type="file"] {
-     @include blind;
+      @include blind;
+    }
+  }
+
+  .formType01 {
+    display: inline-flex;
+    vertical-align: top;
+
+    &::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    > * {
+      float: left;
+
+      & + * {
+        margin-left: 13px;
+      }
+    }
+
+    .ahnInputText, .ahnSelect {
+      width: 427px;
+    }
+  }
+
+  .formType02 {
+    display: inline-flex;
+    vertical-align: top;
+
+    &::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    > * {
+      float: left;
+
+      & + * {
+        margin-left: 13px;
+      }
+    }
+
+    .ahnInputText, .ahnSelect {
+      width: 560px;
     }
   }
 
   /* input checkbox */
-  .anInputCheck {
+  .ahnInputCheck {
     display: inline-block;
     vertical-align: top;
     cursor: pointer;
@@ -441,12 +535,12 @@ html, body {
     vertical-align: top;
     border: 1px solid #585858;
 
-    .anInputRadio {
+    .ahnInputRadio {
       float: left;
       display: block;
       cursor: pointer;
 
-      & + .anInputRadio {
+      & + .ahnInputRadio {
         border-left: 1px solid #585858;
       }
 
@@ -477,11 +571,11 @@ html, body {
   }
 
   /* textarea */
-  .anTextarea {
+  .ahnTextarea {
     box-sizing: border-box;
     height: 400px;
     padding: 23px 34px;
-    border: 1px solid #3B3C3C;
+    border: 1px solid #7F8080;
     background-color: #0A0A0A;
 
     textarea {
@@ -499,7 +593,7 @@ html, body {
   }
 
   /* button */
-  .anBtnS {
+  .ahnBtnS {
     display: inline-block;
     text-align: center;
     vertical-align: top;
@@ -520,7 +614,7 @@ html, body {
     }
   }
 
-  .anBtnM {
+  .ahnBtnM {
     display: inline-block;
     text-align: center;
     vertical-align: top;
@@ -545,7 +639,7 @@ html, body {
     }
   }
 
-  .anBtnL {
+  .ahnBtnL {
     display: inline-block;
     text-align: center;
     vertical-align: top;
@@ -570,7 +664,7 @@ html, body {
     }
   }
 
-  .anBtnMore {
+  .ahnBtnMore {
     position: relative;
     display: inline-block;
     vertical-align: top;
@@ -597,9 +691,9 @@ html, body {
     }
   }
 
-  .anBtnModify,
-  .anBtnDelete,
-  .anBtnRegister {
+  .ahnBtnModify,
+  .ahnBtnDelete,
+  .ahnBtnRegister {
     display: inline-block;
     vertical-align: top;
     width: 90px;
@@ -617,7 +711,7 @@ html, body {
     }
   }
 
-  .anBtnModify {
+  .ahnBtnModify {
 
     span {
       @include imageUrlAdmin(icon/icon_modify,png);
@@ -625,7 +719,7 @@ html, body {
     }
   }
 
-  .anBtnDelete {
+  .ahnBtnDelete {
 
     span {
       @include imageUrlAdmin(icon/icon_delete,png);
@@ -633,7 +727,7 @@ html, body {
     }
   }
 
-  .anBtnRegister {
+  .ahnBtnRegister {
 
     span {
       @include imageUrlAdmin(icon/icon_register,png);
@@ -645,6 +739,14 @@ html, body {
     overflow: hidden;
     text-align: center;
     margin-top: 30px;
+
+    &.mdrType01 {
+      margin-top: 130px;
+    }
+
+    &.mdrType02 {
+      margin-top: 30px;
+    }
 
     .alignLeft {
       float: left;
@@ -965,15 +1067,65 @@ html, body {
             padding-left: 0;
           }
         }
+
+        .lineOrange {
+          border-color: $colorOrange;
+
+          > th, td {
+            border-color: $colorOrange;
+          }
+        }
       }
     }
 
-    .anSelect + .fileSearch {
+    .thText {
+      display: inline-block;
+      vertical-align: top;
+      line-height: 53px;
+      padding-left: 18px;
+      font-size: 18px;
+      @include nsM;
+      color: #fff;
+    }
+
+    .ahnSelect + .fileSearch {
       margin-left: 13px;
+    }
+
+    .thSelectBox {
+      display: flex;
+
+      .ahnSelect {
+        width: 135px;
+        margin-right: 25px;
+
+        select {
+          padding-right: 40px;
+        }
+      }
+
+      .thText {
+        padding: 0;
+        margin-right: 25px;
+      }
+
+      .headingText {
+        display: inline-block;
+        vertical-align: top;
+        line-height: 53px;
+        margin-right: 9px;
+        font-size: 18px;
+        @include nsM;
+        @include colorOrange;
+      }
+
+      .ahnInputText {
+        flex: 1;
+      }
     }
   }
 
-  /* list hegiht 03 */
+  /* list hegiht 03, list width 02, list width 03 */
   .ListHeight03, .ListWidth02, .ListWidth03 {
 
     .contextArea {
@@ -988,7 +1140,7 @@ html, body {
         height: 80px;
       }
 
-      .anInputCheck {
+      .ahnInputCheck {
 
         .text {
           overflow: hidden;
@@ -1038,7 +1190,13 @@ html, body {
         }
 
         .contextArea {
-          padding: 24px 0 28px;
+          padding: 24px 0 60px;
+
+          .title {
+            font-size: 28px;
+            font-family: "NotoSansCJKkrMedium", sans-serif;
+            color: #B3B3B3;
+          }
         }
       }
     }
@@ -1046,7 +1204,7 @@ html, body {
 
   /* list width 02 */
   .ListWidth02 {
-    padding-top: 96px;
+    padding-top: 50px;
 
     ul {
 
@@ -1076,7 +1234,7 @@ html, body {
         }
 
         .contextArea {
-          padding: 29px 0 60px;
+          padding: 24px 0 60px;
 
           .title {
             font-size: 28px;
@@ -1085,7 +1243,7 @@ html, body {
           }
 
           &.categoryType {
-            padding-top: 12px;
+            padding-top: 18px;
           }
         }
       }
@@ -1100,12 +1258,12 @@ html, body {
     }
 
     .iconInsta {
-      @include imageUrlAdmin("icon/icon_instagram");
+      @include imageUrlAdmin("icon/icon_insta");
       background-position: left center;
     }
 
     .iconFace {
-      @include imageUrlAdmin("icon/icon_facebook");
+      @include imageUrlAdmin("icon/icon_face");
       background-position: left center;
     }
 
@@ -1153,7 +1311,7 @@ html, body {
         }
 
         .contextArea {
-          padding: 18px 0 60px;
+          padding: 20px 0 60px;
 
           .infoArea {
             overflow: hidden;
@@ -1216,10 +1374,122 @@ html, body {
             color: #B3B3B3;
           }
 
-          .anInputCheck {
-            margin-top: 14px;
+          .ahnInputCheck {
+            margin-top: 20px;
           }
         }
+      }
+    }
+  }
+
+  /* content add area */
+  .contentAddArea {
+    margin-top: -1px;
+
+    .tableArea02 {
+      margin-top: 0;
+
+      &:first-child {
+
+         table {
+           border-top: 1px solid $colorOrange;
+         }
+      }
+
+      table {
+        margin-top: -1px;
+
+        tr:last-child {
+
+          > * {
+            border-bottom: 0 none;
+          }
+        }
+      }
+    }
+
+    .title {
+      line-height: 26px;
+      padding: 17px 0 18px 18px;
+      font-size: 18px;
+      @include nsM;
+      color: #fff;
+    }
+
+    .btnFuntion {
+      text-align: center;
+      margin-top: 10px;
+      border-top: 1px solid $colorOrange;
+
+      .ahnBtnM {
+        width: 163px;
+
+        span {
+          margin-top: -1px;
+          padding-right: 24px;
+          @include imageUrlAdmin("icon/icon_plus");
+          background-position: right center;
+        }
+      }
+    }
+  }
+
+  /* 썸네일 */
+  .imageWidthBox {
+    padding: 18px 0;
+
+    .imageBox {
+      overflow: hidden;
+
+      .image {
+        float: left;
+        width: 307px;
+        height: 180px;
+        border: 1px solid #464646;
+        background-color: #1F1F1F;
+        font-size: 18px;
+        @include nsM;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .tableText {
+        float: left;
+        line-height: 26px;
+        margin: 156px 0 0 24px;
+      }
+    }
+
+    .imageFunction {
+      padding-bottom: 0;
+    }
+  }
+
+  /* etc */
+  * + .tableText {
+    margin-left: 16px;
+  }
+  .tableText {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 53px;
+    font-size: 18px;
+    @include nsM;
+    color: #B3B3B3;
+  }
+
+  .imageFunction {
+    overflow: hidden;
+    padding: 18px 0;
+
+    > * {
+      float: left;
+
+      & + * {
+        margin-left: 16px;
       }
     }
   }

@@ -3,8 +3,14 @@
 
   #container {
 
+    /* TOP10 */
+    .ahnTopContent {
+
+
+    }
+
     /* 메인배너 관리 */
-    .anMainBanner {
+    .ahnMainBanner {
 
       .bannerArea {
         margin-top: 34px;
@@ -52,16 +58,7 @@
             }
 
             .imageFunction {
-              overflow: hidden;
-              margin: 24px 0;
-
-              button {
-                float: left;
-
-                & + button {
-                  margin-left: 16px;
-                }
-              }
+              margin-top: 24px;
             }
           }
 
@@ -80,12 +77,11 @@
     }
 
     /* 안철수는 */
-    .anVideoContent {
+    .ahncheolsooContent {
 
       .videoContent {
         box-sizing: border-box;
-        width: 567px;
-        height: 320px;
+        width: 560px;
         margin-top: 17px;
         border: 1px solid #464646;
         @include imageUrlAdmin("bg/bg_video");
@@ -95,26 +91,42 @@
         iframe {
           display: block;
           width: 100%;
-          height: 318px;
-        }
-      }
-
-      .imageFunction {
-        overflow: hidden;
-        margin: 18px 0 26px;
-
-        button {
-          float: left;
-
-          & + button {
-            margin-left: 16px;
-          }
+          height: 314px;
         }
       }
 
       .vidoeSubmit {
         padding-left: 160px;
       }
+    }
+
+    /* 안철수의 약속 */
+    .ahnPromiseContent {
+
+    }
+
+    /* 안철수의 오늘 */
+    .ahnTodayContent {
+
+
+    }
+
+    /* 영상 */
+    .ahnVideoContent {
+
+
+    }
+
+    /* 라이브 보기 */
+    .ahnLiveContent {
+
+
+    }
+
+    /* 커뮤니티 */
+    .ahnCommunityContent {
+
+
     }
   }
 }

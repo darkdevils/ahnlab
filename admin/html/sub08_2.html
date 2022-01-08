@@ -98,13 +98,14 @@
         <!-- container -->
         <div id="container">
             <div class="topContent">
-                <h2 class="mainTitle">안철수는</h2>
+                <h2 class="mainTitle">커뮤니티 - 작성</h2>
             </div>
-            <div class="content ahncheolsooContent">
+            <div class="content ahnCommunityContent">
                 <!-- contentTitle -->
                 <div class="contentTitle">
                     <div class="alignLeft">
-                        <span class="title">동영상 콘텐츠관리</span>
+                        <span class="title">콘텐츠관리</span>
+                        <span class="subText">콘텐츠 작성 및 수정</span>
                     </div>
                 </div>
 
@@ -115,30 +116,39 @@
                             <col />
                         </colgroup>
                         <tbody>
-                        <tr>
-                            <th>유뷰트링크</th>
-                            <td>
-                                <div class="formType02">
+                        <tr class="lineOrange">
+                            <td colspan="2">
+                                <div class="thSelectBox">
+                                    <div class="ahnSelect">
+                                        <select>
+                                            <option>자랑하기</option>
+                                            <option>소통하기</option>
+                                        </select>
+                                    </div>
+                                    <div class="thText">제목</div>
+                                    <div class="headingText">[자랑하기]</div>
                                     <div class="ahnInputText">
-                                        <input type="text" placeholder="URL을 입력하세요" />
+                                        <input type="text" />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>이미지</th>
+                            <td>
+                                <div class="formType01">
+                                    <div class="ahnInputText">
+                                        <input type="text" />
                                     </div>
                                     <button type="button" class="ahnBtnM"><span>확인</span></button>
                                 </div>
                             </td>
                         </tr>
-                        <tr>
-                            <th>미리보기</th>
-                            <td>
-                                <div class="imagesArea">
-                                    <div class="videoArea">
-                                        <div class="videoContent">
-                                            <iframe src="https://www.youtube.com/embed/zat0oHJFrcI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                        </div>
-                                        <div class="imageFunction">
-                                            <button type="button" class="ahnBtnS"><span>수정</span></button>
-                                            <button type="button" class="ahnBtnS"><span>삭제</span></button>
-                                        </div>
-                                    </div>
+                        <tr class="lineOrange">
+                            <td colspan="2">
+                                <div class="thText">콘텐츠 작성</div>
+                                <div class="ahnTextarea">
+                                    <textarea placeholder="콘텐츠 작성"></textarea>
                                 </div>
                             </td>
                         </tr>
@@ -146,9 +156,11 @@
                     </table>
                 </div>
 
-                <div class="buttonArea vidoeSubmit">
-                    <div class="alignLeft">
-                        <button type="button" class="ahnBtnL"><span>적용하기</span></button>
+                <div class="buttonArea mdrType01">
+                    <div class="alignRight">
+                        <button type="button" class="ahnBtnModify boardBtn"><span>수정하기</span></button>
+                        <button type="button" class="ahnBtnDelete boardBtn"><span>삭제하기</span></button>
+                        <button type="button" class="ahnBtnRegister boardBtn"><span>발행하기</span></button>
                     </div>
                 </div>
             </div>

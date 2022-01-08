@@ -37,6 +37,11 @@
 
       .topVisualSwiper {
         height: 800px;
+
+        .imgLink {
+          display: block;
+          height: 100%;
+        }
       }
 
       .topVisualVideo {
