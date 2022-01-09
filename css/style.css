@@ -4782,16 +4782,20 @@ h2.title span {
     background-size: 15.5px 14.5px;
   }
   .listWrap__list ul li .sns {
+    display: flex;
+    align-items: center;
+    height: 18px;
+    margin-top: 10px;
     padding: 0 0 0 23px;
     font-size: 12px;
   }
   .listWrap__list ul li .sns + .txt {
-    margin-top: 15px;
+    margin-top: 11px;
     font-size: 20px;
     line-height: 24px;
   }
   .listWrap__list ul li .sns:after {
-    top: 3px;
+    top: 0;
     width: 18px;
     height: 18px;
   }
