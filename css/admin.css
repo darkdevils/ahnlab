@@ -2074,6 +2074,7 @@ html, body {
   /* input checkbox */
   /* input radio tab */
   /* textarea */
+  /* form width */
   /* button */
   /* search area */
   /* paging */
@@ -2380,15 +2381,6 @@ html, body {
   vertical-align: top;
   height: 53px;
 }
-#wrap .ahnInputText.form100 {
-  display: block;
-}
-#wrap .ahnInputText.formWidth01 {
-  width: 427px;
-}
-#wrap .ahnInputText.formWidth02 {
-  width: 560px;
-}
 #wrap .ahnInputText input {
   display: block;
   box-sizing: border-box;
@@ -2625,9 +2617,22 @@ html, body {
   outline: 0 none;
   padding: 0;
   font-size: 14px;
+  font-family: "NotoSansCJKkrMedium", sans-serif;
   color: #fff;
   resize: none;
   background-color: transparent;
+}
+#wrap .form100 {
+  display: block;
+}
+#wrap .form200p {
+  width: 200px;
+}
+#wrap .formWidth01 {
+  width: 427px;
+}
+#wrap .formWidth02 {
+  width: 560px;
 }
 #wrap .ahnBtnS {
   display: inline-block;
@@ -3047,7 +3052,7 @@ html, body {
   display: inline-block;
   vertical-align: top;
   line-height: 53px;
-  margin-right: 9px;
+  margin-right: 13px;
   font-size: 18px;
   font-family: "NotoSansCJKkrMedium", sans-serif;
   color: #EA5504;

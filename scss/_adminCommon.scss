@@ -377,18 +377,6 @@ html, body {
     vertical-align: top;
     height: 53px;
 
-    &.form100 {
-      display: block;
-    }
-
-    &.formWidth01 {
-      width: 427px;
-    }
-
-    &.formWidth02 {
-      width: 560px;
-    }
-
     input {
       display: block;
       box-sizing: border-box;
@@ -654,10 +642,28 @@ html, body {
       outline: 0 none;
       padding: 0;
       font-size: 14px;
+      @include nsM;
       color: #fff;
       resize: none;
       background-color: transparent;
     }
+  }
+
+  /* form width */
+  .form100 {
+    display: block;
+  }
+
+  .form200p {
+    width: 200px;
+  }
+
+  .formWidth01 {
+    width: 427px;
+  }
+
+  .formWidth02 {
+    width: 560px;
   }
 
   /* button */
@@ -1164,7 +1170,7 @@ html, body {
         display: inline-block;
         vertical-align: top;
         line-height: 53px;
-        margin-right: 9px;
+        margin-right: 13px;
         font-size: 18px;
         @include nsM;
         @include colorOrange;
