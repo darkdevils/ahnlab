@@ -165,7 +165,7 @@
     <!-- //header -->
     <!-- container -->
     <div id="container">
-        <div class="topVisual promiseAhn-detail">
+        <div class="topVisual">
             <div class="topVisualSwiper">
                 <div class="swiper">
                     <div class="swiper-wrapper">
@@ -226,29 +226,233 @@
                             <span class="date">2022.02.02 17:45</span>
                         </div>
                         <div class="justifyWrap__right">
-                            <button type="button"><span>공유하기 </span></button>
+                            <button type="button" class="btnSharing"><span>공유하기</span></button>
                             <span class="num">202</span><button type="button" class="btnLike"><span class="blind">좋아요</span></button>
+                            <div class="layerSharing">
+                                <h4 class="title">공유하기</h4>
+                                <div class="sharingSns">
+                                    <a href="#" class="kakao"><span class="blind">카카오톡</span></a>
+                                    <a href="#" class="naver"><span class="blind">네이버</span></a>
+                                    <a href="#" class="google"><span class="blind">구글</span></a>
+                                    <a href="#" class="facebook"><span class="blind">페이스북</span></a>
+                                    <a href="#" class="twitch"><span class="blind">트위치</span></a>
+                                </div>
+                                <div class="urlCopy">
+                                    <input type="text"><button type="button">URL 복사</button>
+                                </div>
+                                <button type="button" class="btnClose"><span class="blind">닫기</span></button>
+                            </div>
                         </div>
                     </div>
-                    <div class="visualImage"><img src="../images/temp/thumbnail_today01.png" alt="나는 슬로우 스타터 현충원 참배하는 안철수 후보"></div>
+                    <div class="visualImage"><img src="../images/temp/thumbnail_community.png" alt="나는 슬로우 스타터 현충원 참배하는 안철수 후보"></div>
                     <p class="text">
                         토지임대부 안심주택 총 100만 호 공급(이 중 절반을 청년안심주택으로 우선 공급)<br>
                         - 도심에 주상복합형 ‘청년 캠퍼스’ 공급<br>
                         - 재건축·재개발·리모델링 규제 완화하여 주택 공급
                     </p>
                 </div>
-                <div class="justifyWrap">
-                    <div class="justifyWrap__left">
-                        <a href="#" class="btnLink">이전글</a>
-                        <a href="#" class="btnLink">목록</a>
-                        <a href="#" class="btnLink">다음글</a>
-                    </div>
-                    <div class="justifyWrap__right">
-                        <span class="num">202</span><button type="button" class="btnLike"><span class="blind">좋아요</span></button>
+                <div class="btnWrap btnWrap-right">
+                    <a href="#" class="btnList"><span>목록</span></a>
+                    <button type="button" class="btnModify"><span>수정하기</span></button>
+                    <button type="button" class="btnDel"><span>삭제하기</span></button>
+                </div>
+                <div class="commentWriter">
+                    <h3 class="title">당신의 의견을 남겨주세요</h3>
+                    <div class="commentWriter__textarea">
+                        <textarea name="" id="" cols="30" rows="10" placeholder="의견을 작성해 주세요."></textarea>
+                        <div class="commentAttach">
+                            <div class="commentNum">
+                                <span><strong>0</strong>/1000</span>
+                                <button type="button" class="btnPhoto"><span class="blind">사진이미지</span></button>
+                            </div>
+                            <button type="button" class="btnRegister"><span class="icon">등록하기</span></button>
+                        </div>
                     </div>
                 </div>
+                <ul class="commentList">
+                    <li class="commentItem">
+                        <div class="commentBox">
+                            <div class="commentBox__nick">
+                                <strong class="nick">dorami</strong>
+                                <button type="button" class="btnCommentLayer"><span class="blind">수정,삭제 버튼</span></button>
+                                <div class="layerButton">
+                                    <ul>
+                                        <li><a href="#"><span>수정</span></a></li>
+                                        <li><a href="#"><span>삭제</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="commentBox__text">
+                                <p class="commentBox__text__view">
+                                    1. 주택 공급 : - 토지임대부 안심주택 총 100만 호 공급(이 중 절반을 청년안심주택으로 우선 공급)<br>
+                                    - 도심에 주상복합형 ‘청년 캠퍼스’ 공급, - 재건축·재개발·리모델링 규제 완화하여 주택 공급<br>
+                                    - 주택 공급 부지로 그린벨트 활용 고려
+                                </p>
+                            </div>
+                            <div class="commentBox__info">
+                                <div class="commentBox__info__left">
+                                    <span class="date">2022.02.02 23:20:11</span>
+                                    <button type="button" class="btnReply"><span>답글작성</span></button>
+                                </div>
+                                <div class="commentBox__info__right">
+                                    <span class="num">200</span>
+                                    <button type="button" class="btnLike"><span class="blind">좋아요</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- 답글작성 버튼 클릭시 나와야 합니다. -->
+                    <li class="commentItem commentItem-reply commentItem-writer">
+                        <div class="commentWriter">
+                            <div class="commentWriter__textarea">
+                                <textarea name="" id="" cols="30" rows="10" placeholder="의견을 작성해 주세요."></textarea>
+                                <div class="commentAttach">
+                                    <div class="commentNum">
+                                        <span><strong>0</strong>/1000</span>
+                                    </div>
+                                    <button type="button" class="btnRegister"><span>등록</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- //답글작성 버튼 클릭시 나와야 합니다. -->
+                    <li class="commentItem commentItem-reply">
+                        <div class="commentBox">
+                            <div class="commentBox__nick">
+                                <strong class="nick">dorami</strong>
+                                <button type="button" class="btnCommentLayer"><span class="blind">수정,삭제 버튼</span></button>
+                                <div class="layerButton">
+                                    <ul>
+                                        <li><a href="#"><span>수정</span></a></li>
+                                        <li><a href="#"><span>삭제</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="commentBox__text">
+                                <p class="commentBox__text__view">
+                                    1. 주택 공급 : - 토지임대부 안심주택 총 100만 호 공급(이 중 절반을 청년안심주택으로 우선 공급)<br>
+                                    - 도심에 주상복합형 ‘청년 캠퍼스’ 공급, - 재건축·재개발·리모델링 규제 완화하여 주택 공급<br>
+                                    - 주택 공급 부지로 그린벨트 활용 고려
+                                </p>
+                            </div>
+                            <div class="commentBox__info">
+                                <div class="commentBox__info__left">
+                                    <span class="date">2022.02.02 23:20:11</span>
+                                    <button type="button" class="btnReply"><span>답글작성</span></button>
+                                </div>
+                                <div class="commentBox__info__right">
+                                    <span class="num">200</span>
+                                    <button type="button" class="btnLike"><span class="blind">좋아요</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="commentItem">
+                        <div class="commentBox">
+                            <div class="commentBox__nick">
+                                <strong class="nick">dorami</strong>
+                                <button type="button" class="btnCommentLayer"><span class="blind">수정,삭제 버튼</span></button>
+                                <div class="layerButton">
+                                    <ul>
+                                        <li><a href="#"><span>수정</span></a></li>
+                                        <li><a href="#"><span>삭제</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="commentBox__text">
+                                <p class="commentBox__text__view">
+                                    1. 주택 공급 : - 토지임대부 안심주택 총 100만 호 공급(이 중 절반을 청년안심주택으로 우선 공급)<br>
+                                    - 도심에 주상복합형 ‘청년 캠퍼스’ 공급, - 재건축·재개발·리모델링 규제 완화하여 주택 공급<br>
+                                    - 주택 공급 부지로 그린벨트 활용 고려
+                                </p>
+                            </div>
+                            <div class="commentBox__info">
+                                <div class="commentBox__info__left">
+                                    <span class="date">2022.02.02 23:20:11</span>
+                                    <button type="button" class="btnReply"><span>답글작성</span></button>
+                                </div>
+                                <div class="commentBox__info__right">
+                                    <span class="num">200</span>
+                                    <button type="button" class="btnLike"><span class="blind">좋아요</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="commentItem commentItem-reply">
+                        <div class="commentBox">
+                            <div class="commentBox__nick">
+                                <strong class="nick">dorami</strong>
+                                <button type="button" class="btnCommentLayer"><span class="blind">수정,삭제 버튼</span></button>
+                                <div class="layerButton">
+                                    <ul>
+                                        <li><a href="#"><span>수정</span></a></li>
+                                        <li><a href="#"><span>삭제</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="commentBox__text">
+                                <p class="commentBox__text__view">
+                                    1. 주택 공급 : - 토지임대부 안심주택 총 100만 호 공급(이 중 절반을 청년안심주택으로 우선 공급)<br>
+                                    - 도심에 주상복합형 ‘청년 캠퍼스’ 공급, - 재건축·재개발·리모델링 규제 완화하여 주택 공급<br>
+                                    - 주택 공급 부지로 그린벨트 활용 고려
+                                </p>
+                            </div>
+                            <div class="commentBox__info">
+                                <div class="commentBox__info__left">
+                                    <span class="date">2022.02.02 23:20:11</span>
+                                    <button type="button" class="btnReply"><span>답글작성</span></button>
+                                </div>
+                                <div class="commentBox__info__right">
+                                    <span class="num">200</span>
+                                    <button type="button" class="btnLike"><span class="blind">좋아요</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="commentItem commentItem-reply">
+                        <div class="commentBox">
+                            <div class="commentBox__nick">
+                                <strong class="nick">dorami</strong>
+                                <button type="button" class="btnCommentLayer"><span class="blind">수정,삭제 버튼</span></button>
+                                <div class="layerButton">
+                                    <ul>
+                                        <li><a href="#"><span>수정</span></a></li>
+                                        <li><a href="#"><span>삭제</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="commentBox__text">
+                                <p class="commentBox__text__view">
+                                    1. 주택 공급 : - 토지임대부 안심주택 총 100만 호 공급(이 중 절반을 청년안심주택으로 우선 공급)<br>
+                                    - 도심에 주상복합형 ‘청년 캠퍼스’ 공급, - 재건축·재개발·리모델링 규제 완화하여 주택 공급<br>
+                                    - 주택 공급 부지로 그린벨트 활용 고려
+                                </p>
+                            </div>
+                            <div class="commentBox__info">
+                                <div class="commentBox__info__left">
+                                    <span class="date">2022.02.02 23:20:11</span>
+                                    <button type="button" class="btnReply"><span>답글작성</span></button>
+                                </div>
+                                <div class="commentBox__info__right">
+                                    <span class="num">200</span>
+                                    <button type="button" class="btnLike"><span class="blind">좋아요</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="pagination">
+                    <a href="#" class="previous"><span>이전</span></a>
+                    <a href="#" class="current"><span>1</span></a>
+                    <a href="#"><span>2</span></a>
+                    <a href="#"><span>3</span></a>
+                    <a href="#"><span>4</span></a>
+                    <a href="#"><span>5</span></a>
+                    <a href="#" class="next"><span>다음</span></a>
+                </div>
+
                 <div class="paginationWrap">
-                    <h3 class="title">일정</h3>
+                    <h3 class="title">소통해줘</h3>
                     <div class="paginationWrap__list">
                         <ul>
                             <li>
@@ -315,6 +519,21 @@
    function toggle(event) {
        event.target.classList.toggle('on');
    }
+   // 공유하기 버튼 클릭시
+   $('.btnSharing').on('click',function(){
+       $('.layerSharing').show();
+   });
+   $('.layerSharing .btnClose').on('click',function(){
+       $('.layerSharing').hide();
+   });
+   // 답글작성 버튼 클릭시
+    $('.btnReply').on('click',function(){
+        $(this).closest('.commentItem').next('.commentItem-writer').show();
+    });
+    // 답글 수정,삭제 버튼
+    $('.btnCommentLayer').on('click',function(){
+        $(this).next().toggle();
+    })
 </script>
 </body>
 </html>
