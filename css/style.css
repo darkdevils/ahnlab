@@ -3555,7 +3555,16 @@ h2.title span {
   line-height: 45px;
 }
 .ahnIs__video {
+  position: relative;
   margin-top: 105px;
+  padding-top: 56.25%;
+}
+.ahnIs__video iframe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 .ahnIs__video * {
   width: 100%;
