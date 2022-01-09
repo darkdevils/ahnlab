@@ -3604,7 +3604,6 @@ h2.title span {
   line-height: 48px;
   padding: 0 5px;
   color: #fff;
-  opacity: 0.7;
   white-space: normal;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -3707,7 +3706,7 @@ h2.title span {
 .detailWrap .justifyWrap__left .btnLink {
   font-size: 24px;
   margin-right: 15px;
-  color: #b3b3b3;
+  color: #fff;
 }
 .detailWrap .justifyWrap__right {
   position: relative;
@@ -3715,19 +3714,19 @@ h2.title span {
 }
 .detailWrap .justifyWrap__right .num {
   position: relative;
-  font-size: 17px;
+  font-size: 18px;
   font-family: "GothamMedium", sans-serif;
 }
 .detailWrap .justifyWrap__right .btnLike {
-  width: 22px;
-  height: 21px;
+  width: 26px;
+  height: 24px;
   margin-left: 10px;
-  background: url("../images/web/icon/icon_like_off02.png") no-repeat;
+  background: url("../images/web/icon/like_24x22_off.png") no-repeat;
   background-size: contain;
   vertical-align: top;
 }
 .detailWrap .justifyWrap__right .btnLike.on {
-  background: url("../images/web/icon/icon_like_on02.png") no-repeat;
+  background: url("../images/web/icon/like_24x22_on.png") no-repeat;
   background-size: contain;
 }
 .detailWrap__content {
@@ -3742,7 +3741,7 @@ h2.title span {
   display: block;
   margin: 60px 0 0;
   font-size: 22px;
-  color: #6a6a6a;
+  color: #b3b3b3;
   line-height: 32px;
 }
 
@@ -3867,8 +3866,13 @@ h2.title span {
   top: 0;
   width: 191px;
   height: 54px;
+  border: 1px solid #fff;
   background: url("../images/web/sub/btnWriting.png") no-repeat;
-  background-size: contain;
+  background-position: center;
+  background-size: 76px 28px;
+}
+.community .btnWriting:hover {
+  background-color: #EA5517;
 }
 .community__list ul {
   display: flex;
@@ -3925,7 +3929,7 @@ h2.title span {
   -webkit-box-orient: vertical;
   overflow: hidden;
   line-height: 40px;
-  color: #b3b3b3;
+  color: #fff;
 }
 .community__list ul li .txt .category {
   color: #EA5517;
@@ -3958,7 +3962,7 @@ h2.title span {
   padding: 0 30px 0 0;
 }
 .communityDetail .justifyWrap__right .btnSharing span {
-  font-size: 12px;
+  font-size: 18px;
   color: #b3b3b3;
   font-family: "NotoSansCJKkrMedium", sans-serif;
   line-height: 16px;
@@ -3999,7 +4003,7 @@ h2.title span {
 }
 .commentWriter__textarea {
   height: 300px;
-  border: 1px solid #3D3D3D;
+  border: 1px solid #707070;
   box-sizing: border-box;
 }
 .commentWriter__textarea textarea {
@@ -4020,7 +4024,7 @@ h2.title span {
   position: relative;
   height: 58px;
   background: #262626;
-  border-top: 1px solid #3d3d3d;
+  border-top: 1px solid #707070;
   box-sizing: border-box;
 }
 .commentWriter .commentAttach .commentNum {
@@ -4681,7 +4685,7 @@ h2.title span {
     padding-top: 35px;
     padding-left: 23.5px;
     font-size: 15px;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
   }
   h2.title strong {
     font-size: 22.5px;
@@ -4861,13 +4865,10 @@ h2.title span {
     display: flex;
     align-items: center;
   }
-  .detailWrap .justifyWrap__right .num {
-    font-size: 11.5px;
-  }
   .detailWrap .justifyWrap__right .btnLike {
     position: relative;
     top: 3px;
-    width: 17.5px;
+    width: 24px;
   }
   .detailWrap__content {
     font-size: 11.5px;
@@ -4941,27 +4942,19 @@ h2.title span {
 
   /* 안철수의 오늘 */
   .tabWrap {
-    margin-bottom: 38.5px;
+    margin-bottom: 30px;
     padding-left: 23.5px;
   }
   .tabWrap ul {
     display: flex;
     flex-flow: wrap;
-    width: 252px;
   }
   .tabWrap ul li {
     width: 84.5px;
     height: 38px;
     line-height: 31px;
-  }
-  .tabWrap ul li + li {
     margin-left: -1px;
-  }
-  .tabWrap ul li:nth-child(-n+3) {
     margin-bottom: -1px;
-  }
-  .tabWrap ul li:nth-child(4) {
-    margin-left: 0;
   }
   .tabWrap ul li a {
     font-size: 13.5px;
@@ -5003,6 +4996,7 @@ h2.title span {
     width: 100%;
   }
   .community__list ul li {
+    width: 100%;
     margin-bottom: 25px;
   }
   .community__list ul li a.imgLink {
@@ -5010,15 +5004,10 @@ h2.title span {
   }
   .community__list ul li .justifyWrap {
     margin-top: 10px;
-  }
-  .community__list ul li .justifyWrap__left {
-    font-size: 11.5px;
+    font-size: 18px;
   }
   .community__list ul li .justifyWrap__left .name {
     margin-right: 10px;
-  }
-  .community__list ul li .justifyWrap__right {
-    font-size: 11.5px;
   }
   .community__list ul li .justifyWrap__right .btnLike {
     margin-left: 5px;
@@ -5046,6 +5035,9 @@ h2.title span {
   .communityDetail {
     padding: 85px 24px 0;
   }
+  .communityDetail.topVisual {
+    display: none;
+  }
   .communityDetail h2.title {
     display: none;
   }
@@ -5065,10 +5057,8 @@ h2.title span {
     display: none;
   }
   .communityDetail .detailWrap .justifyWrap__left .name {
+    font-size: 18px;
     margin-right: 10px;
-  }
-  .communityDetail .detailWrap .justifyWrap__left .name, .communityDetail .detailWrap .justifyWrap__left .date {
-    font-size: 11.5px;
   }
   .communityDetail .detailWrap .justifyWrap__right .btnSharing {
     position: relative;
@@ -5127,7 +5117,7 @@ h2.title span {
     display: none;
   }
   .communityDetail .commentWriter .commentAttach .btnRegister {
-    background: none;
+    background: #000;
     height: 39px;
     width: 91px;
   }
@@ -5175,10 +5165,11 @@ h2.title span {
     padding-right: 0;
   }
   .communityDetail .commentList .commentItem-reply {
-    padding-left: 26px;
+    padding-left: 38.5px;
+    padding-right: 15px;
   }
   .communityDetail .commentList .commentItem-reply:after {
-    left: 5px;
+    left: 15px;
     background: url("../images/mobile/sub/bg_line.png") no-repeat;
     background-size: contain;
     width: 16.5px;
@@ -5232,7 +5223,7 @@ h2.title span {
     display: none;
   }
   .communityDetail .commentList .commentItem .commentWriter .commentAttach .btnRegister {
-    background: none;
+    background: #000;
     height: 39px;
     color: #fff;
   }
@@ -5244,6 +5235,7 @@ h2.title span {
     display: none;
   }
   .communityDetail .commentList .commentItem .commentWriter .commentAttach .btnRegister span {
+    color: #fff;
     font-size: 13.5px;
   }
   .communityDetail .layerSharing {
@@ -5306,6 +5298,8 @@ h2.title span {
   }
   .communityModify .tableArea02 .thText {
     font-size: 14px;
+    padding-left: 10px;
+    line-height: 48px;
   }
   .communityModify .tableArea02 .formType01 {
     height: 37px;
@@ -5335,8 +5329,9 @@ h2.title span {
     height: 37px;
   }
   .communityModify .tableArea02 .ahnBtnM span {
+    height: 100%;
     line-height: 37px;
-    font-size: 9px;
+    font-size: 14px;
   }
   .communityModify .tableArea02 .ahnTextarea {
     height: 200px;
@@ -5359,6 +5354,7 @@ h2.title span {
     background: url("../images/mobile/sub/icon_list.png") no-repeat;
     background-position: center top;
     background-size: 26px 21.5px;
+    padding: 35px 0 0;
   }
   .communityModify .btnWrap-right .btnModify {
     width: 36px;

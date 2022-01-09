@@ -141,7 +141,6 @@ h2.title {
           line-height: 48px;
           padding: 0 5px;
           color: #fff;
-          opacity: 0.7;
           white-space: normal;
           -webkit-line-clamp: 2;
           -webkit-box-orient: vertical;
@@ -252,7 +251,7 @@ h2.title {
       .btnLink {
         font-size: 24px;
         margin-right: 15px;
-        color: #b3b3b3;
+        color: #fff;
       }
     }
     &__right {
@@ -260,18 +259,18 @@ h2.title {
       padding: 0 5px 0 0;
       .num {
         position: relative;
-        font-size: 17px;
+        font-size: 18px;
         @include gtM;
       }
       .btnLike {
-        width: 22px;
-        height: 21px;
+        width: 26px;
+        height: 24px;
         margin-left: 10px;
-        @include imageUrl("web/icon/icon_like_off02");
+        @include imageUrl("web/icon/like_24x22_off");
         background-size: contain;
         vertical-align: top;
         &.on {
-          @include imageUrl("web/icon/icon_like_on02");
+          @include imageUrl("web/icon/like_24x22_on");
           background-size: contain;
         }
       }
@@ -289,7 +288,7 @@ h2.title {
     display: block;
     margin: 60px 0 0;
     font-size: 22px;
-    color: #6a6a6a;
+    color: #b3b3b3;
     line-height: 32px;
   }
 }
@@ -414,8 +413,13 @@ h2.title {
     top: 0;
     width: 191px;
     height: 54px;
+    border: 1px solid #fff;
     @include imageUrl("web/sub/btnWriting");
-    background-size: contain;
+    background-position: center;
+    background-size: 76px 28px;
+    &:hover {
+      background-color: #EA5517;
+    }
   }
   &__list {
     ul {
@@ -471,7 +475,7 @@ h2.title {
           -webkit-box-orient: vertical;
           overflow: hidden;
           line-height: 40px;
-          color: #b3b3b3;
+          color: #fff;
           .category {
             color: #EA5517;
           }
@@ -512,7 +516,7 @@ h2.title {
         margin-right: 14px;
         padding: 0 30px 0 0;
         span {
-          font-size: 12px;
+          font-size: 18px;
           color: #b3b3b3;
           @include nsM;
           line-height: 16px;
@@ -557,7 +561,7 @@ h2.title {
   }
   &__textarea {
     height: 300px;
-    border: 1px solid #3D3D3D;
+    border: 1px solid #707070;
     box-sizing: border-box;
     textarea {
       width: 100%;
@@ -578,7 +582,7 @@ h2.title {
     position: relative;
     height: 58px;
     background: #262626;
-    border-top: 1px solid #3d3d3d;
+    border-top: 1px solid #707070;
     box-sizing: border-box;
     .commentNum {
       display: flex;
@@ -1295,7 +1299,7 @@ h2.title {
     padding-top: calc(70px / 2);
     padding-left: calc(47px / 2);
     font-size: calc(30px / 2);
-    margin-bottom: calc(70px / 2);
+    margin-bottom: calc(50px / 2);
     strong {
       font-size: calc(45px / 2);
     }
@@ -1481,12 +1485,12 @@ h2.title {
         display: flex;
         align-items: center;
         .num {
-          font-size: calc(23px / 2);
+          //font-size: calc(23px / 2);
         }
         .btnLike {
           position: relative;
           top: 3px;
-          width: calc(35px / 2);
+          width: 24px;
         }
       }
     }
@@ -1566,25 +1570,17 @@ h2.title {
 
   /* 안철수의 오늘 */
   .tabWrap {
-    margin-bottom: calc(77px / 2);
+    margin-bottom: calc(60px / 2);
     padding-left: calc(47px / 2);
     ul {
       display: flex;
       flex-flow: wrap;
-      width: 252px;
       li {
         width: calc(169px / 2);
         height: calc(76px / 2);
         line-height: calc(62px / 2);
-        + li {
-          margin-left: -1px;
-        }
-        &:nth-child(-n + 3) {
-          margin-bottom: -1px;
-        }
-        &:nth-child(4) {
-          margin-left: 0;
-        }
+        margin-left: -1px;
+        margin-bottom: -1px;
         a {
           font-size: calc(27px / 2);
           @include nsB;
@@ -1629,6 +1625,7 @@ h2.title {
           width: 100%;
         }
         li {
+          width: 100%;
           margin-bottom: calc(50px / 2);
           a {
             &.imgLink {
@@ -1637,14 +1634,13 @@ h2.title {
           }
           .justifyWrap {
             margin-top: 10px;
+            font-size: calc(36px / 2);
             &__left {
-              font-size: calc(23px / 2);
               .name {
                 margin-right: 10px;
               }
             }
             &__right {
-              font-size: calc(23px / 2);
               .btnLike {
                 margin-left: 5px;
                 width: calc(31px / 2);
@@ -1676,6 +1672,9 @@ h2.title {
 
   .communityDetail {
     padding: 85px 24px 0;
+    &.topVisual {
+      display: none;
+    }
     h2.title {
       display: none;
     }
@@ -1696,10 +1695,8 @@ h2.title {
             display: none;
           }
           .name {
+            font-size: calc(36px / 2);
             margin-right: 10px;
-          }
-          .name,.date {
-            font-size: calc(23px / 2);
           }
         }
 
@@ -1763,7 +1760,7 @@ h2.title {
           }
         }
         .btnRegister {
-          background: none;
+          background: #000;
           height: calc(78px / 2);
           width: calc(182px / 2);
           .icon {
@@ -1827,9 +1824,10 @@ h2.title {
           }
         }
         &-reply {
-          padding-left: calc(52px / 2);
+          padding-left: calc(77px / 2);
+          padding-right: 15px;
           &:after {
-            left: 5px;
+            left: 15px;
             @include imageUrl('mobile/sub/bg_line');
             background-size: contain;
             width: calc(33px / 2);
@@ -1843,6 +1841,7 @@ h2.title {
               }
               .commentAttach {
                 .btnRegister {
+
                   span {
                     font-size: calc(27px / 2);
                   }
@@ -1888,7 +1887,7 @@ h2.title {
               }
             }
             .btnRegister {
-              background: none;
+              background: #000;
               height: calc(78px / 2);
               color: #fff;
               .icon {
@@ -1899,6 +1898,7 @@ h2.title {
                 }
               }
               span {
+                color: #fff;
                 font-size: calc(27px / 2);
               }
             }
@@ -1975,6 +1975,8 @@ h2.title {
       }
       .thText {
         font-size: 14px;
+        padding-left: 10px;
+        line-height: 48px;
       }
       .formType01 {
         height: calc(74px / 2);
@@ -2005,8 +2007,9 @@ h2.title {
       .ahnBtnM {
         height: 37px;
         span {
+          height: 100%;
           line-height: 37px;
-          font-size: calc(18px / 2);
+          font-size: calc(28px / 2);
         }
       }
       .ahnTextarea {
@@ -2031,6 +2034,7 @@ h2.title {
         @include imageUrl("mobile/sub/icon_list");
         background-position: center top;
         background-size: 26px calc(43px / 2);
+        padding: 35px 0 0;
       }
       .btnModify {
         width: calc(72px / 2);
