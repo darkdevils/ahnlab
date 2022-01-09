@@ -3614,13 +3614,18 @@ h2.title span {
   display: none;
 }
 .listWrap__list ul li .txt {
-  display: block;
+  display: -webkit-box;
+  height: 96px;
   margin-top: 29px;
   font-size: 28px;
   line-height: 48px;
   padding: 0 5px;
   color: #fff;
   opacity: 0.7;
+  white-space: normal;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .listWrap__list ul li .sns {
   position: relative;
@@ -4026,6 +4031,7 @@ h2.title span {
   line-height: 20px;
   color: #fff;
   outline: none;
+  resize: none;
 }
 .commentWriter .commentAttach {
   position: relative;
@@ -4319,8 +4325,9 @@ h2.title span {
 }
 .btnWrap .btnList {
   background: url("../images/web/sub/icon_list.png") no-repeat;
-  width: 36px;
+  width: 50px;
   height: 29px;
+  background-position: center top;
 }
 .btnWrap .btnModify {
   width: 50px;
@@ -4770,7 +4777,8 @@ h2.title span {
     width: 100%;
     height: 100%;
   }
-  .listWrap__list ul li a span {
+  .listWrap__list ul li a .txt {
+    height: 48px;
     font-size: 20px;
     opacity: 1;
     margin-top: 13px;
@@ -5117,6 +5125,7 @@ h2.title span {
     height: 98px;
     padding: 10px 7px;
     font-size: 13.5px;
+    resize: none;
   }
   .communityDetail .commentWriter .commentAttach {
     height: 38px;
@@ -5133,6 +5142,7 @@ h2.title span {
   .communityDetail .commentWriter .commentAttach .btnRegister {
     background: none;
     height: 39px;
+    width: 91px;
   }
   .communityDetail .commentWriter .commentAttach .btnRegister .icon {
     padding: 0;
@@ -5194,6 +5204,59 @@ h2.title span {
     height: 98px;
   }
   .communityDetail .commentList .commentItem-reply .commentWriter__textarea .commentAttach .btnRegister span {
+    font-size: 13.5px;
+  }
+  .communityDetail .commentList .commentItem .commentWriter {
+    margin-bottom: 30px;
+  }
+  .communityDetail .commentList .commentItem .commentWriter h3.title {
+    margin-top: 50px;
+    margin-bottom: 0;
+    padding-top: 12px;
+    padding-bottom: 11px;
+    font-size: 16.5px;
+  }
+  .communityDetail .commentList .commentItem .commentWriter h3.title:after {
+    right: -18px;
+    width: 21px;
+    height: 15.5px;
+    background: url("../images/mobile/sub/icon_comment.png") no-repeat;
+    background-size: contain;
+  }
+  .communityDetail .commentList .commentItem .commentWriter__textarea {
+    height: 138px;
+  }
+  .communityDetail .commentList .commentItem .commentWriter__textarea textarea {
+    height: 98px;
+    padding: 10px 7px;
+    font-size: 13.5px;
+    resize: none;
+  }
+  .communityDetail .commentList .commentItem .commentWriter .commentAttach {
+    height: 38px;
+  }
+  .communityDetail .commentList .commentItem .commentWriter .commentAttach .commentNum {
+    padding-left: 15px;
+  }
+  .communityDetail .commentList .commentItem .commentWriter .commentAttach .commentNum span {
+    font-size: 11.5px;
+  }
+  .communityDetail .commentList .commentItem .commentWriter .commentAttach .commentNum .btnPhoto {
+    display: none;
+  }
+  .communityDetail .commentList .commentItem .commentWriter .commentAttach .btnRegister {
+    background: none;
+    height: 39px;
+    color: #fff;
+  }
+  .communityDetail .commentList .commentItem .commentWriter .commentAttach .btnRegister .icon {
+    padding: 0;
+    font-size: 13.5px;
+  }
+  .communityDetail .commentList .commentItem .commentWriter .commentAttach .btnRegister .icon:after {
+    display: none;
+  }
+  .communityDetail .commentList .commentItem .commentWriter .commentAttach .btnRegister span {
     font-size: 13.5px;
   }
   .communityDetail .layerSharing {
