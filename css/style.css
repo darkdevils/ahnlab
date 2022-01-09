@@ -4162,6 +4162,10 @@ h2.title span {
   line-height: 26px;
   text-align: center;
 }
+.commentList .commentBox .layerButton li a:hover {
+  background-color: #EA5517;
+  color: #fff;
+}
 .commentList .commentBox .layerButton li + li {
   border-top: 1px solid #b3b3b3;
 }
@@ -4328,6 +4332,12 @@ h2.title span {
   width: 50px;
   height: 28px;
   background: url("../images/web/sub/icon_del.png") no-repeat;
+  background-position: center top;
+}
+.btnWrap .btnPublish {
+  width: 50px;
+  height: 31px;
+  background: url("../images/web/sub/icon_publish.png") no-repeat;
   background-position: center top;
 }
 
@@ -5227,15 +5237,99 @@ h2.title span {
   .communityModify h2.title {
     display: none;
   }
+  .communityModify .tableArea02 {
+    padding: 0 24px;
+  }
+  .communityModify .tableArea02 table colgroup col:nth-child(1) {
+    width: 88px !important;
+  }
+  .communityModify .tableArea02 table tbody tr > * {
+    height: 34px;
+    padding: 5px 10px;
+    line-height: 36px;
+  }
   .communityModify .tableArea02 table tbody tr th {
-    font-size: 14px;
-    width: 80px;
+    font-size: 15px;
   }
   .communityModify .tableArea02 table tbody tr td {
     width: 100%;
   }
   .communityModify .tableArea02 .thText {
     font-size: 14px;
+  }
+  .communityModify .tableArea02 .formType01 {
+    height: 37px;
+  }
+  .communityModify .tableArea02 .formType01 .ahnInputText {
+    width: 100%;
+  }
+  .communityModify .tableArea02 .thSelectBox .headingText {
+    height: 37px;
+    line-height: 34px;
+    font-size: 15px;
+  }
+  .communityModify .tableArea02 .ahnSelect {
+    height: 37px;
+  }
+  .communityModify .tableArea02 .ahnSelect select {
+    font-size: 14px;
+  }
+  .communityModify .tableArea02 .ahnInputText {
+    width: 100%;
+    height: 37px;
+  }
+  .communityModify .tableArea02 .ahnInputText input {
+    font-size: 14px;
+  }
+  .communityModify .tableArea02 .ahnBtnM {
+    height: 37px;
+  }
+  .communityModify .tableArea02 .ahnBtnM span {
+    line-height: 37px;
+    font-size: 9px;
+  }
+  .communityModify .tableArea02 .ahnTextarea {
+    height: 200px;
+    padding: 15px;
+  }
+  .communityModify .btnWrap-right {
+    padding: 20px 24px 0 0;
+  }
+  .communityModify .btnWrap-right a, .communityModify .btnWrap-right button {
+    display: inline-block;
+    padding-top: 32px;
+    margin-left: 17.5px;
+  }
+  .communityModify .btnWrap-right span {
+    font-size: 10px;
+  }
+  .communityModify .btnWrap-right .btnList {
+    width: 36px;
+    height: 21.5px;
+    background: url("../images/mobile/sub/icon_list.png") no-repeat;
+    background-position: center top;
+    background-size: 26px 21.5px;
+  }
+  .communityModify .btnWrap-right .btnModify {
+    width: 36px;
+    height: 21px;
+    background: url("../images/mobile/sub/icon_modify.png") no-repeat;
+    background-position: center top;
+    background-size: 21px;
+  }
+  .communityModify .btnWrap-right .btnDel {
+    width: 36px;
+    height: 20px;
+    background: url("../images/mobile/sub/icon_del.png") no-repeat;
+    background-position: center top;
+    background-size: 13.5px 20px;
+  }
+  .communityModify .btnWrap-right .btnPublish {
+    width: 36px;
+    height: 19.5px;
+    background: url("../images/mobile/sub/icon_publish.png") no-repeat;
+    background-position: center top;
+    background-size: 17px 19.5px;
   }
 }
 

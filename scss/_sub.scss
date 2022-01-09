@@ -706,6 +706,10 @@ h2.title {
           height: 26px;
           line-height: 26px;
           text-align: center;
+          &:hover {
+            background-color: #EA5517;
+            color: #fff;
+          }
         }
         + li {
           border-top: 1px solid #b3b3b3;
@@ -883,6 +887,12 @@ h2.title {
     width: 50px;
     height: 28px;
     @include imageUrl("web/sub/icon_del");
+    background-position: center top;
+  }
+  .btnPublish {
+    width: 50px;
+    height: 31px;
+    @include imageUrl("web/sub/icon_publish");
     background-position: center top;
   }
 }
@@ -1872,12 +1882,22 @@ h2.title {
       display: none;
     }
     .tableArea02 {
+      padding: 0 24px;
       table {
+        colgroup {
+          col:nth-child(1) {
+            width: 88px !important;
+          }
+        }
         tbody {
           tr {
+            > * {
+              height: calc(68px / 2);
+              padding: 5px 10px;
+              line-height: calc(72px / 2);
+            }
             th {
-              font-size: 14px;
-              width: 80px;
+              font-size: 15px;
             }
             td {
               width: 100%;
@@ -1887,6 +1907,82 @@ h2.title {
       }
       .thText {
         font-size: 14px;
+      }
+      .formType01 {
+        height: calc(74px / 2);
+        .ahnInputText {
+          width: 100%;
+        }
+      }
+      .thSelectBox {
+        .headingText {
+          height: calc(74px / 2);
+          line-height: 34px;
+          font-size: 15px;
+        }
+      }
+      .ahnSelect {
+        height: calc(74px / 2);
+        select {
+          font-size: 14px;
+        }
+      }
+      .ahnInputText {
+        width: 100%;
+        height: calc(74px / 2);
+        input {
+          font-size: 14px;
+        }
+      }
+      .ahnBtnM {
+        height: 37px;
+        span {
+          line-height: 37px;
+          font-size: calc(18px / 2);
+        }
+      }
+      .ahnTextarea {
+        height: 200px;
+        padding: 15px;
+      }
+    }
+    .btnWrap-right {
+      padding: 20px 24px 0 0;
+      a,button {
+        display: inline-block;
+        padding-top: calc(64px / 2);
+        margin-left: calc(35px / 2);
+      }
+      span {
+        font-size: 10px;
+      }
+      .btnList {
+        width: calc(72px / 2);
+        height: calc(43px / 2);
+        @include imageUrl("mobile/sub/icon_list");
+        background-position: center top;
+        background-size: 26px calc(43px / 2);
+      }
+      .btnModify {
+        width: calc(72px / 2);
+        height: calc(42px / 2);
+        @include imageUrl("mobile/sub/icon_modify");
+        background-position: center top;
+        background-size: 21px;
+      }
+      .btnDel {
+        width: calc(72px / 2);
+        height: calc(40px / 2);
+        @include imageUrl("mobile/sub/icon_del");
+        background-position: center top;
+        background-size: calc(27px / 2) calc(40px / 2);
+      }
+      .btnPublish {
+        width: calc(72px / 2);
+        height: calc(39px / 2);
+        @include imageUrl("mobile/sub/icon_publish");
+        background-position: center top;
+        background-size: calc(34px / 2) calc(39px / 2);
       }
     }
   }
