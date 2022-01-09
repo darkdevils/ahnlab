@@ -1971,6 +1971,11 @@ h2.title {
             td {
               width: 100%;
             }
+            &.lineOrange {
+              td {
+                padding-right: 0;
+              }
+            }
           }
         }
       }

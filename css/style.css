@@ -5297,6 +5297,9 @@ h2.title span {
   .communityModify .tableArea02 table tbody tr td {
     width: 100%;
   }
+  .communityModify .tableArea02 table tbody tr.lineOrange td {
+    padding-right: 0;
+  }
   .communityModify .tableArea02 .thText {
     font-size: 14px;
     padding-left: 10px;
