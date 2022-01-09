@@ -4069,21 +4069,39 @@ h2.title span {
   content: "";
   position: absolute;
   left: 0;
-  top: -2px;
+  top: 1px;
   background: url("../images/web/sub/icon_register.png") no-repeat;
   width: 23px;
   height: 23px;
 }
+.commentWriter .commentAttach .btnRegister {
+  background: none;
+  text-align: center;
+  background: #000000;
+  border: 1px solid #707070;
+  transition: 0.3s;
+}
+.commentWriter .commentAttach .btnRegister span {
+  font-size: 20px;
+  color: #b3b3b3;
+  font-family: "NotoSansCJKkrRegular", sans-serif;
+}
+.commentWriter .commentAttach .btnRegister:hover {
+  background: #EA5517;
+}
+.commentWriter .commentAttach .btnRegister:hover span {
+  color: #fff;
+}
 
 .commentList .commentItem {
   position: relative;
-  margin-top: 55px;
+  margin-top: 25px;
   border-bottom: 1px solid #707070;
   padding: 30px 0 11px;
 }
 .commentList .commentItem-reply {
   margin: 0;
-  padding: 30px 0 30px 112px;
+  padding: 30px 0 30px 112px !important;
   background-color: #222222;
 }
 .commentList .commentItem-reply:after {
@@ -4095,34 +4113,16 @@ h2.title span {
   width: 22px;
   height: 22px;
 }
-.commentList .commentItem-reply .commentWriter__textarea {
+.commentList .commentItem .commentWriter__textarea {
   height: 226px;
 }
-.commentList .commentItem-reply .commentWriter__textarea textarea {
+.commentList .commentItem .commentWriter__textarea textarea {
   height: 166px;
   padding: 21px 16px;
 }
-.commentList .commentItem-reply .commentWriter__textarea .commentAttach .btnRegister {
-  background: none;
-  text-align: center;
-  background: #000000;
-  border: 1px solid #707070;
-  transition: 0.3s;
-}
-.commentList .commentItem-reply .commentWriter__textarea .commentAttach .btnRegister span {
-  font-size: 20px;
-  color: #b3b3b3;
-  font-family: "NotoSansCJKkrRegular", sans-serif;
-}
-.commentList .commentItem-reply .commentWriter__textarea .commentAttach .btnRegister:hover {
-  background: #EA5517;
-}
-.commentList .commentItem-reply .commentWriter__textarea .commentAttach .btnRegister:hover span {
-  color: #fff;
-}
 .commentList .commentItem-writer {
+  padding: 0;
   background-color: transparent;
-  display: none;
 }
 .commentList .commentBox {
   position: relative;
@@ -5128,6 +5128,9 @@ h2.title span {
   .communityDetail .commentWriter .commentAttach .btnRegister .icon:after {
     display: none;
   }
+  .communityDetail .commentWriter .commentAttach .btnRegister span {
+    font-size: 13.5px;
+  }
   .communityDetail .commentList .commentItem {
     margin: 0;
     padding: 25px 0;
@@ -5218,6 +5221,19 @@ h2.title span {
   }
 
   /* 커뮤니티 쓰기 - 수정 */
+  .communityModify h2.title {
+    display: none;
+  }
+  .communityModify .tableArea02 table tbody tr th {
+    font-size: 14px;
+    width: 80px;
+  }
+  .communityModify .tableArea02 table tbody tr td {
+    width: 100%;
+  }
+  .communityModify .tableArea02 .thText {
+    font-size: 14px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
