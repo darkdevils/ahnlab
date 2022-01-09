@@ -643,8 +643,11 @@ h2.title {
     &-reply {
       //display: none;
       margin: 0;
-      padding: 30px 0 30px 112px !important;
+      padding: 30px 0 30px 112px;
       background-color: #222222;
+      &.commentItem-writer {
+        padding: 30px 0 30px 112px;
+      }
       &:after {
         content: "";
         position: absolute;
@@ -1755,7 +1758,7 @@ h2.title {
     .commentList {
       .commentItem {
         margin: 0;
-        padding: 25px 0;
+        padding: 25px 10px;
         .commentBox {
           .btnCommentLayer {
             right : 0;
@@ -1801,7 +1804,7 @@ h2.title {
         &-reply {
           padding-left: calc(52px / 2);
           &:after {
-            left: 0;
+            left: 5px;
             @include imageUrl('mobile/sub/bg_line');
             background-size: contain;
             width: calc(33px / 2);

@@ -4101,8 +4101,11 @@ h2.title span {
 }
 .commentList .commentItem-reply {
   margin: 0;
-  padding: 30px 0 30px 112px !important;
+  padding: 30px 0 30px 112px;
   background-color: #222222;
+}
+.commentList .commentItem-reply.commentItem-writer {
+  padding: 30px 0 30px 112px;
 }
 .commentList .commentItem-reply:after {
   content: "";
@@ -5133,7 +5136,7 @@ h2.title span {
   }
   .communityDetail .commentList .commentItem {
     margin: 0;
-    padding: 25px 0;
+    padding: 25px 10px;
   }
   .communityDetail .commentList .commentItem .commentBox .btnCommentLayer {
     right: 0;
@@ -5168,7 +5171,7 @@ h2.title span {
     padding-left: 26px;
   }
   .communityDetail .commentList .commentItem-reply:after {
-    left: 0;
+    left: 5px;
     background: url("../images/mobile/sub/bg_line.png") no-repeat;
     background-size: contain;
     width: 16.5px;
