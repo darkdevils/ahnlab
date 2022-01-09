@@ -3025,6 +3025,10 @@ html, body {
 #wrap .tableArea02 table tbody tr td {
   padding-left: 0;
 }
+#wrap .tableArea02 table tbody tr .itemFull {
+  padding-left: 0;
+  padding-right: 0;
+}
 #wrap .tableArea02 table tbody .lineOrange {
   border-color: #EA5504;
 }
