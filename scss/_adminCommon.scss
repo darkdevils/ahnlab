@@ -1451,7 +1451,7 @@ html, body {
       }
     }
 
-    .iconInsta, .iconFace, .iconNaver, .iconPressRelease, .iconProgram {
+    .iconInsta, .iconFace, .iconNaver, .iconMedia, .iconProgram {
       display: block;
       line-height: 32px;
       padding-left: 36px;
@@ -1474,7 +1474,12 @@ html, body {
       background-position: left center;
     }
 
-    .iconPressRelease, .iconProgram {
+    .iconMedia {
+      @include imageUrlAdmin("icon/icon_media");
+      background-position: left center;
+    }
+
+    .iconProgram {
       @include imageUrlAdmin("icon/icon_an");
       background-position: left center;
     }

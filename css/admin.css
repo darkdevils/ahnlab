@@ -3258,7 +3258,7 @@ html, body {
 #wrap .ListWidth02 ul li .contextArea.categoryType {
   padding-top: 18px;
 }
-#wrap .ListWidth02 .iconInsta, #wrap .ListWidth02 .iconFace, #wrap .ListWidth02 .iconNaver, #wrap .ListWidth02 .iconPressRelease, #wrap .ListWidth02 .iconProgram {
+#wrap .ListWidth02 .iconInsta, #wrap .ListWidth02 .iconFace, #wrap .ListWidth02 .iconNaver, #wrap .ListWidth02 .iconMedia, #wrap .ListWidth02 .iconProgram {
   display: block;
   line-height: 32px;
   padding-left: 36px;
@@ -3277,7 +3277,11 @@ html, body {
   background: url("../admin/images/icon/icon_naver.png") no-repeat;
   background-position: left center;
 }
-#wrap .ListWidth02 .iconPressRelease, #wrap .ListWidth02 .iconProgram {
+#wrap .ListWidth02 .iconMedia {
+  background: url("../admin/images/icon/icon_media.png") no-repeat;
+  background-position: left center;
+}
+#wrap .ListWidth02 .iconProgram {
   background: url("../admin/images/icon/icon_an.png") no-repeat;
   background-position: left center;
 }
