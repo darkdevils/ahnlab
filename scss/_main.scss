@@ -318,42 +318,6 @@
   }
 }
 
-/* mobile hover 방지 */
-@media (hover: none) {
-  #wrap.mainLayout {
-
-    /* header */
-    #header {
-
-    }
-
-    /* container */
-    #container {
-
-      .content {
-
-        .mainTitleArea {
-
-          .moreLink {
-
-            &:hover {
-              color: #BCBCBC;
-              @include imageUrl('mobile/icon/icon_moreLink');
-              background-position: right center;
-              background-size: 4px 6px;
-            }
-          }
-        }
-      }
-    }
-
-    /* footer */
-    #footer {
-
-    }
-  }
-}
-
 /* media queries */
 @media (min-width: 781px) and (max-width: 1199px) {
   /* wrap */
@@ -529,6 +493,12 @@
             @include imageUrl('mobile/icon/icon_moreLink');
             background-position: right center;
             background-size: 4px 6px;
+
+            &:hover {
+              @include imageUrl('mobile/icon/icon_moreLink');
+              background-position: right center;
+              background-size: 4px 6px;
+            }
           }
         }
 

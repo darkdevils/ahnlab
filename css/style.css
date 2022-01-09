@@ -2588,33 +2588,6 @@ html .opening, body .opening {
   color: #9F9F9F;
 }
 
-/* mobile hover 방지 */
-@media (hover: none) {
-  #wrap {
-    /* header */
-    /* container */
-    /* footer */
-  }
-  #wrap #header .headerIn .logoText a:hover {
-    color: #fff;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem a:hover, #wrap #header .headerIn .gnb nav .navIn .gnbItem button:hover {
-    color: #fff;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem a:hover span, #wrap #header .headerIn .gnb nav .navIn .gnbItem button:hover span {
-    color: #fff;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login > button:hover {
-    background: url("../images/mobile/icon/icon_login.png") no-repeat;
-    background-position: left center;
-    background-size: 18px 16px;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search > button:hover {
-    background: url("../images/mobile/icon/icon_search.png") no-repeat;
-    background-position: left center;
-    background-size: 15px 16px;
-  }
-}
 /* media queries */
 @media (max-width: 780px) {
   html .opening, body .opening {
@@ -2695,6 +2668,9 @@ html .opening, body .opening {
     font-size: 18px;
     font-family: "NotoSansCJKkrBold", sans-serif;
   }
+  #wrap #header .headerIn .logoText a:hover {
+    color: #fff;
+  }
   #wrap #header .headerIn .gnb .gnbOpenBtn {
     position: absolute;
     right: 0;
@@ -2753,6 +2729,12 @@ html .opening, body .opening {
     line-height: 35px;
     font-size: 24px;
     font-family: "NotoSansCJKkrBold", sans-serif;
+    color: #fff;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem a:hover, #wrap #header .headerIn .gnb nav .navIn .gnbItem button:hover {
+    color: #fff;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem a:hover span, #wrap #header .headerIn .gnb nav .navIn .gnbItem button:hover span {
     color: #fff;
   }
   #wrap #header .headerIn .gnb nav .navIn .gnbItem.category {
@@ -2824,6 +2806,11 @@ html .opening, body .opening {
     width: 100%;
     height: auto;
     padding-left: 25px;
+    background: url("../images/mobile/icon/icon_login.png") no-repeat;
+    background-position: left center;
+    background-size: 18px 16px;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login > button:hover {
     background: url("../images/mobile/icon/icon_login.png") no-repeat;
     background-position: left center;
     background-size: 18px 16px;
@@ -2929,6 +2916,11 @@ html .opening, body .opening {
     width: 100%;
     height: auto;
     padding-left: 25px;
+    background: url("../images/mobile/icon/icon_search.png") no-repeat;
+    background-position: left center;
+    background-size: 15px 16px;
+  }
+  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search > button:hover {
     background: url("../images/mobile/icon/icon_search.png") no-repeat;
     background-position: left center;
     background-size: 15px 16px;
@@ -3314,20 +3306,6 @@ html .opening, body .opening {
   display: block;
   width: 100%;
 }
-/* mobile hover 방지 */
-@media (hover: none) {
-  #wrap.mainLayout {
-    /* header */
-    /* container */
-    /* footer */
-  }
-  #wrap.mainLayout #container .content .mainTitleArea .moreLink:hover {
-    color: #BCBCBC;
-    background: url("../images/mobile/icon/icon_moreLink.png") no-repeat;
-    background-position: right center;
-    background-size: 4px 6px;
-  }
-}
 /* media queries */
 @media (min-width: 781px) and (max-width: 1199px) {
   /* wrap */
@@ -3447,6 +3425,11 @@ html .opening, body .opening {
     margin-top: 4px;
     padding-right: 8px;
     font-size: 5px;
+    background: url("../images/mobile/icon/icon_moreLink.png") no-repeat;
+    background-position: right center;
+    background-size: 4px 6px;
+  }
+  #wrap.mainLayout #container .content .mainTitleArea .moreLink:hover {
     background: url("../images/mobile/icon/icon_moreLink.png") no-repeat;
     background-position: right center;
     background-size: 4px 6px;

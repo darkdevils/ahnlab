@@ -635,86 +635,6 @@ html, body {
   }
 }
 
-/* mobile hover 방지 */
-@media (hover: none) {
-  #wrap {
-
-    /* header */
-    #header {
-
-      .headerIn {
-
-        .logoText {
-
-          a {
-
-            &:hover {
-              color: #fff;
-            }
-          }
-        }
-
-        .gnb {
-
-          nav {
-
-            .navIn {
-
-              .gnbItem {
-
-                a, button {
-
-                  &:hover {
-                    color: #fff;
-
-                    span {
-                      color: #fff;
-                    }
-                  }
-                }
-
-                &.login {
-
-                  > button {
-
-                    &:hover {
-                      @include imageUrl("mobile/icon/icon_login");
-                      background-position: left center;
-                      background-size: 18px 16px;
-                    }
-                  }
-                }
-
-                &.search {
-
-                  > button  {
-
-                    &:hover {
-                      @include imageUrl("mobile/icon/icon_search");
-                      background-position: left center;
-                      background-size: 15px 16px;
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-
-    /* container */
-    #container {
-
-    }
-
-    /* footer */
-    #footer {
-
-    }
-  }
-}
-
 /* media queries */
 @media (max-width: 780px) {
   html, body {
@@ -798,6 +718,10 @@ html, body {
             line-height    : 50px;
             font-size      : 18px;
             @include nsB;
+
+            &:hover {
+              color: #fff;
+            }
           }
         }
 
@@ -867,6 +791,14 @@ html, body {
                   font-size   : 24px;
                   @include nsB;
                   color       : #fff;
+
+                  &:hover {
+                    color: #fff;
+
+                    span {
+                      color: #fff;
+                    }
+                  }
                 }
 
                 &.category {
@@ -957,6 +889,12 @@ html, body {
                     @include imageUrl("mobile/icon/icon_login");
                     background-position : left center;
                     background-size     : 18px 16px;
+
+                    &:hover {
+                      @include imageUrl("mobile/icon/icon_login");
+                      background-position : left center;
+                      background-size     : 18px 16px;
+                    }
 
                     span {
                       @include unBlind;
@@ -1071,6 +1009,12 @@ html, body {
                       @include imageUrl("mobile/icon/icon_search");
                       background-position : left center;
                       background-size     : 15px 16px;
+
+                      &:hover {
+                        @include imageUrl("mobile/icon/icon_search");
+                        background-position : left center;
+                        background-size     : 15px 16px;
+                      }
 
                       span {
                         @include unBlind;
