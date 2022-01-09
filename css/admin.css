@@ -2729,8 +2729,10 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  box-sizing: border-box;
   width: 90px;
   height: 90px;
+  padding-top: 5px;
   background-color: #EA5504;
 }
 #wrap .ahnBtnList span,
@@ -2741,7 +2743,7 @@ html, body {
   width: 100%;
   text-align: center;
   line-height: 25px;
-  padding-top: 45px;
+  padding-top: 42px;
   font-size: 17px;
   font-family: "NotoSansCJKkrMedium", sans-serif;
   color: #fff;
@@ -2765,7 +2767,7 @@ html, body {
 #wrap .buttonArea {
   overflow: hidden;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 45px;
 }
 #wrap .buttonArea.mdrType01 {
   margin-top: 130px;
@@ -2893,6 +2895,7 @@ html, body {
 #wrap .pagingArea {
   position: relative;
   text-align: center;
+  margin-top: 65px;
 }
 #wrap .pagingArea .alignCenter {
   display: inline-block;
@@ -2990,7 +2993,7 @@ html, body {
 }
 #wrap .tableArea table .textEllipsis {
   display: block;
-  padding: 0 5px;
+  padding: 0 10px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -3068,6 +3071,108 @@ html, body {
 }
 #wrap .tableArea02 .thSelectBox .ahnInputText {
   flex: 1;
+}
+#wrap .tableArea03 {
+  margin-top: 30px;
+}
+#wrap .tableArea03 table {
+  table-layout: fixed;
+  width: 100%;
+  border-top: 1px solid #D8D8D8;
+}
+#wrap .tableArea03 table thead tr > * {
+  vertical-align: middle;
+  height: 64px;
+  font-size: 18px;
+  font-family: "NotoSansCJKkrBold", sans-serif;
+  border-bottom: 1px solid #D8D8D8;
+  background-color: #EA5504;
+}
+#wrap .tableArea03 table tbody tr > * {
+  text-align: center;
+  vertical-align: middle;
+  padding: 16px 0;
+  border-bottom: 1px solid #D8D8D8;
+  font-size: 20px;
+}
+#wrap .tableArea03 table tbody tr .image {
+  display: inline-block;
+  width: 118px;
+  height: 69px;
+}
+#wrap .tableArea03 table tbody tr .image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#wrap .tableArea03 table tbody tr.ImageH > * {
+  padding: 20px 0;
+}
+#wrap .tableArea03 table tbody tr.ImageH .image {
+  width: 88px;
+  height: 119px;
+}
+#wrap .tableArea03 table .tbAlignLeft {
+  text-align: left;
+}
+#wrap .tableArea03 table .tbAlignLeft * {
+  text-align: left;
+}
+#wrap .tableArea03 table .tbAlignRight {
+  text-align: right;
+}
+#wrap .tableArea03 table .tbAlignRight * {
+  text-align: right;
+}
+#wrap .tableArea03 table .numberBox {
+  display: inline-block;
+  text-align: center;
+  box-sizing: border-box;
+  width: 54px;
+  height: 34px;
+  line-height: 32px;
+  border: 1px solid #707070;
+  font-size: 18px;
+  font-family: "GothamBold", sans-serif;
+  background-color: #3E3E3E;
+}
+#wrap .tableArea03 table .tableDelBtn {
+  display: inline-block;
+  text-align: center;
+  box-sizing: border-box;
+  width: 66px;
+  height: 34px;
+  line-height: 32px;
+  border: 1px solid #707070;
+  font-size: 18px;
+  font-family: "GothamBold", sans-serif;
+  color: #fff;
+  background-color: #3E3E3E;
+}
+#wrap .tableArea03 table .textEllipsis {
+  display: block;
+  padding: 0 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #fff;
+}
+#wrap .tableArea03 .sortingBtn {
+  display: inline-block;
+  height: 40px;
+  line-height: 30px;
+  padding-right: 22px;
+  font-size: 18px;
+  font-family: "NotoSansCJKkrBold", sans-serif;
+  color: #fff;
+}
+#wrap .tableArea03 .sortingBtn.iconDown {
+  background: url("../admin/images/icon/iocn_sorting_down.png") no-repeat;
+  background-position: right center;
+}
+#wrap .tableArea03 .sortingBtn.iconUp {
+  background: url("../admin/images/icon/iocn_sorting_up.png") no-repeat;
+  background-position: right center;
 }
 #wrap .ListHeight03 .contextArea .title, #wrap .ListWidth02 .contextArea .title, #wrap .ListWidth03 .contextArea .title {
   overflow: hidden;
@@ -3323,6 +3428,243 @@ html, body {
 #wrap .imageWidthBox .imageFunction {
   padding-bottom: 0;
 }
+#wrap .commentWriter {
+  margin-top: 100px;
+}
+#wrap .commentWriter h3.title {
+  position: relative;
+  display: inline-block;
+  font-size: 30px;
+  font-family: "NotoSansCJKkrBold", sans-serif;
+  margin-bottom: 25px;
+  padding: 26px 0 0;
+}
+#wrap .commentWriter h3.title:after {
+  content: "";
+  position: absolute;
+  right: -45px;
+  top: 0;
+  width: 45px;
+  height: 34px;
+  background: url("../admin/images/icon/icon_comment.png") no-repeat;
+  background-size: contain;
+  font-family: "NotoSansCJKkrRegular", sans-serif;
+}
+#wrap .commentWriter__textarea {
+  height: 300px;
+  border: 1px solid #3D3D3D;
+  box-sizing: border-box;
+}
+#wrap .commentWriter__textarea textarea {
+  width: 100%;
+  height: 240px;
+  border: 0;
+  padding: 38px 33px;
+  background: #262626;
+  box-sizing: border-box;
+  vertical-align: top;
+  font-size: 20px;
+  line-height: 20px;
+  color: #fff;
+  outline: none;
+  resize: none;
+}
+#wrap .commentWriter .commentAttach {
+  position: relative;
+  height: 58px;
+  background: #262626;
+  border-top: 1px solid #3d3d3d;
+  box-sizing: border-box;
+}
+#wrap .commentWriter .commentAttach .commentNum {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 0 0 34px;
+  font-size: 15px;
+  font-family: "GothamMedium", sans-serif;
+}
+#wrap .commentWriter .commentAttach .commentNum .btnPhoto {
+  width: 24px;
+  height: 24px;
+  margin-left: 15px;
+  background: url("../admin/images/icon/icon_photo.png") no-repeat;
+  background-size: contain;
+}
+#wrap .commentWriter .commentAttach .btnRegister {
+  position: absolute;
+  right: -1px;
+  top: -1px;
+  width: 165px;
+  height: 59px;
+  text-align: center;
+  background-color: #000;
+  border: 1px solid #3d3d3d;
+}
+#wrap .commentWriter .commentAttach .btnRegister .icon {
+  position: relative;
+  padding-left: 30px;
+  font-size: 20px;
+  color: #fff;
+}
+#wrap .commentWriter .commentAttach .btnRegister .icon:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1px;
+  background: url("../admin/images/icon/icon_register02.png") no-repeat;
+  width: 23px;
+  height: 23px;
+}
+#wrap .commentWriter .commentAttach .btnRegister {
+  background: none;
+  text-align: center;
+  background: #000000;
+  border: 1px solid #707070;
+  transition: 0.3s;
+}
+#wrap .commentWriter .commentAttach .btnRegister span {
+  font-size: 20px;
+  color: #b3b3b3;
+  font-family: "NotoSansCJKkrRegular", sans-serif;
+}
+#wrap .commentWriter .commentAttach .btnRegister:hover {
+  background: #EA5517;
+}
+#wrap .commentWriter .commentAttach .btnRegister:hover span {
+  color: #fff;
+}
+#wrap .commentList .commentItem {
+  position: relative;
+  margin-top: 25px;
+  border-bottom: 1px solid #707070;
+  padding: 30px 0 11px;
+}
+#wrap .commentList .commentItem-reply {
+  margin: 0;
+  padding: 30px 0 30px 112px;
+  background-color: #222222;
+}
+#wrap .commentList .commentItem-reply.commentItem-writer {
+  padding: 30px 0 30px 112px;
+}
+#wrap .commentList .commentItem-reply:after {
+  content: "";
+  position: absolute;
+  left: 68px;
+  top: 25px;
+  background: url("../admin/images/bg/bg_line.png") no-repeat;
+  width: 22px;
+  height: 22px;
+}
+#wrap .commentList .commentItem .commentWriter {
+  margin: 0;
+}
+#wrap .commentList .commentItem .commentWriter__textarea {
+  height: 226px;
+}
+#wrap .commentList .commentItem .commentWriter__textarea textarea {
+  height: 166px;
+  padding: 21px 16px;
+}
+#wrap .commentList .commentItem-writer {
+  padding: 0;
+  background-color: transparent;
+}
+#wrap .commentList .commentBox {
+  position: relative;
+}
+#wrap .commentList .commentBox__nick {
+  display: block;
+  font-size: 20px;
+  font-family: "NotoSansCJKkrBold", sans-serif;
+  margin-bottom: 26px;
+}
+#wrap .commentList .commentBox .btnCommentLayer {
+  position: absolute;
+  right: 21px;
+  top: 0;
+  width: 14px;
+  height: 13px;
+  background: url("../admin/images/icon/icon_delete02.png") no-repeat;
+}
+#wrap .commentList .commentBox .layerButton {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 43px;
+  height: 53px;
+  border: 1px solid #707070;
+  box-sizing: border-box;
+}
+#wrap .commentList .commentBox .layerButton li a {
+  display: block;
+  color: #b3b3b3;
+  font-size: 13px;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+}
+#wrap .commentList .commentBox .layerButton li a:hover {
+  color: #fff;
+  background-color: #EA5504;
+}
+#wrap .commentList .commentBox .layerButton li + li {
+  border-top: 1px solid #b3b3b3;
+}
+#wrap .commentList .commentBox__text {
+  padding: 0 0 45px;
+}
+#wrap .commentList .commentBox__text__view {
+  font-size: 20px;
+  line-height: 34px;
+  color: #b3b3b3;
+}
+#wrap .commentList .commentBox__info {
+  display: flex;
+  justify-content: space-between;
+  color: #b3b3b3;
+}
+#wrap .commentList .commentBox__info span {
+  font-size: 16px;
+  font-family: "GothamMedium", sans-serif;
+}
+#wrap .commentList .commentBox__info__left button {
+  width: 66px;
+  height: 27px;
+  margin-left: 8px;
+  border: 1px solid #707070;
+  background-color: #000;
+  box-sizing: border-box;
+}
+#wrap .commentList .commentBox__info__left button span {
+  color: #b3b3b3;
+  font-size: 13px;
+  font-family: "NotoSansCJKkrRegular", sans-serif;
+}
+#wrap .commentList .commentBox__info__right {
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+}
+#wrap .commentList .commentBox__info__right .num {
+  display: block;
+  height: 19px;
+  line-height: 19px;
+  padding-right: 26px;
+  font-size: 16px;
+  font-family: "GothamMedium", sans-serif;
+  background: url("../admin/images/icon/icon_like03.png") no-repeat;
+  background-position: right center;
+}
+#wrap .blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 #wrap * + .tableText {
   margin-left: 16px;
 }
@@ -3496,9 +3838,6 @@ html, body {
 }
 #wrap #container .ahncheolsooContent .vidoeSubmit {
   padding-left: 160px;
-}
-#wrap #container .ahnTodayContent .pagingArea {
-  margin-top: 65px;
 }
 #wrap #container .ahnCommunityContent .pagingArea {
   margin-top: 68px;

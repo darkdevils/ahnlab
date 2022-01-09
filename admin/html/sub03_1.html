@@ -98,151 +98,57 @@
         <!-- container -->
         <div id="container">
             <div class="topContent">
-                <h2 class="mainTitle">안철수의 약속 - 전시관리</h2>
+                <h2 class="mainTitle">안철수의 오늘 - 목록</h2>
             </div>
-            <div class="content ahnPromiseContent">
-
-                <!-- table -->
-                <div class="tableArea">
-                    <div class="tableTitle">
-                        <div class="alignLeft">
-                            <div class="title">전시할 콘텐츠</div>
-                            <div class="subText">우선순위를 지정할 콘텐츠를 선택하세요! 5개까지만 선택이 됩니다.</div>
-                        </div>
+            <div class="content ahnTodayContent">
+                <!-- contentTitle -->
+                <div class="contentTitle">
+                    <div class="alignLeft">
+                        <span class="title">콘텐츠관리</span>
+                        <span class="subText">콘텐츠 작성 및 수정</span>
                     </div>
-                    <table>
-                        <colgroup>
-                            <col style="width: 10%" />
-                            <col />
-                            <col style="width: 8%" />
-                            <col style="width: 8%" />
-                            <col style="width: 8%" />
-                            <col style="width: 12%" />
-                            <col style="width: 10%" />
-                        </colgroup>
-                        <thead>
-                        <tr>
-                            <th>전시순서</th>
-                            <th>콘텐츠 제목</th>
-                            <th>좋아요</th>
-                            <th>조회수</th>
-                            <th>댓글수</th>
-                            <th>발행날짜</th>
-                            <th>삭제</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>
-                                <div class="ahnInputTextSmall">
-                                    <input type="text" value="01" />
-                                </div>
-                            </td>
-                            <td class="tbAlignLeft">
-                                <a href="#" class="textEllipsis">[안심정책] 안심하는 노후, 행복한 노후 안철수가, 행복한 노후 안철수가, 행복한 노후 안철수가</a>
-                            </td>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>2</td>
-                            <td>2022.02.02</td>
-                            <td>
-                                <button type="button" class="tableDelBtn"><span>제외</span></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="ahnInputTextSmall">
-                                    <input type="text" value="02" />
-                                </div>
-                            </td>
-                            <td class="tbAlignLeft">
-                                <a href="#" class="textEllipsis">[안심정책] 안심하는 노후, 행복한 노후 안철수가, 행복한 노후 안철수가, 행복한 노후 안철수가</a>
-                            </td>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>2</td>
-                            <td>2022.02.02</td>
-                            <td>
-                                <button type="button" class="tableDelBtn"><span>제외</span></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="ahnInputTextSmall">
-                                    <input type="text" value="03" />
-                                </div>
-                            </td>
-                            <td class="tbAlignLeft">
-                                <a href="#" class="textEllipsis">[안심정책] 안심하는 노후, 행복한 노후 안철수가, 행복한 노후 안철수가, 행복한 노후 안철수가</a>
-                            </td>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>2</td>
-                            <td>2022.02.02</td>
-                            <td>
-                                <button type="button" class="tableDelBtn"><span>제외</span></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="ahnInputTextSmall">
-                                    <input type="text" value="04" />
-                                </div>
-                            </td>
-                            <td class="tbAlignLeft">
-                                <a href="#" class="textEllipsis">[안심정책] 안심하는 노후, 행복한 노후 안철수가, 행복한 노후 안철수가, 행복한 노후 안철수가</a>
-                            </td>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>2</td>
-                            <td>2022.02.02</td>
-                            <td>
-                                <button type="button" class="tableDelBtn"><span>제외</span></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="ahnInputTextSmall">
-                                    <input type="text" value="05" />
-                                </div>
-                            </td>
-                            <td class="tbAlignLeft">
-                                <a href="#" class="textEllipsis">[안심정책] 안심하는 노후, 행복한 노후 안철수가, 행복한 노후 안철수가, 행복한 노후 안철수가</a>
-                            </td>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>2</td>
-                            <td>2022.02.02</td>
-                            <td>
-                                <button type="button" class="tableDelBtn"><span>제외</span></button>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
                 </div>
 
                 <div class="buttonArea">
-                    <div class="alignCenter">
-                        <button type="button" class="ahnBtnL"><span>적용하기</span></button>
-                    </div>
-                </div>
-
-                <!-- contentSubTitle -->
-                <div class="contentSubTitle">
                     <div class="alignLeft">
-                        <span class="title">우선순위를 지정할 콘텐츠를 선택하세요! 5개까지만 선택이 됩니다.</span>
+                        <div class="radioTab">
+                            <label class="ahnInputRadio">
+                                <input type="radio" name="radioTab02" checked />
+                                <span class="text">전체 보기</span>
+                            </label>
+                            <label class="ahnInputRadio">
+                                <input type="radio" name="radioTab02" />
+                                <span class="text">인스타그램</span>
+                            </label>
+                            <label class="ahnInputRadio">
+                                <input type="radio" name="radioTab02" />
+                                <span class="text">페이스북</span>
+                            </label>
+                            <label class="ahnInputRadio">
+                                <input type="radio" name="radioTab02" />
+                                <span class="text">블로그</span>
+                            </label>
+                            <label class="ahnInputRadio">
+                                <input type="radio" name="radioTab02" />
+                                <span class="text">보도자료</span>
+                            </label>
+                            <label class="ahnInputRadio">
+                                <input type="radio" name="radioTab02" />
+                                <span class="text">일정</span>
+                            </label>
+                        </div>
                     </div>
                     <div class="alignRight">
-                        <span class="totalNumber">총 <span class="colorOrange">100개</span>의 콘텐츠</span>
+                        <button type="button" class="ahnBtnL line"><span>콘텐츠 작성하기</span></button>
                     </div>
                 </div>
 
-                <!-- tableArea03 안철수의 약속 전시관리 -->
+                <!-- tableArea03 안철수의 오늘 목록 -->
                 <div class="tableArea03">
                     <table>
                         <colgroup>
                             <col style="width: 70px" />
-                            <col style="width: 70px" />
+                            <col style="width: 120px" />
                             <col style="width: 170px" />
                             <col />
                             <col style="width: 120px" />
@@ -252,7 +158,7 @@
                         <thead>
                         <tr>
                             <th>번호</th>
-                            <th>체크</th>
+                            <th>구분</th>
                             <th>썸네일</th>
                             <th>콘텐츠 제목</th>
                             <th>
@@ -275,12 +181,7 @@
                         <tbody>
                         <tr>
                             <td>1</td>
-                            <td>
-                                <label class="ahnInputCheck">
-                                    <input type="checkbox">
-                                    <span class="text none"></span>
-                                </label>
-                            </td>
+                            <td>인스타그램</td>
                             <td>
                                 <a href="#" class="image">
                                     <img src="../images/temp/photoW_01.png" />
@@ -295,12 +196,7 @@
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td>
-                                <label class="ahnInputCheck">
-                                    <input type="checkbox">
-                                    <span class="text none"></span>
-                                </label>
-                            </td>
+                            <td>페이스북</td>
                             <td>
                                 <a href="#" class="image">
                                     <img src="../images/temp/photoW_01.png" />
@@ -315,12 +211,7 @@
                         </tr>
                         <tr>
                             <td>3</td>
-                            <td>
-                                <label class="ahnInputCheck">
-                                    <input type="checkbox">
-                                    <span class="text none"></span>
-                                </label>
-                            </td>
+                            <td>블로그</td>
                             <td>
                                 <a href="#" class="image">
                                     <img src="../images/temp/photoW_01.png" />
@@ -335,12 +226,7 @@
                         </tr>
                         <tr>
                             <td>4</td>
-                            <td>
-                                <label class="ahnInputCheck">
-                                    <input type="checkbox">
-                                    <span class="text none"></span>
-                                </label>
-                            </td>
+                            <td>보도자료</td>
                             <td>
                                 <a href="#" class="image">
                                     <img src="../images/temp/photoW_01.png" />
@@ -355,12 +241,7 @@
                         </tr>
                         <tr>
                             <td>5</td>
-                            <td>
-                                <label class="ahnInputCheck">
-                                    <input type="checkbox">
-                                    <span class="text none"></span>
-                                </label>
-                            </td>
+                            <td>일정</td>
                             <td>
                                 <a href="#" class="image">
                                     <img src="../images/temp/photoW_01.png" />
@@ -377,9 +258,29 @@
                     </table>
                 </div>
 
-                <div class="buttonArea">
+                <!-- paging -->
+                <div class="pagingArea">
                     <div class="alignCenter">
-                        <button type="button" class="ahnBtnMore"><span>더보기</span></button>
+                        <div class="pagination">
+                            <a href="#" class="previous"><span>이전</span></a>
+                            <a href="#" class="current"><span>1</span></a>
+                            <a href="#"><span>2</span></a>
+                            <a href="#"><span>3</span></a>
+                            <a href="#"><span>4</span></a>
+                            <a href="#"><span>5</span></a>
+                            <a href="#" class="next"><span>다음</span></a>
+                        </div>
+                    </div>
+                    <div class="alignRight">
+                        <div class="searchArea">
+                            <div class="searchTitle">검색</div>
+                            <div class="searchInput">
+                                <input type="text" />
+                            </div>
+                            <button type="button" class="searchBtn">
+                                <span>검색하기</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
