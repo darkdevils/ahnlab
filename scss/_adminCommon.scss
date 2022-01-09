@@ -765,23 +765,34 @@ html, body {
     }
   }
 
+  .ahnBtnList,
   .ahnBtnModify,
   .ahnBtnDelete,
   .ahnBtnRegister {
-    display: inline-block;
-    vertical-align: top;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 90px;
     height: 90px;
     background-color: $colorOrange;
 
     span {
-      display: inline-block;
-      vertical-align: top;
+      display: block;
+      width: 100%;
+      text-align: center;
       line-height: 25px;
       padding-top: 45px;
       font-size: 17px;
       @include nsM;
       color: #fff;
+    }
+  }
+
+  .ahnBtnList {
+
+    span {
+      @include imageUrlAdmin(icon/icon_list,png);
+      background-position: center top;
     }
   }
 
@@ -1524,6 +1535,9 @@ html, body {
       padding-bottom: 0;
     }
   }
+
+  /* 댓글 (당신의 의견을 남겨주세요) */
+
 
   /* etc */
   * + .tableText {

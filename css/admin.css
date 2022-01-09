@@ -2085,6 +2085,7 @@ html, body {
   /* list width 03 */
   /* content add area */
   /* 썸네일 */
+  /* 댓글 (당신의 의견을 남겨주세요) */
   /* etc */
 }
 #wrap #lnb {
@@ -2721,25 +2722,33 @@ html, body {
   font-family: "NotoSansCJKkrBold", sans-serif;
   color: #fff;
 }
+#wrap .ahnBtnList,
 #wrap .ahnBtnModify,
 #wrap .ahnBtnDelete,
 #wrap .ahnBtnRegister {
-  display: inline-block;
-  vertical-align: top;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 90px;
   height: 90px;
   background-color: #EA5504;
 }
+#wrap .ahnBtnList span,
 #wrap .ahnBtnModify span,
 #wrap .ahnBtnDelete span,
 #wrap .ahnBtnRegister span {
-  display: inline-block;
-  vertical-align: top;
+  display: block;
+  width: 100%;
+  text-align: center;
   line-height: 25px;
   padding-top: 45px;
   font-size: 17px;
   font-family: "NotoSansCJKkrMedium", sans-serif;
   color: #fff;
+}
+#wrap .ahnBtnList span {
+  background: url("../admin/images/icon/icon_list.png") no-repeat;
+  background-position: center top;
 }
 #wrap .ahnBtnModify span {
   background: url("../admin/images/icon/icon_modify.png") no-repeat;
