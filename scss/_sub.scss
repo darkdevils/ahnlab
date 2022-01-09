@@ -19,7 +19,7 @@ h2.title {
   }
   span {
     margin-left: 17px;
-    opacity: 0.7;
+    color: #b3b3b3;
   }
 }
 /* 안철수는 */
@@ -311,7 +311,7 @@ h2.title {
         font-size: 24px;
         line-height: 30px;
         @include nsM;
-        color: #848484;
+        color: #fff;
       }
       .btnLike {
         position: absolute;
@@ -887,6 +887,7 @@ h2.title {
     width: 50px;
     height: 29px;
     background-position: center top;
+    padding: 44px 0 0;
   }
   .btnModify {
     width: 50px;
