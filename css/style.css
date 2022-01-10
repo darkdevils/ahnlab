@@ -4338,6 +4338,9 @@ h2.title-margin {
   width: 22px;
   height: 22px;
 }
+.commentList .commentItem-reply .commentBox .btnCommentLayer {
+  right: 50px;
+}
 .commentList .commentItem .commentWriter__textarea {
   height: 226px;
 }
@@ -4370,7 +4373,7 @@ h2.title-margin {
 }
 .commentList .commentBox .btnCommentLayer {
   position: absolute;
-  right: 50px;
+  right: 0;
   top: 10px;
   width: 14px;
   height: 13px;

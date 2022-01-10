@@ -837,6 +837,9 @@ h2.title {
         width: 22px;
         height: 22px;
       }
+      .commentBox .btnCommentLayer {
+        right: 50px;
+      }
     }
     .commentWriter {
       &__textarea {
@@ -876,7 +879,7 @@ h2.title {
     }
     .btnCommentLayer {
       position: absolute;
-      right: 50px;
+      right: 0;
       top: 10px;
       width: 14px;
       height: 13px;
