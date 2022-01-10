@@ -2511,9 +2511,6 @@ html .opening, body .opening {
   margin-top: 30px;
   font-size: 31px;
 }
-#wrap #container {
-  padding-bottom: 180px;
-}
 #wrap #container .topVisual .topVisualSwiper {
   height: 600px;
 }
@@ -2543,6 +2540,7 @@ html .opening, body .opening {
 #wrap #container .content {
   width: 1200px;
   margin: 0 auto;
+  padding-bottom: 180px;
 }
 #wrap #footer {
   margin-top: auto;
@@ -3293,7 +3291,6 @@ html .opening, body .opening {
 }
 #wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide a .topImage, #wrap.mainLayout #container .content .photoWidthArea .swiperArea .swiper .swiper-wrapper .swiper-slide a .topImage, #wrap.mainLayout #container .content .photoHeightArea .swiperArea .swiper .swiper-wrapper .swiper-slide a .topImage {
   transition: all 0.4s;
-  z-index: 2;
 }
 #wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide a .textBox, #wrap.mainLayout #container .content .photoWidthArea .swiperArea .swiper .swiper-wrapper .swiper-slide a .textBox, #wrap.mainLayout #container .content .photoHeightArea .swiperArea .swiper .swiper-wrapper .swiper-slide a .textBox {
   position: absolute;
@@ -3331,33 +3328,22 @@ html .opening, body .opening {
   font-size: 1.1vw;
   font-family: "NotoSansCJKkrMedium", sans-serif;
 }
-#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide a.swiperOn, #wrap.mainLayout #container .content .photoWidthArea .swiperArea .swiper .swiper-wrapper .swiper-slide a.swiperOn, #wrap.mainLayout #container .content .photoHeightArea .swiperArea .swiper .swiper-wrapper .swiper-slide a.swiperOn {
+#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide a.swiperOn01, #wrap.mainLayout #container .content .photoWidthArea .swiperArea .swiper .swiper-wrapper .swiper-slide a.swiperOn01, #wrap.mainLayout #container .content .photoHeightArea .swiperArea .swiper .swiper-wrapper .swiper-slide a.swiperOn01 {
   position: relative;
   z-index: 10;
   transform: scale(1.4);
 }
-#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide a.swiperOn .topImage, #wrap.mainLayout #container .content .photoWidthArea .swiperArea .swiper .swiper-wrapper .swiper-slide a.swiperOn .topImage, #wrap.mainLayout #container .content .photoHeightArea .swiperArea .swiper .swiper-wrapper .swiper-slide a.swiperOn .topImage {
+#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide a.swiperOn01 .topImage, #wrap.mainLayout #container .content .photoWidthArea .swiperArea .swiper .swiper-wrapper .swiper-slide a.swiperOn01 .topImage, #wrap.mainLayout #container .content .photoHeightArea .swiperArea .swiper .swiper-wrapper .swiper-slide a.swiperOn01 .topImage {
   right: 50%;
 }
-#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide a.swiperOn .textBox, #wrap.mainLayout #container .content .photoWidthArea .swiperArea .swiper .swiper-wrapper .swiper-slide a.swiperOn .textBox, #wrap.mainLayout #container .content .photoHeightArea .swiperArea .swiper .swiper-wrapper .swiper-slide a.swiperOn .textBox {
+#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide a.swiperOn01 .textBox, #wrap.mainLayout #container .content .photoWidthArea .swiperArea .swiper .swiper-wrapper .swiper-slide a.swiperOn01 .textBox, #wrap.mainLayout #container .content .photoHeightArea .swiperArea .swiper .swiper-wrapper .swiper-slide a.swiperOn01 .textBox {
   right: -11%;
   opacity: 1;
 }
-#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide a.swiperOn02, #wrap.mainLayout #container .content .photoWidthArea .swiperArea .swiper .swiper-wrapper .swiper-slide a.swiperOn02, #wrap.mainLayout #container .content .photoHeightArea .swiperArea .swiper .swiper-wrapper .swiper-slide a.swiperOn02 {
-  position: relative;
-  z-index: 10;
-  transform: scale(1.4);
-}
-#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide.swiper-slide-active a.swiperOn, #wrap.mainLayout #container .content .photoWidthArea .swiperArea .swiper .swiper-wrapper .swiper-slide.swiper-slide-active a.swiperOn, #wrap.mainLayout #container .content .photoHeightArea .swiperArea .swiper .swiper-wrapper .swiper-slide.swiper-slide-active a.swiperOn {
+#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide.swiper-slide-active a.swiperOn01, #wrap.mainLayout #container .content .photoWidthArea .swiperArea .swiper .swiper-wrapper .swiper-slide.swiper-slide-active a.swiperOn01, #wrap.mainLayout #container .content .photoHeightArea .swiperArea .swiper .swiper-wrapper .swiper-slide.swiper-slide-active a.swiperOn01 {
   transform-origin: -38% center;
 }
-#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide.swiper-slide-active + .swiper-slide + .swiper-slide + .swiper-slide + .swiper-slide a.swiperOn, #wrap.mainLayout #container .content .photoWidthArea .swiperArea .swiper .swiper-wrapper .swiper-slide.swiper-slide-active + .swiper-slide + .swiper-slide + .swiper-slide + .swiper-slide a.swiperOn, #wrap.mainLayout #container .content .photoHeightArea .swiperArea .swiper .swiper-wrapper .swiper-slide.swiper-slide-active + .swiper-slide + .swiper-slide + .swiper-slide + .swiper-slide a.swiperOn {
-  transform-origin: 138% center;
-}
-#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide.swiper-slide-active a.swiperOn02, #wrap.mainLayout #container .content .photoWidthArea .swiperArea .swiper .swiper-wrapper .swiper-slide.swiper-slide-active a.swiperOn02, #wrap.mainLayout #container .content .photoHeightArea .swiperArea .swiper .swiper-wrapper .swiper-slide.swiper-slide-active a.swiperOn02 {
-  transform-origin: -8% center;
-}
-#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide.swiper-slide-active + .swiper-slide + .swiper-slide + .swiper-slide + .swiper-slide a.swiperOn02, #wrap.mainLayout #container .content .photoWidthArea .swiperArea .swiper .swiper-wrapper .swiper-slide.swiper-slide-active + .swiper-slide + .swiper-slide + .swiper-slide + .swiper-slide a.swiperOn02, #wrap.mainLayout #container .content .photoHeightArea .swiperArea .swiper .swiper-wrapper .swiper-slide.swiper-slide-active + .swiper-slide + .swiper-slide + .swiper-slide + .swiper-slide a.swiperOn02 {
+#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide.swiper-slide-active + .swiper-slide + .swiper-slide + .swiper-slide + .swiper-slide a.swiperOn01, #wrap.mainLayout #container .content .photoWidthArea .swiperArea .swiper .swiper-wrapper .swiper-slide.swiper-slide-active + .swiper-slide + .swiper-slide + .swiper-slide + .swiper-slide a.swiperOn01, #wrap.mainLayout #container .content .photoHeightArea .swiperArea .swiper .swiper-wrapper .swiper-slide.swiper-slide-active + .swiper-slide + .swiper-slide + .swiper-slide + .swiper-slide a.swiperOn01 {
   transform-origin: 138% center;
 }
 #wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-button-prev, #wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-button-next, #wrap.mainLayout #container .content .photoWidthArea .swiperArea .swiper .swiper-button-prev, #wrap.mainLayout #container .content .photoWidthArea .swiperArea .swiper .swiper-button-next, #wrap.mainLayout #container .content .photoHeightArea .swiperArea .swiper .swiper-button-prev, #wrap.mainLayout #container .content .photoHeightArea .swiperArea .swiper .swiper-button-next {

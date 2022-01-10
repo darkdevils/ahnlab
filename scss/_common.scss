@@ -538,7 +538,6 @@ html, body {
 
   /* container */
   #container {
-    padding-bottom: 180px;
 
     .topVisual {
 
@@ -579,6 +578,7 @@ html, body {
     .content {
       @include contentWidth($webWidthNumber);
       margin: 0 auto;
+      padding-bottom: 180px;
     }
   }
 
