@@ -5,7 +5,6 @@ html, body {
   @include nsM;
   height: 100%;
   font-size: 20px;
-  letter-spacing: -0.075em;
   color: #fff;
 
   .opening {
@@ -87,6 +86,10 @@ html, body {
     @include contentMinWidth($webWidthNumber);
     height: 130px;
     z-index: 20;
+
+    > * {
+      letter-spacing: -0.075em;
+    }
 
     &.scroll {
       background-color: rgba(0, 0, 0, 0.8);

@@ -2055,7 +2055,6 @@ html, body {
   font-family: "NotoSansCJKkrMedium", sans-serif;
   height: 100%;
   font-size: 20px;
-  letter-spacing: -0.075em;
   color: #fff;
 }
 html .opening, body .opening {
@@ -2127,6 +2126,9 @@ html .opening, body .opening {
   min-width: 1200px;
   height: 130px;
   z-index: 20;
+}
+#wrap #header > * {
+  letter-spacing: -0.075em;
 }
 #wrap #header.scroll {
   background-color: rgba(0, 0, 0, 0.8);
@@ -3171,6 +3173,7 @@ html .opening, body .opening {
   font-size: 30px;
 }
 #wrap.mainLayout #container .content {
+  overflow: hidden;
   width: auto;
   margin: 0;
 }
@@ -3203,27 +3206,7 @@ html .opening, body .opening {
   background: url("../images/web/icon/icon_moreLink_on.png") no-repeat;
   background-position: right center;
 }
-#wrap.mainLayout #container .content .photoNumberArea .swiper-button-prev, #wrap.mainLayout #container .content .photoNumberArea .swiper-button-next, #wrap.mainLayout #container .content .photoWidthArea .swiper-button-prev, #wrap.mainLayout #container .content .photoWidthArea .swiper-button-next, #wrap.mainLayout #container .content .photoHeightArea .swiper-button-prev, #wrap.mainLayout #container .content .photoHeightArea .swiper-button-next {
-  width: 100px;
-  height: 100px;
-}
-#wrap.mainLayout #container .content .photoNumberArea .swiper-button-prev::after, #wrap.mainLayout #container .content .photoNumberArea .swiper-button-next::after, #wrap.mainLayout #container .content .photoWidthArea .swiper-button-prev::after, #wrap.mainLayout #container .content .photoWidthArea .swiper-button-next::after, #wrap.mainLayout #container .content .photoHeightArea .swiper-button-prev::after, #wrap.mainLayout #container .content .photoHeightArea .swiper-button-next::after {
-  display: none;
-}
-#wrap.mainLayout #container .content .photoNumberArea .swiper-button-prev, #wrap.mainLayout #container .content .photoWidthArea .swiper-button-prev, #wrap.mainLayout #container .content .photoHeightArea .swiper-button-prev {
-  left: 0;
-  margin-top: -50px;
-  background: url("../images/web/icon/icon_mainSwiperArrowLeft.png") no-repeat;
-  background-position: 20px center;
-}
-#wrap.mainLayout #container .content .photoNumberArea .swiper-button-next, #wrap.mainLayout #container .content .photoWidthArea .swiper-button-next, #wrap.mainLayout #container .content .photoHeightArea .swiper-button-next {
-  right: 0;
-  margin-top: -50px;
-  background: url("../images/web/icon/icon_mainSwiperArrowRight.png") no-repeat;
-  background-position: right 20px center;
-}
 #wrap.mainLayout #container .content .photoNumberArea .swiperArea {
-  overflow: hidden;
   position: relative;
   padding: 0 100px;
 }
@@ -3255,7 +3238,6 @@ html .opening, body .opening {
   height: 100%;
 }
 #wrap.mainLayout #container .content .photoWidthArea .swiperArea {
-  overflow: hidden;
   position: relative;
   padding: 0 100px;
 }
@@ -3291,7 +3273,6 @@ html .opening, body .opening {
   font-family: "NotoSansCJKkrMedium", sans-serif;
 }
 #wrap.mainLayout #container .content .photoHeightArea .swiperArea {
-  overflow: hidden;
   position: relative;
   padding: 0 100px;
 }
@@ -3305,6 +3286,101 @@ html .opening, body .opening {
 #wrap.mainLayout #container .content .photoHeightArea .swiperArea .swiper .swiper-wrapper .swiper-slide a img {
   display: block;
   width: 100%;
+}
+#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide a, #wrap.mainLayout #container .content .photoWidthArea .swiperArea .swiper .swiper-wrapper .swiper-slide a, #wrap.mainLayout #container .content .photoHeightArea .swiperArea .swiper .swiper-wrapper .swiper-slide a {
+  overflow: visible;
+  transition: all 0.4s;
+}
+#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide a .topImage, #wrap.mainLayout #container .content .photoWidthArea .swiperArea .swiper .swiper-wrapper .swiper-slide a .topImage, #wrap.mainLayout #container .content .photoHeightArea .swiperArea .swiper .swiper-wrapper .swiper-slide a .topImage {
+  transition: all 0.4s;
+  z-index: 2;
+}
+#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide a .textBox, #wrap.mainLayout #container .content .photoWidthArea .swiperArea .swiper .swiper-wrapper .swiper-slide a .textBox, #wrap.mainLayout #container .content .photoHeightArea .swiperArea .swiper .swiper-wrapper .swiper-slide a .textBox {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  width: 61%;
+  padding: 7%;
+  background: #282828;
+  opacity: 0;
+  transition: all 0.4s;
+  z-index: 1;
+}
+#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide a .textBox .title, #wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide a .textBox .context, #wrap.mainLayout #container .content .photoWidthArea .swiperArea .swiper .swiper-wrapper .swiper-slide a .textBox .title, #wrap.mainLayout #container .content .photoWidthArea .swiperArea .swiper .swiper-wrapper .swiper-slide a .textBox .context, #wrap.mainLayout #container .content .photoHeightArea .swiperArea .swiper .swiper-wrapper .swiper-slide a .textBox .title, #wrap.mainLayout #container .content .photoHeightArea .swiperArea .swiper .swiper-wrapper .swiper-slide a .textBox .context {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  color: #fff;
+}
+#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide a .textBox .title, #wrap.mainLayout #container .content .photoWidthArea .swiperArea .swiper .swiper-wrapper .swiper-slide a .textBox .title, #wrap.mainLayout #container .content .photoHeightArea .swiperArea .swiper .swiper-wrapper .swiper-slide a .textBox .title {
+  -webkit-line-clamp: 2;
+  line-height: 1.6vw;
+  max-height: 4.8vw;
+  font-size: 1.3vw;
+  font-family: "NotoSansCJKkrBold", sans-serif;
+}
+#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide a .textBox .context, #wrap.mainLayout #container .content .photoWidthArea .swiperArea .swiper .swiper-wrapper .swiper-slide a .textBox .context, #wrap.mainLayout #container .content .photoHeightArea .swiperArea .swiper .swiper-wrapper .swiper-slide a .textBox .context {
+  margin-top: 0.7vw;
+  -webkit-line-clamp: 5;
+  line-height: 1.4vw;
+  max-height: 7vw;
+  font-size: 1.1vw;
+  font-family: "NotoSansCJKkrMedium", sans-serif;
+}
+#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide a.swiperOn, #wrap.mainLayout #container .content .photoWidthArea .swiperArea .swiper .swiper-wrapper .swiper-slide a.swiperOn, #wrap.mainLayout #container .content .photoHeightArea .swiperArea .swiper .swiper-wrapper .swiper-slide a.swiperOn {
+  position: relative;
+  z-index: 10;
+  transform: scale(1.4);
+}
+#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide a.swiperOn .topImage, #wrap.mainLayout #container .content .photoWidthArea .swiperArea .swiper .swiper-wrapper .swiper-slide a.swiperOn .topImage, #wrap.mainLayout #container .content .photoHeightArea .swiperArea .swiper .swiper-wrapper .swiper-slide a.swiperOn .topImage {
+  right: 50%;
+}
+#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide a.swiperOn .textBox, #wrap.mainLayout #container .content .photoWidthArea .swiperArea .swiper .swiper-wrapper .swiper-slide a.swiperOn .textBox, #wrap.mainLayout #container .content .photoHeightArea .swiperArea .swiper .swiper-wrapper .swiper-slide a.swiperOn .textBox {
+  right: -11%;
+  opacity: 1;
+}
+#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide a.swiperOn02, #wrap.mainLayout #container .content .photoWidthArea .swiperArea .swiper .swiper-wrapper .swiper-slide a.swiperOn02, #wrap.mainLayout #container .content .photoHeightArea .swiperArea .swiper .swiper-wrapper .swiper-slide a.swiperOn02 {
+  position: relative;
+  z-index: 10;
+  transform: scale(1.4);
+}
+#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide.swiper-slide-active a.swiperOn, #wrap.mainLayout #container .content .photoWidthArea .swiperArea .swiper .swiper-wrapper .swiper-slide.swiper-slide-active a.swiperOn, #wrap.mainLayout #container .content .photoHeightArea .swiperArea .swiper .swiper-wrapper .swiper-slide.swiper-slide-active a.swiperOn {
+  transform-origin: -38% center;
+}
+#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide.swiper-slide-active + .swiper-slide + .swiper-slide + .swiper-slide + .swiper-slide a.swiperOn, #wrap.mainLayout #container .content .photoWidthArea .swiperArea .swiper .swiper-wrapper .swiper-slide.swiper-slide-active + .swiper-slide + .swiper-slide + .swiper-slide + .swiper-slide a.swiperOn, #wrap.mainLayout #container .content .photoHeightArea .swiperArea .swiper .swiper-wrapper .swiper-slide.swiper-slide-active + .swiper-slide + .swiper-slide + .swiper-slide + .swiper-slide a.swiperOn {
+  transform-origin: 138% center;
+}
+#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide.swiper-slide-active a.swiperOn02, #wrap.mainLayout #container .content .photoWidthArea .swiperArea .swiper .swiper-wrapper .swiper-slide.swiper-slide-active a.swiperOn02, #wrap.mainLayout #container .content .photoHeightArea .swiperArea .swiper .swiper-wrapper .swiper-slide.swiper-slide-active a.swiperOn02 {
+  transform-origin: -8% center;
+}
+#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide.swiper-slide-active + .swiper-slide + .swiper-slide + .swiper-slide + .swiper-slide a.swiperOn02, #wrap.mainLayout #container .content .photoWidthArea .swiperArea .swiper .swiper-wrapper .swiper-slide.swiper-slide-active + .swiper-slide + .swiper-slide + .swiper-slide + .swiper-slide a.swiperOn02, #wrap.mainLayout #container .content .photoHeightArea .swiperArea .swiper .swiper-wrapper .swiper-slide.swiper-slide-active + .swiper-slide + .swiper-slide + .swiper-slide + .swiper-slide a.swiperOn02 {
+  transform-origin: 138% center;
+}
+#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-button-prev, #wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-button-next, #wrap.mainLayout #container .content .photoWidthArea .swiperArea .swiper .swiper-button-prev, #wrap.mainLayout #container .content .photoWidthArea .swiperArea .swiper .swiper-button-next, #wrap.mainLayout #container .content .photoHeightArea .swiperArea .swiper .swiper-button-prev, #wrap.mainLayout #container .content .photoHeightArea .swiperArea .swiper .swiper-button-next {
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  height: 100%;
+  margin: 0;
+}
+#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-button-prev::after, #wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-button-next::after, #wrap.mainLayout #container .content .photoWidthArea .swiperArea .swiper .swiper-button-prev::after, #wrap.mainLayout #container .content .photoWidthArea .swiperArea .swiper .swiper-button-next::after, #wrap.mainLayout #container .content .photoHeightArea .swiperArea .swiper .swiper-button-prev::after, #wrap.mainLayout #container .content .photoHeightArea .swiperArea .swiper .swiper-button-next::after {
+  display: none;
+}
+#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-button-prev, #wrap.mainLayout #container .content .photoWidthArea .swiperArea .swiper .swiper-button-prev, #wrap.mainLayout #container .content .photoHeightArea .swiperArea .swiper .swiper-button-prev {
+  left: 0;
+  background: url("../images/web/icon/icon_mainSwiperArrowLeft.png") no-repeat;
+  background-position: 20px center;
+  background-size: 40px 70px;
+}
+#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-button-next, #wrap.mainLayout #container .content .photoWidthArea .swiperArea .swiper .swiper-button-next, #wrap.mainLayout #container .content .photoHeightArea .swiperArea .swiper .swiper-button-next {
+  right: 0;
+  background: url("../images/web/icon/icon_mainSwiperArrowRight.png") no-repeat;
+  background-position: right 20px center;
+  background-size: 40px 70px;
 }
 /* media queries */
 @media (min-width: 781px) and (max-width: 1199px) {
