@@ -167,14 +167,17 @@
               .swiper-slide {
 
                 a {
-                  overflow: hidden;
+                  overflow: visible;
                   position: relative;
                   display: block;
+                  transition: all .4s;
 
                   .numberWeb {
                     position: relative;
                     display: block;
                     width: 100%;
+                    z-index: 1;
+                    transition: all .4s;
                   }
 
                   .numberMobile {
@@ -190,6 +193,86 @@
                     bottom: 0;
                     display: block;
                     height: 100%;
+                    transition: all .4s;
+                  }
+
+                  .textBox {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    box-sizing: border-box;
+                    width: 61%;
+                    padding: 7%;
+                    background: #1c1c1c;
+                    opacity: 0;
+                    transition: all .4s;
+                    z-index: 1;
+
+                    .title, .context {
+                      overflow: hidden;
+                      text-overflow: ellipsis;
+                      display: -webkit-box;
+                      -webkit-box-orient: vertical;
+                      word-wrap:break-word;
+                      color: #fff;
+                    }
+
+                    .title {
+                      -webkit-line-clamp: 2;
+                      line-height: 1.6vw;
+                      max-height: 4.8vw;
+                      font-size: 1.3vw;
+                      @include nsB;
+                    }
+
+                    .context {
+                      margin-top: 0.7vw;
+                      -webkit-line-clamp: 5;
+                      line-height: 1.4vw;
+                      max-height: 7vw;
+                      font-size: 1.1vw;
+                      @include nsM;
+                    }
+                  }
+
+                  &.swiperOn01 {
+                    position: relative;
+                    z-index: 10;
+                    transform: scale(1.4);
+
+                    .numberWeb {
+                      opacity: 0;
+                    }
+
+                    .topImage {
+                      right : 50%;
+                    }
+
+                    .textBox {
+                      right : -11%;
+                      opacity: 1;
+                    }
+                  }
+                }
+
+                &.swiper-slide-active {
+
+                  a {
+
+                    &.swiperOn01 {
+                      transform-origin: -38% center;
+                    }
+                  }
+
+                  & + .swiper-slide + .swiper-slide + .swiper-slide + .swiper-slide {
+
+                    a {
+
+                      &.swiperOn01 {
+                        transform-origin: 138% center;
+                      }
+                    }
                   }
                 }
               }
@@ -287,100 +370,6 @@
         .swiperArea {
 
           .swiper {
-
-            .swiper-wrapper {
-
-              .swiper-slide {
-
-                a {
-                  overflow: visible;
-                  transition: all .4s;
-
-                  .numberWeb {
-
-                  }
-
-                  .topImage {
-                    transition: all .4s;
-                  }
-
-                  .textBox {
-                    position: absolute;
-                    right: 0;
-                    top: 0;
-                    bottom: 0;
-                    box-sizing: border-box;
-                    width: 61%;
-                    padding: 7%;
-                    background: #282828;
-                    opacity: 0;
-                    transition: all .4s;
-                    z-index: 1;
-
-                    .title, .context {
-                      overflow: hidden;
-                      text-overflow: ellipsis;
-                      display: -webkit-box;
-                      -webkit-box-orient: vertical;
-                      word-wrap:break-word;
-                      color: #fff;
-                    }
-
-                    .title {
-                      -webkit-line-clamp: 2;
-                      line-height: 1.6vw;
-                      max-height: 4.8vw;
-                      font-size: 1.3vw;
-                      @include nsB;
-                    }
-
-                    .context {
-                      margin-top: 0.7vw;
-                      -webkit-line-clamp: 5;
-                      line-height: 1.4vw;
-                      max-height: 7vw;
-                      font-size: 1.1vw;
-                      @include nsM;
-                    }
-                  }
-
-                  &.swiperOn01 {
-                    position: relative;
-                    z-index: 10;
-                    transform: scale(1.4);
-
-                    .topImage {
-                      right : 50%;
-                    }
-
-                    .textBox {
-                      right : -11%;
-                      opacity: 1;
-                    }
-                  }
-                }
-
-                &.swiper-slide-active {
-
-                  a {
-
-                    &.swiperOn01 {
-                      transform-origin: -38% center;
-                    }
-                  }
-
-                  & + .swiper-slide + .swiper-slide + .swiper-slide + .swiper-slide {
-
-                    a {
-
-                      &.swiperOn01 {
-                        transform-origin: 138% center;
-                      }
-                    }
-                  }
-                }
-              }
-            }
 
             .swiper-button-prev, .swiper-button-next {
               top: 0;
