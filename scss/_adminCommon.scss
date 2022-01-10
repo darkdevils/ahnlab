@@ -203,8 +203,8 @@ html, body {
         .title {
           display: inline-block;
           vertical-align: top;
-          line-height: 49px;
-          padding-top: 9px;
+          line-height: 46px;
+          padding-top: 12px;
           margin-right: 24px;
           font-size: 34px;
           @include nsB;
@@ -213,18 +213,53 @@ html, body {
         .subText {
           display: inline-block;
           vertical-align: top;
-          line-height: 36px;
-          padding-top: 22px;
+          line-height: 38px;
+          padding-top: 20px;
           font-size: 25px;
           @include nsM;
-          color: #7D7D7D;
+          color: #b3b3b3;
         }
       }
 
       .contentSubTitle {
         overflow: hidden;
-        margin-top: 100px;
+        margin-top: 90px;
         border-bottom: 1px solid #D8D8D8;
+
+        .alignLeft {
+          float: left;
+        }
+
+        .alignRight {
+          float: right;
+        }
+
+        .title {
+          display: inline-block;
+          vertical-align: top;
+          line-height: 29px;
+          padding: 18px 0;
+          font-size: 20px;
+          @include nsM;
+        }
+
+        .totalNumber {
+          display: inline-block;
+          vertical-align: top;
+          line-height: 29px;
+          padding: 18px 0;
+          font-size: 18px;
+          @include nsM;
+        }
+
+        &.unLine {
+          border-bottom: 0 none;
+        }
+      }
+
+      .contentSubTitle02 {
+        overflow: hidden;
+        margin-top: 35px;
 
         .alignLeft {
           float: left;
@@ -303,13 +338,20 @@ html, body {
         }
 
         &__content {
-          padding: 0 0 50px 0;
+          padding: 0 0 60px 0;
           border-top: 1px solid #333;
           border-bottom: 1px solid #333;
         }
 
         .visualImage {
-          margin: 45px 0 0;
+          margin: 60px 0 0;
+
+          img {
+            display: inline-block;
+            vertical-align: top;
+            max-width: 100%;
+            height: auto;
+          }
         }
 
         .text {
@@ -371,6 +413,47 @@ html, body {
     }
   }
 
+  .ahnSelectSmall {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    width: 72px;
+    height: 34px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      display: block;
+      width: 14px;
+      height: 8px;
+      margin-top: -4px;
+      @include imageUrlAdmin("icon/icon_select");
+      background-size: 14px 8px;
+    }
+
+    select {
+      display: block;
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      padding: 0 25px 0 17px;
+      border: 1px solid #7F8080;
+      outline: 0 none;
+      color: #fff;
+      font-size: 18px;
+      @include nsM;
+      background-color: #3E3E3E;
+
+      border-radius:0; /* 아이폰 사파리 보더 없애기 */
+      -webkit-appearance:none; /* 화살표 없애기 for chrome*/
+      -moz-appearance:none; /* 화살표 없애기 for firefox*/
+      appearance:none /* 화살표 없애기 공통*/
+    }
+  }
+
   /* input text */
   .ahnInputText {
     display: inline-block;
@@ -405,6 +488,7 @@ html, body {
       height: 100%;
       width: 100%;
       border: 1px solid #707070;
+      outline: 0 none;
       font-size: 18px;
       @include gtM;
       color: #fff;
@@ -570,7 +654,7 @@ html, body {
       padding-left: 33px;
       font-size: 28px;
       @include nsM;
-      color: #B3B3B3;
+      color: #fff;
       @include imageUrlAdmin("icon/icon_check");
       background-position: left 8px;
 
@@ -581,6 +665,42 @@ html, body {
         padding: 0;
         background-position: left 0;
       }
+    }
+  }
+
+  .ahnInputCheck02 {
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+
+    input {
+      @include blind;
+
+      &:checked {
+
+        & + .text {
+          @include imageUrlAdmin("icon/icon_checkOn");
+          background-color: #141414;
+          background-position: right 13px center;
+        }
+      }
+    }
+
+    .text {
+      position: relative;
+      display: block;
+      box-sizing: border-box;
+      width: 172px;
+      height: 53px;
+      line-height: 51px;
+      padding: 0 52px 0 23px;
+      border: 1px solid #fff;
+      font-size: 18px;
+      @include gtM;
+      color: #fff;
+      @include imageUrlAdmin("icon/icon_check");
+      background-color: #141414;
+      background-position: right 13px center;
     }
   }
 
@@ -641,8 +761,8 @@ html, body {
       border: 0 none;
       outline: 0 none;
       padding: 0;
-      font-size: 14px;
-      @include nsM;
+      font-size: 22px;
+      @include nsR;
       color: #fff;
       resize: none;
       background-color: transparent;
@@ -828,7 +948,7 @@ html, body {
     margin-top: 45px;
 
     &.mdrType01 {
-      margin-top: 130px;
+      margin-top: 60px;
     }
 
     .alignLeft {
@@ -978,7 +1098,6 @@ html, body {
 
   /* table */
   .tableArea {
-    margin-top: 30px;
 
     .tableTitle {
       overflow: hidden;
@@ -1330,6 +1449,14 @@ html, body {
         background-position: right center;
       }
     }
+
+    .noData {
+      text-align: center;
+      height: 260px;
+      line-height: 260px;
+      font-size: 18px;
+      @include nsB;
+    }
   }
 
   /* list hegiht 03, list width 02, list width 03 */
@@ -1446,7 +1573,7 @@ html, body {
           .title {
             font-size: 28px;
             font-family: "NotoSansCJKkrMedium", sans-serif;
-            color: #B3B3B3;
+            color: #fff;
           }
 
           &.categoryType {
@@ -1583,7 +1710,7 @@ html, body {
             margin-top: 14px;
             font-size: 28px;
             font-family: "NotoSansCJKkrMedium", sans-serif;
-            color: #B3B3B3;
+            color: #fff;
           }
 
           .ahnInputCheck {
@@ -1647,7 +1774,7 @@ html, body {
   }
 
   /* 썸네일 */
-  .imageWidthBox {
+  .imageWidthBoxW {
     padding: 18px 0;
 
     .imageBox {
@@ -1677,6 +1804,98 @@ html, body {
 
     .imageFunction {
       padding-bottom: 0;
+    }
+  }
+
+  .imageWidthBoxH {
+    overflow: hidden;
+    padding: 18px 0;
+
+    .image {
+      float: left;
+      width: 175px;
+      height: 237px;
+      border: 1px solid #464646;
+      background-color: #1F1F1F;
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .contentBox {
+      float: left;
+      margin: 150px 0 0 24px;
+
+      .tableText {
+        line-height: 26px;
+        font-size: 18px;
+        @include nsM;
+      }
+
+      .imageFunction {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  .videoWidthBoxH {
+    padding: 18px 0;
+
+    .videoContent {
+      width: 560px;
+      height: 316px;
+      box-sizing: border-box;
+      border: 1px solid #464646;
+      @include imageUrlAdmin("bg/bg_video");
+      background-position: center center;
+      background-color: #1F1F1F;
+
+      iframe {
+        display: block;
+        width: 100%;
+        height: 314px;
+      }
+    }
+
+    .imageFunction {
+      padding-bottom: 0;
+    }
+  }
+
+  /* 라이브 영삭 시작/종료 */
+  .liveVideoControl {
+    margin: -1px 0 70px;
+    border: 3px solid #fff;
+    background-color: #2B2B2B;
+
+    .controlBox {
+      display: flex;
+      align-items: center;
+      height: 88px;
+
+      & + .controlBox {
+        border-top: 1px solid #585858;
+      }
+
+      .liveTitle {
+        width: 150px;
+        text-align: center;
+        font-size: 18px;
+        @include nsM;
+      }
+
+      .liveBtn {
+        margin-left: 15px;
+      }
+
+      .liveText {
+        margin-left: 28px;
+        font-size: 18px;
+        color: #b3b3b3;
+      }
     }
   }
 

@@ -79,22 +79,6 @@
     /* 안철수는 */
     .ahncheolsooContent {
 
-      .videoContent {
-        box-sizing: border-box;
-        width: 560px;
-        margin-top: 17px;
-        border: 1px solid #464646;
-        @include imageUrlAdmin("bg/bg_video");
-        background-position: center;
-        background-color: #1F1F1F;
-
-        iframe {
-          display: block;
-          width: 100%;
-          height: 314px;
-        }
-      }
-
       .vidoeSubmit {
         padding-left: 160px;
       }
