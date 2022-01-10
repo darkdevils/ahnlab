@@ -2086,7 +2086,6 @@ html, body {
   /* content add area */
   /* 썸네일 */
   /* 라이브 영삭 시작/종료 */
-  /* 댓글 (당신의 의견을 남겨주세요) */
   /* etc */
 }
 #wrap #lnb {
@@ -2307,20 +2306,32 @@ html, body {
   margin-top: 32px;
   padding-top: 33px;
   border-top: 1px solid #777;
+  /* 댓글 (당신의 의견을 남겨주세요) */
 }
 #wrap #container .content .detailWrap h3.title {
   display: block;
-  line-height: 72px;
   font-size: 50px;
   font-family: "NotoSansCJKkrMedium", sans-serif;
-  padding-bottom: 13px;
+  padding-bottom: 28px;
+  letter-spacing: -0.09em;
+}
+#wrap #container .content .detailWrap h3.title .category {
+  color: #EA5517;
 }
 #wrap #container .content .detailWrap .justifyWrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 17px 0 0;
+  padding: 24px 0 0;
   color: #b3b3b3;
+}
+#wrap #container .content .detailWrap .justifyWrap__left .write {
+  font-size: 19px;
+  margin-right: 17px;
+}
+#wrap #container .content .detailWrap .justifyWrap__left .name {
+  font-size: 19px;
+  margin-right: 55px;
 }
 #wrap #container .content .detailWrap .justifyWrap__left .writeTitle {
   font-size: 19px;
@@ -2332,42 +2343,289 @@ html, body {
   font-family: "GothamMedium", sans-serif;
 }
 #wrap #container .content .detailWrap .justifyWrap__left .btnLink {
-  font-size: 24px;
-  margin-right: 15px;
-  color: #b3b3b3;
+  font-size: 22px;
+  margin-left: 11px;
+  margin-right: 9px;
+  color: #fff;
 }
 #wrap #container .content .detailWrap .justifyWrap__right {
+  position: relative;
   padding: 0 5px 0 0;
 }
 #wrap #container .content .detailWrap .justifyWrap__right .num {
+  position: relative;
   display: block;
+  height: 22px;
   line-height: 22px;
-  padding-right: 31px;
-  font-size: 17px;
+  padding-right: 23px;
+  font-size: 18px;
   font-family: "GothamMedium", sans-serif;
-  background: url("../admin/images/icon/icon_like02.png") no-repeat;
-  background-position: right bottom;
+  background: url("../admin/images/icon/icon_like01.png") no-repeat;
+  background-position: right center;
+  background-size: 16px 15px;
 }
 #wrap #container .content .detailWrap__content {
+  margin-bottom: 6px;
   padding: 0 0 60px 0;
-  border-top: 1px solid #333;
-  border-bottom: 1px solid #333;
+  border-top: 2px solid #EA5510;
+  border-bottom: 1px solid #EA5510;
 }
 #wrap #container .content .detailWrap .visualImage {
-  margin: 60px 0 0;
+  margin: 55px 0 0;
 }
 #wrap #container .content .detailWrap .visualImage img {
-  display: inline-block;
-  vertical-align: top;
   max-width: 100%;
-  height: auto;
 }
 #wrap #container .content .detailWrap .text {
   display: block;
   margin: 60px 0 0;
   font-size: 22px;
-  color: #6a6a6a;
-  line-height: 32px;
+  color: #E4E4E4;
+  line-height: 36px;
+}
+#wrap #container .content .detailWrap .commentWriter {
+  margin-top: 100px;
+}
+#wrap #container .content .detailWrap .commentWriter h3.title {
+  position: relative;
+  display: inline-block;
+  font-size: 30px;
+  font-family: "NotoSansCJKkrBold", sans-serif;
+  margin-bottom: 25px;
+  padding: 26px 0 0;
+  letter-spacing: -0.075em;
+}
+#wrap #container .content .detailWrap .commentWriter h3.title:after {
+  content: "";
+  position: absolute;
+  right: -45px;
+  top: 0;
+  width: 45px;
+  height: 34px;
+  background: url("../admin/images/icon/icon_comment.png") no-repeat;
+  background-size: contain;
+  font-family: "NotoSansCJKkrRegular", sans-serif;
+}
+#wrap #container .content .detailWrap .commentWriter__textarea {
+  height: 300px;
+  border: 1px solid #707070;
+  box-sizing: border-box;
+}
+#wrap #container .content .detailWrap .commentWriter__textarea textarea {
+  width: 100%;
+  height: 240px;
+  border: 0;
+  padding: 38px 33px;
+  background: #262626;
+  box-sizing: border-box;
+  vertical-align: top;
+  font-size: 20px;
+  line-height: 34px;
+  color: #E4E4E4;
+  outline: none;
+  resize: none;
+  font-family: "NotoSansCJKkrRegular", sans-serif;
+}
+#wrap #container .content .detailWrap .commentWriter .commentAttach {
+  position: relative;
+  height: 58px;
+  background: #262626;
+  border-top: 1px solid #707070;
+  box-sizing: border-box;
+}
+#wrap #container .content .detailWrap .commentWriter .commentAttach .commentNum {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 0 0 34px;
+  font-size: 15px;
+  color: #AAAAAA;
+  font-family: "GothamMedium", sans-serif;
+}
+#wrap #container .content .detailWrap .commentWriter .commentAttach .commentNum .btnPhoto {
+  width: 24px;
+  height: 24px;
+  margin-left: 15px;
+  background: url("../admin/images/icon/icon_photo.png") no-repeat;
+  background-size: contain;
+}
+#wrap #container .content .detailWrap .commentWriter .commentAttach .btnRegister {
+  position: absolute;
+  right: -1px;
+  top: -1px;
+  width: 165px;
+  height: 59px;
+  text-align: center;
+  background-color: #000;
+  border: 1px solid #3d3d3d;
+}
+#wrap #container .content .detailWrap .commentWriter .commentAttach .btnRegister .icon {
+  position: relative;
+  padding-left: 30px;
+  font-size: 20px;
+  color: #fff;
+}
+#wrap #container .content .detailWrap .commentWriter .commentAttach .btnRegister .icon:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 3px;
+  background: url("../admin/images/icon/icon_register02.png") no-repeat;
+  width: 23px;
+  height: 23px;
+}
+#wrap #container .content .detailWrap .commentWriter .commentAttach .btnRegister {
+  background: none;
+  text-align: center;
+  background: #000000;
+  border: 1px solid #707070;
+  transition: 0.3s;
+}
+#wrap #container .content .detailWrap .commentWriter .commentAttach .btnRegister span {
+  font-size: 20px;
+  color: #b3b3b3;
+  font-family: "NotoSansCJKkrRegular", sans-serif;
+}
+#wrap #container .content .detailWrap .commentWriter .commentAttach .btnRegister:hover {
+  background: #EA5517;
+}
+#wrap #container .content .detailWrap .commentWriter .commentAttach .btnRegister:hover span {
+  color: #fff;
+}
+#wrap #container .content .detailWrap .commentList .commentItem {
+  position: relative;
+  margin-top: 30px;
+  border-bottom: 1px solid #707070;
+  padding: 30px 0;
+}
+#wrap #container .content .detailWrap .commentList .commentItem + .commentItem-reply.commentItem-writer {
+  background: #000;
+  margin-top: -5px;
+  padding-top: 0;
+}
+#wrap #container .content .detailWrap .commentList .commentItem-reply {
+  margin: 0;
+  padding: 39px 0 30px 95px;
+  background-color: #222222;
+}
+#wrap #container .content .detailWrap .commentList .commentItem-reply.commentItem-writer {
+  padding: 30px 0 30px 53px;
+}
+#wrap #container .content .detailWrap .commentList .commentItem-reply:after {
+  content: "";
+  position: absolute;
+  left: 34px;
+  top: 25px;
+  background: url("../admin/images/bg/bg_line.png") no-repeat;
+  width: 22px;
+  height: 22px;
+}
+#wrap #container .content .detailWrap .commentList .commentItem .commentWriter__textarea {
+  height: 226px;
+}
+#wrap #container .content .detailWrap .commentList .commentItem .commentWriter__textarea textarea {
+  height: 166px;
+  padding: 21px 16px;
+}
+#wrap #container .content .detailWrap .commentList .commentItem-writer {
+  padding: 0;
+  background-color: transparent;
+}
+#wrap #container .content .detailWrap .commentList .commentItem-writer.commentItem-reply:after {
+  left: 0;
+  top: 0;
+}
+#wrap #container .content .detailWrap .commentList .commentBox {
+  position: relative;
+}
+#wrap #container .content .detailWrap .commentList .commentBox__nick {
+  display: block;
+  font-size: 20px;
+  font-family: "NotoSansCJKkrBold", sans-serif;
+  margin-bottom: 26px;
+}
+#wrap #container .content .detailWrap .commentList .commentBox__nick .nick .date {
+  margin-left: 17px;
+  font-size: 16px;
+  color: #B3B3B3;
+  font-family: "GothamMedium", sans-serif;
+}
+#wrap #container .content .detailWrap .commentList .commentBox .btnCommentLayer {
+  position: absolute;
+  right: 50px;
+  top: 10px;
+  width: 14px;
+  height: 13px;
+  background: url("../admin/images/icon/icon_delete02.png") no-repeat;
+}
+#wrap #container .content .detailWrap .commentList .commentBox .layerButton {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 43px;
+  height: 53px;
+  border: 1px solid #707070;
+  box-sizing: border-box;
+}
+#wrap #container .content .detailWrap .commentList .commentBox .layerButton li a {
+  display: block;
+  color: #b3b3b3;
+  font-size: 13px;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+}
+#wrap #container .content .detailWrap .commentList .commentBox .layerButton li a:hover {
+  background-color: #EA5517;
+  color: #fff;
+}
+#wrap #container .content .detailWrap .commentList .commentBox .layerButton li + li {
+  border-top: 1px solid #b3b3b3;
+}
+#wrap #container .content .detailWrap .commentList .commentBox__text {
+  padding: 0 0 45px;
+}
+#wrap #container .content .detailWrap .commentList .commentBox__text__view {
+  font-size: 20px;
+  line-height: 34px;
+  color: #E4E4E4;
+}
+#wrap #container .content .detailWrap .commentList .commentBox__info {
+  display: flex;
+  justify-content: space-between;
+  color: #b3b3b3;
+}
+#wrap #container .content .detailWrap .commentList .commentBox__info span {
+  font-size: 16px;
+  font-family: "GothamMedium", sans-serif;
+}
+#wrap #container .content .detailWrap .commentList .commentBox__info__left button {
+  width: 129px;
+  height: 43px;
+  margin-left: 3px;
+  border: 1px solid #707070;
+  background-color: #000;
+  box-sizing: border-box;
+}
+#wrap #container .content .detailWrap .commentList .commentBox__info__left button span {
+  color: #fff;
+  font-size: 20px;
+  font-family: "NotoSansCJKkrRegular", sans-serif;
+}
+#wrap #container .content .detailWrap .commentList .commentBox__info__right {
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+}
+#wrap #container .content .detailWrap .commentList .commentBox__info__right .num {
+  display: block;
+  height: 43px;
+  line-height: 43px;
+  padding-right: 28px;
+  color: #B3B3B3;
+  background: url("../admin/images/icon/icon_like03.png") no-repeat;
+  background-position: right center;
 }
 #wrap .colorOrange {
   color: #EA5504;
@@ -3621,236 +3879,6 @@ html, body {
   margin-left: 28px;
   font-size: 18px;
   color: #b3b3b3;
-}
-#wrap .commentWriter {
-  margin-top: 100px;
-}
-#wrap .commentWriter h3.title {
-  position: relative;
-  display: inline-block;
-  font-size: 30px;
-  font-family: "NotoSansCJKkrBold", sans-serif;
-  margin-bottom: 25px;
-  padding: 26px 0 0;
-}
-#wrap .commentWriter h3.title:after {
-  content: "";
-  position: absolute;
-  right: -45px;
-  top: 0;
-  width: 45px;
-  height: 34px;
-  background: url("../admin/images/icon/icon_comment.png") no-repeat;
-  background-size: contain;
-  font-family: "NotoSansCJKkrRegular", sans-serif;
-}
-#wrap .commentWriter__textarea {
-  height: 300px;
-  border: 1px solid #3D3D3D;
-  box-sizing: border-box;
-}
-#wrap .commentWriter__textarea textarea {
-  width: 100%;
-  height: 240px;
-  border: 0;
-  padding: 38px 33px;
-  background: #262626;
-  box-sizing: border-box;
-  vertical-align: top;
-  font-size: 20px;
-  line-height: 20px;
-  color: #fff;
-  outline: none;
-  resize: none;
-}
-#wrap .commentWriter .commentAttach {
-  position: relative;
-  height: 58px;
-  background: #262626;
-  border-top: 1px solid #3d3d3d;
-  box-sizing: border-box;
-}
-#wrap .commentWriter .commentAttach .commentNum {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  padding: 0 0 0 34px;
-  font-size: 15px;
-  font-family: "GothamMedium", sans-serif;
-}
-#wrap .commentWriter .commentAttach .commentNum .btnPhoto {
-  width: 24px;
-  height: 24px;
-  margin-left: 15px;
-  background: url("../admin/images/icon/icon_photo.png") no-repeat;
-  background-size: contain;
-}
-#wrap .commentWriter .commentAttach .btnRegister {
-  position: absolute;
-  right: -1px;
-  top: -1px;
-  width: 165px;
-  height: 59px;
-  text-align: center;
-  background-color: #000;
-  border: 1px solid #3d3d3d;
-}
-#wrap .commentWriter .commentAttach .btnRegister .icon {
-  position: relative;
-  padding-left: 30px;
-  font-size: 20px;
-  color: #fff;
-}
-#wrap .commentWriter .commentAttach .btnRegister .icon:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 1px;
-  background: url("../admin/images/icon/icon_register02.png") no-repeat;
-  width: 23px;
-  height: 23px;
-}
-#wrap .commentWriter .commentAttach .btnRegister {
-  background: none;
-  text-align: center;
-  background: #000000;
-  border: 1px solid #707070;
-  transition: 0.3s;
-}
-#wrap .commentWriter .commentAttach .btnRegister span {
-  font-size: 20px;
-  color: #b3b3b3;
-  font-family: "NotoSansCJKkrRegular", sans-serif;
-}
-#wrap .commentWriter .commentAttach .btnRegister:hover {
-  background: #EA5517;
-}
-#wrap .commentWriter .commentAttach .btnRegister:hover span {
-  color: #fff;
-}
-#wrap .commentList .commentItem {
-  position: relative;
-  margin-top: 25px;
-  border-bottom: 1px solid #707070;
-  padding: 30px 0 11px;
-}
-#wrap .commentList .commentItem-reply {
-  margin: 0;
-  padding: 30px 0 30px 112px;
-  background-color: #222222;
-}
-#wrap .commentList .commentItem-reply.commentItem-writer {
-  padding: 30px 0 30px 112px;
-}
-#wrap .commentList .commentItem-reply:after {
-  content: "";
-  position: absolute;
-  left: 68px;
-  top: 25px;
-  background: url("../admin/images/bg/bg_line.png") no-repeat;
-  width: 22px;
-  height: 22px;
-}
-#wrap .commentList .commentItem .commentWriter {
-  margin: 0;
-}
-#wrap .commentList .commentItem .commentWriter__textarea {
-  height: 226px;
-}
-#wrap .commentList .commentItem .commentWriter__textarea textarea {
-  height: 166px;
-  padding: 21px 16px;
-}
-#wrap .commentList .commentItem-writer {
-  padding: 0;
-  background-color: transparent;
-}
-#wrap .commentList .commentBox {
-  position: relative;
-}
-#wrap .commentList .commentBox__nick {
-  display: block;
-  font-size: 20px;
-  font-family: "NotoSansCJKkrBold", sans-serif;
-  margin-bottom: 26px;
-}
-#wrap .commentList .commentBox .btnCommentLayer {
-  position: absolute;
-  right: 21px;
-  top: 0;
-  width: 14px;
-  height: 13px;
-  background: url("../admin/images/icon/icon_delete02.png") no-repeat;
-}
-#wrap .commentList .commentBox .layerButton {
-  display: none;
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  width: 43px;
-  height: 53px;
-  border: 1px solid #707070;
-  box-sizing: border-box;
-}
-#wrap .commentList .commentBox .layerButton li a {
-  display: block;
-  color: #b3b3b3;
-  font-size: 13px;
-  height: 26px;
-  line-height: 26px;
-  text-align: center;
-}
-#wrap .commentList .commentBox .layerButton li a:hover {
-  color: #fff;
-  background-color: #EA5504;
-}
-#wrap .commentList .commentBox .layerButton li + li {
-  border-top: 1px solid #b3b3b3;
-}
-#wrap .commentList .commentBox__text {
-  padding: 0 0 45px;
-}
-#wrap .commentList .commentBox__text__view {
-  font-size: 20px;
-  line-height: 34px;
-  color: #b3b3b3;
-}
-#wrap .commentList .commentBox__info {
-  display: flex;
-  justify-content: space-between;
-  color: #b3b3b3;
-}
-#wrap .commentList .commentBox__info span {
-  font-size: 16px;
-  font-family: "GothamMedium", sans-serif;
-}
-#wrap .commentList .commentBox__info__left button {
-  width: 66px;
-  height: 27px;
-  margin-left: 8px;
-  border: 1px solid #707070;
-  background-color: #000;
-  box-sizing: border-box;
-}
-#wrap .commentList .commentBox__info__left button span {
-  color: #b3b3b3;
-  font-size: 13px;
-  font-family: "NotoSansCJKkrRegular", sans-serif;
-}
-#wrap .commentList .commentBox__info__right {
-  display: flex;
-  align-items: center;
-  padding-right: 20px;
-}
-#wrap .commentList .commentBox__info__right .num {
-  display: block;
-  height: 19px;
-  line-height: 19px;
-  padding-right: 26px;
-  font-size: 16px;
-  font-family: "GothamMedium", sans-serif;
-  background: url("../admin/images/icon/icon_like03.png") no-repeat;
-  background-position: right center;
 }
 #wrap .blind {
   position: absolute;
