@@ -538,7 +538,6 @@ html, body {
 
   /* container */
   #container {
-    padding-bottom: 180px;
 
     .topVisual {
 
@@ -579,6 +578,7 @@ html, body {
     .content {
       @include contentWidth($webWidthNumber);
       margin: 0 auto;
+      padding-bottom: 180px;
     }
   }
 
@@ -659,8 +659,8 @@ html, body {
       bottom       : 24px;
       width        : 41px;
       height       : 41px;
-      border-color : #666;
-      background   : #666;
+      border-color : #E4E4E4;
+      background   : #000;
 
       span {
         height              : 9px;
@@ -669,7 +669,7 @@ html, body {
         font-size           : 8px;
         @include imageUrl("web/icon/icon_pageTop");
         background-position : center top;
-        background-size     : 21px 10px;
+        background-size     : 11px 6px;
       }
     }
 
@@ -1162,12 +1162,11 @@ html, body {
 
       /* container */
       #container {
-        padding-bottom : 40px;
 
         .topVisual {
 
           .topVisualSwiper {
-            height : 95.5128vw;
+            height : 95.4166vw;
 
             .swiper {
 
@@ -1184,11 +1183,13 @@ html, body {
 
         .content {
           @include contentWidth($mobileWidthNumber);
+          padding-bottom: 98px;
         }
       }
 
       /* footer */
       #footer {
+        background-color: #262626;
 
         .footerIn {
           height       : 143px;

@@ -13,7 +13,6 @@ let common = {
         this.gnbMobileOpen(); // gnb mobile open
         this.gnbMobileClose(); // gnb mobile close
         this.gnbMobileLoginSearchSlide(); // gnb mobile login, search 메뉴 slide
-        //this.mainSwiperOn() // main swiper on
     },
 
     // scroll 이벤트
@@ -229,33 +228,6 @@ let common = {
             } else {
                 $gnbItemSub.stop().slideDown(slideSpeed);
             }
-        });
-    },
-
-    // main swiper on
-    mainSwiperOn : function () {
-        $(document).on("mouseenter", ".photoNumberArea .swiper-slide a", function(){
-            let $this = $(this);
-
-            $this.addClass("swiperOn");
-        });
-
-        $(document).on("mouseleave", ".photoNumberArea .swiper-slide a", function(){
-            let $this = $(this);
-
-            $this.removeClass("swiperOn");
-        });
-
-        $(document).on("mouseenter", ".photoWidthArea .swiper-slide a, .photoHeightArea .swiper-slide a", function(){
-            let $this = $(this);
-
-            $this.addClass("swiperOn02");
-        });
-
-        $(document).on("mouseleave", ".photoWidthArea .swiper-slide a, .photoHeightArea .swiper-slide a", function(){
-            let $this = $(this);
-
-            $this.removeClass("swiperOn02");
         });
     },
 
