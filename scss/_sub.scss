@@ -837,6 +837,9 @@ h2.title {
         width: 22px;
         height: 22px;
       }
+      .commentBox .btnCommentLayer {
+        right: 50px;
+      }
     }
     .commentWriter {
       &__textarea {
@@ -876,7 +879,7 @@ h2.title {
     }
     .btnCommentLayer {
       position: absolute;
-      right: 50px;
+      right: 0;
       top: 10px;
       width: 14px;
       height: 13px;
@@ -1500,7 +1503,7 @@ h2.title {
     padding-top: calc(70px / 2);
     padding-left: calc(47px / 2);
     font-size: calc(30px / 2);
-    margin-bottom: calc(50px / 2);
+    margin-bottom: calc(70px / 2);
     strong {
       font-size: calc(45px / 2);
     }
@@ -1511,7 +1514,7 @@ h2.title {
   /* 안철수는 */
   .ahnIs {
     &__visual {
-      margin-bottom: calc(100px / 2);
+      margin-bottom: calc(70px / 2);
       img {
         display: none;
       }
@@ -1558,12 +1561,13 @@ h2.title {
       }
     }
     &__video {
-      margin-top: calc(80px / 2);
+      margin-top: calc(70px / 2);
     }
   }
 
   /* 안철수의 약속 */
   .listWrap__list {
+    padding-top: 0;
     padding-left: calc(48px / 2);
     padding-right: calc(48px / 2);
     ul {
@@ -1571,7 +1575,9 @@ h2.title {
       li {
         position: relative;
         width: 100%;
+        height: auto;
         margin-top: 30px;
+        &:nth-child(odd),
         &:nth-child(even) {
           margin-top: 30px;
         }
@@ -1616,6 +1622,7 @@ h2.title {
           }
           &:after {
             top: 0;
+            left: 0;
             width: calc(36px / 2);
             height: calc(36px / 2);
           }
@@ -1644,7 +1651,7 @@ h2.title {
     }
   }
   .listWrap .btnMore {
-    margin-top: 20px;
+    margin-top: 70px;
     button {
       span {
         font-size: calc(35px / 2);
@@ -1667,17 +1674,27 @@ h2.title {
   .detailWrap {
     h3.title {
       font-size: calc(42px / 2);
+      padding-bottom: calc(10px / 2);
       line-height: 48px;
     }
     .justifyWrap {
-      padding-bottom: 10px;
+      padding-top: 11px;
+      padding-bottom: 5px;
       &__left {
+        .write,
         .writeTitle {
           display: none;
         }
+        .name {
+          margin-right: 4px;
+          font-size: calc(28px / 2);
+        }
+        .date {
+          font-size: calc(28px / 2);
+        }
         .btnLink {
           width: calc(35px / 2);
-          font-size: calc(32px / 2);
+          font-size: calc(28px / 2);
           color: #fff;
           margin-right: calc(15px / 2);
         }
@@ -1688,18 +1705,26 @@ h2.title {
         .num {
           //font-size: calc(23px / 2);
         }
+        .btnSharing {
+          display: none;
+        }
         .btnLike {
-          position: relative;
-          top: 3px;
-          width: 24px;
+          .num {
+            font-size: calc(28px / 2);
+          }
+          &:after {
+            top: 1px;
+          }
         }
       }
     }
 
     &__content {
+      margin-bottom: 0;
+      padding-bottom: 35px;
       font-size: calc(23px / 2);
       .visualImage {
-        margin-top: 35px;
+        margin-top: 30px;
         img {
           width: 100%;
         }
@@ -1744,15 +1769,21 @@ h2.title {
             margin-left: 7px;
           }
           .btnLike {
-            right: 6px;
-            top: 6px;
+            background-position: center;
+            background-size: 20px 20px;
+            right: 3px;
+            top: 4px;
+            &.on {
+              background-position: center;
+              background-size: 20px 20px;
+            }
           }
         }
       }
     }
   }
   .pagination {
-    padding-top: 30px;
+    padding-top: 35px;
     a {
       width: calc(55px / 2);
       height: calc(55px / 2);
@@ -1771,7 +1802,7 @@ h2.title {
 
   /* 안철수의 오늘 */
   .tabWrap {
-    margin-bottom: calc(60px / 2);
+    margin-bottom: calc(70px / 2);
     padding-left: calc(47px / 2);
     ul {
       display: flex;
@@ -1833,9 +1864,19 @@ h2.title {
               height: auto;
             }
           }
+          > .btnLike {
+            right: 0;
+            top: 0;
+            background-size: 20px 20px;
+            &.on {
+              background-size: 20px 20px;
+            }
+          }
           .justifyWrap {
             margin-top: 10px;
-            font-size: calc(36px / 2);
+            * {
+              font-size: calc(28px / 2);
+            }
             &__left {
               .name {
                 margin-right: 10px;
@@ -1843,15 +1884,11 @@ h2.title {
             }
             &__right {
               .btnLike {
-                margin-left: 5px;
-                width: calc(31px / 2);
-                height: calc(29px / 2);
-                @include imageUrl("mobile/sub/icon_like_31x29_off");
-                background-size: contain;
-                vertical-align: top;
-                &.on {
-                  @include imageUrl("mobile/sub/icon_like_31x29_on");
-                  background-size: contain;
+                &:after {
+                  top: 1px;
+                }
+                span {
+                  font-size: calc(28px / 2);
                 }
               }
             }
@@ -1859,7 +1896,7 @@ h2.title {
           .txt {
             display: -webkit-box;
             font-size: calc(40px / 2);
-            margin-top: calc(15px / 2);
+            margin-top: calc(36px / 2);
             line-height: calc(48px / 2);
           }
           .text {
@@ -1896,8 +1933,7 @@ h2.title {
             display: none;
           }
           .name {
-            font-size: calc(36px / 2);
-            margin-right: 10px;
+            margin-right: 4px;
           }
         }
 
@@ -1919,6 +1955,10 @@ h2.title {
             }
           }
         }
+      }
+      .txt {
+        font-size: 15px;
+        line-height: calc(41px / 2);
       }
     }
     .btnWrap {
@@ -1981,7 +2021,12 @@ h2.title {
     .commentList {
       .commentItem {
         margin: 0;
-        padding: 25px 10px;
+        padding: 30px 0 12px;
+        overflow: hidden;
+        .btnReply-m {
+          background-color: #EA551C;
+          border-color: #EA551C;
+        }
         .commentBox {
           .btnCommentLayer {
             right : 0;
@@ -1989,6 +2034,7 @@ h2.title {
 
           .layerButton {
             right : 0;
+            top: 28px;
 
             li {
               a {
@@ -1999,12 +2045,18 @@ h2.title {
           }
 
           &__nick {
+            margin-bottom: 15px;
             .nick {
               font-size : calc(30px / 2);
+              .date {
+                font-size : calc(28px / 2);
+                margin-left: 5px;
+                color: #E4E4E4;
+              }
             }
           }
           &__text {
-            padding-bottom: 30px;
+            padding-bottom: 20px;
             &__view {
               font-size : calc(30px / 2);
               line-height: calc(45px / 2);
@@ -2016,19 +2068,30 @@ h2.title {
             }
             &__left {
               button {
-                height: calc(50px / 2);
+                width: calc(120px / 2);
+                height: calc(60px / 2);
+                font-size: calc(26px / 2);
+                margin-left: 0;
               }
             }
             &__right {
               padding-right: 0;
+              .btnLike {
+                padding: 0 24px 0 0;
+                &:after {
+                  top: 1px;
+                  width: 16px;
+                  height: 16px;
+                }
+              }
             }
           }
         }
         &-reply {
-          padding-left: calc(77px / 2);
+          padding-left: calc(100px / 2);
           padding-right: 15px;
           &:after {
-            left: 15px;
+            left: 25px;
             @include imageUrl('mobile/sub/bg_line');
             background-size: contain;
             width: calc(33px / 2);
@@ -2046,6 +2109,27 @@ h2.title {
                   span {
                     font-size: calc(27px / 2);
                   }
+                }
+              }
+            }
+          }
+
+          .commentBox {
+            &__info {
+              position: relative;
+              padding: 10px 0 0;
+              &:after {
+                content: "";
+                position: absolute;
+                left: -100px;
+                top: 0;
+                width: 200%;
+                height: 1px;
+                background: #707070;
+              }
+              &__left {
+                .btnReply {
+                  margin-left: -25px;
                 }
               }
             }
@@ -2143,6 +2227,22 @@ h2.title {
         }
       }
     }
+    .paginationWrap {
+      &__list {
+        > ul > li {
+          > .btnLike {
+            width: 40px;
+            height: 40px;
+            right: 0;
+            top: 0;
+            background-size: 20px 20px;
+            &.on {
+              background-size: 20px 20px;
+            }
+          }
+        }
+      }
+    }
   }
 
   /* 커뮤니티 쓰기 - 수정 */
@@ -2198,9 +2298,11 @@ h2.title {
         }
       }
       .ahnSelect {
+        width: 96%;
         height: calc(74px / 2);
         select {
           font-size: 14px;
+          background: #262626;
         }
       }
       .ahnInputText {
@@ -2208,9 +2310,11 @@ h2.title {
         height: calc(74px / 2);
         input {
           font-size: 14px;
+          background: #262626;
         }
       }
       .ahnBtnM {
+        width: 60px;
         height: 37px;
         span {
           height: 100%;
@@ -2221,6 +2325,7 @@ h2.title {
       .ahnTextarea {
         height: 200px;
         padding: 15px;
+        background: #262626;
       }
     }
     .btnWrap-right {

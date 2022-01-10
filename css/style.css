@@ -4338,6 +4338,9 @@ h2.title-margin {
   width: 22px;
   height: 22px;
 }
+.commentList .commentItem-reply .commentBox .btnCommentLayer {
+  right: 50px;
+}
 .commentList .commentItem .commentWriter__textarea {
   height: 226px;
 }
@@ -4370,7 +4373,7 @@ h2.title-margin {
 }
 .commentList .commentBox .btnCommentLayer {
   position: absolute;
-  right: 50px;
+  right: 0;
   top: 10px;
   width: 14px;
   height: 13px;
@@ -4940,7 +4943,7 @@ h2.title-margin {
     padding-top: 35px;
     padding-left: 23.5px;
     font-size: 15px;
-    margin-bottom: 25px;
+    margin-bottom: 35px;
   }
   h2.title strong {
     font-size: 22.5px;
@@ -4951,7 +4954,7 @@ h2.title-margin {
 
   /* 안철수는 */
   .ahnIs__visual {
-    margin-bottom: 50px;
+    margin-bottom: 35px;
   }
   .ahnIs__visual img {
     display: none;
@@ -4996,11 +4999,12 @@ h2.title-margin {
     line-height: 22.5px;
   }
   .ahnIs__video {
-    margin-top: 40px;
+    margin-top: 35px;
   }
 
   /* 안철수의 약속 */
   .listWrap__list {
+    padding-top: 0;
     padding-left: 24px;
     padding-right: 24px;
   }
@@ -5010,9 +5014,10 @@ h2.title-margin {
   .listWrap__list ul li {
     position: relative;
     width: 100%;
+    height: auto;
     margin-top: 30px;
   }
-  .listWrap__list ul li:nth-child(even) {
+  .listWrap__list ul li:nth-child(odd), .listWrap__list ul li:nth-child(even) {
     margin-top: 30px;
   }
   .listWrap__list ul li a img {
@@ -5055,6 +5060,7 @@ h2.title-margin {
   }
   .listWrap__list ul li .sns:after {
     top: 0;
+    left: 0;
     width: 18px;
     height: 18px;
   }
@@ -5080,7 +5086,7 @@ h2.title-margin {
   }
 
   .listWrap .btnMore {
-    margin-top: 20px;
+    margin-top: 70px;
   }
   .listWrap .btnMore button span {
     font-size: 17.5px;
@@ -5102,17 +5108,27 @@ h2.title-margin {
 
   .detailWrap h3.title {
     font-size: 21px;
+    padding-bottom: 5px;
     line-height: 48px;
   }
   .detailWrap .justifyWrap {
-    padding-bottom: 10px;
+    padding-top: 11px;
+    padding-bottom: 5px;
   }
-  .detailWrap .justifyWrap__left .writeTitle {
+  .detailWrap .justifyWrap__left .write,
+.detailWrap .justifyWrap__left .writeTitle {
     display: none;
+  }
+  .detailWrap .justifyWrap__left .name {
+    margin-right: 4px;
+    font-size: 14px;
+  }
+  .detailWrap .justifyWrap__left .date {
+    font-size: 14px;
   }
   .detailWrap .justifyWrap__left .btnLink {
     width: 17.5px;
-    font-size: 16px;
+    font-size: 14px;
     color: #fff;
     margin-right: 7.5px;
   }
@@ -5120,16 +5136,22 @@ h2.title-margin {
     display: flex;
     align-items: center;
   }
-  .detailWrap .justifyWrap__right .btnLike {
-    position: relative;
-    top: 3px;
-    width: 24px;
+  .detailWrap .justifyWrap__right .btnSharing {
+    display: none;
+  }
+  .detailWrap .justifyWrap__right .btnLike .num {
+    font-size: 14px;
+  }
+  .detailWrap .justifyWrap__right .btnLike:after {
+    top: 1px;
   }
   .detailWrap__content {
+    margin-bottom: 0;
+    padding-bottom: 35px;
     font-size: 11.5px;
   }
   .detailWrap__content .visualImage {
-    margin-top: 35px;
+    margin-top: 30px;
   }
   .detailWrap__content .visualImage img {
     width: 100%;
@@ -5174,12 +5196,18 @@ h2.title-margin {
     margin-left: 7px;
   }
   .paginationWrap__list ul li .btnLike {
-    right: 6px;
-    top: 6px;
+    background-position: center;
+    background-size: 20px 20px;
+    right: 3px;
+    top: 4px;
+  }
+  .paginationWrap__list ul li .btnLike.on {
+    background-position: center;
+    background-size: 20px 20px;
   }
 
   .pagination {
-    padding-top: 30px;
+    padding-top: 35px;
   }
   .pagination a {
     width: 27.5px;
@@ -5197,7 +5225,7 @@ h2.title-margin {
 
   /* 안철수의 오늘 */
   .tabWrap {
-    margin-bottom: 30px;
+    margin-bottom: 35px;
     padding-left: 23.5px;
   }
   .tabWrap ul {
@@ -5257,29 +5285,33 @@ h2.title-margin {
   .community__list ul li a.imgLink {
     height: auto;
   }
+  .community__list ul li > .btnLike {
+    right: 0;
+    top: 0;
+    background-size: 20px 20px;
+  }
+  .community__list ul li > .btnLike.on {
+    background-size: 20px 20px;
+  }
   .community__list ul li .justifyWrap {
     margin-top: 10px;
-    font-size: 18px;
+  }
+  .community__list ul li .justifyWrap * {
+    font-size: 14px;
   }
   .community__list ul li .justifyWrap__left .name {
     margin-right: 10px;
   }
-  .community__list ul li .justifyWrap__right .btnLike {
-    margin-left: 5px;
-    width: 15.5px;
-    height: 14.5px;
-    background: url("../images/mobile/sub/icon_like_31x29_off.png") no-repeat;
-    background-size: contain;
-    vertical-align: top;
+  .community__list ul li .justifyWrap__right .btnLike:after {
+    top: 1px;
   }
-  .community__list ul li .justifyWrap__right .btnLike.on {
-    background: url("../images/mobile/sub/icon_like_31x29_on.png") no-repeat;
-    background-size: contain;
+  .community__list ul li .justifyWrap__right .btnLike span {
+    font-size: 14px;
   }
   .community__list ul li .txt {
     display: -webkit-box;
     font-size: 20px;
-    margin-top: 7.5px;
+    margin-top: 18px;
     line-height: 24px;
   }
   .community__list ul li .text {
@@ -5312,8 +5344,7 @@ h2.title-margin {
     display: none;
   }
   .communityDetail .detailWrap .justifyWrap__left .name {
-    font-size: 18px;
-    margin-right: 10px;
+    margin-right: 4px;
   }
   .communityDetail .detailWrap .justifyWrap__right .btnSharing {
     position: relative;
@@ -5329,6 +5360,10 @@ h2.title-margin {
     height: 17px;
     background: url("../images/mobile/sub/icon_sharing.png") no-repeat;
     background-size: cover;
+  }
+  .communityDetail .detailWrap .txt {
+    font-size: 15px;
+    line-height: 20.5px;
   }
   .communityDetail .btnWrap {
     display: none;
@@ -5388,23 +5423,37 @@ h2.title-margin {
   }
   .communityDetail .commentList .commentItem {
     margin: 0;
-    padding: 25px 10px;
+    padding: 30px 0 12px;
+    overflow: hidden;
+  }
+  .communityDetail .commentList .commentItem .btnReply-m {
+    background-color: #EA551C;
+    border-color: #EA551C;
   }
   .communityDetail .commentList .commentItem .commentBox .btnCommentLayer {
     right: 0;
   }
   .communityDetail .commentList .commentItem .commentBox .layerButton {
     right: 0;
+    top: 28px;
   }
   .communityDetail .commentList .commentItem .commentBox .layerButton li a {
     height: 25px;
     background-color: #000;
   }
+  .communityDetail .commentList .commentItem .commentBox__nick {
+    margin-bottom: 15px;
+  }
   .communityDetail .commentList .commentItem .commentBox__nick .nick {
     font-size: 15px;
   }
+  .communityDetail .commentList .commentItem .commentBox__nick .nick .date {
+    font-size: 14px;
+    margin-left: 5px;
+    color: #E4E4E4;
+  }
   .communityDetail .commentList .commentItem .commentBox__text {
-    padding-bottom: 30px;
+    padding-bottom: 20px;
   }
   .communityDetail .commentList .commentItem .commentBox__text__view {
     font-size: 15px;
@@ -5414,17 +5463,28 @@ h2.title-margin {
     font-size: 11.5px;
   }
   .communityDetail .commentList .commentItem .commentBox__info__left button {
-    height: 25px;
+    width: 60px;
+    height: 30px;
+    font-size: 13px;
+    margin-left: 0;
   }
   .communityDetail .commentList .commentItem .commentBox__info__right {
     padding-right: 0;
   }
+  .communityDetail .commentList .commentItem .commentBox__info__right .btnLike {
+    padding: 0 24px 0 0;
+  }
+  .communityDetail .commentList .commentItem .commentBox__info__right .btnLike:after {
+    top: 1px;
+    width: 16px;
+    height: 16px;
+  }
   .communityDetail .commentList .commentItem-reply {
-    padding-left: 38.5px;
+    padding-left: 50px;
     padding-right: 15px;
   }
   .communityDetail .commentList .commentItem-reply:after {
-    left: 15px;
+    left: 25px;
     background: url("../images/mobile/sub/bg_line.png") no-repeat;
     background-size: contain;
     width: 16.5px;
@@ -5438,6 +5498,22 @@ h2.title-margin {
   }
   .communityDetail .commentList .commentItem-reply .commentWriter__textarea .commentAttach .btnRegister span {
     font-size: 13.5px;
+  }
+  .communityDetail .commentList .commentItem-reply .commentBox__info {
+    position: relative;
+    padding: 10px 0 0;
+  }
+  .communityDetail .commentList .commentItem-reply .commentBox__info:after {
+    content: "";
+    position: absolute;
+    left: -100px;
+    top: 0;
+    width: 200%;
+    height: 1px;
+    background: #707070;
+  }
+  .communityDetail .commentList .commentItem-reply .commentBox__info__left .btnReply {
+    margin-left: -25px;
   }
   .communityDetail .commentList .commentItem .commentWriter {
     margin-bottom: 30px;
@@ -5529,6 +5605,16 @@ h2.title-margin {
     height: 25px;
     font-size: 8.5px;
   }
+  .communityDetail .paginationWrap__list > ul > li > .btnLike {
+    width: 40px;
+    height: 40px;
+    right: 0;
+    top: 0;
+    background-size: 20px 20px;
+  }
+  .communityDetail .paginationWrap__list > ul > li > .btnLike.on {
+    background-size: 20px 20px;
+  }
 
   /* 커뮤니티 쓰기 - 수정 */
   .communityModify h2.title {
@@ -5571,10 +5657,12 @@ h2.title-margin {
     font-size: 15px;
   }
   .communityModify .tableArea02 .ahnSelect {
+    width: 96%;
     height: 37px;
   }
   .communityModify .tableArea02 .ahnSelect select {
     font-size: 14px;
+    background: #262626;
   }
   .communityModify .tableArea02 .ahnInputText {
     width: 100%;
@@ -5582,8 +5670,10 @@ h2.title-margin {
   }
   .communityModify .tableArea02 .ahnInputText input {
     font-size: 14px;
+    background: #262626;
   }
   .communityModify .tableArea02 .ahnBtnM {
+    width: 60px;
     height: 37px;
   }
   .communityModify .tableArea02 .ahnBtnM span {
@@ -5594,6 +5684,7 @@ h2.title-margin {
   .communityModify .tableArea02 .ahnTextarea {
     height: 200px;
     padding: 15px;
+    background: #262626;
   }
   .communityModify .btnWrap-right {
     padding: 20px 24px 0 0;
