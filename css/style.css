@@ -3552,18 +3552,23 @@ html .opening, body .opening {
 }
 
 h2.title {
-  padding: 75px 0 0;
+  padding: 71px 0 0;
   font-family: "NotoSansCJKkrMedium", sans-serif;
   font-size: 30px;
-  margin-bottom: 60px;
+  margin-bottom: 51px;
 }
 h2.title strong {
   font-family: "NotoSansCJKkrBold", sans-serif;
   font-size: 45px;
+  letter-spacing: -0.075em;
 }
 h2.title span {
-  margin-left: 17px;
+  margin-left: 22px;
   color: #b3b3b3;
+  letter-spacing: -0.075em;
+}
+h2.title-margin {
+  margin-bottom: 78px;
 }
 
 /* 안철수는 */
@@ -3630,6 +3635,9 @@ h2.title span {
 }
 
 /* 안철수의 약속 */
+.listWrap__list {
+  padding: 50px 0 0;
+}
 .listWrap__list ul {
   display: flex;
   flex-wrap: wrap;
@@ -3638,9 +3646,13 @@ h2.title span {
 .listWrap__list ul li {
   position: relative;
   width: 540px;
+  height: 520px;
 }
-.listWrap__list ul li:nth-child(even) {
-  margin-top: 54px;
+.listWrap__list ul li:first-child {
+  margin-top: 0;
+}
+.listWrap__list ul li:nth-child(odd) {
+  margin-top: -52px;
 }
 .listWrap__list ul li .btnLike {
   position: absolute;
@@ -3648,16 +3660,16 @@ h2.title span {
   top: 12px;
   width: 54px;
   height: 50px;
-  background: url("../images/web/icon/icon_like_off.png") no-repeat;
+  background: url("../images/web/sub/like_37x_35_off.png") no-repeat;
   background-position: center;
-  background-size: 27px 25px;
+  background-size: 37px 35px;
   padding: 10px;
   z-index: 2;
 }
 .listWrap__list ul li .btnLike.on {
-  background: url("../images/web/icon/icon_like_on.png") no-repeat;
+  background: url("../images/web/sub/like_37x_35_on.png") no-repeat;
   background-position: center;
-  background-size: 27px 25px;
+  background-size: 37px 35px;
 }
 .listWrap__list ul li a {
   display: block;
@@ -3674,20 +3686,22 @@ h2.title span {
 }
 .listWrap__list ul li .txt {
   display: -webkit-box;
-  height: 96px;
-  margin-top: 29px;
+  height: 65px;
+  margin-top: 22px;
   font-size: 28px;
-  line-height: 48px;
+  line-height: 32px;
   padding: 0 5px;
   color: #fff;
   white-space: normal;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  letter-spacing: -0.025em;
 }
 .listWrap__list ul li .sns {
   position: relative;
   display: block;
+  margin: 13px 0 0;
   padding: 12px 5px 0 41px;
   font-size: 22px;
   font-family: "NotoSansCJKkrRegular", sans-serif;
@@ -3699,7 +3713,7 @@ h2.title span {
 .listWrap__list ul li .sns:after {
   content: "";
   position: absolute;
-  left: 0;
+  left: 5px;
   top: 8px;
   width: 31px;
   height: 31px;
@@ -3725,7 +3739,7 @@ h2.title span {
   background-size: contain;
 }
 .listWrap .btnMore {
-  margin-top: 100px;
+  margin-top: 60px;
   text-align: center;
 }
 .listWrap .btnMore button {
@@ -3758,7 +3772,8 @@ h2.title span {
   display: block;
   font-size: 50px;
   font-family: "NotoSansCJKkrMedium", sans-serif;
-  padding-bottom: 22px;
+  padding-bottom: 28px;
+  letter-spacing: -0.09em;
 }
 .detailWrap h3.title .category {
   color: #EA5517;
@@ -3767,8 +3782,16 @@ h2.title span {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 17px 0 0;
+  padding: 24px 0 0;
   color: #b3b3b3;
+}
+.detailWrap .justifyWrap__left .write {
+  font-size: 19px;
+  margin-right: 17px;
+}
+.detailWrap .justifyWrap__left .name {
+  font-size: 19px;
+  margin-right: 55px;
 }
 .detailWrap .justifyWrap__left .writeTitle {
   font-size: 19px;
@@ -3780,8 +3803,9 @@ h2.title span {
   font-family: "GothamMedium", sans-serif;
 }
 .detailWrap .justifyWrap__left .btnLink {
-  font-size: 24px;
-  margin-right: 15px;
+  font-size: 22px;
+  margin-left: 11px;
+  margin-right: 9px;
   color: #fff;
 }
 .detailWrap .justifyWrap__right {
@@ -3794,35 +3818,84 @@ h2.title span {
   font-family: "GothamMedium", sans-serif;
 }
 .detailWrap .justifyWrap__right .btnLike {
-  width: 26px;
-  height: 24px;
+  position: relative;
   margin-left: 10px;
-  background: url("../images/web/icon/like_24x22_off.png") no-repeat;
+  padding: 0 23px 0 0;
+  vertical-align: top;
+}
+.detailWrap .justifyWrap__right .btnLike:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 3px;
+  width: 16px;
+  height: 15px;
+  background: url("../images/web/sub/like_16x15_off.png") no-repeat;
+  background-size: contain;
+}
+.detailWrap .justifyWrap__right .btnLike span {
+  color: #B3B3B3;
+  font-size: 18px;
+  font-family: "GothamMedium", sans-serif;
+}
+.detailWrap .justifyWrap__right .btnLike.on span {
+  color: #fff;
+}
+.detailWrap .justifyWrap__right .btnLike.on:after {
+  background: url("../images/web/sub/like_16x15_on.png") no-repeat;
+  background-size: contain;
+}
+.detailWrap .justifyWrap__right .btnSharing {
+  position: relative;
+  margin-right: 27px;
+  padding: 0 0 0 30px;
+}
+.detailWrap .justifyWrap__right .btnSharing span {
+  font-size: 16px;
+  color: #b3b3b3;
+  font-family: "NotoSansCJKkrMedium", sans-serif;
+  line-height: 16px;
+}
+.detailWrap .justifyWrap__right .btnSharing:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -3px;
+  width: 21px;
+  height: 20px;
+  background: url("../images/web/sub/icon_sharing.png") no-repeat;
   background-size: contain;
   vertical-align: top;
 }
-.detailWrap .justifyWrap__right .btnLike.on {
-  background: url("../images/web/icon/like_24x22_on.png") no-repeat;
+.detailWrap .justifyWrap__right .btnSharing.on span {
+  color: #fff;
+}
+.detailWrap .justifyWrap__right .btnSharing.on:after {
+  background: url("../images/web/sub/icon_sharing_on.png") no-repeat;
   background-size: contain;
 }
 .detailWrap__content {
+  margin-bottom: 6px;
   padding: 0 0 60px 0;
-  border-top: 1px solid #333;
-  border-bottom: 1px solid #333;
+  border-top: 2px solid #EA5510;
+  border-bottom: 1px solid #EA5510;
 }
 .detailWrap .visualImage {
   margin: 55px 0 0;
+}
+.detailWrap .visualImage img {
+  max-width: 100%;
 }
 .detailWrap .text {
   display: block;
   margin: 60px 0 0;
   font-size: 22px;
-  color: #b3b3b3;
-  line-height: 32px;
+  color: #E4E4E4;
+  line-height: 36px;
 }
 
 .paginationWrap {
-  margin-top: 120px;
+  margin-top: 110px;
 }
 .paginationWrap h3.title {
   font-size: 30px;
@@ -3839,22 +3912,23 @@ h2.title span {
 }
 .paginationWrap ul li .text {
   display: block;
-  margin-top: 30px;
-  font-size: 24px;
-  line-height: 30px;
+  margin-top: 21px;
+  font-size: 28px;
+  line-height: 32px;
+  letter-spacing: -0.025em;
   font-family: "NotoSansCJKkrMedium", sans-serif;
   color: #fff;
 }
-.paginationWrap ul li .btnLike {
+.paginationWrap ul li > .btnLike {
   position: absolute;
-  right: 15px;
-  top: 15px;
-  width: 19px;
-  height: 18px;
-  background: url("../images/web/sub/icon_like_19x18_off.png") no-repeat;
+  right: 17px;
+  top: 18px;
+  width: 27px;
+  height: 26px;
+  background: url("../images/web/sub/like_27x26_off.png") no-repeat;
 }
-.paginationWrap ul li .btnLike.on {
-  background: url("../images/web/sub/icon_like_19x18_on.png") no-repeat;
+.paginationWrap ul li > .btnLike.on {
+  background: url("../images/web/sub/like_27x26_on.png") no-repeat;
 }
 
 .pagination {
@@ -3910,7 +3984,7 @@ h2.title span {
 /* 안철수의 오늘 */
 .tabWrap {
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
 }
 .tabWrap ul {
   display: flex;
@@ -3930,6 +4004,7 @@ h2.title span {
   font-size: 19px;
   font-family: "NotoSansCJKkrBold", sans-serif;
   color: #fff;
+  letter-spacing: -0.075em;
 }
 .tabWrap ul li.on {
   background-color: #EA5517;
@@ -3945,7 +4020,7 @@ h2.title span {
   border: 1px solid #fff;
   background: url("../images/web/sub/btnWriting.png") no-repeat;
   background-position: center;
-  background-size: 76px 28px;
+  background-size: 87px 29px;
 }
 .community .btnWriting:hover {
   background-color: #EA5517;
@@ -3956,8 +4031,26 @@ h2.title span {
   justify-content: space-between;
 }
 .community__list ul li {
+  position: relative;
   width: 384px;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
+}
+.community__list ul li > .btnLike {
+  position: absolute;
+  right: 3px;
+  top: 7px;
+  width: 54px;
+  height: 50px;
+  background: url("../images/web/sub/like_27x26_off.png") no-repeat;
+  background-position: center;
+  background-size: 27px 27px;
+  padding: 10px;
+  z-index: 2;
+}
+.community__list ul li > .btnLike.on {
+  background: url("../images/web/sub/like_27x26_on.png") no-repeat;
+  background-position: center;
+  background-size: 27px 27px;
 }
 .community__list ul li a {
   position: relative;
@@ -3980,21 +4073,39 @@ h2.title span {
 }
 .community__list ul li .justifyWrap__left .date {
   font-family: "GothamMedium", sans-serif;
+  letter-spacing: -0.037em;
 }
 .community__list ul li .justifyWrap__right {
   font-size: 18px;
   font-family: "GothamMedium", sans-serif;
 }
 .community__list ul li .justifyWrap__right .btnLike {
-  margin-left: 7px;
-  width: 19px;
-  height: 18px;
-  background: url("../images/web/sub/icon_like_19x18_off.png") no-repeat;
-  background-size: contain;
+  position: relative;
+  margin-left: 10px;
+  padding: 0 23px 0 0;
   vertical-align: top;
 }
-.community__list ul li .justifyWrap__right .btnLike.on {
-  background: url("../images/web/sub/icon_like_19x18_on.png") no-repeat;
+.community__list ul li .justifyWrap__right .btnLike:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 3px;
+  width: 16px;
+  height: 15px;
+  background: url("../images/web/sub/like_16x15_off.png") no-repeat;
+  background-size: contain;
+}
+.community__list ul li .justifyWrap__right .btnLike span {
+  color: #B3B3B3;
+  font-size: 18px;
+  font-family: "GothamMedium", sans-serif;
+}
+.community__list ul li .justifyWrap__right .btnLike.on span {
+  color: #fff;
+}
+.community__list ul li .justifyWrap__right .btnLike.on:after {
+  background: url("../images/web/sub/like_16x15_on.png") no-repeat;
+  background-size: contain;
 }
 .community__list ul li .txt {
   display: -webkit-box;
@@ -4004,7 +4115,8 @@ h2.title span {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  line-height: 40px;
+  line-height: 32px;
+  letter-spacing: -0.025em;
   color: #fff;
 }
 .community__list ul li .txt .category {
@@ -4025,37 +4137,83 @@ h2.title span {
   line-height: 44px;
   font-family: "NotoSansCJKkrBold", sans-serif;
 }
+.community .pagination {
+  padding: 55px 0 0;
+}
 
-.communityDetail .justifyWrap__left .write {
-  margin-right: 28px;
-}
-.communityDetail .justifyWrap__left .name {
-  margin-right: 55px;
-}
-.communityDetail .justifyWrap__right .btnSharing {
-  position: relative;
-  margin-right: 14px;
-  padding: 0 30px 0 0;
-}
-.communityDetail .justifyWrap__right .btnSharing span {
-  font-size: 18px;
-  color: #b3b3b3;
-  font-family: "NotoSansCJKkrMedium", sans-serif;
-  line-height: 16px;
-}
-.communityDetail .justifyWrap__right .btnSharing:after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: -6px;
-  width: 25px;
-  height: 23px;
-  background: url("../images/web/sub/icon_sharing.png") no-repeat;
-  background-size: contain;
-  vertical-align: top;
-}
 .communityDetail .btnWrap {
   margin-bottom: 130px;
+}
+.communityDetail .paginationWrap__list ul > li > {
+  position: relative;
+}
+.communityDetail .paginationWrap__list ul > li > .btnLike {
+  position: absolute;
+  right: 3px;
+  top: 7px;
+  width: 54px;
+  height: 50px;
+  background: url("../images/web/sub/like_27x26_off.png") no-repeat;
+  background-position: center;
+  background-size: 27px 27px;
+  padding: 10px;
+  z-index: 2;
+}
+.communityDetail .paginationWrap__list ul > li > .btnLike.on {
+  background: url("../images/web/sub/like_27x26_on.png") no-repeat;
+  background-position: center;
+  background-size: 27px 27px;
+}
+.communityDetail .paginationWrap__list .justifyWrap {
+  display: flex;
+  justify-content: space-between;
+  color: #b3b3b3;
+  margin-top: 20px;
+  padding-top: 0;
+}
+.communityDetail .paginationWrap__list .justifyWrap__left {
+  font-size: 18px;
+}
+.communityDetail .paginationWrap__list .justifyWrap__left .name {
+  margin-right: 12px;
+}
+.communityDetail .paginationWrap__list .justifyWrap__left .date {
+  font-family: "GothamMedium", sans-serif;
+  letter-spacing: -0.037em;
+}
+.communityDetail .paginationWrap__list .justifyWrap__right {
+  font-size: 18px;
+  font-family: "GothamMedium", sans-serif;
+}
+.communityDetail .paginationWrap .txt {
+  display: -webkit-box;
+  font-size: 28px;
+  margin-top: 15px;
+  white-space: normal;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 32px;
+  letter-spacing: -0.025em;
+  color: #fff;
+}
+.communityDetail .paginationWrap .txt .category {
+  color: #EA5517;
+}
+.communityDetail .paginationWrap .text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 40px;
+  line-height: 44px;
+  font-family: "NotoSansCJKkrBold", sans-serif;
 }
 
 .commentWriter h3.title {
@@ -4065,6 +4223,7 @@ h2.title span {
   font-family: "NotoSansCJKkrBold", sans-serif;
   margin-bottom: 25px;
   padding: 26px 0 0;
+  letter-spacing: -0.075em;
 }
 .commentWriter h3.title:after {
   content: "";
@@ -4091,10 +4250,11 @@ h2.title span {
   box-sizing: border-box;
   vertical-align: top;
   font-size: 20px;
-  line-height: 20px;
-  color: #fff;
+  line-height: 34px;
+  color: #E4E4E4;
   outline: none;
   resize: none;
+  font-family: "NotoSansCJKkrRegular", sans-serif;
 }
 .commentWriter .commentAttach {
   position: relative;
@@ -4109,6 +4269,7 @@ h2.title span {
   height: 100%;
   padding: 0 0 0 34px;
   font-size: 15px;
+  color: #AAAAAA;
   font-family: "GothamMedium", sans-serif;
 }
 .commentWriter .commentAttach .commentNum .btnPhoto {
@@ -4138,7 +4299,7 @@ h2.title span {
   content: "";
   position: absolute;
   left: 0;
-  top: 1px;
+  top: 3px;
   background: url("../images/web/sub/icon_register.png") no-repeat;
   width: 23px;
   height: 23px;
@@ -4164,22 +4325,27 @@ h2.title span {
 
 .commentList .commentItem {
   position: relative;
-  margin-top: 25px;
+  margin-top: 30px;
   border-bottom: 1px solid #707070;
-  padding: 30px 0 11px;
+  padding: 30px 0;
+}
+.commentList .commentItem + .commentItem-reply.commentItem-writer {
+  background: #000;
+  margin-top: -5px;
+  padding-top: 0;
 }
 .commentList .commentItem-reply {
   margin: 0;
-  padding: 30px 0 30px 112px;
+  padding: 39px 0 30px 95px;
   background-color: #222222;
 }
 .commentList .commentItem-reply.commentItem-writer {
-  padding: 30px 0 30px 112px;
+  padding: 30px 0 30px 53px;
 }
 .commentList .commentItem-reply:after {
   content: "";
   position: absolute;
-  left: 68px;
+  left: 34px;
   top: 25px;
   background: url("../images/web/sub/bg_line.png") no-repeat;
   width: 22px;
@@ -4196,6 +4362,10 @@ h2.title span {
   padding: 0;
   background-color: transparent;
 }
+.commentList .commentItem-writer.commentItem-reply:after {
+  left: 0;
+  top: 0;
+}
 .commentList .commentBox {
   position: relative;
 }
@@ -4205,10 +4375,16 @@ h2.title span {
   font-family: "NotoSansCJKkrBold", sans-serif;
   margin-bottom: 26px;
 }
+.commentList .commentBox__nick .nick .date {
+  margin-left: 17px;
+  font-size: 16px;
+  color: #B3B3B3;
+  font-family: "GothamMedium", sans-serif;
+}
 .commentList .commentBox .btnCommentLayer {
   position: absolute;
-  right: 21px;
-  top: 0;
+  right: 50px;
+  top: 10px;
   width: 14px;
   height: 13px;
   background: url("../images/web/sub/bg_del.png") no-repeat;
@@ -4244,7 +4420,7 @@ h2.title span {
 .commentList .commentBox__text__view {
   font-size: 20px;
   line-height: 34px;
-  color: #b3b3b3;
+  color: #E4E4E4;
 }
 .commentList .commentBox__info {
   display: flex;
@@ -4256,16 +4432,16 @@ h2.title span {
   font-family: "GothamMedium", sans-serif;
 }
 .commentList .commentBox__info__left button {
-  width: 66px;
-  height: 27px;
-  margin-left: 8px;
+  width: 129px;
+  height: 43px;
+  margin-left: 3px;
   border: 1px solid #707070;
   background-color: #000;
   box-sizing: border-box;
 }
 .commentList .commentBox__info__left button span {
-  color: #b3b3b3;
-  font-size: 13px;
+  color: #fff;
+  font-size: 20px;
   font-family: "NotoSansCJKkrRegular", sans-serif;
 }
 .commentList .commentBox__info__right {
@@ -4274,15 +4450,30 @@ h2.title span {
   padding-right: 20px;
 }
 .commentList .commentBox__info__right .btnLike {
-  width: 19px;
-  height: 18px;
+  position: relative;
+  padding: 0 28px 0 0;
   margin-left: 7px;
-  background: url("../images/web/sub/icon_like_19x18_off.png") no-repeat;
-  background-size: contain;
   vertical-align: top;
 }
-.commentList .commentBox__info__right .btnLike.on {
-  background: url("../images/web/sub/icon_like_19x18_on.png") no-repeat;
+.commentList .commentBox__info__right .btnLike:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 22px;
+  height: 21px;
+  background: url("../images/web/sub/like_22x21_off.png") no-repeat;
+  background-size: contain;
+}
+.commentList .commentBox__info__right .btnLike span {
+  color: #B3B3B3;
+}
+.commentList .commentBox__info__right .btnLike.on:after {
+  background: url("../images/web/sub/like_22x21_on.png") no-repeat;
+  background-size: contain;
+}
+.commentList .commentBox__info__right .btnLike.on span {
+  color: #fff;
 }
 
 .layerSharing {

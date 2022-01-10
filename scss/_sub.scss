@@ -9,17 +9,22 @@
   overflow: hidden
 }
 h2.title {
-  padding: 75px 0 0;
+  padding: 71px 0 0;
   @include nsM;
   font-size: 30px;
-  margin-bottom: 60px;
+  margin-bottom: 51px;
   strong {
     @include nsB;
     font-size: 45px;
+    letter-spacing: -0.075em;
   }
   span {
-    margin-left: 17px;
+    margin-left: 22px;
     color: #b3b3b3;
+    letter-spacing: -0.075em;
+  }
+  &-margin {
+    margin-bottom: 78px;
   }
 }
 /* 안철수는 */
@@ -93,6 +98,7 @@ h2.title {
 /* 안철수의 약속 */
 .listWrap {
   &__list {
+    padding: 50px 0 0;
     ul {
       display: flex;
       flex-wrap: wrap;
@@ -100,8 +106,12 @@ h2.title {
       li {
         position: relative;
         width: 540px;
-        &:nth-child(even) {
-          margin-top: 54px;
+        height: 520px;
+        &:first-child {
+          margin-top: 0;
+        }
+        &:nth-child(odd) {
+          margin-top: -52px;
         }
         .btnLike {
           position: absolute;
@@ -109,15 +119,15 @@ h2.title {
           top: 12px;
           width: 54px;
           height: 50px;
-          @include imageUrl("web/icon/icon_like_off");
+          @include imageUrl("web/sub/like_37x_35_off");
           background-position: center;
-          background-size: 27px 25px;
+          background-size: 37px 35px;
           padding: 10px;
           z-index: 2;
           &.on {
-            @include imageUrl("web/icon/icon_like_on");
+            @include imageUrl("web/sub/like_37x_35_on");
             background-position: center;
-            background-size: 27px 25px;
+            background-size: 37px 35px;
           }
         }
         a {
@@ -135,20 +145,22 @@ h2.title {
         }
         .txt {
           display: -webkit-box;
-          height: 96px;
-          margin-top: 29px;
+          height: 65px;
+          margin-top: 22px;
           font-size: 28px;
-          line-height: 48px;
+          line-height: 32px;
           padding: 0 5px;
           color: #fff;
           white-space: normal;
           -webkit-line-clamp: 2;
           -webkit-box-orient: vertical;
           overflow: hidden;
+          letter-spacing: -0.025em;
         }
         .sns {
           position: relative;
           display: block;
+          margin: 13px 0 0;
           padding: 12px 5px 0 41px;
           font-size: 22px;
           @include nsR;
@@ -159,7 +171,7 @@ h2.title {
           &:after {
             content: "";
             position: absolute;
-            left: 0;
+            left: 5px;
             top: 8px;
             width: 31px;
             height: 31px;
@@ -189,7 +201,7 @@ h2.title {
     }
   }
   .btnMore {
-    margin-top: 100px;
+    margin-top: 60px;
     text-align: center;
     button {
       position: relative;
@@ -227,7 +239,8 @@ h2.title {
     display: block;
     font-size: 50px;
     @include nsM;
-    padding-bottom: 22px;
+    padding-bottom: 28px;
+    letter-spacing: -0.09em;
     .category {
       color: #EA5517;
     }
@@ -236,9 +249,17 @@ h2.title {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 17px 0 0;
+    padding: 24px 0 0;
     color: #b3b3b3;
     &__left {
+      .write {
+        font-size: 19px;
+        margin-right: 17px;
+      }
+      .name {
+        font-size: 19px;
+        margin-right: 55px;
+      }
       .writeTitle {
         font-size: 19px;
         @include nsM;
@@ -249,8 +270,9 @@ h2.title {
         @include gtM;
       }
       .btnLink {
-        font-size: 24px;
-        margin-right: 15px;
+        font-size: 22px;
+        margin-left: 11px;
+        margin-right: 9px;
         color: #fff;
       }
     }
@@ -263,37 +285,90 @@ h2.title {
         @include gtM;
       }
       .btnLike {
-        width: 26px;
-        height: 24px;
+        position: relative;
         margin-left: 10px;
-        @include imageUrl("web/icon/like_24x22_off");
-        background-size: contain;
+        padding: 0 23px 0 0;
         vertical-align: top;
-        &.on {
-          @include imageUrl("web/icon/like_24x22_on");
+        &:after {
+          content: "";
+          position: absolute;
+          right: 0;
+          top: 3px;
+          width: 16px;
+          height: 15px;
+          @include imageUrl("web/sub/like_16x15_off");
           background-size: contain;
+        }
+        span {
+          color: #B3B3B3;
+          font-size: 18px;
+          @include gtM;
+        }
+        &.on {
+          span {
+            color: #fff;
+          }
+          &:after {
+            @include imageUrl("web/sub/like_16x15_on");
+            background-size: contain;
+          }
+        }
+      }
+      .btnSharing {
+        position: relative;
+        margin-right: 27px;
+        padding: 0 0 0 30px;
+        span {
+          font-size: 16px;
+          color: #b3b3b3;
+          @include nsM;
+          line-height: 16px;
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: -3px;
+          width: 21px;
+          height: 20px;
+          @include imageUrl("web/sub/icon_sharing");
+          background-size: contain;
+          vertical-align: top;
+        }
+        &.on {
+          span {
+            color: #fff;
+          }
+          &:after {
+            @include imageUrl("web/sub/icon_sharing_on");
+            background-size: contain;
+          }
         }
       }
     }
   }
   &__content {
+    margin-bottom: 6px;
     padding: 0 0 60px 0;
-    border-top: 1px solid #333;
-    border-bottom: 1px solid #333;
+    border-top: 2px solid #EA5510;
+    border-bottom: 1px solid #EA5510;
   }
   .visualImage {
     margin: 55px 0 0;
+    img {
+      max-width: 100%;
+    }
   }
   .text {
     display: block;
     margin: 60px 0 0;
     font-size: 22px;
-    color: #b3b3b3;
-    line-height: 32px;
+    color: #E4E4E4;
+    line-height: 36px;
   }
 }
 .paginationWrap {
-  margin-top: 120px;
+  margin-top: 110px;
   h3.title {
     font-size: 30px;
     @include nsB;
@@ -307,21 +382,22 @@ h2.title {
       width: 386px;
       .text {
         display: block;
-        margin-top: 30px;
-        font-size: 24px;
-        line-height: 30px;
+        margin-top: 21px;
+        font-size: 28px;
+        line-height: 32px;
+        letter-spacing: -0.025em;
         @include nsM;
         color: #fff;
       }
-      .btnLike {
+      > .btnLike {
         position: absolute;
-        right: 15px;
-        top: 15px;
-        width: 19px;
-        height: 18px;
-        @include imageUrl('web/sub/icon_like_19x18_off');
+        right: 17px;
+        top: 18px;
+        width: 27px;
+        height: 26px;
+        @include imageUrl('web/sub/like_27x26_off');
         &.on {
-          @include imageUrl('web/sub/icon_like_19x18_on');
+          @include imageUrl('web/sub/like_27x26_on');
         }
       }
     }
@@ -380,7 +456,7 @@ h2.title {
 /* 안철수의 오늘 */
 .tabWrap {
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
   ul {
     display: flex;
     li {
@@ -397,6 +473,7 @@ h2.title {
         font-size: 19px;
         @include nsB;
         color: #fff;
+        letter-spacing: -0.075em;
       }
       &.on {
         background-color: #EA5517;
@@ -416,7 +493,7 @@ h2.title {
     border: 1px solid #fff;
     @include imageUrl("web/sub/btnWriting");
     background-position: center;
-    background-size: 76px 28px;
+    background-size: 87px 29px;
     &:hover {
       background-color: #EA5517;
     }
@@ -427,8 +504,26 @@ h2.title {
       flex-flow: wrap;
       justify-content: space-between;
       li {
+        position: relative;
         width: 384px;
-        margin-bottom: 60px;
+        margin-bottom: 50px;
+        > .btnLike {
+          position: absolute;
+          right: 3px;
+          top: 7px;
+          width: 54px;
+          height: 50px;
+          @include imageUrl('web/sub/like_27x26_off');
+          background-position: center;
+          background-size: 27px 27px;
+          padding: 10px;
+          z-index: 2;
+          &.on {
+            @include imageUrl('web/sub/like_27x26_on');
+            background-position: center;
+            background-size: 27px 27px;
+          }
+        }
         a {
           position: relative;
           display: block;
@@ -448,20 +543,40 @@ h2.title {
             }
             .date {
               @include gtM;
+              letter-spacing: -0.037em;
             }
           }
           &__right {
             font-size: 18px;
             @include gtM;
             .btnLike {
-              margin-left: 7px;
-              width: 19px;
-              height: 18px;
-              @include imageUrl("web/sub/icon_like_19x18_off");
-              background-size: contain;
+              position: relative;
+              margin-left: 10px;
+              padding: 0 23px 0 0;
               vertical-align: top;
+              &:after {
+                content: "";
+                position: absolute;
+                right: 0;
+                top: 3px;
+                width: 16px;
+                height: 15px;
+                @include imageUrl("web/sub/like_16x15_off");
+                background-size: contain;
+              }
+              span {
+                color: #B3B3B3;
+                font-size: 18px;
+                @include gtM;
+              }
               &.on {
-                @include imageUrl("web/sub/icon_like_19x18_on");
+                span {
+                  color: #fff;
+                }
+                &:after {
+                  @include imageUrl("web/sub/like_16x15_on");
+                  background-size: contain;
+                }
               }
             }
           }
@@ -474,7 +589,8 @@ h2.title {
           -webkit-line-clamp: 2;
           -webkit-box-orient: vertical;
           overflow: hidden;
-          line-height: 40px;
+          line-height: 32px;
+          letter-spacing: -0.025em;
           color: #fff;
           .category {
             color: #EA5517;
@@ -498,45 +614,90 @@ h2.title {
       }
     }
   }
+  .pagination {
+    padding: 55px 0 0;
+  }
 }
 
 .communityDetail {
-  .justifyWrap {
-    &__left {
-      .write {
-        margin-right: 28px;
-      }
-      .name {
-        margin-right: 55px;
-      }
-    }
-    &__right {
-      .btnSharing {
-        position: relative;
-        margin-right: 14px;
-        padding: 0 30px 0 0;
-        span {
-          font-size: 18px;
-          color: #b3b3b3;
-          @include nsM;
-          line-height: 16px;
-        }
-        &:after {
-          content: "";
-          position: absolute;
-          right: 0;
-          top: -6px;
-          width: 25px;
-          height: 23px;
-          @include imageUrl("web/sub/icon_sharing");
-          background-size: contain;
-          vertical-align: top;
-        }
-      }
-    }
-  }
   .btnWrap {
     margin-bottom: 130px;
+  }
+  .paginationWrap {
+    &__list {
+      ul > li > {
+        position: relative;
+        .btnLike {
+          position: absolute;
+          right: 3px;
+          top: 7px;
+          width: 54px;
+          height: 50px;
+          @include imageUrl('web/sub/like_27x26_off');
+          background-position: center;
+          background-size: 27px 27px;
+          padding: 10px;
+          z-index: 2;
+          &.on {
+            @include imageUrl('web/sub/like_27x26_on');
+            background-position: center;
+            background-size: 27px 27px;
+          }
+        }
+      }
+      .justifyWrap {
+        display: flex;
+        justify-content: space-between;
+        color: #b3b3b3;
+        margin-top: 20px;
+        padding-top: 0;
+        &__left {
+          font-size: 18px;
+          .name {
+            margin-right: 12px;
+          }
+          .date {
+            @include gtM;
+            letter-spacing: -0.037em;
+          }
+        }
+        &__right {
+          font-size: 18px;
+          @include gtM;
+
+        }
+      }
+    }
+    .txt {
+      display: -webkit-box;
+      font-size: 28px;
+      margin-top: 15px;
+      white-space: normal;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      line-height: 32px;
+      letter-spacing: -0.025em;
+      color: #fff;
+      .category {
+        color: #EA5517;
+      }
+    }
+    .text {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 40px;
+      line-height: 44px;
+      @include nsB;
+    }
   }
 }
 .commentWriter {
@@ -547,6 +708,7 @@ h2.title {
     @include nsB;
     margin-bottom: 25px;
     padding: 26px 0 0;
+    letter-spacing: -0.075em;
     &:after {
       content: "";
       position: absolute;
@@ -572,10 +734,11 @@ h2.title {
       box-sizing: border-box;
       vertical-align: top;
       font-size: 20px;
-      line-height: 20px;
-      color: #fff;
+      line-height: 34px;
+      color: #E4E4E4;
       outline: none;
       resize: none;
+      @include nsR;
     }
   }
   .commentAttach {
@@ -590,6 +753,7 @@ h2.title {
       height: 100%;
       padding: 0 0 0 34px;
       font-size: 15px;
+      color: #AAAAAA;
       @include gtM;
       .btnPhoto {
         width: 24px;
@@ -617,7 +781,7 @@ h2.title {
           content: "";
           position: absolute;
           left: 0;
-          top: 1px;
+          top: 3px;
           @include imageUrl("web/sub/icon_register");
           width: 23px;
           height: 23px;
@@ -647,21 +811,26 @@ h2.title {
 .commentList {
   .commentItem {
     position: relative;
-    margin-top: 25px;
+    margin-top: 30px;
     border-bottom: 1px solid #707070;
-    padding: 30px 0 11px;
+    padding: 30px 0;
+    + .commentItem-reply.commentItem-writer {
+      background: #000;
+      margin-top: -5px;
+      padding-top: 0;
+    }
     &-reply {
       //display: none;
       margin: 0;
-      padding: 30px 0 30px 112px;
+      padding: 39px 0 30px 95px;
       background-color: #222222;
       &.commentItem-writer {
-        padding: 30px 0 30px 112px;
+        padding: 30px 0 30px 53px;
       }
       &:after {
         content: "";
         position: absolute;
-        left: 68px;
+        left: 34px;
         top: 25px;
         //top: 43px;
         @include imageUrl("web/sub/bg_line");
@@ -681,6 +850,12 @@ h2.title {
     &-writer {
       padding: 0;
       background-color: transparent;
+      &.commentItem-reply {
+        &:after {
+          left: 0;
+          top: 0;
+        }
+      }
     }
   }
   .commentBox {
@@ -690,11 +865,19 @@ h2.title {
       font-size : 20px;
       @include nsB;
       margin-bottom: 26px;
+      .nick {
+        .date {
+          margin-left: 17px;
+          font-size: 16px;
+          color: #B3B3B3;
+          @include gtM;
+        }
+      }
     }
     .btnCommentLayer {
       position: absolute;
-      right: 21px;
-      top: 0;
+      right: 50px;
+      top: 10px;
       width: 14px;
       height: 13px;
       @include imageUrl("web/sub/bg_del");
@@ -731,7 +914,7 @@ h2.title {
       &__view {
         font-size: 20px;
         line-height: 34px;
-        color: #b3b3b3;
+        color: #E4E4E4;
       }
     }
     &__info {
@@ -744,15 +927,15 @@ h2.title {
       }
       &__left {
         button {
-          width: 66px;
-          height: 27px;
-          margin-left: 8px;
+          width: 129px;
+          height: 43px;
+          margin-left: 3px;
           border: 1px solid #707070;
           background-color: #000;
           box-sizing: border-box;
           span {
-            color: #b3b3b3;
-            font-size: 13px;
+            color: #fff;
+            font-size: 20px;
             @include nsR;
           }
         }
@@ -762,14 +945,31 @@ h2.title {
         align-items: center;
         padding-right: 20px;
         .btnLike {
-          width: 19px;
-          height: 18px;
+          position: relative;
+          padding: 0 28px 0 0;
           margin-left: 7px;
-          @include imageUrl("web/sub/icon_like_19x18_off");
-          background-size: contain;
           vertical-align: top;
+          &:after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 22px;
+            height: 21px;
+            @include imageUrl("web/sub/like_22x21_off");
+            background-size: contain;
+          }
+          span {
+            color: #B3B3B3;
+          }
           &.on {
-            @include imageUrl("web/sub/icon_like_19x18_on");
+            &:after {
+              @include imageUrl("web/sub/like_22x21_on");
+              background-size: contain;
+            }
+            span {
+              color: #fff;
+            }
           }
         }
       }

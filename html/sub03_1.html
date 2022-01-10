@@ -225,11 +225,28 @@
                 <div class="detailWrap__content">
                     <div class="justifyWrap">
                         <div class="justifyWrap__left">
+                            <span class="write">작성자</span>
+                            <span class="name">도레미</span>
                             <span class="writeTitle">작성일</span>
                             <span class="date">2022.02.02 17:45</span>
                         </div>
                         <div class="justifyWrap__right">
-                            <span class="num">202</span><button type="button" class="btnLike"><span class="blind">좋아요</span></button>
+                            <button type="button" class="btnSharing"><span>공유하기</span></button>
+                            <button type="button" class="btnLike"><span class="num">202</span><span class="blind">좋아요</span></button>
+                            <div class="layerSharing">
+                                <h4 class="title">공유하기</h4>
+                                <div class="sharingSns">
+                                    <a href="#" class="kakao"><span class="blind">카카오톡</span></a>
+                                    <a href="#" class="naver"><span class="blind">네이버</span></a>
+                                    <a href="#" class="google"><span class="blind">구글</span></a>
+                                    <a href="#" class="facebook"><span class="blind">페이스북</span></a>
+                                    <a href="#" class="twitch"><span class="blind">트위치</span></a>
+                                </div>
+                                <div class="urlCopy">
+                                    <input type="text"><button type="button">URL 복사</button>
+                                </div>
+                                <button type="button" class="btnClose"><span class="blind">닫기</span></button>
+                            </div>
                         </div>
                     </div>
                     <div class="visualImage"><img src="../images/temp/thumbnail_today01.png" alt="나는 슬로우 스타터 현충원 참배하는 안철수 후보"></div>
@@ -254,7 +271,7 @@
                         <a href="#" class="btnLink">다음글</a>
                     </div>
                     <div class="justifyWrap__right">
-                        <span class="num">202</span><button type="button" class="btnLike"><span class="blind">좋아요</span></button>
+                        <button type="button" class="btnLike"><span class="num">202</span><span class="blind">좋아요</span></button>
                     </div>
                 </div>
                 <div class="paginationWrap">
@@ -264,21 +281,21 @@
                             <li>
                                 <button type="button" class="btnLike"><span class="blind">좋아요</span></button>
                                 <a href="#">
-                                    <img src="../images/temp/thumbnail_today_386x277_01.png" alt="시민들과의 직접 만남 후배들과의 만남">
+                                    <img src="../images/temp/thum_promise01.png" alt="시민들과의 직접 만남 후배들과의 만남">
                                     <span class="text">안철수의 솔직한 생각을 일목요연하게 알려드립니다.</span>
                                 </a>
                             </li>
                             <li>
                                 <button type="button" class="btnLike"><span class="blind">좋아요</span></button>
                                 <a href="#">
-                                    <img src="../images/temp/thumbnail_today_386x277_02.png" alt="부산고등학교 모교 후배들과의 만남">
+                                    <img src="../images/temp/thum_promise02.png" alt="부산고등학교 모교 후배들과의 만남">
                                     <span class="text">안철수의 솔직한 생각을 일목요연하게 알려드립니다.</span>
                                 </a>
                             </li>
                             <li>
                                 <button type="button" class="btnLike"><span class="blind">좋아요</span></button>
                                 <a href="#">
-                                    <img src="../images/temp/thumbnail_today_386x277_03.png" alt="더 좋은 준비된 정권교체 안철수">
+                                    <img src="../images/temp/thum_promise03.png" alt="더 좋은 준비된 정권교체 안철수">
                                     <span class="text">안철수의 솔직한 생각을 일목요연하게 알려드립니다.</span>
                                 </a>
                             </li>
@@ -317,14 +334,21 @@
 </div>
 <!-- //wrap -->
 <script>
-   //좋아요 버튼 시 class='on' 활성화
-   const likeBtn = document.querySelectorAll('.btnLike');
-   likeBtn.forEach(function(target) {
-       target.addEventListener('click', toggle);
-   });
-   function toggle(event) {
-       event.target.classList.toggle('on');
-   }
+    //좋아요 버튼 시 class='on' 활성화
+    $(function(){
+        $('.btnLike').on('click',function () {
+            $(this).toggleClass('on');
+        });
+    });
+    // 공유하기 버튼 클릭시
+    $('.btnSharing').on('click',function(){
+        $(this).addClass('on');
+        $('.layerSharing').show();
+    });
+    $('.layerSharing .btnClose').on('click',function(){
+        $('.btnSharing').removeClass('on');
+        $('.layerSharing').hide();
+    });
 </script>
 </body>
 </html>
