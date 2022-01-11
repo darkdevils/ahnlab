@@ -1082,15 +1082,15 @@ h2.title {
     border: 1px solid #3D3D3D;
     box-sizing: border-box;
     input {
-      width: 288px;
-      height: 47px;
+      flex: 1;
+      height: 100%;
       padding: 0 5px;
       box-sizing: border-box;
       outline: none;
     }
     button {
       width: 100px;
-      height: 47px;
+      height: 100%;
       background-color: #000;
       color: #e6e6e6;
       font-size: 16px;
@@ -1268,6 +1268,7 @@ h2.title {
         height: 13px;
         margin-top: -6px;
         @include imageUrlAdmin("icon/icon_select");
+        z-index: 10;
       }
 
       select {
@@ -1881,20 +1882,14 @@ h2.title {
       background-size: contain;
     }
     .urlCopy {
-      display: inline-block;
-      vertical-align: top;
-      width: auto;
+      width: 208px;
       height: 26px;
       input {
-        float: left;
-        display: block;
-        width: 154px;
-        height: 100%;
+        width: 153px;
       }
       button {
-        float: left;
+        flex-shrink: 0;
         width: 53px;
-        height: 100%;
         font-size: calc(17px / 2);
       }
     }

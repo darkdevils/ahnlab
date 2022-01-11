@@ -4575,15 +4575,15 @@ h2.title-margin {
   box-sizing: border-box;
 }
 .layerSharing .urlCopy input {
-  width: 288px;
-  height: 47px;
+  flex: 1;
+  height: 100%;
   padding: 0 5px;
   box-sizing: border-box;
   outline: none;
 }
 .layerSharing .urlCopy button {
   width: 100px;
-  height: 47px;
+  height: 100%;
   background-color: #000;
   color: #e6e6e6;
   font-size: 16px;
@@ -4748,6 +4748,7 @@ h2.title-margin {
   height: 13px;
   margin-top: -6px;
   background: url("../admin/images/icon/icon_select.png") no-repeat;
+  z-index: 10;
 }
 .communityModify .tableArea02 .ahnSelect select {
   display: block;
@@ -5298,21 +5299,15 @@ h2.title-margin {
     background-size: contain;
   }
   .layerSharing .urlCopy {
-    display: inline-block;
-    vertical-align: top;
-    width: auto;
+    width: 208px;
     height: 26px;
   }
   .layerSharing .urlCopy input {
-    float: left;
-    display: block;
-    width: 154px;
-    height: 100%;
+    width: 153px;
   }
   .layerSharing .urlCopy button {
-    float: left;
+    flex-shrink: 0;
     width: 53px;
-    height: 100%;
     font-size: 8.5px;
   }
 
