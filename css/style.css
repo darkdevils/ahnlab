@@ -3548,6 +3548,14 @@ html .opening, body .opening {
     padding-left: 3.2051vw;
   }
 }
+.w140 {
+  width: 140px !important;
+}
+
+.w180 {
+  width: 180px !important;
+}
+
 .blind {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -3895,11 +3903,28 @@ h2.title-margin {
   border-top: 2px solid #EA5510;
   border-bottom: 1px solid #EA5510;
 }
+.detailWrap__content.lineNone {
+  border-top: 0;
+}
 .detailWrap .visualImage {
   margin: 55px 0 0;
 }
 .detailWrap .visualImage img {
   max-width: 100%;
+}
+.detailWrap .video {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  margin-top: 55px;
+}
+.detailWrap .video iframe, .detailWrap .video object {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 .detailWrap .text {
   display: block;
@@ -3944,6 +3969,24 @@ h2.title-margin {
 }
 .paginationWrap ul li > .btnLike.on {
   background: url("../images/web/sub/like_27x26_on.png") no-repeat;
+}
+.paginationWrap__list-video ul li {
+  width: 270px;
+}
+.paginationWrap__list-video ul li a {
+  color: #fff;
+}
+.paginationWrap__list-video ul li a .txt {
+  display: -webkit-box;
+  font-size: 28px;
+  margin-top: 15px;
+  white-space: normal;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 32px;
+  letter-spacing: -0.025em;
+  color: #fff;
 }
 
 .pagination {
@@ -4496,6 +4539,7 @@ h2.title-margin {
   padding: 0 28px 0 0;
   margin-left: 7px;
   vertical-align: top;
+  line-height: 21px;
 }
 .commentList .commentBox__info__right .btnLike:after {
   content: "";
@@ -5004,6 +5048,88 @@ h2.title-margin {
   margin: 0;
 }
 
+/* 영상 */
+.listWrap__list-video {
+  padding-top: 0;
+  overflow: hidden;
+}
+.listWrap__list-video ul {
+  justify-content: left;
+  margin-left: -27px;
+}
+.listWrap__list-video ul li {
+  width: 383px;
+  height: 755px;
+  margin-left: 26px;
+}
+.listWrap__list-video ul li a img {
+  width: 100%;
+  height: 518px;
+}
+.listWrap__list-video ul li:nth-child(odd) {
+  margin-top: 0;
+}
+.listWrap__list-video ul li:nth-child(2) {
+  margin-top: 90px;
+}
+.listWrap__list-video ul li:nth-child(3n+4), .listWrap__list-video ul li:nth-child(3n+6) {
+  margin-top: -90px;
+}
+.listWrap__list-video ul li .txt {
+  margin-top: 35px;
+}
+
+/* 라이브 */
+.liveDetail.content {
+  position: relative;
+}
+.liveDetail.content:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 143px;
+  width: 1920px;
+  margin-left: -960px;
+  height: 891px;
+  background: url("../images/web/sub/bg_live.png") no-repeat;
+  background-repeat: repeat;
+}
+.liveDetail .detailWrap {
+  position: relative;
+  z-index: 1;
+}
+.liveDetail .liveWrap {
+  position: relative;
+  margin-top: 25px;
+  padding: 55px 0 0;
+  text-align: center;
+}
+.liveDetail .liveWrap .titleLive {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.liveDetail .liveWrap .titleLive .mobile {
+  display: none;
+}
+.liveDetail .liveWrap .liveArea {
+  width: 1025px;
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 47.25%;
+  height: 0;
+  overflow: hidden;
+}
+.liveDetail .liveWrap .liveArea iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.liveDetail .commentWriter {
+  margin-top: 90px;
+}
+
 @media (max-width: 780px) {
   h2.title {
     padding-top: 35px;
@@ -5351,6 +5477,9 @@ h2.title-margin {
     background-position: center;
     background-size: 20px 20px;
   }
+  .paginationWrap__list-video ul li {
+    width: 149.5px;
+  }
 
   .pagination {
     padding: 35px 0 0;
@@ -5390,6 +5519,12 @@ h2.title-margin {
     font-size: 13.5px;
     font-family: "NotoSansCJKkrBold", sans-serif;
     color: #fff;
+  }
+  .tabWrap ul li.w140 {
+    width: 100px !important;
+  }
+  .tabWrap ul li.w180 {
+    width: 110px !important;
   }
 
   /* 커뮤니티 */
@@ -5570,9 +5705,12 @@ h2.title-margin {
   .communityDetail .commentList .commentItem .commentBox .layerButton {
     right: 0;
     top: 28px;
+    width: 80px;
+    height: 91px;
   }
   .communityDetail .commentList .commentItem .commentBox .layerButton li a {
-    height: 25px;
+    height: 44px;
+    line-height: 44px;
     background-color: #000;
   }
   .communityDetail .commentList .commentItem .commentBox__nick {
@@ -5608,9 +5746,10 @@ h2.title-margin {
   }
   .communityDetail .commentList .commentItem .commentBox__info__right .btnLike {
     padding: 0 24px 0 0;
+    line-height: 20px;
   }
   .communityDetail .commentList .commentItem .commentBox__info__right .btnLike:after {
-    top: 1px;
+    top: 2px;
     width: 16px;
     height: 16px;
   }
@@ -5853,6 +5992,298 @@ h2.title-margin {
     background: url("../images/mobile/sub/icon_publish.png") no-repeat;
     background-position: center top;
     background-size: 17px 19.5px;
+  }
+
+  /* 영상 */
+  .listWrap__list-video ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+  }
+  .listWrap__list-video ul li {
+    width: 50%;
+    box-sizing: border-box;
+  }
+  .listWrap__list-video ul li:nth-child(odd), .listWrap__list-video ul li:nth-child(even) {
+    margin: 0;
+    margin-bottom: 35px;
+  }
+  .listWrap__list-video ul li:nth-child(odd) {
+    padding-right: 6px;
+  }
+  .listWrap__list-video ul li:nth-child(even) {
+    padding-left: 6px;
+  }
+  .listWrap__list-video ul li a .txt {
+    height: 35px;
+    font-size: 15px;
+    margin-top: 10px;
+    line-height: 17.5px;
+  }
+
+  /* 라이브 */
+  .liveDetail {
+    padding: 0 24px;
+  }
+  .liveDetail.content:after {
+    display: none;
+  }
+  .liveDetail .topVisualSwiper, .liveDetail h2.title {
+    display: none;
+  }
+  .liveDetail .liveWrap .titleLive {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .liveDetail .liveWrap .titleLive img {
+    display: none;
+  }
+  .liveDetail .liveWrap .titleLive img.mobile {
+    display: inline-block;
+    width: 177px;
+  }
+  .liveDetail .liveWrap .liveArea {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 0;
+  }
+  .liveDetail .liveWrap .liveArea iframe {
+    position: relative;
+    width: 100%;
+  }
+  .liveDetail .liveWrap .text {
+    text-align: left;
+  }
+  .liveDetail .commentWriter {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+  .liveDetail .commentWriter h3.title {
+    margin-top: 50px;
+    margin-bottom: 0;
+    padding-top: 12px;
+    padding-bottom: 11px;
+    font-size: 16.5px;
+    line-height: 24px;
+  }
+  .liveDetail .commentWriter h3.title:after {
+    right: -18px;
+    width: 21px;
+    height: 15.5px;
+    background: url("../images/mobile/sub/icon_comment.png") no-repeat;
+    background-size: contain;
+  }
+  .liveDetail .commentWriter__textarea {
+    height: 138px;
+  }
+  .liveDetail .commentWriter__textarea textarea {
+    height: 98px;
+    padding: 10px 7px;
+    font-size: 13.5px;
+    resize: none;
+  }
+  .liveDetail .commentWriter .commentAttach {
+    height: 38px;
+  }
+  .liveDetail .commentWriter .commentAttach .commentNum {
+    padding-left: 15px;
+  }
+  .liveDetail .commentWriter .commentAttach .commentNum span {
+    font-size: 12px;
+    font-family: "GothamBook", sans-serif;
+  }
+  .liveDetail .commentWriter .commentAttach .commentNum .btnPhoto {
+    display: none;
+  }
+  .liveDetail .commentWriter .commentAttach .btnRegister {
+    background: #000;
+    height: 39px;
+    width: 91px;
+  }
+  .liveDetail .commentWriter .commentAttach .btnRegister .icon {
+    padding: 0;
+    font-size: 13.5px;
+  }
+  .liveDetail .commentWriter .commentAttach .btnRegister .icon:after {
+    display: none;
+  }
+  .liveDetail .commentWriter .commentAttach .btnRegister span {
+    font-size: 13.5px;
+  }
+  .liveDetail .commentList .commentItem {
+    margin: 0;
+    padding: 30px 0 12px;
+    overflow: hidden;
+  }
+  .liveDetail .commentList .commentItem .btnReply-m {
+    background-color: #EA551C;
+    border-color: #EA551C;
+  }
+  .liveDetail .commentList .commentItem .commentBox .btnCommentLayer {
+    right: 0;
+  }
+  .liveDetail .commentList .commentItem .commentBox .layerButton {
+    right: 0;
+    top: 28px;
+    width: 80px;
+    height: 91px;
+  }
+  .liveDetail .commentList .commentItem .commentBox .layerButton li a {
+    height: 44px;
+    line-height: 44px;
+    background-color: #000;
+  }
+  .liveDetail .commentList .commentItem .commentBox__nick {
+    margin-bottom: 15px;
+  }
+  .liveDetail .commentList .commentItem .commentBox__nick .nick {
+    font-size: 15px;
+  }
+  .liveDetail .commentList .commentItem .commentBox__nick .nick .date {
+    font-size: 14px;
+    margin-left: 5px;
+    color: #E4E4E4;
+  }
+  .liveDetail .commentList .commentItem .commentBox__text {
+    padding-bottom: 20px;
+  }
+  .liveDetail .commentList .commentItem .commentBox__text__view {
+    font-size: 15px;
+    line-height: 22.5px;
+  }
+  .liveDetail .commentList .commentItem .commentBox__info span {
+    font-size: 14px;
+    font-family: "GothamBook", sans-serif;
+  }
+  .liveDetail .commentList .commentItem .commentBox__info__left button {
+    width: 60px;
+    height: 30px;
+    font-size: 13px;
+    margin-left: 0;
+  }
+  .liveDetail .commentList .commentItem .commentBox__info__right {
+    padding-right: 0;
+  }
+  .liveDetail .commentList .commentItem .commentBox__info__right .btnLike {
+    padding: 0 24px 0 0;
+    line-height: 20px;
+  }
+  .liveDetail .commentList .commentItem .commentBox__info__right .btnLike:after {
+    top: 2px;
+    width: 16px;
+    height: 16px;
+  }
+  .liveDetail .commentList .commentItem-reply {
+    padding-left: 50px;
+    padding-right: 15px;
+  }
+  .liveDetail .commentList .commentItem-reply:after {
+    left: 25px;
+    background: url("../images/mobile/sub/bg_line.png") no-repeat;
+    background-size: contain;
+    width: 17px;
+    height: 17px;
+  }
+  .liveDetail .commentList .commentItem-reply .commentWriter__textarea {
+    height: 138px;
+  }
+  .liveDetail .commentList .commentItem-reply .commentWriter__textarea textarea {
+    height: 98px;
+  }
+  .liveDetail .commentList .commentItem-reply .commentWriter__textarea .commentAttach .btnRegister span {
+    font-size: 13.5px;
+  }
+  .liveDetail .commentList .commentItem-reply .commentBox__info {
+    position: relative;
+    padding: 10px 0 0;
+  }
+  .liveDetail .commentList .commentItem-reply .commentBox__info:after {
+    content: "";
+    position: absolute;
+    left: -100px;
+    top: 0;
+    width: 200%;
+    height: 1px;
+    background: #707070;
+  }
+  .liveDetail .commentList .commentItem-reply .commentBox__info__left .btnReply {
+    margin-left: -25px;
+  }
+  .liveDetail .commentList .commentItem .commentWriter {
+    margin-bottom: 30px;
+  }
+  .liveDetail .commentList .commentItem .commentWriter h3.title {
+    margin-top: 50px;
+    margin-bottom: 0;
+    padding-top: 12px;
+    padding-bottom: 11px;
+    font-size: 16.5px;
+  }
+  .liveDetail .commentList .commentItem .commentWriter h3.title:after {
+    right: -18px;
+    width: 21px;
+    height: 15.5px;
+    background: url("../images/mobile/sub/icon_comment.png") no-repeat;
+    background-size: contain;
+  }
+  .liveDetail .commentList .commentItem .commentWriter__textarea {
+    height: 138px;
+  }
+  .liveDetail .commentList .commentItem .commentWriter__textarea textarea {
+    height: 98px;
+    padding: 10px 7px;
+    font-size: 13.5px;
+    resize: none;
+  }
+  .liveDetail .commentList .commentItem .commentWriter .commentAttach {
+    height: 38px;
+  }
+  .liveDetail .commentList .commentItem .commentWriter .commentAttach .commentNum {
+    padding-left: 15px;
+  }
+  .liveDetail .commentList .commentItem .commentWriter .commentAttach .commentNum span {
+    font-size: 11.5px;
+  }
+  .liveDetail .commentList .commentItem .commentWriter .commentAttach .commentNum .btnPhoto {
+    display: none;
+  }
+  .liveDetail .commentList .commentItem .commentWriter .commentAttach .btnRegister {
+    background: #000;
+    height: 39px;
+    color: #fff;
+  }
+  .liveDetail .commentList .commentItem .commentWriter .commentAttach .btnRegister .icon {
+    padding: 0;
+    font-size: 13.5px;
+  }
+  .liveDetail .commentList .commentItem .commentWriter .commentAttach .btnRegister .icon:after {
+    display: none;
+  }
+  .liveDetail .commentList .commentItem .commentWriter .commentAttach .btnRegister span {
+    color: #fff;
+    font-size: 13.5px;
+  }
+  .liveDetail .paginationWrap__list > ul > li > .btnLike {
+    width: 40px;
+    height: 40px;
+    right: 0;
+    top: 0;
+    background-size: 20px 20px;
+  }
+  .liveDetail .paginationWrap__list > ul > li > .btnLike.on {
+    background-size: 20px 20px;
+  }
+  .liveDetail .paginationWrap__list > ul > li .imgLink {
+    height: 100%;
+  }
+  .liveDetail .paginationWrap__list > ul > li .imgLink .text {
+    width: 40vw;
+    line-height: 6.8vw;
+    font-size: 5.7vw;
+  }
+  .liveDetail .paginationWrap__list > ul > li .justifyWrap {
+    display: none;
   }
 }
 

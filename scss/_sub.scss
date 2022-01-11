@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+.w140 {width: 140px !important;}
+.w180 {width: 180px !important;}
+
 .blind {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -364,11 +367,28 @@ h2.title {
     padding: 0 0 60px 0;
     border-top: 2px solid #EA5510;
     border-bottom: 1px solid #EA5510;
+    &.lineNone {
+      border-top: 0;
+    }
   }
   .visualImage {
     margin: 55px 0 0;
     img {
       max-width: 100%;
+    }
+  }
+  .video {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin-top: 55px;
+    iframe,object {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
   }
   .text {
@@ -407,14 +427,37 @@ h2.title {
         top: 18px;
         width: 27px;
         height: 26px;
-        @include imageUrl('web/sub/like_27x26_off');
+        @include imageUrl("web/sub/like_27x26_off");
         &.on {
-          @include imageUrl('web/sub/like_27x26_on');
+          @include imageUrl("web/sub/like_27x26_on");
+        }
+      }
+    }
+  }
+  &__list-video {
+    ul {
+      li {
+        width: 270px;
+        a {
+          color: #fff;
+          .txt {
+            display: -webkit-box;
+            font-size: 28px;
+            margin-top: 15px;
+            white-space: normal;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            line-height: 32px;
+            letter-spacing: -0.025em;
+            color: #fff;
+          }
         }
       }
     }
   }
 }
+
 .pagination {
   display: flex;
   justify-content: center;
@@ -525,13 +568,13 @@ h2.title {
           top: 7px;
           width: 54px;
           height: 50px;
-          @include imageUrl('web/sub/like_27x26_off');
+          @include imageUrl("web/sub/like_27x26_off");
           background-position: center;
           background-size: 27px 27px;
           padding: 10px;
           z-index: 2;
           &.on {
-            @include imageUrl('web/sub/like_27x26_on');
+            @include imageUrl("web/sub/like_27x26_on");
             background-position: center;
             background-size: 27px 27px;
           }
@@ -660,13 +703,13 @@ h2.title {
           top: 7px;
           width: 54px;
           height: 50px;
-          @include imageUrl('web/sub/like_27x26_off');
+          @include imageUrl("web/sub/like_27x26_off");
           background-position: center;
           background-size: 27px 27px;
           padding: 10px;
           z-index: 2;
           &.on {
-            @include imageUrl('web/sub/like_27x26_on');
+            @include imageUrl("web/sub/like_27x26_on");
             background-position: center;
             background-size: 27px 27px;
           }
@@ -703,7 +746,9 @@ h2.title {
 
         }
       }
+
     }
+
     .txt {
       display: -webkit-box;
       font-size: 28px;
@@ -994,6 +1039,7 @@ h2.title {
           padding: 0 28px 0 0;
           margin-left: 7px;
           vertical-align: top;
+          line-height: 21px;
           &:after {
             content: "";
             position: absolute;
@@ -1558,6 +1604,96 @@ h2.title {
   }
 }
 
+/* 영상 */
+.listWrap__list-video {
+  padding-top: 0;
+  overflow: hidden;
+  ul {
+    justify-content: left;
+    margin-left: -27px;
+    li {
+      width: 383px;
+      height: 755px;
+      margin-left: 26px;
+      a {
+        img {
+          width: 100%;
+          height: 518px;
+        }
+      }
+      &:nth-child(odd) {
+        margin-top: 0;
+      }
+      &:nth-child(2) {
+        margin-top: 90px;
+      }
+      &:nth-child(3n+4),&:nth-child(3n+6) {
+        margin-top: -90px
+      }
+      .txt {
+        margin-top: 35px;
+      }
+    }
+  }
+}
+
+/* 라이브 */
+.liveDetail {
+  &.content{
+    position: relative;
+    &:after {
+      content           : "";
+      position          : absolute;
+      left              : 50%;
+      top               : 143px;
+      width: 1920px;
+      margin-left: calc(-1920px / 2);
+      height            : 891px;
+      @include imageUrl("web/sub/bg_live");
+      background-repeat : repeat;
+
+    }
+  }
+  .detailWrap {
+    position: relative;
+    z-index: 1;
+  }
+  .liveWrap {
+    position   : relative;
+    margin-top : 25px;
+    padding    : 55px 0 0;
+    text-align : center;
+
+    .titleLive {
+      text-align    : center;
+      margin-bottom : 50px;
+      .mobile {
+        display: none;
+      }
+    }
+
+    .liveArea {
+      width          : 1025px;
+      margin         : 0 auto;
+      position       : relative;
+      padding-bottom : 47.25%;
+      height         : 0;
+      overflow       : hidden;
+
+      iframe {
+        position : absolute;
+        top      : 0;
+        left     : 0;
+        width    : 100%;
+        height   : 100%;
+      }
+    }
+  }
+  .commentWriter {
+    margin-top: 90px;
+  }
+}
+
 @media (max-width: 780px) {
   h2.title {
     padding-top: calc(70px / 2);
@@ -1878,7 +2014,7 @@ h2.title {
       right: 26px;
       width: calc(32px / 2);
       height: calc(29px / 2);
-      @include imageUrl('mobile/sub/bg_close');
+      @include imageUrl("mobile/sub/bg_close");
       background-size: contain;
     }
     .urlCopy {
@@ -1933,6 +2069,13 @@ h2.title {
           }
         }
       }
+      &-video {
+        ul {
+          li {
+            width: calc(299px / 2);
+          }
+        }
+      }
     }
   }
   .pagination {
@@ -1971,6 +2114,12 @@ h2.title {
           font-size: calc(27px / 2);
           @include nsB;
           color: #fff;
+        }
+        &.w140 {
+          width: 100px !important;
+        }
+        &.w180 {
+          width: 110px !important;
         }
       }
     }
@@ -2186,10 +2335,12 @@ h2.title {
           .layerButton {
             right : 0;
             top: 28px;
-
+            width: 80px;
+            height: 91px;
             li {
               a {
-                height           : 25px;
+                height           : 44px;
+                line-height: 44px;
                 background-color : #000;
               }
             }
@@ -2230,8 +2381,9 @@ h2.title {
               padding-right: 0;
               .btnLike {
                 padding: 0 24px 0 0;
+                line-height: 20px;
                 &:after {
-                  top: 1px;
+                  top: 2px;
                   width: 16px;
                   height: 16px;
                 }
@@ -2244,7 +2396,7 @@ h2.title {
           padding-right: 15px;
           &:after {
             left: 25px;
-            @include imageUrl('mobile/sub/bg_line');
+            @include imageUrl("mobile/sub/bg_line");
             background-size: contain;
             width: 17px;
             height: 17px;
@@ -2517,6 +2669,339 @@ h2.title {
         @include imageUrl("mobile/sub/icon_publish");
         background-position: center top;
         background-size: calc(34px / 2) calc(39px / 2);
+      }
+    }
+  }
+
+  /* 영상 */
+  .listWrap__list-video {
+    ul {
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+      li {
+        width: 50%;
+        box-sizing: border-box;
+        &:nth-child(odd),&:nth-child(even) {
+          margin: 0;
+          margin-bottom: 35px;
+        }
+        &:nth-child(odd) {
+          padding-right: 6px;
+        }
+        &:nth-child(even) {
+          padding-left: 6px;
+        }
+        a {
+          .txt {
+            height: 35px;
+            font-size: 15px;
+            margin-top: 10px;
+            line-height: calc(35px / 2);
+          }
+        }
+      }
+    }
+  }
+
+  /* 라이브 */
+  .liveDetail {
+    padding:0 24px;
+    &.content:after {
+      display: none;
+    }
+    .topVisualSwiper,h2.title {
+      display: none;
+    }
+    .liveWrap {
+      .titleLive {
+        margin-bottom: 20px;
+        text-align: center;
+        img {
+          display: none;
+        }
+        img.mobile {
+          display: inline-block;
+          width: 177px;
+        }
+      }
+
+      .liveArea {
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+        padding: 0;
+        iframe {
+          position: relative;
+          width: 100%;
+        }
+      }
+      .text {
+        text-align: left;
+      }
+    }
+
+    .commentWriter {
+      margin-top: 0;
+      margin-bottom: 30px;
+      h3.title {
+        margin-top: 50px;
+        margin-bottom: 0;
+        padding-top: 12px;
+        padding-bottom: 11px;
+        font-size: calc(33px / 2);
+        line-height: 24px;
+        &:after {
+          right: -18px;
+          width: calc(42px / 2);
+          height: calc(31px / 2);
+          @include imageUrl("mobile/sub/icon_comment");
+          background-size: contain;
+        }
+      }
+      &__textarea {
+        height: calc(276px / 2);
+        textarea {
+          height: 98px;
+          padding: 10px 7px;
+          font-size: calc(27px / 2);
+          resize: none;
+        }
+      }
+      .commentAttach {
+        height: calc(76px / 2);
+        .commentNum {
+          padding-left: 15px;
+          span {
+            font-size: 12px;
+            @include gtBook;
+          }
+          .btnPhoto {
+            display: none;
+          }
+        }
+        .btnRegister {
+          background: #000;
+          height: calc(78px / 2);
+          width: calc(182px / 2);
+          .icon {
+            padding: 0;
+            font-size: calc(27px / 2);
+            &:after {
+              display: none;
+            }
+          }
+          span {
+            font-size: calc(27px / 2);
+          }
+        }
+      }
+    }
+
+    .commentList {
+      .commentItem {
+        margin: 0;
+        padding: 30px 0 12px;
+        overflow: hidden;
+        .btnReply-m {
+          background-color: #EA551C;
+          border-color: #EA551C;
+        }
+        .commentBox {
+          .btnCommentLayer {
+            right : 0;
+          }
+
+          .layerButton {
+            right : 0;
+            top: 28px;
+            width: 80px;
+            height: 91px;
+            li {
+              a {
+                height           : 44px;
+                line-height: 44px;
+                background-color : #000;
+              }
+            }
+          }
+
+          &__nick {
+            margin-bottom: 15px;
+            .nick {
+              font-size : calc(30px / 2);
+              .date {
+                font-size : calc(28px / 2);
+                margin-left: 5px;
+                color: #E4E4E4;
+              }
+            }
+          }
+          &__text {
+            padding-bottom: 20px;
+            &__view {
+              font-size : calc(30px / 2);
+              line-height: calc(45px / 2);
+            }
+          }
+          &__info {
+            span {
+              font-size: 14px;
+              @include gtBook;
+            }
+            &__left {
+              button {
+                width: calc(120px / 2);
+                height: calc(60px / 2);
+                font-size: calc(26px / 2);
+                margin-left: 0;
+              }
+            }
+            &__right {
+              padding-right: 0;
+              .btnLike {
+                padding: 0 24px 0 0;
+                line-height: 20px;
+                &:after {
+                  top: 2px;
+                  width: 16px;
+                  height: 16px;
+                }
+              }
+            }
+          }
+        }
+        &-reply {
+          padding-left: calc(100px / 2);
+          padding-right: 15px;
+          &:after {
+            left: 25px;
+            @include imageUrl("mobile/sub/bg_line");
+            background-size: contain;
+            width: 17px;
+            height: 17px;
+          }
+          .commentWriter {
+            &__textarea {
+              height: calc(276px / 2);
+              textarea {
+                height: 98px;
+              }
+              .commentAttach {
+                .btnRegister {
+
+                  span {
+                    font-size: calc(27px / 2);
+                  }
+                }
+              }
+            }
+          }
+
+          .commentBox {
+            &__info {
+              position: relative;
+              padding: 10px 0 0;
+              &:after {
+                content: "";
+                position: absolute;
+                left: -100px;
+                top: 0;
+                width: 200%;
+                height: 1px;
+                background: #707070;
+              }
+              &__left {
+                .btnReply {
+                  margin-left: -25px;
+                }
+              }
+            }
+          }
+        }
+        .commentWriter {
+          margin-bottom: 30px;
+          h3.title {
+            margin-top: 50px;
+            margin-bottom: 0;
+            padding-top: 12px;
+            padding-bottom: 11px;
+            font-size: calc(33px / 2);
+            &:after {
+              right: -18px;
+              width: calc(42px / 2);
+              height: calc(31px / 2);
+              @include imageUrl("mobile/sub/icon_comment");
+              background-size: contain;
+            }
+          }
+          &__textarea {
+            height: calc(276px / 2);
+            textarea {
+              height: 98px;
+              padding: 10px 7px;
+              font-size: calc(27px / 2);
+              resize: none;
+            }
+          }
+          .commentAttach {
+            height: calc(76px / 2);
+            .commentNum {
+              padding-left: 15px;
+              span {
+                font-size: calc(23px / 2);
+              }
+              .btnPhoto {
+                display: none;
+              }
+            }
+            .btnRegister {
+              background: #000;
+              height: calc(78px / 2);
+              color: #fff;
+              .icon {
+                padding: 0;
+                font-size: calc(27px / 2);
+                &:after {
+                  display: none;
+                }
+              }
+              span {
+                color: #fff;
+                font-size: calc(27px / 2);
+              }
+            }
+          }
+        }
+      }
+    }
+    .paginationWrap {
+      &__list {
+        > ul > li {
+          > .btnLike {
+            width: 40px;
+            height: 40px;
+            right: 0;
+            top: 0;
+            background-size: 20px 20px;
+            &.on {
+              background-size: 20px 20px;
+            }
+          }
+
+          .imgLink {
+            height: 100%;
+
+            .text {
+              width: 40vw;
+              line-height: 6.8vw;
+              font-size: 5.7vw;
+            }
+          }
+          .justifyWrap {
+            display: none;
+          }
+        }
       }
     }
   }
