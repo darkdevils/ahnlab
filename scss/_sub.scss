@@ -1864,8 +1864,12 @@ h2.title {
     .sharingSns {
       margin-bottom: 15px;
       a {
-        width: calc(62px / 2);
-        height: calc(62px / 2);
+        width: 34px;
+        height: 34px;
+
+        & + a {
+          margin-left: 9px;
+        }
       }
     }
     .btnClose {
@@ -1877,15 +1881,20 @@ h2.title {
       background-size: contain;
     }
     .urlCopy {
-      width: calc(413px / 2);
-      height: 25px;
+      display: inline-block;
+      vertical-align: top;
+      width: auto;
+      height: 26px;
       input {
-        width: calc(308px / 2);
+        float: left;
+        display: block;
+        width: 154px;
         height: 100%;
       }
       button {
-        width: calc(107px / 2);
-        height: 25px;
+        float: left;
+        width: 53px;
+        height: 100%;
         font-size: calc(17px / 2);
       }
     }

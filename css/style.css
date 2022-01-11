@@ -5283,8 +5283,11 @@ h2.title-margin {
     margin-bottom: 15px;
   }
   .layerSharing .sharingSns a {
-    width: 31px;
-    height: 31px;
+    width: 34px;
+    height: 34px;
+  }
+  .layerSharing .sharingSns a + a {
+    margin-left: 9px;
   }
   .layerSharing .btnClose {
     top: 28px;
@@ -5295,16 +5298,21 @@ h2.title-margin {
     background-size: contain;
   }
   .layerSharing .urlCopy {
-    width: 206.5px;
-    height: 25px;
+    display: inline-block;
+    vertical-align: top;
+    width: auto;
+    height: 26px;
   }
   .layerSharing .urlCopy input {
+    float: left;
+    display: block;
     width: 154px;
     height: 100%;
   }
   .layerSharing .urlCopy button {
-    width: 53.5px;
-    height: 25px;
+    float: left;
+    width: 53px;
+    height: 100%;
     font-size: 8.5px;
   }
 
