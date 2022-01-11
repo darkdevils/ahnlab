@@ -3126,18 +3126,48 @@ html .opening, body .opening {
   height: 100%;
 }
 #wrap.mainLayout #container .topVisual .topVisualVideo {
+  position: relative;
   text-align: center;
   box-sizing: border-box;
-  padding: 190px 0 100px;
+  padding: 296px 0 33px;
   background: url("../images/web/bg/bg_topVisualVideo.png") no-repeat;
   background-position: center center;
   background-size: auto 100%;
 }
 #wrap.mainLayout #container .topVisual .topVisualVideo .title {
-  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 153px;
+  text-align: center;
+}
+#wrap.mainLayout #container .topVisual .topVisualVideo .title .live {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  padding: 5px 87px 0 0;
+  line-height: 81px;
+  font-size: 56px;
+  font-family: "NotoSansCJKkrBold", sans-serif;
+}
+#wrap.mainLayout #container .topVisual .topVisualVideo .title .live::after {
+  content: "LIVE";
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  text-align: center;
+  height: 36px;
+  padding: 0 17px;
+  line-height: 36px;
+  border-radius: 18px;
+  font-size: 28px;
+  font-family: "GothamBold", sans-serif;
+  color: #fff;
+  background-color: #FF0000;
 }
 #wrap.mainLayout #container .topVisual .topVisualVideo .videoHeightAuto {
-  width: 1025px;
+  width: 900px;
   display: inline-block;
   vertical-align: top;
 }
@@ -3416,37 +3446,39 @@ html .opening, body .opening {
     height: 108.9743vw;
   }
   #wrap.mainLayout #container .topVisual .topVisualVideo {
+    position: static;
     box-sizing: border-box;
     height: auto;
     padding: 50px 0 0;
     background: #000;
   }
   #wrap.mainLayout #container .topVisual .topVisualVideo .title {
+    position: static;
+    left: auto;
+    right: auto;
+    top: auto;
     display: block;
     text-align: center;
     margin: 5.1282vw 0 3.4615vw;
   }
-  #wrap.mainLayout #container .topVisual .topVisualVideo .title span {
+  #wrap.mainLayout #container .topVisual .topVisualVideo .title .live {
     position: relative;
     display: inline-block;
     vertical-align: top;
     line-height: 10.2564vw;
-    padding-top: 1.0256vw;
+    padding-right: 11.282vw;
     font-size: 7.1794vw;
     font-family: "NotoSansCJKkrBold", sans-serif;
   }
-  #wrap.mainLayout #container .topVisual .topVisualVideo .title span.live {
-    padding-right: 11.282vw;
-  }
-  #wrap.mainLayout #container .topVisual .topVisualVideo .title span.live::after {
+  #wrap.mainLayout #container .topVisual .topVisualVideo .title .live::after {
     content: "LIVE";
     position: absolute;
     right: 0;
     top: 0;
     display: block;
     text-align: center;
-    width: 12.3076vw;
     height: 4.6153vw;
+    padding: 0 2vw;
     line-height: 4.6153vw;
     border-radius: 2.3076vw;
     font-size: 3.5897vw;
@@ -3516,9 +3548,6 @@ html .opening, body .opening {
   }
   #wrap.mainLayout #container .content .photoNumberArea .swiper-button-prev, #wrap.mainLayout #container .content .photoNumberArea .swiper-button-next, #wrap.mainLayout #container .content .photoWidthArea .swiper-button-prev, #wrap.mainLayout #container .content .photoWidthArea .swiper-button-next, #wrap.mainLayout #container .content .photoHeightArea .swiper-button-prev, #wrap.mainLayout #container .content .photoHeightArea .swiper-button-next {
     display: none;
-  }
-  #wrap.mainLayout #container .content .photoNumberArea {
-    padding-top: 5.3846vw;
   }
   #wrap.mainLayout #container .content .photoNumberArea .swiperArea {
     padding: 0 3.2051vw;

@@ -45,19 +45,51 @@
       }
 
       .topVisualVideo {
+        position: relative;
         text-align: center;
         box-sizing: border-box;
-        padding: 190px 0 100px;
+        padding: 296px 0 33px;
         @include imageUrl('web/bg/bg_topVisualVideo');
         background-position: center center;
         background-size: auto 100%;
 
         .title {
-          display: none;
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 153px;
+          text-align: center;
+
+          .live {
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            padding: 5px 87px 0 0;
+            line-height: 81px;
+            font-size: 56px;
+            @include nsB;
+
+            &::after {
+              content: "LIVE";
+              position: absolute;
+              right: 0;
+              top: 0;
+              display: block;
+              text-align: center;
+              height: 36px;
+              padding: 0 17px;
+              line-height: 36px;
+              border-radius: 18px;
+              font-size: 28px;
+              @include gtB;
+              color: #fff;
+              background-color: #FF0000;
+            }
+          }
         }
 
         .videoHeightAuto {
-          width: 1025px;
+          width: 900px;
           display: inline-block;
           vertical-align: top;
         }
@@ -477,44 +509,45 @@
         }
 
         .topVisualVideo {
+          position: static;
           box-sizing: border-box;
           height: auto;
           padding: 50px 0 0;
           background: #000;
 
           .title {
+            position: static;
+            left: auto;
+            right: auto;
+            top: auto;
             display: block;
             text-align: center;
             margin: 5.1282vw 0 3.4615vw;
 
-            span {
+            .live {
               position: relative;
               display: inline-block;
               vertical-align: top;
               line-height: 10.2564vw;
-              padding-top: 1.0256vw;
+              padding-right: 11.2820vw;
               font-size: 7.1794vw;
               @include nsB;
 
-              &.live {
-                padding-right: 11.2820vw;
+              &::after {
+                content: "LIVE";
+                position: absolute;
+                right: 0;
+                top: 0;
+                display: block;
+                text-align: center;
+                height: 4.6153vw;
+                padding: 0 2vw;
+                line-height: 4.6153vw;
+                border-radius: 2.3076vw;
+                font-size: 3.5897vw;
+                @include gtB;
+                background-color: $colorRed;
 
-                &::after {
-                  content: "LIVE";
-                  position: absolute;
-                  right: 0;
-                  top: 0;
-                  display: block;
-                  text-align: center;
-                  width: 12.3076vw;
-                  height: 4.6153vw;
-                  line-height: 4.6153vw;
-                  border-radius: 2.3076vw;
-                  font-size: 3.5897vw;
-                  @include gtB;
-                  background-color: $colorRed;
-
-                }
               }
             }
           }
@@ -605,7 +638,6 @@
         }
 
         .photoNumberArea {
-          padding-top: 5.3846vw;
 
           .swiperArea {
             padding: 0 3.2051vw;
