@@ -1853,44 +1853,48 @@ h2.title {
     }
   }
   .layerSharing {
-    width: 312px;
-    //left: 0;
-    //width: auto;
-    height: calc(326px / 2);
-    padding: 29px 0 0 34px;
+    left: 0;
+    width: auto;
+    height: auto;
+    padding: 6vw;
     h4.title {
-      font-size: calc(25px / 2);
-      margin-bottom: 10px;
+      font-size: 4.5vw;
+      margin-bottom: 4vw;
     }
     .sharingSns {
-      margin-bottom: 15px;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 4vw;
       a {
-        width: 34px;
-        height: 34px;
+        width: 13vw;
+        height: 13vw;
 
         & + a {
-          margin-left: 9px;
+          margin: 0;
         }
       }
     }
     .btnClose {
-      top: 28px;
-      right: 26px;
-      width: calc(32px / 2);
-      height: calc(29px / 2);
+      box-sizing: content-box;
+      top: 3vw;
+      right: 3vw;
+      width: 5vw;
+      height: 5vw;
+      padding: 2vw;
       @include imageUrl('mobile/sub/bg_close');
-      background-size: contain;
+      background-size: 5vw 5vw;
+      background-position: center;
     }
     .urlCopy {
-      width: 208px;
-      height: 26px;
+      width: auto;
+      height: 10vw;
       input {
-        width: 153px;
+        width: auto;
       }
       button {
         flex-shrink: 0;
-        width: 53px;
-        font-size: calc(17px / 2);
+        width: 20vw;
+        font-size: 3.7vw;
       }
     }
   }

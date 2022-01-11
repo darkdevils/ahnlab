@@ -5301,43 +5301,49 @@ h2.title-margin {
   }
 
   .layerSharing {
-    width: 312px;
-    height: 163px;
-    padding: 29px 0 0 34px;
+    left: 0;
+    width: auto;
+    height: auto;
+    padding: 6vw;
   }
   .layerSharing h4.title {
-    font-size: 12.5px;
-    margin-bottom: 10px;
+    font-size: 4.5vw;
+    margin-bottom: 4vw;
   }
   .layerSharing .sharingSns {
-    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4vw;
   }
   .layerSharing .sharingSns a {
-    width: 34px;
-    height: 34px;
+    width: 13vw;
+    height: 13vw;
   }
   .layerSharing .sharingSns a + a {
-    margin-left: 9px;
+    margin: 0;
   }
   .layerSharing .btnClose {
-    top: 28px;
-    right: 26px;
-    width: 16px;
-    height: 14.5px;
+    box-sizing: content-box;
+    top: 3vw;
+    right: 3vw;
+    width: 5vw;
+    height: 5vw;
+    padding: 2vw;
     background: url("../images/mobile/sub/bg_close.png") no-repeat;
-    background-size: contain;
+    background-size: 5vw 5vw;
+    background-position: center;
   }
   .layerSharing .urlCopy {
-    width: 208px;
-    height: 26px;
+    width: auto;
+    height: 10vw;
   }
   .layerSharing .urlCopy input {
-    width: 153px;
+    width: auto;
   }
   .layerSharing .urlCopy button {
     flex-shrink: 0;
-    width: 53px;
-    font-size: 8.5px;
+    width: 20vw;
+    font-size: 3.7vw;
   }
 
   .paginationWrap {
