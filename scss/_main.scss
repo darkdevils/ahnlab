@@ -568,11 +568,11 @@
 
         .mainTitleArea {
           overflow: hidden;
-          padding: 5vw 3.2051vw 1.6666vw 3.2051vw;
+          padding: 6vw 3.2051vw 3vw 3.2051vw;
 
           .title {
-            line-height: 22px;
-            font-size: 15px;
+            line-height: 25px;
+            font-size: 22.5px;
           }
 
           .moreLink {
@@ -583,6 +583,8 @@
             @include imageUrl('mobile/icon/icon_moreLink');
             background-position: right center;
             background-size: 4px 6px;
+
+            display: none;
 
             &:hover {
               @include imageUrl('mobile/icon/icon_moreLink');

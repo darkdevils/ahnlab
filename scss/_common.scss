@@ -29,7 +29,7 @@ html, body {
   .pageTop {
     position: fixed;
     right: 98px;
-    bottom: 0;
+    bottom: 1px;
     display: block;
     box-sizing: border-box;
     width: 85px;
@@ -656,7 +656,6 @@ html, body {
     /* page top button */
     .pageTop {
       right        : 24px;
-      bottom       : 0;
       width        : 41px;
       height       : 41px;
       border-color : #E4E4E4;

@@ -252,22 +252,25 @@ h2.title {
     padding: 24px 0 0;
     color: #b3b3b3;
     &__left {
-      .write {
+      display: flex;
+
+      > *  {
+        display: block;
+        line-height: 27px;
         font-size: 19px;
-        margin-right: 17px;
+      }
+
+      .write {
+
       }
       .name {
-        font-size: 19px;
-        margin-right: 55px;
+
       }
       .writeTitle {
-        font-size: 19px;
-        @include nsM;
-        margin-right: 17px;
+        margin-left: 55px;
       }
       .date {
-        font-size: 18px;
-        @include gtM;
+        @include gtBook;
       }
       .btnLink {
         font-size: 22px;
@@ -277,63 +280,34 @@ h2.title {
       }
     }
     &__right {
+      display: flex;
       position: relative;
-      padding: 0 5px 0 0;
-      .num {
-        position: relative;
+      padding-right: 5px;
+
+      .btnSharing, .btnLike {
+        display: block;
+        line-height: 27px;
         font-size: 18px;
-        @include gtM;
       }
-      .btnLike {
-        position: relative;
-        margin-left: 10px;
-        padding: 0 23px 0 0;
-        vertical-align: top;
-        &:after {
-          content: "";
-          position: absolute;
-          right: 0;
-          top: 3px;
-          width: 16px;
-          height: 15px;
-          @include imageUrl("web/sub/like_16x15_off");
-          background-size: contain;
-        }
-        span {
-          color: #B3B3B3;
-          font-size: 18px;
-          @include gtM;
-        }
-        &.on {
-          span {
-            color: #fff;
-          }
-          &:after {
-            @include imageUrl("web/sub/like_16x15_on");
-            background-size: contain;
-          }
-        }
-      }
+
       .btnSharing {
         position: relative;
-        margin-right: 27px;
         padding: 0 0 0 30px;
+
         span {
-          font-size: 16px;
-          color: #b3b3b3;
+          display: block;
           @include nsM;
-          line-height: 16px;
+          color: #b3b3b3;
         }
         &:after {
           content: "";
           position: absolute;
           left: 0;
-          top: -3px;
+          top: 3px;
           width: 21px;
           height: 20px;
           @include imageUrl("web/sub/icon_sharing");
           background-size: contain;
-          vertical-align: top;
         }
         &.on {
           span {
@@ -341,6 +315,38 @@ h2.title {
           }
           &:after {
             @include imageUrl("web/sub/icon_sharing_on");
+            background-size: contain;
+          }
+        }
+      }
+      .btnLike {
+        position: relative;
+        margin-left: 31px;
+        padding: 0 23px 0 0;
+        vertical-align: top;
+        &:after {
+          content: "";
+          position: absolute;
+          right: 0;
+          top: 50%;
+          width: 16px;
+          height: 15px;
+          margin-top: -7px;
+          @include imageUrl("web/sub/like_16x15_off");
+          background-size: contain;
+        }
+        .num {
+          position: relative;
+          display: block;
+          color: #B3B3B3;
+          @include gtBook;
+        }
+        &.on {
+          span {
+            color: #fff;
+          }
+          &:after {
+            @include imageUrl("web/sub/like_16x15_on");
             background-size: contain;
           }
         }
@@ -535,20 +541,29 @@ h2.title {
           display: flex;
           justify-content: space-between;
           color: #b3b3b3;
-          margin-top: 20px;
+          margin-top: 13px;
+          @include gtBook;
+          font-size: 19px;
+
           &__left {
-            font-size: 18px;
+            display: flex;
+
+            > * {
+              display: block;
+              line-height: 26px;
+            }
+
             .name {
               margin-right: 12px;
             }
             .date {
-              @include gtM;
               letter-spacing: -0.037em;
             }
           }
           &__right {
-            font-size: 18px;
-            @include gtM;
+            display: flex;
+            font-size: 19px;
+            @include gtBook;
             .btnLike {
               position: relative;
               margin-left: 10px;
@@ -558,16 +573,18 @@ h2.title {
                 content: "";
                 position: absolute;
                 right: 0;
-                top: 3px;
+                top: 6px;
                 width: 16px;
                 height: 15px;
                 @include imageUrl("web/sub/like_16x15_off");
                 background-size: contain;
               }
               span {
+                display: block;
+                line-height: 26px;
+                @include gtBook;
+                font-size: 19px;
                 color: #B3B3B3;
-                font-size: 18px;
-                @include gtM;
               }
               &.on {
                 span {
@@ -606,6 +623,7 @@ h2.title {
           left: 50%;
           top: 50%;
           transform: translate(-50%, -50%);
+          width: 230px;
           color: #fff;
           font-size: 40px;
           line-height: 44px;
@@ -754,13 +772,18 @@ h2.title {
       padding: 0 0 0 34px;
       font-size: 15px;
       color: #AAAAAA;
-      @include gtM;
+
+      > span {
+        @include gtBook;
+      }
+
       .btnPhoto {
         width: 24px;
         height: 24px;
         margin-left: 15px;
         @include imageUrl("web/sub/bg_photo");
         background-size: contain;
+        @include nsR;
       }
     }
     .btnRegister {
@@ -873,7 +896,7 @@ h2.title {
           margin-left: 17px;
           font-size: 16px;
           color: #B3B3B3;
-          @include gtM;
+          @include gtBook;
         }
       }
     }
@@ -926,7 +949,7 @@ h2.title {
       color: #b3b3b3;
       span {
         font-size: 16px;
-        @include gtM;
+        @include gtBook;
       }
       &__left {
         button {
@@ -1068,7 +1091,7 @@ h2.title {
 }
 
 .btnWrap {
-  padding-top: 26px;
+  padding-top: 50px;
   &-right {
     text-align: right;
   }
@@ -1114,12 +1137,12 @@ h2.title {
 
 /* 커뮤니티 쓰기 - 수정 */
 .communityModify {
-  padding: 90px 0 0;
+  padding: 67px 0 0;
   .tableArea02 {
     table {
       width: 100%;
       table-layout: fixed;
-      border-top: 1px solid #777;
+      border-top: 1px solid $colorOrange;
 
       tbody {
         tr {
@@ -1127,21 +1150,27 @@ h2.title {
             box-sizing: border-box;
             vertical-align: top;
             text-align: left;
-            height: 82px;
-            line-height: 53px;
-            padding: 14px 18px;
+            height: 66px;
+            line-height: 42px;
+            padding: 12px 18px;
             border-bottom: 1px solid #777;
-            font-size: 18px;
+            font-size: 16px;
             color: #B3B3B3;
           }
 
           th {
+            width: 110px;
             @include nsM;
             color: #fff;
           }
 
           td {
             padding-left: 0;
+          }
+
+          .thtd100 {
+            padding-left: 0;
+            padding-right: 0;
           }
         }
 
@@ -1151,6 +1180,10 @@ h2.title {
           > th, td {
             border-color: $colorOrange;
           }
+        }
+
+        .categorySelect {
+          width: 180px;
         }
       }
     }
@@ -1169,8 +1202,9 @@ h2.title {
     }
     .thSelectBox {
       display: flex;
+      width: 620px;
+
       .ahnSelect {
-        width: 135px;
         margin-right: 25px;
 
         select {
@@ -1186,9 +1220,9 @@ h2.title {
       .headingText {
         display: inline-block;
         vertical-align: top;
-        line-height: 53px;
-        margin-right: 9px;
-        font-size: 18px;
+        line-height: 42px;
+        margin-right: 16px;
+        font-size: 16px;
         @include nsM;
         @include colorOrange;
       }
@@ -1203,7 +1237,7 @@ h2.title {
       display: inline-block;
       vertical-align: top;
       box-sizing: border-box;
-      height: 53px;
+      height: 42px;
 
       &:after {
         content: "";
@@ -1223,12 +1257,12 @@ h2.title {
         width: 100%;
         height: 100%;
         padding: 0 50px 0 17px;
-        border: 1px solid #7F8080;
+        border: 1px solid #707070;
         outline: 0 none;
         color: #fff;
-        font-size: 18px;
+        font-size: 16px;
         @include nsM;
-        background-color: #000;
+        background-color: #262626;
 
         border-radius:0; /* 아이폰 사파리 보더 없애기 */
         -webkit-appearance:none; /* 화살표 없애기 for chrome*/
@@ -1241,7 +1275,7 @@ h2.title {
     .ahnInputText {
       display: inline-block;
       vertical-align: top;
-      height: 53px;
+      height: 42px;
 
       &.form100 {
         display: block;
@@ -1261,12 +1295,12 @@ h2.title {
         width: 100%;
         height: 100%;
         padding: 0 17px;
-        border: 1px solid #7F8080;
+        border: 1px solid #707070;
         outline: 0 none;
-        font-size: 18px;
+        font-size: 16px;
         @include nsM;
         color: #fff;
-        background-color: #000;
+        background-color: #262626;
       }
     }
 
@@ -1375,6 +1409,7 @@ h2.title {
     .formType01 {
       display: inline-flex;
       vertical-align: top;
+      width: 620px;
 
       &::after {
         content: "";
@@ -1386,12 +1421,12 @@ h2.title {
         float: left;
 
         & + * {
-          margin-left: 13px;
+          margin-left: 7px;
         }
       }
 
       .ahnInputText, .ahnSelect {
-        width: 427px;
+        flex: 1;
       }
     }
 
@@ -1445,8 +1480,8 @@ h2.title {
       text-align: center;
       vertical-align: top;
       box-sizing: border-box;
-      width: 120px;
-      height: 53px;
+      width: 93px;
+      height: 42px;
       border: 1px solid $colorOrange;
       background-color: #141414;
 
@@ -1454,8 +1489,8 @@ h2.title {
         display: inline-block;
         vertical-align: top;
         height: 51px;
-        line-height: 51px;
-        font-size: 18px;
+        line-height: 40px;
+        font-size: 15px;
         @include nsM;
         color: #fff;
       }
@@ -1470,8 +1505,8 @@ h2.title {
       box-sizing: border-box;
       height: 400px;
       padding: 23px 34px;
-      border: 1px solid #7F8080;
-      background-color: #0A0A0A;
+      border: 1px solid #707070;
+      background-color: #262626;
 
       textarea {
         display: block;
@@ -1480,9 +1515,10 @@ h2.title {
         border: 0 none;
         outline: 0 none;
         padding: 0;
-        font-size: 14px;
+        font-size: 16px;
         color: #fff;
         resize: none;
+        @include nsR;
         background-color: transparent;
       }
     }
@@ -1678,51 +1714,96 @@ h2.title {
       line-height: 48px;
     }
     .justifyWrap {
-      padding-top: 11px;
-      padding-bottom: 5px;
+      padding-top: 7px;
+      padding-bottom: 3px;
+
+      * {
+        letter-spacing: -0.02em;
+      }
+
       &__left {
+
+        > * {
+          line-height: 19px;
+          font-size: 14px;
+        }
+
         .write,
         .writeTitle {
           display: none;
         }
         .name {
-          margin-right: 4px;
-          font-size: calc(28px / 2);
+          margin-right: 7px;
         }
         .date {
-          font-size: calc(28px / 2);
         }
         .btnLink {
-          width: calc(35px / 2);
+          display: block;
           font-size: calc(28px / 2);
           color: #fff;
-          margin-right: calc(15px / 2);
+          margin: 0 15px 0 0;
         }
       }
       &__right {
         display: flex;
         align-items: center;
+        padding-right: 0;
+
+        > * {
+          line-height: 19px;
+          font-size: 14px;
+        }
+
         .num {
           //font-size: calc(23px / 2);
         }
         .btnSharing {
-          display: none;
+          padding-left: 22px;
+
+          &::after {
+            top: 0;
+            width: 17px;
+            height: 17px;
+            @include imageUrl("mobile/sub/icon_sharing");
+            background-size : 17px 17px;
+          }
+
+          &.on {
+            &::after {
+              @include imageUrl("mobile/sub/icon_sharing");
+              background-size : 17px 17px;
+            }
+          }
+
+          span {
+            display: block;
+            line-height: 19px;
+            font-size: 14px;
+            @include gtBook;
+          }
         }
         .btnLike {
+          margin-left: 7px;
+          padding-right: 20px;
           .num {
+            display: block;
+            line-height: 19px;
             font-size: calc(28px / 2);
           }
           &:after {
-            top: 1px;
+            top: 50%;
+            margin-top: -7px;
           }
         }
       }
     }
 
     &__content {
-      margin-bottom: 0;
+      margin-bottom: 7px;
       padding-bottom: 35px;
       font-size: calc(23px / 2);
+      border-top: 1px solid #666;
+      border-bottom: 1px solid #666;
       .visualImage {
         margin-top: 30px;
         img {
@@ -1738,6 +1819,42 @@ h2.title {
         img {
           width: 100%;
         }
+      }
+    }
+  }
+  .layerSharing {
+    width: calc(627px / 2);
+    height: calc(326px / 2);
+    padding: 30px 35px;
+    h4.title {
+      font-size: calc(25px / 2);
+    }
+    .sharingSns {
+      margin-bottom: 15px;
+      a {
+        width: calc(62px / 2);
+        height: calc(62px / 2);
+      }
+    }
+    .btnClose {
+      top: 29px;
+      right: 27px;
+      width: calc(32px / 2);
+      height: calc(29px / 2);
+      @include imageUrl('mobile/sub/bg_close');
+      background-size: contain;
+    }
+    .urlCopy {
+      width: calc(413px / 2);
+      height: 25px;
+      input {
+        width: calc(308px / 2);
+        height: 100%;
+      }
+      button {
+        width: calc(107px / 2);
+        height: 25px;
+        font-size: calc(17px / 2);
       }
     }
   }
@@ -1783,12 +1900,13 @@ h2.title {
     }
   }
   .pagination {
-    padding-top: 35px;
+    padding: 35px 0 0;
     a {
       width: calc(55px / 2);
       height: calc(55px / 2);
       font-size: calc(27px / 2);
       line-height: calc(55px / 2);
+      margin: 0 5px;
       &.previous,&.next {
         font-size: calc(36px / 2);
         &:after {
@@ -1873,6 +1991,7 @@ h2.title {
             }
           }
           .justifyWrap {
+            display: none;
             margin-top: 10px;
             * {
               font-size: calc(28px / 2);
@@ -1900,8 +2019,9 @@ h2.title {
             line-height: calc(48px / 2);
           }
           .text {
-            font-size: calc(60px / 2);
-            line-height: calc(70px / 2);
+            width: 58vw;
+            font-size: 8.3333vw;
+            line-height: 9.7222vw;
           }
         }
       }
@@ -1924,6 +2044,8 @@ h2.title {
       }
       &__content {
         padding-bottom: 35px;
+        border-top: 1px solid #666;
+        border-bottom: 1px solid #666;
       }
       .justifyWrap {
         padding-top: 10px;
@@ -1933,25 +2055,17 @@ h2.title {
             display: none;
           }
           .name {
-            margin-right: 4px;
           }
         }
 
         &__right {
           .btnSharing {
-            position     : relative;
-            margin-right : 14px;
-            padding      : 0 30px 0 0;
             span {
-              display: none;
+
             }
 
             &:after {
-              top: -10px;
-              width: calc(37px / 2);
-              height: calc(34px / 2);
-              @include imageUrl("mobile/sub/icon_sharing");
-              background-size : cover;
+
             }
           }
         }
@@ -1994,7 +2108,8 @@ h2.title {
         .commentNum {
           padding-left: 15px;
           span {
-            font-size: calc(23px / 2);
+            font-size: 12px;
+            @include gtBook;
           }
           .btnPhoto {
             display: none;
@@ -2064,7 +2179,8 @@ h2.title {
           }
           &__info {
             span {
-              font-size: calc(23px / 2);
+              font-size: 14px;
+              @include gtBook;
             }
             &__left {
               button {
@@ -2094,8 +2210,8 @@ h2.title {
             left: 25px;
             @include imageUrl('mobile/sub/bg_line');
             background-size: contain;
-            width: calc(33px / 2);
-            height: calc(33px / 2);
+            width: 17px;
+            height: 17px;
           }
           .commentWriter {
             &__textarea {
@@ -2191,42 +2307,6 @@ h2.title {
         }
       }
     }
-    .layerSharing {
-      width: calc(627px / 2);
-      height: calc(326px / 2);
-      padding: 30px 35px;
-      h4.title {
-        font-size: calc(25px / 2);
-      }
-      .sharingSns {
-        margin-bottom: 15px;
-        a {
-          width: calc(62px / 2);
-          height: calc(62px / 2);
-        }
-      }
-      .btnClose {
-        top: 29px;
-        right: 27px;
-        width: calc(32px / 2);
-        height: calc(29px / 2);
-        @include imageUrl('mobile/sub/bg_close');
-        background-size: contain;
-      }
-      .urlCopy {
-        width: calc(413px / 2);
-        height: 25px;
-        input {
-          width: calc(308px / 2);
-          height: 100%;
-        }
-        button {
-          width: calc(107px / 2);
-          height: 25px;
-          font-size: calc(17px / 2);
-        }
-      }
-    }
     .paginationWrap {
       &__list {
         > ul > li {
@@ -2239,6 +2319,9 @@ h2.title {
             &.on {
               background-size: 20px 20px;
             }
+          }
+          .justifyWrap {
+            display: none;
           }
         }
       }
@@ -2253,29 +2336,35 @@ h2.title {
     .tableArea02 {
       padding: 0 24px;
       table {
-        colgroup {
-          col:nth-child(1) {
-            width: 88px !important;
-          }
-        }
+        border-top: 0 none;
+
         tbody {
           tr {
             > * {
-              height: calc(68px / 2);
-              padding: 5px 10px;
-              line-height: calc(72px / 2);
+              height: 53px;
+              padding: 8px 0;
+              line-height: 37px;
             }
             th {
+              width: 57px;
               font-size: 15px;
             }
             td {
               width: 100%;
             }
             &.lineOrange {
-              td {
-                padding-right: 0;
+              > * {
+                border-color: #666;
               }
             }
+          }
+
+          .ahnInputText {
+            height: 37px;
+          }
+
+          .categorySelect {
+            width: 100%;
           }
         }
       }
@@ -2284,22 +2373,31 @@ h2.title {
         padding-left: 10px;
         line-height: 48px;
       }
-      .formType01 {
-        height: calc(74px / 2);
-        .ahnInputText {
-          width: 100%;
-        }
-      }
       .thSelectBox {
+        width: 100%;
+
         .headingText {
-          height: calc(74px / 2);
-          line-height: 34px;
+          height: 37px;
+          line-height: 37px;
           font-size: 15px;
+          margin-right: 5px;
+        }
+
+        .ahnInputText {
         }
       }
       .ahnSelect {
-        width: 96%;
+        width: 100%;
         height: calc(74px / 2);
+
+        &::after {
+          width: 19px;
+          height: 11px;
+          margin-top: -5px;
+          @include imageUrl("mobile/icon/icon_select");
+          background-size: 19px 11px;
+
+        }
         select {
           font-size: 14px;
           background: #262626;
@@ -2326,6 +2424,9 @@ h2.title {
         height: 200px;
         padding: 15px;
         background: #262626;
+      }
+      .formType01 {
+        width: 100%;
       }
     }
     .btnWrap-right {

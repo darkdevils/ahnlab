@@ -29,6 +29,10 @@
   font-family: "GothamBlack", sans-serif;
 }
 
+@mixin gtBook {
+  font-family: "GothamBook", sans-serif;
+}
+
 /* blind */
 @mixin blind {
   position: absolute;

@@ -28,6 +28,10 @@
   font-family: "GothamBlack";
   src: url("../fonts/Gotham-Black.ttf") format("truetype");
 }
+@font-face {
+  font-family: "GothamBook";
+  src: url("../fonts/Gotham-Book.ttf") format("truetype");
+}
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -2084,7 +2088,7 @@ html .opening, body .opening {
 #wrap .pageTop {
   position: fixed;
   right: 98px;
-  bottom: 0;
+  bottom: 1px;
   display: block;
   box-sizing: border-box;
   width: 85px;
@@ -2607,7 +2611,6 @@ html .opening, body .opening {
   }
   #wrap .pageTop {
     right: 24px;
-    bottom: 0;
     width: 41px;
     height: 41px;
     border-color: #E4E4E4;
@@ -3477,11 +3480,11 @@ html .opening, body .opening {
   }
   #wrap.mainLayout #container .content .mainTitleArea {
     overflow: hidden;
-    padding: 5vw 3.2051vw 1.6666vw 3.2051vw;
+    padding: 6vw 3.2051vw 3vw 3.2051vw;
   }
   #wrap.mainLayout #container .content .mainTitleArea .title {
-    line-height: 22px;
-    font-size: 15px;
+    line-height: 25px;
+    font-size: 22.5px;
   }
   #wrap.mainLayout #container .content .mainTitleArea .moreLink {
     line-height: 14px;
@@ -3491,6 +3494,7 @@ html .opening, body .opening {
     background: url("../images/mobile/icon/icon_moreLink.png") no-repeat;
     background-position: right center;
     background-size: 4px 6px;
+    display: none;
   }
   #wrap.mainLayout #container .content .mainTitleArea .moreLink:hover {
     background: url("../images/mobile/icon/icon_moreLink.png") no-repeat;
@@ -3772,22 +3776,19 @@ h2.title-margin {
   padding: 24px 0 0;
   color: #b3b3b3;
 }
-.detailWrap .justifyWrap__left .write {
-  font-size: 19px;
-  margin-right: 17px;
+.detailWrap .justifyWrap__left {
+  display: flex;
 }
-.detailWrap .justifyWrap__left .name {
+.detailWrap .justifyWrap__left > * {
+  display: block;
+  line-height: 27px;
   font-size: 19px;
-  margin-right: 55px;
 }
 .detailWrap .justifyWrap__left .writeTitle {
-  font-size: 19px;
-  font-family: "NotoSansCJKkrMedium", sans-serif;
-  margin-right: 17px;
+  margin-left: 55px;
 }
 .detailWrap .justifyWrap__left .date {
-  font-size: 18px;
-  font-family: "GothamMedium", sans-serif;
+  font-family: "GothamBook", sans-serif;
 }
 .detailWrap .justifyWrap__left .btnLink {
   font-size: 22px;
@@ -3796,17 +3797,44 @@ h2.title-margin {
   color: #fff;
 }
 .detailWrap .justifyWrap__right {
+  display: flex;
   position: relative;
-  padding: 0 5px 0 0;
+  padding-right: 5px;
 }
-.detailWrap .justifyWrap__right .num {
-  position: relative;
+.detailWrap .justifyWrap__right .btnSharing, .detailWrap .justifyWrap__right .btnLike {
+  display: block;
+  line-height: 27px;
   font-size: 18px;
-  font-family: "GothamMedium", sans-serif;
+}
+.detailWrap .justifyWrap__right .btnSharing {
+  position: relative;
+  padding: 0 0 0 30px;
+}
+.detailWrap .justifyWrap__right .btnSharing span {
+  display: block;
+  font-family: "NotoSansCJKkrMedium", sans-serif;
+  color: #b3b3b3;
+}
+.detailWrap .justifyWrap__right .btnSharing:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 3px;
+  width: 21px;
+  height: 20px;
+  background: url("../images/web/sub/icon_sharing.png") no-repeat;
+  background-size: contain;
+}
+.detailWrap .justifyWrap__right .btnSharing.on span {
+  color: #fff;
+}
+.detailWrap .justifyWrap__right .btnSharing.on:after {
+  background: url("../images/web/sub/icon_sharing_on.png") no-repeat;
+  background-size: contain;
 }
 .detailWrap .justifyWrap__right .btnLike {
   position: relative;
-  margin-left: 10px;
+  margin-left: 31px;
   padding: 0 23px 0 0;
   vertical-align: top;
 }
@@ -3814,51 +3842,24 @@ h2.title-margin {
   content: "";
   position: absolute;
   right: 0;
-  top: 3px;
+  top: 50%;
   width: 16px;
   height: 15px;
+  margin-top: -7px;
   background: url("../images/web/sub/like_16x15_off.png") no-repeat;
   background-size: contain;
 }
-.detailWrap .justifyWrap__right .btnLike span {
+.detailWrap .justifyWrap__right .btnLike .num {
+  position: relative;
+  display: block;
   color: #B3B3B3;
-  font-size: 18px;
-  font-family: "GothamMedium", sans-serif;
+  font-family: "GothamBook", sans-serif;
 }
 .detailWrap .justifyWrap__right .btnLike.on span {
   color: #fff;
 }
 .detailWrap .justifyWrap__right .btnLike.on:after {
   background: url("../images/web/sub/like_16x15_on.png") no-repeat;
-  background-size: contain;
-}
-.detailWrap .justifyWrap__right .btnSharing {
-  position: relative;
-  margin-right: 27px;
-  padding: 0 0 0 30px;
-}
-.detailWrap .justifyWrap__right .btnSharing span {
-  font-size: 16px;
-  color: #b3b3b3;
-  font-family: "NotoSansCJKkrMedium", sans-serif;
-  line-height: 16px;
-}
-.detailWrap .justifyWrap__right .btnSharing:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: -3px;
-  width: 21px;
-  height: 20px;
-  background: url("../images/web/sub/icon_sharing.png") no-repeat;
-  background-size: contain;
-  vertical-align: top;
-}
-.detailWrap .justifyWrap__right .btnSharing.on span {
-  color: #fff;
-}
-.detailWrap .justifyWrap__right .btnSharing.on:after {
-  background: url("../images/web/sub/icon_sharing_on.png") no-repeat;
   background-size: contain;
 }
 .detailWrap__content {
@@ -4050,21 +4051,27 @@ h2.title-margin {
   display: flex;
   justify-content: space-between;
   color: #b3b3b3;
-  margin-top: 20px;
+  margin-top: 13px;
+  font-family: "GothamBook", sans-serif;
+  font-size: 19px;
 }
 .community__list ul li .justifyWrap__left {
-  font-size: 18px;
+  display: flex;
+}
+.community__list ul li .justifyWrap__left > * {
+  display: block;
+  line-height: 26px;
 }
 .community__list ul li .justifyWrap__left .name {
   margin-right: 12px;
 }
 .community__list ul li .justifyWrap__left .date {
-  font-family: "GothamMedium", sans-serif;
   letter-spacing: -0.037em;
 }
 .community__list ul li .justifyWrap__right {
-  font-size: 18px;
-  font-family: "GothamMedium", sans-serif;
+  display: flex;
+  font-size: 19px;
+  font-family: "GothamBook", sans-serif;
 }
 .community__list ul li .justifyWrap__right .btnLike {
   position: relative;
@@ -4076,16 +4083,18 @@ h2.title-margin {
   content: "";
   position: absolute;
   right: 0;
-  top: 3px;
+  top: 6px;
   width: 16px;
   height: 15px;
   background: url("../images/web/sub/like_16x15_off.png") no-repeat;
   background-size: contain;
 }
 .community__list ul li .justifyWrap__right .btnLike span {
+  display: block;
+  line-height: 26px;
+  font-family: "GothamBook", sans-serif;
+  font-size: 19px;
   color: #B3B3B3;
-  font-size: 18px;
-  font-family: "GothamMedium", sans-serif;
 }
 .community__list ul li .justifyWrap__right .btnLike.on span {
   color: #fff;
@@ -4119,6 +4128,7 @@ h2.title-margin {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  width: 230px;
   color: #fff;
   font-size: 40px;
   line-height: 44px;
@@ -4257,7 +4267,9 @@ h2.title-margin {
   padding: 0 0 0 34px;
   font-size: 15px;
   color: #AAAAAA;
-  font-family: "GothamMedium", sans-serif;
+}
+.commentWriter .commentAttach .commentNum > span {
+  font-family: "GothamBook", sans-serif;
 }
 .commentWriter .commentAttach .commentNum .btnPhoto {
   width: 24px;
@@ -4265,6 +4277,7 @@ h2.title-margin {
   margin-left: 15px;
   background: url("../images/web/sub/bg_photo.png") no-repeat;
   background-size: contain;
+  font-family: "NotoSansCJKkrRegular", sans-serif;
 }
 .commentWriter .commentAttach .btnRegister {
   position: absolute;
@@ -4369,7 +4382,7 @@ h2.title-margin {
   margin-left: 17px;
   font-size: 16px;
   color: #B3B3B3;
-  font-family: "GothamMedium", sans-serif;
+  font-family: "GothamBook", sans-serif;
 }
 .commentList .commentBox .btnCommentLayer {
   position: absolute;
@@ -4419,7 +4432,7 @@ h2.title-margin {
 }
 .commentList .commentBox__info span {
   font-size: 16px;
-  font-family: "GothamMedium", sans-serif;
+  font-family: "GothamBook", sans-serif;
 }
 .commentList .commentBox__info__left button {
   width: 129px;
@@ -4549,7 +4562,7 @@ h2.title-margin {
 }
 
 .btnWrap {
-  padding-top: 26px;
+  padding-top: 50px;
 }
 .btnWrap-right {
   text-align: right;
@@ -4595,7 +4608,7 @@ h2.title-margin {
 
 /* 커뮤니티 쓰기 - 수정 */
 .communityModify {
-  padding: 90px 0 0;
+  padding: 67px 0 0;
 }
 .communityModify .tableArea02 {
   /* selectbox */
@@ -4607,31 +4620,39 @@ h2.title-margin {
 .communityModify .tableArea02 table {
   width: 100%;
   table-layout: fixed;
-  border-top: 1px solid #777;
+  border-top: 1px solid #EA5504;
 }
 .communityModify .tableArea02 table tbody tr > * {
   box-sizing: border-box;
   vertical-align: top;
   text-align: left;
-  height: 82px;
-  line-height: 53px;
-  padding: 14px 18px;
+  height: 66px;
+  line-height: 42px;
+  padding: 12px 18px;
   border-bottom: 1px solid #777;
-  font-size: 18px;
+  font-size: 16px;
   color: #B3B3B3;
 }
 .communityModify .tableArea02 table tbody tr th {
+  width: 110px;
   font-family: "NotoSansCJKkrMedium", sans-serif;
   color: #fff;
 }
 .communityModify .tableArea02 table tbody tr td {
   padding-left: 0;
 }
+.communityModify .tableArea02 table tbody tr .thtd100 {
+  padding-left: 0;
+  padding-right: 0;
+}
 .communityModify .tableArea02 table tbody .lineOrange {
   border-color: #EA5504;
 }
 .communityModify .tableArea02 table tbody .lineOrange > th, .communityModify .tableArea02 table tbody .lineOrange td {
   border-color: #EA5504;
+}
+.communityModify .tableArea02 table tbody .categorySelect {
+  width: 180px;
 }
 .communityModify .tableArea02 .thText {
   display: inline-block;
@@ -4647,9 +4668,9 @@ h2.title-margin {
 }
 .communityModify .tableArea02 .thSelectBox {
   display: flex;
+  width: 620px;
 }
 .communityModify .tableArea02 .thSelectBox .ahnSelect {
-  width: 135px;
   margin-right: 25px;
 }
 .communityModify .tableArea02 .thSelectBox .ahnSelect select {
@@ -4662,9 +4683,9 @@ h2.title-margin {
 .communityModify .tableArea02 .thSelectBox .headingText {
   display: inline-block;
   vertical-align: top;
-  line-height: 53px;
-  margin-right: 9px;
-  font-size: 18px;
+  line-height: 42px;
+  margin-right: 16px;
+  font-size: 16px;
   font-family: "NotoSansCJKkrMedium", sans-serif;
   color: #EA5504;
 }
@@ -4676,7 +4697,7 @@ h2.title-margin {
   display: inline-block;
   vertical-align: top;
   box-sizing: border-box;
-  height: 53px;
+  height: 42px;
 }
 .communityModify .tableArea02 .ahnSelect:after {
   content: "";
@@ -4695,12 +4716,12 @@ h2.title-margin {
   width: 100%;
   height: 100%;
   padding: 0 50px 0 17px;
-  border: 1px solid #7F8080;
+  border: 1px solid #707070;
   outline: 0 none;
   color: #fff;
-  font-size: 18px;
+  font-size: 16px;
   font-family: "NotoSansCJKkrMedium", sans-serif;
-  background-color: #000;
+  background-color: #262626;
   border-radius: 0;
   /* 아이폰 사파리 보더 없애기 */
   -webkit-appearance: none;
@@ -4712,7 +4733,7 @@ h2.title-margin {
 .communityModify .tableArea02 .ahnInputText {
   display: inline-block;
   vertical-align: top;
-  height: 53px;
+  height: 42px;
 }
 .communityModify .tableArea02 .ahnInputText.form100 {
   display: block;
@@ -4729,12 +4750,12 @@ h2.title-margin {
   width: 100%;
   height: 100%;
   padding: 0 17px;
-  border: 1px solid #7F8080;
+  border: 1px solid #707070;
   outline: 0 none;
-  font-size: 18px;
+  font-size: 16px;
   font-family: "NotoSansCJKkrMedium", sans-serif;
   color: #fff;
-  background-color: #000;
+  background-color: #262626;
 }
 .communityModify .tableArea02 .ahnInputTextSmall {
   display: inline-block;
@@ -4837,6 +4858,7 @@ h2.title-margin {
 .communityModify .tableArea02 .formType01 {
   display: inline-flex;
   vertical-align: top;
+  width: 620px;
 }
 .communityModify .tableArea02 .formType01::after {
   content: "";
@@ -4847,10 +4869,10 @@ h2.title-margin {
   float: left;
 }
 .communityModify .tableArea02 .formType01 > * + * {
-  margin-left: 13px;
+  margin-left: 7px;
 }
 .communityModify .tableArea02 .formType01 .ahnInputText, .communityModify .tableArea02 .formType01 .ahnSelect {
-  width: 427px;
+  flex: 1;
 }
 .communityModify .tableArea02 .formType02 {
   display: inline-flex;
@@ -4894,8 +4916,8 @@ h2.title-margin {
   text-align: center;
   vertical-align: top;
   box-sizing: border-box;
-  width: 120px;
-  height: 53px;
+  width: 93px;
+  height: 42px;
   border: 1px solid #EA5504;
   background-color: #141414;
 }
@@ -4903,8 +4925,8 @@ h2.title-margin {
   display: inline-block;
   vertical-align: top;
   height: 51px;
-  line-height: 51px;
-  font-size: 18px;
+  line-height: 40px;
+  font-size: 15px;
   font-family: "NotoSansCJKkrMedium", sans-serif;
   color: #fff;
 }
@@ -4915,8 +4937,8 @@ h2.title-margin {
   box-sizing: border-box;
   height: 400px;
   padding: 23px 34px;
-  border: 1px solid #7F8080;
-  background-color: #0A0A0A;
+  border: 1px solid #707070;
+  background-color: #262626;
 }
 .communityModify .tableArea02 .ahnTextarea textarea {
   display: block;
@@ -4925,9 +4947,10 @@ h2.title-margin {
   border: 0 none;
   outline: 0 none;
   padding: 0;
-  font-size: 14px;
+  font-size: 16px;
   color: #fff;
   resize: none;
+  font-family: "NotoSansCJKkrRegular", sans-serif;
   background-color: transparent;
 }
 .communityModify .justifyWrap {
@@ -5112,43 +5135,77 @@ h2.title-margin {
     line-height: 48px;
   }
   .detailWrap .justifyWrap {
-    padding-top: 11px;
-    padding-bottom: 5px;
+    padding-top: 7px;
+    padding-bottom: 3px;
+  }
+  .detailWrap .justifyWrap * {
+    letter-spacing: -0.02em;
+  }
+  .detailWrap .justifyWrap__left > * {
+    line-height: 19px;
+    font-size: 14px;
   }
   .detailWrap .justifyWrap__left .write,
 .detailWrap .justifyWrap__left .writeTitle {
     display: none;
   }
   .detailWrap .justifyWrap__left .name {
-    margin-right: 4px;
-    font-size: 14px;
-  }
-  .detailWrap .justifyWrap__left .date {
-    font-size: 14px;
+    margin-right: 7px;
   }
   .detailWrap .justifyWrap__left .btnLink {
-    width: 17.5px;
+    display: block;
     font-size: 14px;
     color: #fff;
-    margin-right: 7.5px;
+    margin: 0 15px 0 0;
   }
   .detailWrap .justifyWrap__right {
     display: flex;
     align-items: center;
+    padding-right: 0;
+  }
+  .detailWrap .justifyWrap__right > * {
+    line-height: 19px;
+    font-size: 14px;
   }
   .detailWrap .justifyWrap__right .btnSharing {
-    display: none;
+    padding-left: 22px;
+  }
+  .detailWrap .justifyWrap__right .btnSharing::after {
+    top: 0;
+    width: 17px;
+    height: 17px;
+    background: url("../images/mobile/sub/icon_sharing.png") no-repeat;
+    background-size: 17px 17px;
+  }
+  .detailWrap .justifyWrap__right .btnSharing.on::after {
+    background: url("../images/mobile/sub/icon_sharing.png") no-repeat;
+    background-size: 17px 17px;
+  }
+  .detailWrap .justifyWrap__right .btnSharing span {
+    display: block;
+    line-height: 19px;
+    font-size: 14px;
+    font-family: "GothamBook", sans-serif;
+  }
+  .detailWrap .justifyWrap__right .btnLike {
+    margin-left: 7px;
+    padding-right: 20px;
   }
   .detailWrap .justifyWrap__right .btnLike .num {
+    display: block;
+    line-height: 19px;
     font-size: 14px;
   }
   .detailWrap .justifyWrap__right .btnLike:after {
-    top: 1px;
+    top: 50%;
+    margin-top: -7px;
   }
   .detailWrap__content {
-    margin-bottom: 0;
+    margin-bottom: 7px;
     padding-bottom: 35px;
     font-size: 11.5px;
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
   }
   .detailWrap__content .visualImage {
     margin-top: 30px;
@@ -5163,6 +5220,43 @@ h2.title-margin {
   }
   .detailWrap__content .img img {
     width: 100%;
+  }
+
+  .layerSharing {
+    width: 313.5px;
+    height: 163px;
+    padding: 30px 35px;
+  }
+  .layerSharing h4.title {
+    font-size: 12.5px;
+  }
+  .layerSharing .sharingSns {
+    margin-bottom: 15px;
+  }
+  .layerSharing .sharingSns a {
+    width: 31px;
+    height: 31px;
+  }
+  .layerSharing .btnClose {
+    top: 29px;
+    right: 27px;
+    width: 16px;
+    height: 14.5px;
+    background: url("../images/mobile/sub/bg_close.png") no-repeat;
+    background-size: contain;
+  }
+  .layerSharing .urlCopy {
+    width: 206.5px;
+    height: 25px;
+  }
+  .layerSharing .urlCopy input {
+    width: 154px;
+    height: 100%;
+  }
+  .layerSharing .urlCopy button {
+    width: 53.5px;
+    height: 25px;
+    font-size: 8.5px;
   }
 
   .paginationWrap {
@@ -5207,13 +5301,14 @@ h2.title-margin {
   }
 
   .pagination {
-    padding-top: 35px;
+    padding: 35px 0 0;
   }
   .pagination a {
     width: 27.5px;
     height: 27.5px;
     font-size: 13.5px;
     line-height: 27.5px;
+    margin: 0 5px;
   }
   .pagination a.previous, .pagination a.next {
     font-size: 18px;
@@ -5294,6 +5389,7 @@ h2.title-margin {
     background-size: 20px 20px;
   }
   .community__list ul li .justifyWrap {
+    display: none;
     margin-top: 10px;
   }
   .community__list ul li .justifyWrap * {
@@ -5315,8 +5411,9 @@ h2.title-margin {
     line-height: 24px;
   }
   .community__list ul li .text {
-    font-size: 30px;
-    line-height: 35px;
+    width: 58vw;
+    font-size: 8.3333vw;
+    line-height: 9.7222vw;
   }
 
   .communityDetail {
@@ -5335,6 +5432,8 @@ h2.title-margin {
   }
   .communityDetail .detailWrap__content {
     padding-bottom: 35px;
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
   }
   .communityDetail .detailWrap .justifyWrap {
     padding-top: 10px;
@@ -5342,24 +5441,6 @@ h2.title-margin {
   }
   .communityDetail .detailWrap .justifyWrap__left .write, .communityDetail .detailWrap .justifyWrap__left .writeTitle {
     display: none;
-  }
-  .communityDetail .detailWrap .justifyWrap__left .name {
-    margin-right: 4px;
-  }
-  .communityDetail .detailWrap .justifyWrap__right .btnSharing {
-    position: relative;
-    margin-right: 14px;
-    padding: 0 30px 0 0;
-  }
-  .communityDetail .detailWrap .justifyWrap__right .btnSharing span {
-    display: none;
-  }
-  .communityDetail .detailWrap .justifyWrap__right .btnSharing:after {
-    top: -10px;
-    width: 18.5px;
-    height: 17px;
-    background: url("../images/mobile/sub/icon_sharing.png") no-repeat;
-    background-size: cover;
   }
   .communityDetail .detailWrap .txt {
     font-size: 15px;
@@ -5401,7 +5482,8 @@ h2.title-margin {
     padding-left: 15px;
   }
   .communityDetail .commentWriter .commentAttach .commentNum span {
-    font-size: 11.5px;
+    font-size: 12px;
+    font-family: "GothamBook", sans-serif;
   }
   .communityDetail .commentWriter .commentAttach .commentNum .btnPhoto {
     display: none;
@@ -5460,7 +5542,8 @@ h2.title-margin {
     line-height: 22.5px;
   }
   .communityDetail .commentList .commentItem .commentBox__info span {
-    font-size: 11.5px;
+    font-size: 14px;
+    font-family: "GothamBook", sans-serif;
   }
   .communityDetail .commentList .commentItem .commentBox__info__left button {
     width: 60px;
@@ -5487,8 +5570,8 @@ h2.title-margin {
     left: 25px;
     background: url("../images/mobile/sub/bg_line.png") no-repeat;
     background-size: contain;
-    width: 16.5px;
-    height: 16.5px;
+    width: 17px;
+    height: 17px;
   }
   .communityDetail .commentList .commentItem-reply .commentWriter__textarea {
     height: 138px;
@@ -5569,42 +5652,6 @@ h2.title-margin {
     color: #fff;
     font-size: 13.5px;
   }
-  .communityDetail .layerSharing {
-    width: 313.5px;
-    height: 163px;
-    padding: 30px 35px;
-  }
-  .communityDetail .layerSharing h4.title {
-    font-size: 12.5px;
-  }
-  .communityDetail .layerSharing .sharingSns {
-    margin-bottom: 15px;
-  }
-  .communityDetail .layerSharing .sharingSns a {
-    width: 31px;
-    height: 31px;
-  }
-  .communityDetail .layerSharing .btnClose {
-    top: 29px;
-    right: 27px;
-    width: 16px;
-    height: 14.5px;
-    background: url("../images/mobile/sub/bg_close.png") no-repeat;
-    background-size: contain;
-  }
-  .communityDetail .layerSharing .urlCopy {
-    width: 206.5px;
-    height: 25px;
-  }
-  .communityDetail .layerSharing .urlCopy input {
-    width: 154px;
-    height: 100%;
-  }
-  .communityDetail .layerSharing .urlCopy button {
-    width: 53.5px;
-    height: 25px;
-    font-size: 8.5px;
-  }
   .communityDetail .paginationWrap__list > ul > li > .btnLike {
     width: 40px;
     height: 40px;
@@ -5615,6 +5662,9 @@ h2.title-margin {
   .communityDetail .paginationWrap__list > ul > li > .btnLike.on {
     background-size: 20px 20px;
   }
+  .communityDetail .paginationWrap__list > ul > li .justifyWrap {
+    display: none;
+  }
 
   /* 커뮤니티 쓰기 - 수정 */
   .communityModify h2.title {
@@ -5623,42 +5673,54 @@ h2.title-margin {
   .communityModify .tableArea02 {
     padding: 0 24px;
   }
-  .communityModify .tableArea02 table colgroup col:nth-child(1) {
-    width: 88px !important;
+  .communityModify .tableArea02 table {
+    border-top: 0 none;
   }
   .communityModify .tableArea02 table tbody tr > * {
-    height: 34px;
-    padding: 5px 10px;
-    line-height: 36px;
+    height: 53px;
+    padding: 8px 0;
+    line-height: 37px;
   }
   .communityModify .tableArea02 table tbody tr th {
+    width: 57px;
     font-size: 15px;
   }
   .communityModify .tableArea02 table tbody tr td {
     width: 100%;
   }
-  .communityModify .tableArea02 table tbody tr.lineOrange td {
-    padding-right: 0;
+  .communityModify .tableArea02 table tbody tr.lineOrange > * {
+    border-color: #666;
+  }
+  .communityModify .tableArea02 table tbody .ahnInputText {
+    height: 37px;
+  }
+  .communityModify .tableArea02 table tbody .categorySelect {
+    width: 100%;
   }
   .communityModify .tableArea02 .thText {
     font-size: 14px;
     padding-left: 10px;
     line-height: 48px;
   }
-  .communityModify .tableArea02 .formType01 {
-    height: 37px;
-  }
-  .communityModify .tableArea02 .formType01 .ahnInputText {
+  .communityModify .tableArea02 .thSelectBox {
     width: 100%;
   }
   .communityModify .tableArea02 .thSelectBox .headingText {
     height: 37px;
-    line-height: 34px;
+    line-height: 37px;
     font-size: 15px;
+    margin-right: 5px;
   }
   .communityModify .tableArea02 .ahnSelect {
-    width: 96%;
+    width: 100%;
     height: 37px;
+  }
+  .communityModify .tableArea02 .ahnSelect::after {
+    width: 19px;
+    height: 11px;
+    margin-top: -5px;
+    background: url("../images/mobile/icon/icon_select.png") no-repeat;
+    background-size: 19px 11px;
   }
   .communityModify .tableArea02 .ahnSelect select {
     font-size: 14px;
@@ -5685,6 +5747,9 @@ h2.title-margin {
     height: 200px;
     padding: 15px;
     background: #262626;
+  }
+  .communityModify .tableArea02 .formType01 {
+    width: 100%;
   }
   .communityModify .btnWrap-right {
     padding: 20px 24px 0 0;
