@@ -4465,6 +4465,9 @@ h2.title-margin {
 .commentList .commentItem-reply .commentBox .btnCommentLayer {
   right: 50px;
 }
+.commentList .commentItem-reply .commentBox .layerButton {
+  right: 47px;
+}
 .commentList .commentItem .commentWriter__textarea {
   height: 226px;
 }
@@ -4506,8 +4509,8 @@ h2.title-margin {
 .commentList .commentBox .layerButton {
   display: none;
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: 0;
+  top: 27px;
   width: 43px;
   height: 53px;
   border: 1px solid #707070;
@@ -5131,7 +5134,7 @@ h2.title-margin {
   position: relative;
   margin-top: 25px;
   padding: 55px 0 0;
-  text-align: center;
+  /*text-align : center;*/
 }
 .liveDetail .liveWrap .titleLive {
   text-align: center;
@@ -5696,6 +5699,7 @@ h2.title-margin {
     padding: 10px 7px;
     font-size: 13.5px;
     resize: none;
+    line-height: 24px;
   }
   .communityDetail .commentWriter .commentAttach {
     height: 38px;

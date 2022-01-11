@@ -927,6 +927,11 @@ h2.title {
       .commentBox .btnCommentLayer {
         right: 50px;
       }
+      .commentBox {
+        .layerButton {
+          right: 47px;
+        }
+      }
     }
     .commentWriter {
       &__textarea {
@@ -975,8 +980,8 @@ h2.title {
     .layerButton {
       display: none;
       position: absolute;
-      right: 20px;
-      top: 20px;
+      right: 0;
+      top: 27px;
       width: 43px;
       height: 53px;
       border: 1px solid #707070;
@@ -1662,7 +1667,7 @@ h2.title {
     position   : relative;
     margin-top : 25px;
     padding    : 55px 0 0;
-    text-align : center;
+    /*text-align : center;*/
 
     .titleLive {
       text-align    : center;
@@ -2290,6 +2295,7 @@ h2.title {
           padding: 10px 7px;
           font-size: calc(27px / 2);
           resize: none;
+          line-height: 24px;
         }
       }
       .commentAttach {
