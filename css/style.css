@@ -3126,18 +3126,48 @@ html .opening, body .opening {
   height: 100%;
 }
 #wrap.mainLayout #container .topVisual .topVisualVideo {
+  position: relative;
   text-align: center;
   box-sizing: border-box;
-  padding: 190px 0 100px;
+  padding: 296px 0 33px;
   background: url("../images/web/bg/bg_topVisualVideo.png") no-repeat;
   background-position: center center;
   background-size: auto 100%;
 }
 #wrap.mainLayout #container .topVisual .topVisualVideo .title {
-  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 153px;
+  text-align: center;
+}
+#wrap.mainLayout #container .topVisual .topVisualVideo .title .live {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  padding: 5px 87px 0 0;
+  line-height: 81px;
+  font-size: 56px;
+  font-family: "NotoSansCJKkrBold", sans-serif;
+}
+#wrap.mainLayout #container .topVisual .topVisualVideo .title .live::after {
+  content: "LIVE";
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  text-align: center;
+  height: 36px;
+  padding: 0 17px;
+  line-height: 36px;
+  border-radius: 18px;
+  font-size: 28px;
+  font-family: "GothamBold", sans-serif;
+  color: #fff;
+  background-color: #FF0000;
 }
 #wrap.mainLayout #container .topVisual .topVisualVideo .videoHeightAuto {
-  width: 1025px;
+  width: 900px;
   display: inline-block;
   vertical-align: top;
 }
@@ -3416,37 +3446,39 @@ html .opening, body .opening {
     height: 108.9743vw;
   }
   #wrap.mainLayout #container .topVisual .topVisualVideo {
+    position: static;
     box-sizing: border-box;
     height: auto;
     padding: 50px 0 0;
     background: #000;
   }
   #wrap.mainLayout #container .topVisual .topVisualVideo .title {
+    position: static;
+    left: auto;
+    right: auto;
+    top: auto;
     display: block;
     text-align: center;
     margin: 5.1282vw 0 3.4615vw;
   }
-  #wrap.mainLayout #container .topVisual .topVisualVideo .title span {
+  #wrap.mainLayout #container .topVisual .topVisualVideo .title .live {
     position: relative;
     display: inline-block;
     vertical-align: top;
     line-height: 10.2564vw;
-    padding-top: 1.0256vw;
+    padding-right: 11.282vw;
     font-size: 7.1794vw;
     font-family: "NotoSansCJKkrBold", sans-serif;
   }
-  #wrap.mainLayout #container .topVisual .topVisualVideo .title span.live {
-    padding-right: 11.282vw;
-  }
-  #wrap.mainLayout #container .topVisual .topVisualVideo .title span.live::after {
+  #wrap.mainLayout #container .topVisual .topVisualVideo .title .live::after {
     content: "LIVE";
     position: absolute;
     right: 0;
     top: 0;
     display: block;
     text-align: center;
-    width: 12.3076vw;
     height: 4.6153vw;
+    padding: 0 2vw;
     line-height: 4.6153vw;
     border-radius: 2.3076vw;
     font-size: 3.5897vw;
@@ -3516,9 +3548,6 @@ html .opening, body .opening {
   }
   #wrap.mainLayout #container .content .photoNumberArea .swiper-button-prev, #wrap.mainLayout #container .content .photoNumberArea .swiper-button-next, #wrap.mainLayout #container .content .photoWidthArea .swiper-button-prev, #wrap.mainLayout #container .content .photoWidthArea .swiper-button-next, #wrap.mainLayout #container .content .photoHeightArea .swiper-button-prev, #wrap.mainLayout #container .content .photoHeightArea .swiper-button-next {
     display: none;
-  }
-  #wrap.mainLayout #container .content .photoNumberArea {
-    padding-top: 5.3846vw;
   }
   #wrap.mainLayout #container .content .photoNumberArea .swiperArea {
     padding: 0 3.2051vw;
@@ -4592,23 +4621,23 @@ h2.title-margin {
   margin-left: 17px;
 }
 .layerSharing .sharingSns a.kakao {
-  background: url("../images/web/sns/sns_kakao.png") no-repeat;
+  background: url("../images/mobile/sns/sns_kakao.png") no-repeat;
   background-size: 100% 100%;
 }
 .layerSharing .sharingSns a.naver {
-  background: url("../images/web/sns/sns_naver.png") no-repeat;
+  background: url("../images/mobile/sns/sns_naver.png") no-repeat;
   background-size: 100% 100%;
 }
 .layerSharing .sharingSns a.google {
-  background: url("../images/web/sns/sns_google.png") no-repeat;
+  background: url("../images/mobile/sns/sns_google.png") no-repeat;
   background-size: 100% 100%;
 }
 .layerSharing .sharingSns a.facebook {
-  background: url("../images/web/sns/sns_facebook.png") no-repeat;
+  background: url("../images/mobile/sns/sns_facebook.png") no-repeat;
   background-size: 100% 100%;
 }
 .layerSharing .sharingSns a.twitch {
-  background: url("../images/web/sns/sns_twitch.png") no-repeat;
+  background: url("../images/mobile/sns/sns_twitch.png") no-repeat;
   background-size: 100% 100%;
 }
 .layerSharing .urlCopy {
@@ -5398,43 +5427,49 @@ h2.title-margin {
   }
 
   .layerSharing {
-    width: 312px;
-    height: 163px;
-    padding: 29px 0 0 34px;
+    left: 0;
+    width: auto;
+    height: auto;
+    padding: 6vw;
   }
   .layerSharing h4.title {
-    font-size: 12.5px;
-    margin-bottom: 10px;
+    font-size: 4.5vw;
+    margin-bottom: 4vw;
   }
   .layerSharing .sharingSns {
-    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4vw;
   }
   .layerSharing .sharingSns a {
-    width: 34px;
-    height: 34px;
+    width: 13vw;
+    height: 13vw;
   }
   .layerSharing .sharingSns a + a {
-    margin-left: 9px;
+    margin: 0;
   }
   .layerSharing .btnClose {
-    top: 28px;
-    right: 26px;
-    width: 16px;
-    height: 14.5px;
+    box-sizing: content-box;
+    top: 3vw;
+    right: 3vw;
+    width: 5vw;
+    height: 5vw;
+    padding: 2vw;
     background: url("../images/mobile/sub/bg_close.png") no-repeat;
-    background-size: contain;
+    background-size: 5vw 5vw;
+    background-position: center;
   }
   .layerSharing .urlCopy {
-    width: 208px;
-    height: 26px;
+    width: auto;
+    height: 10vw;
   }
   .layerSharing .urlCopy input {
-    width: 153px;
+    width: auto;
   }
   .layerSharing .urlCopy button {
     flex-shrink: 0;
-    width: 53px;
-    font-size: 8.5px;
+    width: 20vw;
+    font-size: 3.7vw;
   }
 
   .paginationWrap {
