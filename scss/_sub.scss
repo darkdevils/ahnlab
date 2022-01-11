@@ -1852,12 +1852,14 @@ h2.title {
     }
   }
   .layerSharing {
-    left: 0;
-    width: auto;
+    width: 312px;
+    //left: 0;
+    //width: auto;
     height: calc(326px / 2);
-    padding: 30px 0 0 35px;
+    padding: 29px 0 0 34px;
     h4.title {
       font-size: calc(25px / 2);
+      margin-bottom: 10px;
     }
     .sharingSns {
       margin-bottom: 15px;
@@ -1867,8 +1869,8 @@ h2.title {
       }
     }
     .btnClose {
-      top: 29px;
-      right: 27px;
+      top: 28px;
+      right: 26px;
       width: calc(32px / 2);
       height: calc(29px / 2);
       @include imageUrl('mobile/sub/bg_close');

@@ -3064,6 +3064,7 @@ html .opening, body .opening {
     background-color: #262626;
   }
   #wrap #footer .footerIn {
+    width: auto;
     height: 143px;
     padding-left: 24px;
   }
@@ -5270,13 +5271,13 @@ h2.title-margin {
   }
 
   .layerSharing {
-    left: 0;
-    width: auto;
+    width: 312px;
     height: 163px;
-    padding: 30px 0 0 35px;
+    padding: 29px 0 0 34px;
   }
   .layerSharing h4.title {
     font-size: 12.5px;
+    margin-bottom: 10px;
   }
   .layerSharing .sharingSns {
     margin-bottom: 15px;
@@ -5286,8 +5287,8 @@ h2.title-margin {
     height: 31px;
   }
   .layerSharing .btnClose {
-    top: 29px;
-    right: 27px;
+    top: 28px;
+    right: 26px;
     width: 16px;
     height: 14.5px;
     background: url("../images/mobile/sub/bg_close.png") no-repeat;
