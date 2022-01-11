@@ -3380,6 +3380,8 @@ html .opening, body .opening {
   background-size: 40px 70px;
 }
 #wrap.mainLayout #footer .footerIn {
+  width: auto;
+  margin: 0;
   padding-left: 100px;
 }
 
