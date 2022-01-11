@@ -2630,6 +2630,9 @@ html .opening, body .opening {
     background-position: center top;
     background-size: 11px 6px;
   }
+  #wrap .pageTop:hover {
+    opacity: 0.5;
+  }
   #wrap .imgWeb {
     display: none;
   }
