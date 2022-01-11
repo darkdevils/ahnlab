@@ -5176,6 +5176,7 @@ h2.title-margin {
     line-height: 48px;
   }
   .detailWrap .justifyWrap {
+    position: relative;
     padding-top: 7px;
     padding-bottom: 3px;
   }
@@ -5201,6 +5202,7 @@ h2.title-margin {
     margin: 0 15px 0 0;
   }
   .detailWrap .justifyWrap__right {
+    position: static;
     display: flex;
     align-items: center;
     padding-right: 0;
@@ -5214,7 +5216,7 @@ h2.title-margin {
     height: 19px;
   }
   .detailWrap .justifyWrap__right .btnSharing::after {
-    top: 0;
+    top: 1px;
     width: 17px;
     height: 17px;
     background: url("../images/mobile/sub/icon_sharing.png") no-repeat;
@@ -5268,9 +5270,10 @@ h2.title-margin {
   }
 
   .layerSharing {
-    width: 313.5px;
+    left: 0;
+    width: auto;
     height: 163px;
-    padding: 30px 35px;
+    padding: 30px 0 0 35px;
   }
   .layerSharing h4.title {
     font-size: 12.5px;

@@ -1737,6 +1737,7 @@ h2.title {
       line-height: 48px;
     }
     .justifyWrap {
+      position: relative;
       padding-top: 7px;
       padding-bottom: 3px;
 
@@ -1769,6 +1770,7 @@ h2.title {
         }
       }
       &__right {
+        position: static;
         display: flex;
         align-items: center;
         padding-right: 0;
@@ -1786,7 +1788,7 @@ h2.title {
           height: 19px;
 
           &::after {
-            top: 0;
+            top: 1px;
             width: 17px;
             height: 17px;
             @include imageUrl("mobile/sub/icon_sharing");
@@ -1850,9 +1852,10 @@ h2.title {
     }
   }
   .layerSharing {
-    width: calc(627px / 2);
+    left: 0;
+    width: auto;
     height: calc(326px / 2);
-    padding: 30px 35px;
+    padding: 30px 0 0 35px;
     h4.title {
       font-size: calc(25px / 2);
     }
