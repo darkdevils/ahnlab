@@ -1050,27 +1050,27 @@ h2.title {
       }
 
       &.kakao {
-        @include imageUrl("web/sns/sns_kakao");
+        @include imageUrl("mobile/sns/sns_kakao");
         background-size : 100% 100%;
       }
 
       &.naver {
-        @include imageUrl("web/sns/sns_naver");
+        @include imageUrl("mobile/sns/sns_naver");
         background-size : 100% 100%;
       }
 
       &.google {
-        @include imageUrl("web/sns/sns_google");
+        @include imageUrl("mobile/sns/sns_google");
         background-size : 100% 100%;
       }
 
       &.facebook {
-        @include imageUrl("web/sns/sns_facebook");
+        @include imageUrl("mobile/sns/sns_facebook");
         background-size : 100% 100%;
       }
 
       &.twitch {
-        @include imageUrl("web/sns/sns_twitch");
+        @include imageUrl("mobile/sns/sns_twitch");
         background-size : 100% 100%;
       }
     }

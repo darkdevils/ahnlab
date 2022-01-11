@@ -4577,23 +4577,23 @@ h2.title-margin {
   margin-left: 17px;
 }
 .layerSharing .sharingSns a.kakao {
-  background: url("../images/web/sns/sns_kakao.png") no-repeat;
+  background: url("../images/mobile/sns/sns_kakao.png") no-repeat;
   background-size: 100% 100%;
 }
 .layerSharing .sharingSns a.naver {
-  background: url("../images/web/sns/sns_naver.png") no-repeat;
+  background: url("../images/mobile/sns/sns_naver.png") no-repeat;
   background-size: 100% 100%;
 }
 .layerSharing .sharingSns a.google {
-  background: url("../images/web/sns/sns_google.png") no-repeat;
+  background: url("../images/mobile/sns/sns_google.png") no-repeat;
   background-size: 100% 100%;
 }
 .layerSharing .sharingSns a.facebook {
-  background: url("../images/web/sns/sns_facebook.png") no-repeat;
+  background: url("../images/mobile/sns/sns_facebook.png") no-repeat;
   background-size: 100% 100%;
 }
 .layerSharing .sharingSns a.twitch {
-  background: url("../images/web/sns/sns_twitch.png") no-repeat;
+  background: url("../images/mobile/sns/sns_twitch.png") no-repeat;
   background-size: 100% 100%;
 }
 .layerSharing .urlCopy {
