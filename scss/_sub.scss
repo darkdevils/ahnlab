@@ -1483,7 +1483,11 @@ h2.title {
       width: 93px;
       height: 42px;
       border: 1px solid $colorOrange;
-      background-color: #141414;
+      background-color: #262626;
+
+      &:hover {
+        background-color: $colorOrange;
+      }
 
       span {
         display: inline-block;
@@ -2414,9 +2418,12 @@ h2.title {
       .ahnBtnM {
         width: 60px;
         height: 37px;
+        &:hover {
+          background-color: #262626;
+        }
         span {
           height: 100%;
-          line-height: 37px;
+          line-height: 35px;
           font-size: calc(28px / 2);
         }
       }

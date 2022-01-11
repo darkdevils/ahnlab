@@ -4919,7 +4919,10 @@ h2.title-margin {
   width: 93px;
   height: 42px;
   border: 1px solid #EA5504;
-  background-color: #141414;
+  background-color: #262626;
+}
+.communityModify .tableArea02 .ahnBtnM:hover {
+  background-color: #EA5504;
 }
 .communityModify .tableArea02 .ahnBtnM span {
   display: inline-block;
@@ -5738,9 +5741,12 @@ h2.title-margin {
     width: 60px;
     height: 37px;
   }
+  .communityModify .tableArea02 .ahnBtnM:hover {
+    background-color: #262626;
+  }
   .communityModify .tableArea02 .ahnBtnM span {
     height: 100%;
-    line-height: 37px;
+    line-height: 35px;
     font-size: 14px;
   }
   .communityModify .tableArea02 .ahnTextarea {
