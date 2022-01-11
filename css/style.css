@@ -2096,6 +2096,10 @@ html .opening, body .opening {
   border: 1px solid #fff;
   background: #000;
   z-index: 30;
+  opacity: 0.5;
+}
+#wrap .pageTop:hover {
+  opacity: 1;
 }
 #wrap .pageTop span {
   display: block;
@@ -2551,8 +2555,9 @@ html .opening, body .opening {
 }
 #wrap #footer .footerIn {
   box-sizing: border-box;
+  width: 1200px;
   height: 286px;
-  padding-left: 136px;
+  margin: 0 auto;
 }
 #wrap #footer .footerIn .homepageLink {
   padding-top: 65px;
@@ -3057,7 +3062,7 @@ html .opening, body .opening {
   }
   #wrap #footer .footerIn {
     height: 143px;
-    padding-left: 36px;
+    padding-left: 24px;
   }
   #wrap #footer .footerIn .homepageLink {
     padding-top: 33px;
@@ -3371,6 +3376,10 @@ html .opening, body .opening {
   background-position: right 20px center;
   background-size: 40px 70px;
 }
+#wrap.mainLayout #footer .footerIn {
+  padding-left: 100px;
+}
+
 /* media queries */
 @media (min-width: 781px) and (max-width: 1199px) {
   /* wrap */
@@ -3528,6 +3537,9 @@ html .opening, body .opening {
   }
   #wrap.mainLayout #container .content .photoHeightArea .swiperArea {
     padding: 0 3.2051vw;
+  }
+  #wrap.mainLayout #footer .footerIn {
+    padding-left: 3.2051vw;
   }
 }
 .blind {

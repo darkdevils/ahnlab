@@ -37,6 +37,11 @@ html, body {
     border: 1px solid #fff;
     background: #000;
     z-index: 30;
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 1;
+    }
 
     span {
       display: block;
@@ -588,8 +593,9 @@ html, body {
 
     .footerIn {
       box-sizing: border-box;
+      width: 1200px;
       height: 286px;
-      padding-left: 136px;
+      margin: 0 auto;
 
       .homepageLink {
         padding-top: 65px;
@@ -1192,7 +1198,7 @@ html, body {
 
         .footerIn {
           height       : 143px;
-          padding-left : 36px;
+          padding-left : 24px;
 
           .homepageLink {
             padding-top : 33px;
