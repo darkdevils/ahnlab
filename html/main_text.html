@@ -803,7 +803,7 @@
                         breakpoints: {
                             781: {
                                 slidesPerView: 7.55,
-                                spaceBetween: 30,
+                                spaceBetween: 15,
                             },
                             1: {
                                 slidesPerView: 3.2,
@@ -840,13 +840,13 @@
 <!-- //wrap -->
 <script>
     $(function (){
-        $(document).on("mouseenter", ".photoNumberArea .swiper-slide a", function(){
+        $(document).on("mouseenter", "#wrap.web .photoNumberArea .swiper-slide a", function(){
             let $this = $(this);
 
             $this.addClass("swiperOn01");
         });
 
-        $(document).on("mouseleave", ".photoNumberArea .swiper-slide a", function(){
+        $(document).on("mouseleave", "#wrap.web .photoNumberArea .swiper-slide a", function(){
             let $this = $(this);
 
             $this.removeClass("swiperOn01");

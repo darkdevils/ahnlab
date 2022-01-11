@@ -256,6 +256,7 @@ h2.title {
 
       > *  {
         display: block;
+        height: 27px;
         line-height: 27px;
         font-size: 19px;
       }
@@ -286,7 +287,7 @@ h2.title {
 
       .btnSharing, .btnLike {
         display: block;
-        line-height: 27px;
+        height: 27px;
         font-size: 18px;
       }
 
@@ -296,6 +297,7 @@ h2.title {
 
         span {
           display: block;
+          height: 27px;
           line-height: 27px;
           @include nsM;
           color: #b3b3b3;
@@ -322,6 +324,7 @@ h2.title {
       }
       .btnLike {
         position: relative;
+        height: 27px;
         margin-left: 31px;
         padding: 0 23px 0 0;
         vertical-align: top;
@@ -339,6 +342,7 @@ h2.title {
         .num {
           position: relative;
           display: block;
+          height: 27px;
           line-height: 27px;
           color: #B3B3B3;
           @include gtBook;
@@ -552,6 +556,7 @@ h2.title {
 
             > * {
               display: block;
+              height: 26px;
               line-height: 26px;
             }
 
@@ -571,6 +576,7 @@ h2.title {
               margin-left: 10px;
               padding: 0 23px 0 0;
               vertical-align: top;
+              height: 26px;
               &:after {
                 content: "";
                 position: absolute;
@@ -583,6 +589,7 @@ h2.title {
               }
               span {
                 display: block;
+                height: 26px;
                 line-height: 26px;
                 @include gtBook;
                 font-size: 19px;
@@ -625,10 +632,10 @@ h2.title {
           left: 50%;
           top: 50%;
           transform: translate(-50%, -50%);
-          width: 230px;
+          width: 280px;
           color: #fff;
-          font-size: 40px;
-          line-height: 44px;
+          font-size: 44px;
+          line-height: 48px;
           @include nsB;
         }
       }
@@ -662,6 +669,15 @@ h2.title {
             @include imageUrl('web/sub/like_27x26_on');
             background-position: center;
             background-size: 27px 27px;
+          }
+        }
+        .imgLink {
+          position: relative;
+          display: block;
+          height: 226px;
+
+          .text {
+            margin: 0;
           }
         }
       }
@@ -714,8 +730,9 @@ h2.title {
       top: 50%;
       transform: translate(-50%, -50%);
       color: #fff;
+      width: 280px;
       font-size: 40px;
-      line-height: 44px;
+      line-height: 48px;
       @include nsB;
     }
   }
@@ -1730,6 +1747,7 @@ h2.title {
       &__left {
 
         > * {
+          height: 19px;
           line-height: 19px;
           font-size: 14px;
         }
@@ -1765,6 +1783,7 @@ h2.title {
         }
         .btnSharing {
           padding-left: 22px;
+          height: 19px;
 
           &::after {
             top: 0;
@@ -1782,17 +1801,19 @@ h2.title {
           }
 
           span {
-            display: block;
+            display: none;
             line-height: 19px;
             font-size: 14px;
             @include gtBook;
           }
         }
         .btnLike {
+          height: 19px;
           margin-left: 7px;
           padding-right: 20px;
           .num {
             display: block;
+            height: 19px;
             line-height: 19px;
             font-size: calc(28px / 2);
           }
@@ -2025,9 +2046,9 @@ h2.title {
             line-height: calc(48px / 2);
           }
           .text {
-            width: 58vw;
-            font-size: 8.3333vw;
-            line-height: 9.7222vw;
+            width: 66vw;
+            font-size: 9.3vw;
+            line-height: 11.7vw;
           }
         }
       }
@@ -2324,6 +2345,16 @@ h2.title {
             background-size: 20px 20px;
             &.on {
               background-size: 20px 20px;
+            }
+          }
+
+          .imgLink {
+            height: 100%;
+
+            .text {
+              width: 40vw;
+              line-height: 6.8vw;
+              font-size: 5.7vw;
             }
           }
           .justifyWrap {

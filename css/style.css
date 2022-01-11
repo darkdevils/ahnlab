@@ -3328,10 +3328,9 @@ html .opening, body .opening {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 15vw;
-  max-height: 6.9vw;
-  line-height: 2.3vw;
-  font-size: 2vw;
+  width: 17.1vw;
+  line-height: 2.95vw;
+  font-size: 2.445vw;
   color: #fff;
   font-family: "NotoSansCJKkrMedium", sans-serif;
 }
@@ -3379,10 +3378,9 @@ html .opening, body .opening {
     /* container */
   }
   #wrap.mainLayout #container .content .photoWidthArea .swiperArea.communitySwiper .swiper-slide a .text {
-    width: 180px;
-    max-height: 84px;
-    line-height: 28px;
-    font-size: 24px;
+    width: 205px;
+    line-height: 36px;
+    font-size: 29px;
   }
 }
 @media (max-width: 780px) {
@@ -3524,10 +3522,9 @@ html .opening, body .opening {
     padding: 0 3.2051vw;
   }
   #wrap.mainLayout #container .content .photoWidthArea .swiperArea.communitySwiper .swiper-slide a .text {
-    width: 25vw;
-    max-height: 12.9vw;
-    line-height: 4.3vw;
-    font-size: 3.6vw;
+    width: 30vw;
+    line-height: 5.1vw;
+    font-size: 4.2vw;
   }
   #wrap.mainLayout #container .content .photoHeightArea .swiperArea {
     padding: 0 3.2051vw;
@@ -3781,6 +3778,7 @@ h2.title-margin {
 }
 .detailWrap .justifyWrap__left > * {
   display: block;
+  height: 27px;
   line-height: 27px;
   font-size: 19px;
 }
@@ -3809,7 +3807,7 @@ h2.title-margin {
 }
 .detailWrap .justifyWrap__right .btnSharing, .detailWrap .justifyWrap__right .btnLike {
   display: block;
-  line-height: 27px;
+  height: 27px;
   font-size: 18px;
 }
 .detailWrap .justifyWrap__right .btnSharing {
@@ -3818,6 +3816,7 @@ h2.title-margin {
 }
 .detailWrap .justifyWrap__right .btnSharing span {
   display: block;
+  height: 27px;
   line-height: 27px;
   font-family: "NotoSansCJKkrMedium", sans-serif;
   color: #b3b3b3;
@@ -3841,6 +3840,7 @@ h2.title-margin {
 }
 .detailWrap .justifyWrap__right .btnLike {
   position: relative;
+  height: 27px;
   margin-left: 31px;
   padding: 0 23px 0 0;
   vertical-align: top;
@@ -3859,6 +3859,7 @@ h2.title-margin {
 .detailWrap .justifyWrap__right .btnLike .num {
   position: relative;
   display: block;
+  height: 27px;
   line-height: 27px;
   color: #B3B3B3;
   font-family: "GothamBook", sans-serif;
@@ -4068,6 +4069,7 @@ h2.title-margin {
 }
 .community__list ul li .justifyWrap__left > * {
   display: block;
+  height: 26px;
   line-height: 26px;
 }
 .community__list ul li .justifyWrap__left .name {
@@ -4086,6 +4088,7 @@ h2.title-margin {
   margin-left: 10px;
   padding: 0 23px 0 0;
   vertical-align: top;
+  height: 26px;
 }
 .community__list ul li .justifyWrap__right .btnLike:after {
   content: "";
@@ -4099,6 +4102,7 @@ h2.title-margin {
 }
 .community__list ul li .justifyWrap__right .btnLike span {
   display: block;
+  height: 26px;
   line-height: 26px;
   font-family: "GothamBook", sans-serif;
   font-size: 19px;
@@ -4136,10 +4140,10 @@ h2.title-margin {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 230px;
+  width: 280px;
   color: #fff;
-  font-size: 40px;
-  line-height: 44px;
+  font-size: 44px;
+  line-height: 48px;
   font-family: "NotoSansCJKkrBold", sans-serif;
 }
 .community .pagination {
@@ -4168,6 +4172,14 @@ h2.title-margin {
   background: url("../images/web/sub/like_27x26_on.png") no-repeat;
   background-position: center;
   background-size: 27px 27px;
+}
+.communityDetail .paginationWrap__list ul > li > .imgLink {
+  position: relative;
+  display: block;
+  height: 226px;
+}
+.communityDetail .paginationWrap__list ul > li > .imgLink .text {
+  margin: 0;
 }
 .communityDetail .paginationWrap__list .justifyWrap {
   display: flex;
@@ -4216,8 +4228,9 @@ h2.title-margin {
   top: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
+  width: 280px;
   font-size: 40px;
-  line-height: 44px;
+  line-height: 48px;
   font-family: "NotoSansCJKkrBold", sans-serif;
 }
 
@@ -5153,6 +5166,7 @@ h2.title-margin {
     letter-spacing: -0.02em;
   }
   .detailWrap .justifyWrap__left > * {
+    height: 19px;
     line-height: 19px;
     font-size: 14px;
   }
@@ -5180,6 +5194,7 @@ h2.title-margin {
   }
   .detailWrap .justifyWrap__right .btnSharing {
     padding-left: 22px;
+    height: 19px;
   }
   .detailWrap .justifyWrap__right .btnSharing::after {
     top: 0;
@@ -5193,17 +5208,19 @@ h2.title-margin {
     background-size: 17px 17px;
   }
   .detailWrap .justifyWrap__right .btnSharing span {
-    display: block;
+    display: none;
     line-height: 19px;
     font-size: 14px;
     font-family: "GothamBook", sans-serif;
   }
   .detailWrap .justifyWrap__right .btnLike {
+    height: 19px;
     margin-left: 7px;
     padding-right: 20px;
   }
   .detailWrap .justifyWrap__right .btnLike .num {
     display: block;
+    height: 19px;
     line-height: 19px;
     font-size: 14px;
   }
@@ -5422,9 +5439,9 @@ h2.title-margin {
     line-height: 24px;
   }
   .community__list ul li .text {
-    width: 58vw;
-    font-size: 8.3333vw;
-    line-height: 9.7222vw;
+    width: 66vw;
+    font-size: 9.3vw;
+    line-height: 11.7vw;
   }
 
   .communityDetail {
@@ -5672,6 +5689,14 @@ h2.title-margin {
   }
   .communityDetail .paginationWrap__list > ul > li > .btnLike.on {
     background-size: 20px 20px;
+  }
+  .communityDetail .paginationWrap__list > ul > li .imgLink {
+    height: 100%;
+  }
+  .communityDetail .paginationWrap__list > ul > li .imgLink .text {
+    width: 40vw;
+    line-height: 6.8vw;
+    font-size: 5.7vw;
   }
   .communityDetail .paginationWrap__list > ul > li .justifyWrap {
     display: none;
