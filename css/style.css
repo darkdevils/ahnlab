@@ -3784,8 +3784,14 @@ h2.title-margin {
   line-height: 27px;
   font-size: 19px;
 }
+.detailWrap .justifyWrap__left .write {
+  margin-right: 20px;
+}
+.detailWrap .justifyWrap__left .name {
+  margin-right: 63px;
+}
 .detailWrap .justifyWrap__left .writeTitle {
-  margin-left: 55px;
+  margin-right: 20px;
 }
 .detailWrap .justifyWrap__left .date {
   font-family: "GothamBook", sans-serif;
@@ -3812,6 +3818,7 @@ h2.title-margin {
 }
 .detailWrap .justifyWrap__right .btnSharing span {
   display: block;
+  line-height: 27px;
   font-family: "NotoSansCJKkrMedium", sans-serif;
   color: #b3b3b3;
 }
@@ -3852,6 +3859,7 @@ h2.title-margin {
 .detailWrap .justifyWrap__right .btnLike .num {
   position: relative;
   display: block;
+  line-height: 27px;
   color: #B3B3B3;
   font-family: "GothamBook", sans-serif;
 }

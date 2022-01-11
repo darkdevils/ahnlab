@@ -261,13 +261,13 @@ h2.title {
       }
 
       .write {
-
+        margin-right: 20px;
       }
       .name {
-
+        margin-right: 63px;
       }
       .writeTitle {
-        margin-left: 55px;
+        margin-right: 20px;
       }
       .date {
         @include gtBook;
@@ -296,6 +296,7 @@ h2.title {
 
         span {
           display: block;
+          line-height: 27px;
           @include nsM;
           color: #b3b3b3;
         }
@@ -338,6 +339,7 @@ h2.title {
         .num {
           position: relative;
           display: block;
+          line-height: 27px;
           color: #B3B3B3;
           @include gtBook;
         }
