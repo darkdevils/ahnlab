@@ -208,6 +208,7 @@ h2.title {
     text-align: center;
     button {
       position: relative;
+      padding-bottom: 7px;
       span {
         color: #fff;
         font-size: 31px;
@@ -217,7 +218,7 @@ h2.title {
         content: "";
         position: absolute;
         left: 0;
-        bottom: -7px;
+        bottom: 0;
         width: 100%;
         height: 3px;
         background: #fff;
@@ -397,6 +398,14 @@ h2.title {
     font-size: 22px;
     color: #E4E4E4;
     line-height: 36px;
+  }
+  .imageText {
+    padding-top: 60px;
+
+    > * {
+      margin-top: 0 !important;
+    }
+
   }
 }
 .paginationWrap {
@@ -1698,7 +1707,7 @@ h2.title {
 
     .liveArea {
       width          : 1025px;
-      margin         : 0 auto;
+      margin         : 0 auto 84px;
       position       : relative;
       padding-bottom : 47.25%;
       height         : 0;
@@ -2014,6 +2023,9 @@ h2.title {
         img {
           width: 100%;
         }
+      }
+      .imageText {
+        padding-top: 30px;
       }
     }
   }
@@ -2589,7 +2601,7 @@ h2.title {
             }
             &.lineOrange {
               > * {
-                border-color: #666;
+                border: 0 none;
               }
             }
           }
@@ -2669,43 +2681,47 @@ h2.title {
     }
     .btnWrap-right {
       padding: 20px 24px 0 0;
+
       a,button {
         display: inline-block;
+        vertical-align: top;
+        margin-left: 18px;
 
-        padding-top: calc(64px / 2);
-        margin-left: calc(35px / 2);
-      }
-      span {
-        font-size: 10px;
-      }
-      .btnList {
-        width: calc(72px / 2);
-        height: calc(43px / 2);
-        @include imageUrl("mobile/sub/icon_list");
-        background-position: center top;
-        background-size: 26px calc(43px / 2);
-        padding: 35px 0 0;
-      }
-      .btnModify {
-        width: calc(72px / 2);
-        height: calc(42px / 2);
-        @include imageUrl("mobile/sub/icon_modify");
-        background-position: center top;
-        background-size: 21px;
-      }
-      .btnDel {
-        width: calc(72px / 2);
-        height: calc(40px / 2);
-        @include imageUrl("mobile/sub/icon_del");
-        background-position: center top;
-        background-size: calc(27px / 2) calc(40px / 2);
-      }
-      .btnPublish {
-        width: calc(72px / 2);
-        height: calc(39px / 2);
-        @include imageUrl("mobile/sub/icon_publish");
-        background-position: center top;
-        background-size: calc(34px / 2) calc(39px / 2);
+        span {
+          width: 36px;
+          height: 22px;
+          font-size: 10px;
+          padding: 30px 0 0;
+        }
+
+        &.btnList {
+          span {
+            @include imageUrl("mobile/sub/icon_list");
+            background-size: 26px 22px;
+            background-position: center top;
+          }
+        }
+        &.btnModify {
+          span {
+            @include imageUrl("mobile/sub/icon_modify");
+            background-position: center top;
+            background-size: 21px;
+          }
+        }
+        &.btnDel {
+          span {
+            @include imageUrl("mobile/sub/icon_del");
+            background-position: center top;
+            background-size: calc(27px / 2) calc(40px / 2);
+          }
+        }
+        &.btnPublish {
+          span {
+            @include imageUrl("mobile/sub/icon_publish");
+            background-position: center top;
+            background-size: calc(34px / 2) calc(39px / 2);
+          }
+        }
       }
     }
   }
@@ -2765,12 +2781,9 @@ h2.title {
 
       .liveArea {
         width: 100%;
-        height: auto;
-        box-sizing: border-box;
-        padding: 0;
+        height: 8.05vw;
+        margin-bottom: 0;
         iframe {
-          position: relative;
-          width: 100%;
         }
       }
       .text {

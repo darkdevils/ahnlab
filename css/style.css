@@ -3556,23 +3556,22 @@ html .opening, body .opening {
     padding: 6vw 3.2051vw 3vw 3.2051vw;
   }
   #wrap.mainLayout #container .content .mainTitleArea .title {
-    line-height: 25px;
-    font-size: 22.5px;
+    line-height: 6vw;
+    font-size: 5.1282vw;
   }
   #wrap.mainLayout #container .content .mainTitleArea .moreLink {
-    line-height: 14px;
-    margin-top: 4px;
-    padding-right: 8px;
-    font-size: 5px;
-    background: url("../images/mobile/icon/icon_moreLink.png") no-repeat;
+    line-height: 5vw;
+    margin-top: 1vw;
+    padding-right: 3vw;
+    font-size: 4.1025vw;
+    background: url("../images/web/icon/icon_moreLink.png") no-repeat;
     background-position: right center;
-    background-size: 4px 6px;
-    display: none;
+    background-size: 2vw 3vw;
   }
   #wrap.mainLayout #container .content .mainTitleArea .moreLink:hover {
-    background: url("../images/mobile/icon/icon_moreLink.png") no-repeat;
+    background: url("../images/web/icon/icon_moreLink.png") no-repeat;
     background-position: right center;
-    background-size: 4px 6px;
+    background-size: 2vw 3vw;
   }
   #wrap.mainLayout #container .content .photoNumberArea .swiper-button-prev, #wrap.mainLayout #container .content .photoNumberArea .swiper-button-next, #wrap.mainLayout #container .content .photoWidthArea .swiper-button-prev, #wrap.mainLayout #container .content .photoWidthArea .swiper-button-next, #wrap.mainLayout #container .content .photoHeightArea .swiper-button-prev, #wrap.mainLayout #container .content .photoHeightArea .swiper-button-next {
     display: none;
@@ -3828,6 +3827,7 @@ h2.title-margin {
 }
 .listWrap .btnMore button {
   position: relative;
+  padding-bottom: 7px;
 }
 .listWrap .btnMore button span {
   color: #fff;
@@ -3838,7 +3838,7 @@ h2.title-margin {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -7px;
+  bottom: 0;
   width: 100%;
   height: 3px;
   background: #fff;
@@ -4002,6 +4002,12 @@ h2.title-margin {
   font-size: 22px;
   color: #E4E4E4;
   line-height: 36px;
+}
+.detailWrap .imageText {
+  padding-top: 60px;
+}
+.detailWrap .imageText > * {
+  margin-top: 0 !important;
 }
 
 .paginationWrap {
@@ -5189,7 +5195,7 @@ h2.title-margin {
 }
 .liveDetail .liveWrap .liveArea {
   width: 1025px;
-  margin: 0 auto;
+  margin: 0 auto 84px;
   position: relative;
   padding-bottom: 47.25%;
   height: 0;
@@ -5474,6 +5480,9 @@ h2.title-margin {
   }
   .detailWrap__content .img img {
     width: 100%;
+  }
+  .detailWrap__content .imageText {
+    padding-top: 30px;
   }
 
   .layerSharing {
@@ -5972,7 +5981,7 @@ h2.title-margin {
     width: 100%;
   }
   .communityModify .tableArea02 table tbody tr.lineOrange > * {
-    border-color: #666;
+    border: 0 none;
   }
   .communityModify .tableArea02 table tbody .ahnInputText {
     height: 37px;
@@ -6042,37 +6051,31 @@ h2.title-margin {
   }
   .communityModify .btnWrap-right a, .communityModify .btnWrap-right button {
     display: inline-block;
-    padding-top: 32px;
-    margin-left: 17.5px;
+    vertical-align: top;
+    margin-left: 18px;
   }
-  .communityModify .btnWrap-right span {
+  .communityModify .btnWrap-right a span, .communityModify .btnWrap-right button span {
+    width: 36px;
+    height: 22px;
     font-size: 10px;
+    padding: 30px 0 0;
   }
-  .communityModify .btnWrap-right .btnList {
-    width: 36px;
-    height: 21.5px;
+  .communityModify .btnWrap-right a.btnList span, .communityModify .btnWrap-right button.btnList span {
     background: url("../images/mobile/sub/icon_list.png") no-repeat;
+    background-size: 26px 22px;
     background-position: center top;
-    background-size: 26px 21.5px;
-    padding: 35px 0 0;
   }
-  .communityModify .btnWrap-right .btnModify {
-    width: 36px;
-    height: 21px;
+  .communityModify .btnWrap-right a.btnModify span, .communityModify .btnWrap-right button.btnModify span {
     background: url("../images/mobile/sub/icon_modify.png") no-repeat;
     background-position: center top;
     background-size: 21px;
   }
-  .communityModify .btnWrap-right .btnDel {
-    width: 36px;
-    height: 20px;
+  .communityModify .btnWrap-right a.btnDel span, .communityModify .btnWrap-right button.btnDel span {
     background: url("../images/mobile/sub/icon_del.png") no-repeat;
     background-position: center top;
     background-size: 13.5px 20px;
   }
-  .communityModify .btnWrap-right .btnPublish {
-    width: 36px;
-    height: 19.5px;
+  .communityModify .btnWrap-right a.btnPublish span, .communityModify .btnWrap-right button.btnPublish span {
     background: url("../images/mobile/sub/icon_publish.png") no-repeat;
     background-position: center top;
     background-size: 17px 19.5px;
@@ -6128,13 +6131,8 @@ h2.title-margin {
   }
   .liveDetail .liveWrap .liveArea {
     width: 100%;
-    height: auto;
-    box-sizing: border-box;
-    padding: 0;
-  }
-  .liveDetail .liveWrap .liveArea iframe {
-    position: relative;
-    width: 100%;
+    height: 8.05vw;
+    margin-bottom: 0;
   }
   .liveDetail .liveWrap .text {
     text-align: left;
