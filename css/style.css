@@ -4240,13 +4240,13 @@ h2.title-margin {
   padding: 55px 0 0;
 }
 
-.communityDetail .btnWrap {
+.communityDetail .btnWrap, .videoDtail .btnWrap {
   margin-bottom: 130px;
 }
-.communityDetail .paginationWrap__list ul > li > {
+.communityDetail .paginationWrap__list ul > li >, .videoDtail .paginationWrap__list ul > li > {
   position: relative;
 }
-.communityDetail .paginationWrap__list ul > li > .btnLike {
+.communityDetail .paginationWrap__list ul > li > .btnLike, .videoDtail .paginationWrap__list ul > li > .btnLike {
   position: absolute;
   right: 3px;
   top: 7px;
@@ -4258,41 +4258,41 @@ h2.title-margin {
   padding: 10px;
   z-index: 2;
 }
-.communityDetail .paginationWrap__list ul > li > .btnLike.on {
+.communityDetail .paginationWrap__list ul > li > .btnLike.on, .videoDtail .paginationWrap__list ul > li > .btnLike.on {
   background: url("../images/web/sub/like_27x26_on.png") no-repeat;
   background-position: center;
   background-size: 27px 27px;
 }
-.communityDetail .paginationWrap__list ul > li > .imgLink {
+.communityDetail .paginationWrap__list ul > li > .imgLink, .videoDtail .paginationWrap__list ul > li > .imgLink {
   position: relative;
   display: block;
   height: 226px;
 }
-.communityDetail .paginationWrap__list ul > li > .imgLink .text {
+.communityDetail .paginationWrap__list ul > li > .imgLink .text, .videoDtail .paginationWrap__list ul > li > .imgLink .text {
   margin: 0;
 }
-.communityDetail .paginationWrap__list .justifyWrap {
+.communityDetail .paginationWrap__list .justifyWrap, .videoDtail .paginationWrap__list .justifyWrap {
   display: flex;
   justify-content: space-between;
   color: #b3b3b3;
   margin-top: 20px;
   padding-top: 0;
 }
-.communityDetail .paginationWrap__list .justifyWrap__left {
+.communityDetail .paginationWrap__list .justifyWrap__left, .videoDtail .paginationWrap__list .justifyWrap__left {
   font-size: 18px;
 }
-.communityDetail .paginationWrap__list .justifyWrap__left .name {
+.communityDetail .paginationWrap__list .justifyWrap__left .name, .videoDtail .paginationWrap__list .justifyWrap__left .name {
   margin-right: 12px;
 }
-.communityDetail .paginationWrap__list .justifyWrap__left .date {
+.communityDetail .paginationWrap__list .justifyWrap__left .date, .videoDtail .paginationWrap__list .justifyWrap__left .date {
   font-family: "GothamMedium", sans-serif;
   letter-spacing: -0.037em;
 }
-.communityDetail .paginationWrap__list .justifyWrap__right {
+.communityDetail .paginationWrap__list .justifyWrap__right, .videoDtail .paginationWrap__list .justifyWrap__right {
   font-size: 18px;
   font-family: "GothamMedium", sans-serif;
 }
-.communityDetail .paginationWrap .txt {
+.communityDetail .paginationWrap .txt, .videoDtail .paginationWrap .txt {
   display: -webkit-box;
   font-size: 28px;
   margin-top: 15px;
@@ -4304,10 +4304,10 @@ h2.title-margin {
   letter-spacing: -0.025em;
   color: #fff;
 }
-.communityDetail .paginationWrap .txt .category {
+.communityDetail .paginationWrap .txt .category, .videoDtail .paginationWrap .txt .category {
   color: #EA5517;
 }
-.communityDetail .paginationWrap .text {
+.communityDetail .paginationWrap .text, .videoDtail .paginationWrap .text {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -4605,6 +4605,7 @@ h2.title-margin {
   border: 1px solid #E66B1B;
   background-color: #2B2B2B;
   box-sizing: border-box;
+  z-index: 1;
 }
 .layerSharing h4.title {
   font-size: 24px;
@@ -4683,40 +4684,35 @@ h2.title-margin {
   text-align: right;
 }
 .btnWrap button, .btnWrap a {
-  position: relative;
   display: inline-block;
+  vertical-align: top;
   margin-left: 21px;
+}
+.btnWrap button span, .btnWrap a span {
+  display: block;
+  width: 54px;
+  height: 24px;
+  line-height: 24px;
   padding: 41px 0 0;
   text-align: center;
   color: #fff;
   font-size: 14px;
   font-family: "NotoSansCJKkrMedium", sans-serif;
-}
-.btnWrap button span, .btnWrap a span {
   letter-spacing: -0.05em;
 }
-.btnWrap .btnList {
+.btnWrap button.btnList span, .btnWrap a.btnList span {
   background: url("../images/web/sub/icon_list.png") no-repeat;
-  width: 50px;
-  height: 29px;
-  background-position: center top;
-  padding: 44px 0 0;
+  background-position: 12px top;
 }
-.btnWrap .btnModify {
-  width: 50px;
-  height: 29px;
+.btnWrap button.btnModify span, .btnWrap a.btnModify span {
   background: url("../images/web/sub/icon_modify.png") no-repeat;
   background-position: center top;
 }
-.btnWrap .btnDel {
-  width: 50px;
-  height: 28px;
+.btnWrap button.btnDel span, .btnWrap a.btnDel span {
   background: url("../images/web/sub/icon_del.png") no-repeat;
-  background-position: center top;
+  background-position: center 1px;
 }
-.btnWrap .btnPublish {
-  width: 50px;
-  height: 31px;
+.btnWrap button.btnPublish span, .btnWrap a.btnPublish span {
   background: url("../images/web/sub/icon_publish.png") no-repeat;
   background-position: center top;
 }
@@ -5111,6 +5107,13 @@ h2.title-margin {
   margin-top: 35px;
 }
 
+.videoDetail .detailWrap .commentWriter {
+  margin-top: 90px;
+}
+.videoDetail .commentList .commentWriter {
+  margin: 0;
+}
+
 /* 라이브 */
 .liveDetail.content {
   position: relative;
@@ -5160,6 +5163,9 @@ h2.title-margin {
 }
 .liveDetail .commentWriter {
   margin-top: 90px;
+}
+.liveDetail .commentList .commentWriter {
+  margin: 0;
 }
 
 @media (max-width: 780px) {
@@ -5641,182 +5647,183 @@ h2.title-margin {
     line-height: 11.7vw;
   }
 
-  .communityDetail {
+  .communityDetail, .videoDetail {
     padding: 85px 24px 0;
   }
-  .communityDetail.topVisual {
+  .communityDetail.topVisual, .videoDetail.topVisual {
     display: none;
   }
-  .communityDetail h2.title {
+  .communityDetail h2.title, .videoDetail h2.title {
     display: none;
   }
-  .communityDetail .detailWrap h3.title {
+  .communityDetail .detailWrap h3.title, .videoDetail .detailWrap h3.title {
     font-size: 21px;
     line-height: 24px;
     padding-bottom: 15px;
   }
-  .communityDetail .detailWrap__content {
+  .communityDetail .detailWrap__content, .videoDetail .detailWrap__content {
     padding-bottom: 35px;
     border-top: 1px solid #666;
     border-bottom: 1px solid #666;
   }
-  .communityDetail .detailWrap .justifyWrap {
+  .communityDetail .detailWrap .justifyWrap, .videoDetail .detailWrap .justifyWrap {
     padding-top: 10px;
     padding-bottom: 0;
   }
-  .communityDetail .detailWrap .justifyWrap__left .write, .communityDetail .detailWrap .justifyWrap__left .writeTitle {
+  .communityDetail .detailWrap .justifyWrap__left .write, .communityDetail .detailWrap .justifyWrap__left .writeTitle, .videoDetail .detailWrap .justifyWrap__left .write, .videoDetail .detailWrap .justifyWrap__left .writeTitle {
     display: none;
   }
-  .communityDetail .detailWrap .txt {
+  .communityDetail .detailWrap .txt, .videoDetail .detailWrap .txt {
     font-size: 15px;
     line-height: 20.5px;
   }
-  .communityDetail .btnWrap {
+  .communityDetail .btnWrap, .videoDetail .btnWrap {
     display: none;
   }
-  .communityDetail .commentWriter {
-    margin-bottom: 30px;
+  .communityDetail .detailWrap .commentWriter, .videoDetail .detailWrap .commentWriter {
+    margin-top: 0;
   }
-  .communityDetail .commentWriter h3.title {
+  .communityDetail .detailWrap .commentWriter h3.title, .videoDetail .detailWrap .commentWriter h3.title {
     margin-top: 50px;
     margin-bottom: 0;
     padding-top: 12px;
     padding-bottom: 11px;
     font-size: 16.5px;
   }
-  .communityDetail .commentWriter h3.title:after {
+  .communityDetail .detailWrap .commentWriter h3.title:after, .videoDetail .detailWrap .commentWriter h3.title:after {
     right: -18px;
     width: 21px;
     height: 15.5px;
     background: url("../images/mobile/sub/icon_comment.png") no-repeat;
     background-size: contain;
   }
-  .communityDetail .commentWriter__textarea {
+  .communityDetail .detailWrap .commentWriter__textarea, .videoDetail .detailWrap .commentWriter__textarea {
     height: 138px;
   }
-  .communityDetail .commentWriter__textarea textarea {
+  .communityDetail .detailWrap .commentWriter__textarea textarea, .videoDetail .detailWrap .commentWriter__textarea textarea {
     height: 98px;
     padding: 10px 7px;
     font-size: 13.5px;
     resize: none;
     line-height: 24px;
   }
-  .communityDetail .commentWriter .commentAttach {
+  .communityDetail .detailWrap .commentWriter .commentAttach, .videoDetail .detailWrap .commentWriter .commentAttach {
     height: 38px;
   }
-  .communityDetail .commentWriter .commentAttach .commentNum {
+  .communityDetail .detailWrap .commentWriter .commentAttach .commentNum, .videoDetail .detailWrap .commentWriter .commentAttach .commentNum {
     padding-left: 15px;
   }
-  .communityDetail .commentWriter .commentAttach .commentNum span {
+  .communityDetail .detailWrap .commentWriter .commentAttach .commentNum span, .videoDetail .detailWrap .commentWriter .commentAttach .commentNum span {
     font-size: 12px;
     font-family: "GothamBook", sans-serif;
   }
-  .communityDetail .commentWriter .commentAttach .commentNum .btnPhoto {
+  .communityDetail .detailWrap .commentWriter .commentAttach .commentNum .btnPhoto, .videoDetail .detailWrap .commentWriter .commentAttach .commentNum .btnPhoto {
     display: none;
   }
-  .communityDetail .commentWriter .commentAttach .btnRegister {
+  .communityDetail .detailWrap .commentWriter .commentAttach .btnRegister, .videoDetail .detailWrap .commentWriter .commentAttach .btnRegister {
     background: #000;
     height: 39px;
     width: 91px;
   }
-  .communityDetail .commentWriter .commentAttach .btnRegister .icon {
+  .communityDetail .detailWrap .commentWriter .commentAttach .btnRegister .icon, .videoDetail .detailWrap .commentWriter .commentAttach .btnRegister .icon {
     padding: 0;
     font-size: 13.5px;
   }
-  .communityDetail .commentWriter .commentAttach .btnRegister .icon:after {
+  .communityDetail .detailWrap .commentWriter .commentAttach .btnRegister .icon:after, .videoDetail .detailWrap .commentWriter .commentAttach .btnRegister .icon:after {
     display: none;
   }
-  .communityDetail .commentWriter .commentAttach .btnRegister span {
+  .communityDetail .detailWrap .commentWriter .commentAttach .btnRegister span, .videoDetail .detailWrap .commentWriter .commentAttach .btnRegister span {
     font-size: 13.5px;
   }
-  .communityDetail .commentList .commentItem {
+  .communityDetail .detailWrap .commentList .commentItem, .videoDetail .detailWrap .commentList .commentItem {
     margin: 0;
     padding: 30px 0 12px;
     overflow: hidden;
   }
-  .communityDetail .commentList .commentItem .btnReply-m {
+  .communityDetail .detailWrap .commentList .commentItem .btnReply-m, .videoDetail .detailWrap .commentList .commentItem .btnReply-m {
     background-color: #EA551C;
     border-color: #EA551C;
   }
-  .communityDetail .commentList .commentItem .commentBox .btnCommentLayer {
+  .communityDetail .detailWrap .commentList .commentItem .commentBox .btnCommentLayer, .videoDetail .detailWrap .commentList .commentItem .commentBox .btnCommentLayer {
     right: 0;
   }
-  .communityDetail .commentList .commentItem .commentBox .layerButton {
+  .communityDetail .detailWrap .commentList .commentItem .commentBox .layerButton, .videoDetail .detailWrap .commentList .commentItem .commentBox .layerButton {
     right: 0;
     top: 28px;
     width: 80px;
     height: 91px;
   }
-  .communityDetail .commentList .commentItem .commentBox .layerButton li a {
+  .communityDetail .detailWrap .commentList .commentItem .commentBox .layerButton li a, .videoDetail .detailWrap .commentList .commentItem .commentBox .layerButton li a {
     height: 44px;
     line-height: 44px;
     background-color: #000;
   }
-  .communityDetail .commentList .commentItem .commentBox__nick {
+  .communityDetail .detailWrap .commentList .commentItem .commentBox__nick, .videoDetail .detailWrap .commentList .commentItem .commentBox__nick {
     margin-bottom: 15px;
   }
-  .communityDetail .commentList .commentItem .commentBox__nick .nick {
+  .communityDetail .detailWrap .commentList .commentItem .commentBox__nick .nick, .videoDetail .detailWrap .commentList .commentItem .commentBox__nick .nick {
     font-size: 15px;
   }
-  .communityDetail .commentList .commentItem .commentBox__nick .nick .date {
+  .communityDetail .detailWrap .commentList .commentItem .commentBox__nick .nick .date, .videoDetail .detailWrap .commentList .commentItem .commentBox__nick .nick .date {
     font-size: 14px;
     margin-left: 5px;
     color: #E4E4E4;
   }
-  .communityDetail .commentList .commentItem .commentBox__text {
+  .communityDetail .detailWrap .commentList .commentItem .commentBox__text, .videoDetail .detailWrap .commentList .commentItem .commentBox__text {
     padding-bottom: 20px;
   }
-  .communityDetail .commentList .commentItem .commentBox__text__view {
+  .communityDetail .detailWrap .commentList .commentItem .commentBox__text__view, .videoDetail .detailWrap .commentList .commentItem .commentBox__text__view {
     font-size: 15px;
     line-height: 22.5px;
   }
-  .communityDetail .commentList .commentItem .commentBox__info span {
+  .communityDetail .detailWrap .commentList .commentItem .commentBox__info span, .videoDetail .detailWrap .commentList .commentItem .commentBox__info span {
     font-size: 14px;
     font-family: "GothamBook", sans-serif;
   }
-  .communityDetail .commentList .commentItem .commentBox__info__left button {
+  .communityDetail .detailWrap .commentList .commentItem .commentBox__info__left button, .videoDetail .detailWrap .commentList .commentItem .commentBox__info__left button {
     width: 60px;
     height: 30px;
     font-size: 13px;
     margin-left: 0;
   }
-  .communityDetail .commentList .commentItem .commentBox__info__right {
+  .communityDetail .detailWrap .commentList .commentItem .commentBox__info__right, .videoDetail .detailWrap .commentList .commentItem .commentBox__info__right {
     padding-right: 0;
   }
-  .communityDetail .commentList .commentItem .commentBox__info__right .btnLike {
+  .communityDetail .detailWrap .commentList .commentItem .commentBox__info__right .btnLike, .videoDetail .detailWrap .commentList .commentItem .commentBox__info__right .btnLike {
     padding: 0 24px 0 0;
     line-height: 20px;
   }
-  .communityDetail .commentList .commentItem .commentBox__info__right .btnLike:after {
+  .communityDetail .detailWrap .commentList .commentItem .commentBox__info__right .btnLike:after, .videoDetail .detailWrap .commentList .commentItem .commentBox__info__right .btnLike:after {
     top: 2px;
     width: 16px;
     height: 16px;
   }
-  .communityDetail .commentList .commentItem-reply {
+  .communityDetail .detailWrap .commentList .commentItem-reply, .videoDetail .detailWrap .commentList .commentItem-reply {
     padding-left: 50px;
     padding-right: 15px;
   }
-  .communityDetail .commentList .commentItem-reply:after {
+  .communityDetail .detailWrap .commentList .commentItem-reply:after, .videoDetail .detailWrap .commentList .commentItem-reply:after {
+    top: 30px;
     left: 25px;
     background: url("../images/mobile/sub/bg_line.png") no-repeat;
     background-size: contain;
     width: 17px;
     height: 17px;
   }
-  .communityDetail .commentList .commentItem-reply .commentWriter__textarea {
+  .communityDetail .detailWrap .commentList .commentItem-reply .commentWriter__textarea, .videoDetail .detailWrap .commentList .commentItem-reply .commentWriter__textarea {
     height: 138px;
   }
-  .communityDetail .commentList .commentItem-reply .commentWriter__textarea textarea {
+  .communityDetail .detailWrap .commentList .commentItem-reply .commentWriter__textarea textarea, .videoDetail .detailWrap .commentList .commentItem-reply .commentWriter__textarea textarea {
     height: 98px;
   }
-  .communityDetail .commentList .commentItem-reply .commentWriter__textarea .commentAttach .btnRegister span {
+  .communityDetail .detailWrap .commentList .commentItem-reply .commentWriter__textarea .commentAttach .btnRegister span, .videoDetail .detailWrap .commentList .commentItem-reply .commentWriter__textarea .commentAttach .btnRegister span {
     font-size: 13.5px;
   }
-  .communityDetail .commentList .commentItem-reply .commentBox__info {
+  .communityDetail .detailWrap .commentList .commentItem-reply .commentBox__info, .videoDetail .detailWrap .commentList .commentItem-reply .commentBox__info {
     position: relative;
     padding: 10px 0 0;
   }
-  .communityDetail .commentList .commentItem-reply .commentBox__info:after {
+  .communityDetail .detailWrap .commentList .commentItem-reply .commentBox__info:after, .videoDetail .detailWrap .commentList .commentItem-reply .commentBox__info:after {
     content: "";
     position: absolute;
     left: -100px;
@@ -5825,82 +5832,79 @@ h2.title-margin {
     height: 1px;
     background: #707070;
   }
-  .communityDetail .commentList .commentItem-reply .commentBox__info__left .btnReply {
+  .communityDetail .detailWrap .commentList .commentItem-reply .commentBox__info__left .btnReply, .videoDetail .detailWrap .commentList .commentItem-reply .commentBox__info__left .btnReply {
     margin-left: -25px;
   }
-  .communityDetail .commentList .commentItem .commentWriter {
-    margin-bottom: 30px;
-  }
-  .communityDetail .commentList .commentItem .commentWriter h3.title {
+  .communityDetail .detailWrap .commentList .commentItem .commentWriter h3.title, .videoDetail .detailWrap .commentList .commentItem .commentWriter h3.title {
     margin-top: 50px;
     margin-bottom: 0;
     padding-top: 12px;
     padding-bottom: 11px;
     font-size: 16.5px;
   }
-  .communityDetail .commentList .commentItem .commentWriter h3.title:after {
+  .communityDetail .detailWrap .commentList .commentItem .commentWriter h3.title:after, .videoDetail .detailWrap .commentList .commentItem .commentWriter h3.title:after {
     right: -18px;
     width: 21px;
     height: 15.5px;
     background: url("../images/mobile/sub/icon_comment.png") no-repeat;
     background-size: contain;
   }
-  .communityDetail .commentList .commentItem .commentWriter__textarea {
+  .communityDetail .detailWrap .commentList .commentItem .commentWriter__textarea, .videoDetail .detailWrap .commentList .commentItem .commentWriter__textarea {
     height: 138px;
   }
-  .communityDetail .commentList .commentItem .commentWriter__textarea textarea {
+  .communityDetail .detailWrap .commentList .commentItem .commentWriter__textarea textarea, .videoDetail .detailWrap .commentList .commentItem .commentWriter__textarea textarea {
     height: 98px;
     padding: 10px 7px;
     font-size: 13.5px;
     resize: none;
   }
-  .communityDetail .commentList .commentItem .commentWriter .commentAttach {
+  .communityDetail .detailWrap .commentList .commentItem .commentWriter .commentAttach, .videoDetail .detailWrap .commentList .commentItem .commentWriter .commentAttach {
     height: 38px;
   }
-  .communityDetail .commentList .commentItem .commentWriter .commentAttach .commentNum {
+  .communityDetail .detailWrap .commentList .commentItem .commentWriter .commentAttach .commentNum, .videoDetail .detailWrap .commentList .commentItem .commentWriter .commentAttach .commentNum {
     padding-left: 15px;
   }
-  .communityDetail .commentList .commentItem .commentWriter .commentAttach .commentNum span {
+  .communityDetail .detailWrap .commentList .commentItem .commentWriter .commentAttach .commentNum span, .videoDetail .detailWrap .commentList .commentItem .commentWriter .commentAttach .commentNum span {
     font-size: 11.5px;
   }
-  .communityDetail .commentList .commentItem .commentWriter .commentAttach .commentNum .btnPhoto {
+  .communityDetail .detailWrap .commentList .commentItem .commentWriter .commentAttach .commentNum .btnPhoto, .videoDetail .detailWrap .commentList .commentItem .commentWriter .commentAttach .commentNum .btnPhoto {
     display: none;
   }
-  .communityDetail .commentList .commentItem .commentWriter .commentAttach .btnRegister {
+  .communityDetail .detailWrap .commentList .commentItem .commentWriter .commentAttach .btnRegister, .videoDetail .detailWrap .commentList .commentItem .commentWriter .commentAttach .btnRegister {
     background: #000;
     height: 39px;
     color: #fff;
   }
-  .communityDetail .commentList .commentItem .commentWriter .commentAttach .btnRegister .icon {
+  .communityDetail .detailWrap .commentList .commentItem .commentWriter .commentAttach .btnRegister .icon, .videoDetail .detailWrap .commentList .commentItem .commentWriter .commentAttach .btnRegister .icon {
     padding: 0;
     font-size: 13.5px;
   }
-  .communityDetail .commentList .commentItem .commentWriter .commentAttach .btnRegister .icon:after {
+  .communityDetail .detailWrap .commentList .commentItem .commentWriter .commentAttach .btnRegister .icon:after, .videoDetail .detailWrap .commentList .commentItem .commentWriter .commentAttach .btnRegister .icon:after {
     display: none;
   }
-  .communityDetail .commentList .commentItem .commentWriter .commentAttach .btnRegister span {
+  .communityDetail .detailWrap .commentList .commentItem .commentWriter .commentAttach .btnRegister span, .videoDetail .detailWrap .commentList .commentItem .commentWriter .commentAttach .btnRegister span {
     color: #fff;
     font-size: 13.5px;
   }
-  .communityDetail .paginationWrap__list > ul > li > .btnLike {
+  .communityDetail .paginationWrap__list > ul > li > .btnLike, .videoDetail .paginationWrap__list > ul > li > .btnLike {
     width: 40px;
     height: 40px;
     right: 0;
     top: 0;
     background-size: 20px 20px;
   }
-  .communityDetail .paginationWrap__list > ul > li > .btnLike.on {
+  .communityDetail .paginationWrap__list > ul > li > .btnLike.on, .videoDetail .paginationWrap__list > ul > li > .btnLike.on {
     background-size: 20px 20px;
   }
-  .communityDetail .paginationWrap__list > ul > li .imgLink {
+  .communityDetail .paginationWrap__list > ul > li .imgLink, .videoDetail .paginationWrap__list > ul > li .imgLink {
     height: 100%;
   }
-  .communityDetail .paginationWrap__list > ul > li .imgLink .text {
+  .communityDetail .paginationWrap__list > ul > li .imgLink .text, .videoDetail .paginationWrap__list > ul > li .imgLink .text {
     width: 40vw;
     line-height: 6.8vw;
     font-size: 5.7vw;
   }
-  .communityDetail .paginationWrap__list > ul > li .justifyWrap {
+  .communityDetail .paginationWrap__list > ul > li .justifyWrap, .videoDetail .paginationWrap__list > ul > li .justifyWrap {
     display: none;
   }
 
@@ -6094,11 +6098,10 @@ h2.title-margin {
   .liveDetail .liveWrap .text {
     text-align: left;
   }
-  .liveDetail .commentWriter {
+  .liveDetail .detailWrap .commentWriter {
     margin-top: 0;
-    margin-bottom: 30px;
   }
-  .liveDetail .commentWriter h3.title {
+  .liveDetail .detailWrap .commentWriter h3.title {
     margin-top: 50px;
     margin-bottom: 0;
     padding-top: 12px;
@@ -6106,138 +6109,139 @@ h2.title-margin {
     font-size: 16.5px;
     line-height: 24px;
   }
-  .liveDetail .commentWriter h3.title:after {
+  .liveDetail .detailWrap .commentWriter h3.title:after {
     right: -18px;
     width: 21px;
     height: 15.5px;
     background: url("../images/mobile/sub/icon_comment.png") no-repeat;
     background-size: contain;
   }
-  .liveDetail .commentWriter__textarea {
+  .liveDetail .detailWrap .commentWriter__textarea {
     height: 138px;
   }
-  .liveDetail .commentWriter__textarea textarea {
+  .liveDetail .detailWrap .commentWriter__textarea textarea {
     height: 98px;
     padding: 10px 7px;
     font-size: 13.5px;
     resize: none;
   }
-  .liveDetail .commentWriter .commentAttach {
+  .liveDetail .detailWrap .commentWriter .commentAttach {
     height: 38px;
   }
-  .liveDetail .commentWriter .commentAttach .commentNum {
+  .liveDetail .detailWrap .commentWriter .commentAttach .commentNum {
     padding-left: 15px;
   }
-  .liveDetail .commentWriter .commentAttach .commentNum span {
+  .liveDetail .detailWrap .commentWriter .commentAttach .commentNum span {
     font-size: 12px;
     font-family: "GothamBook", sans-serif;
   }
-  .liveDetail .commentWriter .commentAttach .commentNum .btnPhoto {
+  .liveDetail .detailWrap .commentWriter .commentAttach .commentNum .btnPhoto {
     display: none;
   }
-  .liveDetail .commentWriter .commentAttach .btnRegister {
+  .liveDetail .detailWrap .commentWriter .commentAttach .btnRegister {
     background: #000;
     height: 39px;
     width: 91px;
   }
-  .liveDetail .commentWriter .commentAttach .btnRegister .icon {
+  .liveDetail .detailWrap .commentWriter .commentAttach .btnRegister .icon {
     padding: 0;
     font-size: 13.5px;
   }
-  .liveDetail .commentWriter .commentAttach .btnRegister .icon:after {
+  .liveDetail .detailWrap .commentWriter .commentAttach .btnRegister .icon:after {
     display: none;
   }
-  .liveDetail .commentWriter .commentAttach .btnRegister span {
+  .liveDetail .detailWrap .commentWriter .commentAttach .btnRegister span {
     font-size: 13.5px;
   }
-  .liveDetail .commentList .commentItem {
+  .liveDetail .detailWrap .commentList .commentItem {
     margin: 0;
     padding: 30px 0 12px;
     overflow: hidden;
   }
-  .liveDetail .commentList .commentItem .btnReply-m {
+  .liveDetail .detailWrap .commentList .commentItem .btnReply-m {
     background-color: #EA551C;
     border-color: #EA551C;
   }
-  .liveDetail .commentList .commentItem .commentBox .btnCommentLayer {
+  .liveDetail .detailWrap .commentList .commentItem .commentBox .btnCommentLayer {
     right: 0;
   }
-  .liveDetail .commentList .commentItem .commentBox .layerButton {
+  .liveDetail .detailWrap .commentList .commentItem .commentBox .layerButton {
     right: 0;
     top: 28px;
     width: 80px;
     height: 91px;
   }
-  .liveDetail .commentList .commentItem .commentBox .layerButton li a {
+  .liveDetail .detailWrap .commentList .commentItem .commentBox .layerButton li a {
     height: 44px;
     line-height: 44px;
     background-color: #000;
   }
-  .liveDetail .commentList .commentItem .commentBox__nick {
+  .liveDetail .detailWrap .commentList .commentItem .commentBox__nick {
     margin-bottom: 15px;
   }
-  .liveDetail .commentList .commentItem .commentBox__nick .nick {
+  .liveDetail .detailWrap .commentList .commentItem .commentBox__nick .nick {
     font-size: 15px;
   }
-  .liveDetail .commentList .commentItem .commentBox__nick .nick .date {
+  .liveDetail .detailWrap .commentList .commentItem .commentBox__nick .nick .date {
     font-size: 14px;
     margin-left: 5px;
     color: #E4E4E4;
   }
-  .liveDetail .commentList .commentItem .commentBox__text {
+  .liveDetail .detailWrap .commentList .commentItem .commentBox__text {
     padding-bottom: 20px;
   }
-  .liveDetail .commentList .commentItem .commentBox__text__view {
+  .liveDetail .detailWrap .commentList .commentItem .commentBox__text__view {
     font-size: 15px;
     line-height: 22.5px;
   }
-  .liveDetail .commentList .commentItem .commentBox__info span {
+  .liveDetail .detailWrap .commentList .commentItem .commentBox__info span {
     font-size: 14px;
     font-family: "GothamBook", sans-serif;
   }
-  .liveDetail .commentList .commentItem .commentBox__info__left button {
+  .liveDetail .detailWrap .commentList .commentItem .commentBox__info__left button {
     width: 60px;
     height: 30px;
     font-size: 13px;
     margin-left: 0;
   }
-  .liveDetail .commentList .commentItem .commentBox__info__right {
+  .liveDetail .detailWrap .commentList .commentItem .commentBox__info__right {
     padding-right: 0;
   }
-  .liveDetail .commentList .commentItem .commentBox__info__right .btnLike {
+  .liveDetail .detailWrap .commentList .commentItem .commentBox__info__right .btnLike {
     padding: 0 24px 0 0;
     line-height: 20px;
   }
-  .liveDetail .commentList .commentItem .commentBox__info__right .btnLike:after {
+  .liveDetail .detailWrap .commentList .commentItem .commentBox__info__right .btnLike:after {
     top: 2px;
     width: 16px;
     height: 16px;
   }
-  .liveDetail .commentList .commentItem-reply {
+  .liveDetail .detailWrap .commentList .commentItem-reply {
     padding-left: 50px;
     padding-right: 15px;
   }
-  .liveDetail .commentList .commentItem-reply:after {
+  .liveDetail .detailWrap .commentList .commentItem-reply:after {
+    top: 30px;
     left: 25px;
     background: url("../images/mobile/sub/bg_line.png") no-repeat;
     background-size: contain;
     width: 17px;
     height: 17px;
   }
-  .liveDetail .commentList .commentItem-reply .commentWriter__textarea {
+  .liveDetail .detailWrap .commentList .commentItem-reply .commentWriter__textarea {
     height: 138px;
   }
-  .liveDetail .commentList .commentItem-reply .commentWriter__textarea textarea {
+  .liveDetail .detailWrap .commentList .commentItem-reply .commentWriter__textarea textarea {
     height: 98px;
   }
-  .liveDetail .commentList .commentItem-reply .commentWriter__textarea .commentAttach .btnRegister span {
+  .liveDetail .detailWrap .commentList .commentItem-reply .commentWriter__textarea .commentAttach .btnRegister span {
     font-size: 13.5px;
   }
-  .liveDetail .commentList .commentItem-reply .commentBox__info {
+  .liveDetail .detailWrap .commentList .commentItem-reply .commentBox__info {
     position: relative;
     padding: 10px 0 0;
   }
-  .liveDetail .commentList .commentItem-reply .commentBox__info:after {
+  .liveDetail .detailWrap .commentList .commentItem-reply .commentBox__info:after {
     content: "";
     position: absolute;
     left: -100px;
@@ -6246,60 +6250,57 @@ h2.title-margin {
     height: 1px;
     background: #707070;
   }
-  .liveDetail .commentList .commentItem-reply .commentBox__info__left .btnReply {
+  .liveDetail .detailWrap .commentList .commentItem-reply .commentBox__info__left .btnReply {
     margin-left: -25px;
   }
-  .liveDetail .commentList .commentItem .commentWriter {
-    margin-bottom: 30px;
-  }
-  .liveDetail .commentList .commentItem .commentWriter h3.title {
+  .liveDetail .detailWrap .commentList .commentItem .commentWriter h3.title {
     margin-top: 50px;
     margin-bottom: 0;
     padding-top: 12px;
     padding-bottom: 11px;
     font-size: 16.5px;
   }
-  .liveDetail .commentList .commentItem .commentWriter h3.title:after {
+  .liveDetail .detailWrap .commentList .commentItem .commentWriter h3.title:after {
     right: -18px;
     width: 21px;
     height: 15.5px;
     background: url("../images/mobile/sub/icon_comment.png") no-repeat;
     background-size: contain;
   }
-  .liveDetail .commentList .commentItem .commentWriter__textarea {
+  .liveDetail .detailWrap .commentList .commentItem .commentWriter__textarea {
     height: 138px;
   }
-  .liveDetail .commentList .commentItem .commentWriter__textarea textarea {
+  .liveDetail .detailWrap .commentList .commentItem .commentWriter__textarea textarea {
     height: 98px;
     padding: 10px 7px;
     font-size: 13.5px;
     resize: none;
   }
-  .liveDetail .commentList .commentItem .commentWriter .commentAttach {
+  .liveDetail .detailWrap .commentList .commentItem .commentWriter .commentAttach {
     height: 38px;
   }
-  .liveDetail .commentList .commentItem .commentWriter .commentAttach .commentNum {
+  .liveDetail .detailWrap .commentList .commentItem .commentWriter .commentAttach .commentNum {
     padding-left: 15px;
   }
-  .liveDetail .commentList .commentItem .commentWriter .commentAttach .commentNum span {
+  .liveDetail .detailWrap .commentList .commentItem .commentWriter .commentAttach .commentNum span {
     font-size: 11.5px;
   }
-  .liveDetail .commentList .commentItem .commentWriter .commentAttach .commentNum .btnPhoto {
+  .liveDetail .detailWrap .commentList .commentItem .commentWriter .commentAttach .commentNum .btnPhoto {
     display: none;
   }
-  .liveDetail .commentList .commentItem .commentWriter .commentAttach .btnRegister {
+  .liveDetail .detailWrap .commentList .commentItem .commentWriter .commentAttach .btnRegister {
     background: #000;
     height: 39px;
     color: #fff;
   }
-  .liveDetail .commentList .commentItem .commentWriter .commentAttach .btnRegister .icon {
+  .liveDetail .detailWrap .commentList .commentItem .commentWriter .commentAttach .btnRegister .icon {
     padding: 0;
     font-size: 13.5px;
   }
-  .liveDetail .commentList .commentItem .commentWriter .commentAttach .btnRegister .icon:after {
+  .liveDetail .detailWrap .commentList .commentItem .commentWriter .commentAttach .btnRegister .icon:after {
     display: none;
   }
-  .liveDetail .commentList .commentItem .commentWriter .commentAttach .btnRegister span {
+  .liveDetail .detailWrap .commentList .commentItem .commentWriter .commentAttach .btnRegister span {
     color: #fff;
     font-size: 13.5px;
   }

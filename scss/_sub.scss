@@ -689,7 +689,7 @@ h2.title {
   }
 }
 
-.communityDetail {
+.communityDetail, .videoDtail {
   .btnWrap {
     margin-bottom: 130px;
   }
@@ -1083,6 +1083,7 @@ h2.title {
   border: 1px solid #E66B1B;
   background-color: #2B2B2B;
   box-sizing: border-box;
+  z-index: 1;
   h4.title {
     font-size: 24px;
     color: #fff;
@@ -1166,42 +1167,46 @@ h2.title {
     text-align: right;
   }
   button,a {
-    position: relative;
     display: inline-block;
+    vertical-align: top;
     margin-left: 21px;
-    padding: 41px 0 0;
-    text-align: center;
-    color: #fff;
-    font-size: 14px;
-    @include nsM;
     span {
+      display: block;
+      width: 54px;
+      height: 24px;
+      line-height: 24px;
+      padding: 41px 0 0;
+      text-align: center;
+      color: #fff;
+      font-size: 14px;
+      @include nsM;
       letter-spacing: -0.05em;
     }
-  }
-  .btnList {
-    @include imageUrl("web/sub/icon_list");
-    width: 50px;
-    height: 29px;
-    background-position: center top;
-    padding: 44px 0 0;
-  }
-  .btnModify {
-    width: 50px;
-    height: 29px;
-    @include imageUrl("web/sub/icon_modify");
-    background-position: center top;
-  }
-  .btnDel {
-    width: 50px;
-    height: 28px;
-    @include imageUrl("web/sub/icon_del");
-    background-position: center top;
-  }
-  .btnPublish {
-    width: 50px;
-    height: 31px;
-    @include imageUrl("web/sub/icon_publish");
-    background-position: center top;
+
+    &.btnList {
+      span {
+        @include imageUrl("web/sub/icon_list");
+        background-position: 12px top;
+      }
+    }
+    &.btnModify {
+      span {
+        @include imageUrl("web/sub/icon_modify");
+        background-position: center top;
+      }
+    }
+    &.btnDel {
+      span {
+        @include imageUrl("web/sub/icon_del");
+        background-position: center 1px;
+      }
+    }
+    &.btnPublish {
+      span {
+        @include imageUrl("web/sub/icon_publish");
+        background-position: center top;
+      }
+    }
   }
 }
 
@@ -1642,6 +1647,20 @@ h2.title {
   }
 }
 
+.videoDetail {
+  .detailWrap {
+    .commentWriter {
+      margin-top: 90px;
+    }
+  }
+
+  .commentList {
+    .commentWriter {
+      margin: 0;
+    }
+  }
+}
+
 /* 라이브 */
 .liveDetail {
   &.content{
@@ -1696,6 +1715,11 @@ h2.title {
   }
   .commentWriter {
     margin-top: 90px;
+  }
+  .commentList {
+    .commentWriter {
+      margin: 0;
+    }
   }
 }
 
@@ -2222,7 +2246,7 @@ h2.title {
     }
   }
 
-  .communityDetail {
+  .communityDetail, .videoDetail {
     padding: 85px 24px 0;
     &.topVisual {
       display: none;
@@ -2272,233 +2296,236 @@ h2.title {
     .btnWrap {
       display: none;
     }
-    .commentWriter {
-      margin-bottom: 30px;
-      h3.title {
-        margin-top: 50px;
-        margin-bottom: 0;
-        padding-top: 12px;
-        padding-bottom: 11px;
-        font-size: calc(33px / 2);
-        &:after {
-          right: -18px;
-          width: calc(42px / 2);
-          height: calc(31px / 2);
-          @include imageUrl("mobile/sub/icon_comment");
-          background-size: contain;
-        }
-      }
-      &__textarea {
-        height: calc(276px / 2);
-        textarea {
-          height: 98px;
-          padding: 10px 7px;
-          font-size: calc(27px / 2);
-          resize: none;
-          line-height: 24px;
-        }
-      }
-      .commentAttach {
-        height: calc(76px / 2);
-        .commentNum {
-          padding-left: 15px;
-          span {
-            font-size: 12px;
-            @include gtBook;
-          }
-          .btnPhoto {
-            display: none;
+
+    .detailWrap {
+      .commentWriter {
+        margin-top: 0;
+        h3.title {
+          margin-top: 50px;
+          margin-bottom: 0;
+          padding-top: 12px;
+          padding-bottom: 11px;
+          font-size: calc(33px / 2);
+          &:after {
+            right: -18px;
+            width: calc(42px / 2);
+            height: calc(31px / 2);
+            @include imageUrl("mobile/sub/icon_comment");
+            background-size: contain;
           }
         }
-        .btnRegister {
-          background: #000;
-          height: calc(78px / 2);
-          width: calc(182px / 2);
-          .icon {
-            padding: 0;
+        &__textarea {
+          height: calc(276px / 2);
+          textarea {
+            height: 98px;
+            padding: 10px 7px;
             font-size: calc(27px / 2);
-            &:after {
+            resize: none;
+            line-height: 24px;
+          }
+        }
+        .commentAttach {
+          height: calc(76px / 2);
+          .commentNum {
+            padding-left: 15px;
+            span {
+              font-size: 12px;
+              @include gtBook;
+            }
+            .btnPhoto {
               display: none;
             }
           }
-          span {
-            font-size: calc(27px / 2);
+          .btnRegister {
+            background: #000;
+            height: calc(78px / 2);
+            width: calc(182px / 2);
+            .icon {
+              padding: 0;
+              font-size: calc(27px / 2);
+              &:after {
+                display: none;
+              }
+            }
+            span {
+              font-size: calc(27px / 2);
+            }
           }
         }
       }
-    }
 
-    .commentList {
-      .commentItem {
-        margin: 0;
-        padding: 30px 0 12px;
-        overflow: hidden;
-        .btnReply-m {
-          background-color: #EA551C;
-          border-color: #EA551C;
-        }
-        .commentBox {
-          .btnCommentLayer {
-            right : 0;
+      .commentList {
+        .commentItem {
+          margin: 0;
+          padding: 30px 0 12px;
+          overflow: hidden;
+          .btnReply-m {
+            background-color: #EA551C;
+            border-color: #EA551C;
           }
+          .commentBox {
+            .btnCommentLayer {
+              right : 0;
+            }
 
-          .layerButton {
-            right : 0;
-            top: 28px;
-            width: 80px;
-            height: 91px;
-            li {
-              a {
-                height           : 44px;
-                line-height: 44px;
-                background-color : #000;
-              }
-            }
-          }
-
-          &__nick {
-            margin-bottom: 15px;
-            .nick {
-              font-size : calc(30px / 2);
-              .date {
-                font-size : calc(28px / 2);
-                margin-left: 5px;
-                color: #E4E4E4;
-              }
-            }
-          }
-          &__text {
-            padding-bottom: 20px;
-            &__view {
-              font-size : calc(30px / 2);
-              line-height: calc(45px / 2);
-            }
-          }
-          &__info {
-            span {
-              font-size: 14px;
-              @include gtBook;
-            }
-            &__left {
-              button {
-                width: calc(120px / 2);
-                height: calc(60px / 2);
-                font-size: calc(26px / 2);
-                margin-left: 0;
-              }
-            }
-            &__right {
-              padding-right: 0;
-              .btnLike {
-                padding: 0 24px 0 0;
-                line-height: 20px;
-                &:after {
-                  top: 2px;
-                  width: 16px;
-                  height: 16px;
+            .layerButton {
+              right : 0;
+              top: 28px;
+              width: 80px;
+              height: 91px;
+              li {
+                a {
+                  height           : 44px;
+                  line-height: 44px;
+                  background-color : #000;
                 }
               }
             }
-          }
-        }
-        &-reply {
-          padding-left: calc(100px / 2);
-          padding-right: 15px;
-          &:after {
-            left: 25px;
-            @include imageUrl("mobile/sub/bg_line");
-            background-size: contain;
-            width: 17px;
-            height: 17px;
-          }
-          .commentWriter {
-            &__textarea {
-              height: calc(276px / 2);
-              textarea {
-                height: 98px;
-              }
-              .commentAttach {
-                .btnRegister {
 
-                  span {
-                    font-size: calc(27px / 2);
+            &__nick {
+              margin-bottom: 15px;
+              .nick {
+                font-size : calc(30px / 2);
+                .date {
+                  font-size : calc(28px / 2);
+                  margin-left: 5px;
+                  color: #E4E4E4;
+                }
+              }
+            }
+            &__text {
+              padding-bottom: 20px;
+              &__view {
+                font-size : calc(30px / 2);
+                line-height: calc(45px / 2);
+              }
+            }
+            &__info {
+              span {
+                font-size: 14px;
+                @include gtBook;
+              }
+              &__left {
+                button {
+                  width: calc(120px / 2);
+                  height: calc(60px / 2);
+                  font-size: calc(26px / 2);
+                  margin-left: 0;
+                }
+              }
+              &__right {
+                padding-right: 0;
+                .btnLike {
+                  padding: 0 24px 0 0;
+                  line-height: 20px;
+                  &:after {
+                    top: 2px;
+                    width: 16px;
+                    height: 16px;
                   }
                 }
               }
             }
           }
+          &-reply {
+            padding-left: calc(100px / 2);
+            padding-right: 15px;
+            &:after {
+              top: 30px;
+              left: 25px;
+              @include imageUrl("mobile/sub/bg_line");
+              background-size: contain;
+              width: 17px;
+              height: 17px;
+            }
+            .commentWriter {
+              &__textarea {
+                height: calc(276px / 2);
+                textarea {
+                  height: 98px;
+                }
+                .commentAttach {
+                  .btnRegister {
 
-          .commentBox {
-            &__info {
-              position: relative;
-              padding: 10px 0 0;
-              &:after {
-                content: "";
-                position: absolute;
-                left: -100px;
-                top: 0;
-                width: 200%;
-                height: 1px;
-                background: #707070;
+                    span {
+                      font-size: calc(27px / 2);
+                    }
+                  }
+                }
               }
-              &__left {
-                .btnReply {
-                  margin-left: -25px;
+            }
+
+            .commentBox {
+              &__info {
+                position: relative;
+                padding: 10px 0 0;
+                &:after {
+                  content: "";
+                  position: absolute;
+                  left: -100px;
+                  top: 0;
+                  width: 200%;
+                  height: 1px;
+                  background: #707070;
+                }
+                &__left {
+                  .btnReply {
+                    margin-left: -25px;
+                  }
                 }
               }
             }
           }
-        }
-        .commentWriter {
-          margin-bottom: 30px;
-          h3.title {
-            margin-top: 50px;
-            margin-bottom: 0;
-            padding-top: 12px;
-            padding-bottom: 11px;
-            font-size: calc(33px / 2);
-            &:after {
-              right: -18px;
-              width: calc(42px / 2);
-              height: calc(31px / 2);
-              @include imageUrl("mobile/sub/icon_comment");
-              background-size: contain;
-            }
-          }
-          &__textarea {
-            height: calc(276px / 2);
-            textarea {
-              height: 98px;
-              padding: 10px 7px;
-              font-size: calc(27px / 2);
-              resize: none;
-            }
-          }
-          .commentAttach {
-            height: calc(76px / 2);
-            .commentNum {
-              padding-left: 15px;
-              span {
-                font-size: calc(23px / 2);
-              }
-              .btnPhoto {
-                display: none;
+          .commentWriter {
+            h3.title {
+              margin-top: 50px;
+              margin-bottom: 0;
+              padding-top: 12px;
+              padding-bottom: 11px;
+              font-size: calc(33px / 2);
+              &:after {
+                right: -18px;
+                width: calc(42px / 2);
+                height: calc(31px / 2);
+                @include imageUrl("mobile/sub/icon_comment");
+                background-size: contain;
               }
             }
-            .btnRegister {
-              background: #000;
-              height: calc(78px / 2);
-              color: #fff;
-              .icon {
-                padding: 0;
+            &__textarea {
+              height: calc(276px / 2);
+              textarea {
+                height: 98px;
+                padding: 10px 7px;
                 font-size: calc(27px / 2);
-                &:after {
+                resize: none;
+              }
+            }
+            .commentAttach {
+              height: calc(76px / 2);
+              .commentNum {
+                padding-left: 15px;
+                span {
+                  font-size: calc(23px / 2);
+                }
+                .btnPhoto {
                   display: none;
                 }
               }
-              span {
+              .btnRegister {
+                background: #000;
+                height: calc(78px / 2);
                 color: #fff;
-                font-size: calc(27px / 2);
+                .icon {
+                  padding: 0;
+                  font-size: calc(27px / 2);
+                  &:after {
+                    display: none;
+                  }
+                }
+                span {
+                  color: #fff;
+                  font-size: calc(27px / 2);
+                }
               }
             }
           }
@@ -2751,234 +2778,235 @@ h2.title {
       }
     }
 
-    .commentWriter {
-      margin-top: 0;
-      margin-bottom: 30px;
-      h3.title {
-        margin-top: 50px;
-        margin-bottom: 0;
-        padding-top: 12px;
-        padding-bottom: 11px;
-        font-size: calc(33px / 2);
-        line-height: 24px;
-        &:after {
-          right: -18px;
-          width: calc(42px / 2);
-          height: calc(31px / 2);
-          @include imageUrl("mobile/sub/icon_comment");
-          background-size: contain;
-        }
-      }
-      &__textarea {
-        height: calc(276px / 2);
-        textarea {
-          height: 98px;
-          padding: 10px 7px;
-          font-size: calc(27px / 2);
-          resize: none;
-        }
-      }
-      .commentAttach {
-        height: calc(76px / 2);
-        .commentNum {
-          padding-left: 15px;
-          span {
-            font-size: 12px;
-            @include gtBook;
-          }
-          .btnPhoto {
-            display: none;
+    .detailWrap {
+      .commentWriter {
+        margin-top: 0;
+        h3.title {
+          margin-top: 50px;
+          margin-bottom: 0;
+          padding-top: 12px;
+          padding-bottom: 11px;
+          font-size: calc(33px / 2);
+          line-height: 24px;
+          &:after {
+            right: -18px;
+            width: calc(42px / 2);
+            height: calc(31px / 2);
+            @include imageUrl("mobile/sub/icon_comment");
+            background-size: contain;
           }
         }
-        .btnRegister {
-          background: #000;
-          height: calc(78px / 2);
-          width: calc(182px / 2);
-          .icon {
-            padding: 0;
+        &__textarea {
+          height: calc(276px / 2);
+          textarea {
+            height: 98px;
+            padding: 10px 7px;
             font-size: calc(27px / 2);
-            &:after {
+            resize: none;
+          }
+        }
+        .commentAttach {
+          height: calc(76px / 2);
+          .commentNum {
+            padding-left: 15px;
+            span {
+              font-size: 12px;
+              @include gtBook;
+            }
+            .btnPhoto {
               display: none;
             }
           }
-          span {
-            font-size: calc(27px / 2);
+          .btnRegister {
+            background: #000;
+            height: calc(78px / 2);
+            width: calc(182px / 2);
+            .icon {
+              padding: 0;
+              font-size: calc(27px / 2);
+              &:after {
+                display: none;
+              }
+            }
+            span {
+              font-size: calc(27px / 2);
+            }
           }
         }
       }
-    }
 
-    .commentList {
-      .commentItem {
-        margin: 0;
-        padding: 30px 0 12px;
-        overflow: hidden;
-        .btnReply-m {
-          background-color: #EA551C;
-          border-color: #EA551C;
-        }
-        .commentBox {
-          .btnCommentLayer {
-            right : 0;
+      .commentList {
+        .commentItem {
+          margin: 0;
+          padding: 30px 0 12px;
+          overflow: hidden;
+          .btnReply-m {
+            background-color: #EA551C;
+            border-color: #EA551C;
           }
+          .commentBox {
+            .btnCommentLayer {
+              right : 0;
+            }
 
-          .layerButton {
-            right : 0;
-            top: 28px;
-            width: 80px;
-            height: 91px;
-            li {
-              a {
-                height           : 44px;
-                line-height: 44px;
-                background-color : #000;
-              }
-            }
-          }
-
-          &__nick {
-            margin-bottom: 15px;
-            .nick {
-              font-size : calc(30px / 2);
-              .date {
-                font-size : calc(28px / 2);
-                margin-left: 5px;
-                color: #E4E4E4;
-              }
-            }
-          }
-          &__text {
-            padding-bottom: 20px;
-            &__view {
-              font-size : calc(30px / 2);
-              line-height: calc(45px / 2);
-            }
-          }
-          &__info {
-            span {
-              font-size: 14px;
-              @include gtBook;
-            }
-            &__left {
-              button {
-                width: calc(120px / 2);
-                height: calc(60px / 2);
-                font-size: calc(26px / 2);
-                margin-left: 0;
-              }
-            }
-            &__right {
-              padding-right: 0;
-              .btnLike {
-                padding: 0 24px 0 0;
-                line-height: 20px;
-                &:after {
-                  top: 2px;
-                  width: 16px;
-                  height: 16px;
+            .layerButton {
+              right : 0;
+              top: 28px;
+              width: 80px;
+              height: 91px;
+              li {
+                a {
+                  height           : 44px;
+                  line-height: 44px;
+                  background-color : #000;
                 }
               }
             }
-          }
-        }
-        &-reply {
-          padding-left: calc(100px / 2);
-          padding-right: 15px;
-          &:after {
-            left: 25px;
-            @include imageUrl("mobile/sub/bg_line");
-            background-size: contain;
-            width: 17px;
-            height: 17px;
-          }
-          .commentWriter {
-            &__textarea {
-              height: calc(276px / 2);
-              textarea {
-                height: 98px;
-              }
-              .commentAttach {
-                .btnRegister {
 
-                  span {
-                    font-size: calc(27px / 2);
+            &__nick {
+              margin-bottom: 15px;
+              .nick {
+                font-size : calc(30px / 2);
+                .date {
+                  font-size : calc(28px / 2);
+                  margin-left: 5px;
+                  color: #E4E4E4;
+                }
+              }
+            }
+            &__text {
+              padding-bottom: 20px;
+              &__view {
+                font-size : calc(30px / 2);
+                line-height: calc(45px / 2);
+              }
+            }
+            &__info {
+              span {
+                font-size: 14px;
+                @include gtBook;
+              }
+              &__left {
+                button {
+                  width: calc(120px / 2);
+                  height: calc(60px / 2);
+                  font-size: calc(26px / 2);
+                  margin-left: 0;
+                }
+              }
+              &__right {
+                padding-right: 0;
+                .btnLike {
+                  padding: 0 24px 0 0;
+                  line-height: 20px;
+                  &:after {
+                    top: 2px;
+                    width: 16px;
+                    height: 16px;
                   }
                 }
               }
             }
           }
+          &-reply {
+            padding-left: calc(100px / 2);
+            padding-right: 15px;
+            &:after {
+              top: 30px;
+              left: 25px;
+              @include imageUrl("mobile/sub/bg_line");
+              background-size: contain;
+              width: 17px;
+              height: 17px;
+            }
+            .commentWriter {
+              &__textarea {
+                height: calc(276px / 2);
+                textarea {
+                  height: 98px;
+                }
+                .commentAttach {
+                  .btnRegister {
 
-          .commentBox {
-            &__info {
-              position: relative;
-              padding: 10px 0 0;
-              &:after {
-                content: "";
-                position: absolute;
-                left: -100px;
-                top: 0;
-                width: 200%;
-                height: 1px;
-                background: #707070;
+                    span {
+                      font-size: calc(27px / 2);
+                    }
+                  }
+                }
               }
-              &__left {
-                .btnReply {
-                  margin-left: -25px;
+            }
+
+            .commentBox {
+              &__info {
+                position: relative;
+                padding: 10px 0 0;
+                &:after {
+                  content: "";
+                  position: absolute;
+                  left: -100px;
+                  top: 0;
+                  width: 200%;
+                  height: 1px;
+                  background: #707070;
+                }
+                &__left {
+                  .btnReply {
+                    margin-left: -25px;
+                  }
                 }
               }
             }
           }
-        }
-        .commentWriter {
-          margin-bottom: 30px;
-          h3.title {
-            margin-top: 50px;
-            margin-bottom: 0;
-            padding-top: 12px;
-            padding-bottom: 11px;
-            font-size: calc(33px / 2);
-            &:after {
-              right: -18px;
-              width: calc(42px / 2);
-              height: calc(31px / 2);
-              @include imageUrl("mobile/sub/icon_comment");
-              background-size: contain;
-            }
-          }
-          &__textarea {
-            height: calc(276px / 2);
-            textarea {
-              height: 98px;
-              padding: 10px 7px;
-              font-size: calc(27px / 2);
-              resize: none;
-            }
-          }
-          .commentAttach {
-            height: calc(76px / 2);
-            .commentNum {
-              padding-left: 15px;
-              span {
-                font-size: calc(23px / 2);
-              }
-              .btnPhoto {
-                display: none;
+          .commentWriter {
+            h3.title {
+              margin-top: 50px;
+              margin-bottom: 0;
+              padding-top: 12px;
+              padding-bottom: 11px;
+              font-size: calc(33px / 2);
+              &:after {
+                right: -18px;
+                width: calc(42px / 2);
+                height: calc(31px / 2);
+                @include imageUrl("mobile/sub/icon_comment");
+                background-size: contain;
               }
             }
-            .btnRegister {
-              background: #000;
-              height: calc(78px / 2);
-              color: #fff;
-              .icon {
-                padding: 0;
+            &__textarea {
+              height: calc(276px / 2);
+              textarea {
+                height: 98px;
+                padding: 10px 7px;
                 font-size: calc(27px / 2);
-                &:after {
+                resize: none;
+              }
+            }
+            .commentAttach {
+              height: calc(76px / 2);
+              .commentNum {
+                padding-left: 15px;
+                span {
+                  font-size: calc(23px / 2);
+                }
+                .btnPhoto {
                   display: none;
                 }
               }
-              span {
+              .btnRegister {
+                background: #000;
+                height: calc(78px / 2);
                 color: #fff;
-                font-size: calc(27px / 2);
+                .icon {
+                  padding: 0;
+                  font-size: calc(27px / 2);
+                  &:after {
+                    display: none;
+                  }
+                }
+                span {
+                  color: #fff;
+                  font-size: calc(27px / 2);
+                }
               }
             }
           }
