@@ -184,6 +184,41 @@
         }
       }
 
+      .photoNumberArea, .photoWidthArea, .photoHeightArea {
+
+        .swiperArea {
+
+          .swiper {
+
+            .swiper-button-prev, .swiper-button-next {
+              top: 0;
+              bottom: 0;
+              width: 100px;
+              height: 100%;
+              margin: 0;
+
+              &::after {
+                display: none;
+              }
+            }
+
+            .swiper-button-prev {
+              left: 0;
+              @include imageUrl('web/icon/icon_mainSwiperArrowLeft');
+              background-position: 20px center;
+              background-size: 40px 70px;
+            }
+
+            .swiper-button-next {
+              right: 0;
+              @include imageUrl('web/icon/icon_mainSwiperArrowRight');
+              background-position: right 20px center;
+              background-size: 40px 70px;
+            }
+          }
+        }
+      }
+
       .photoNumberArea {
 
         .swiperArea {
@@ -198,7 +233,7 @@
 
               .swiper-slide {
 
-                a {
+                > a, .top10Item {
                   overflow: visible;
                   position: relative;
                   display: block;
@@ -241,7 +276,7 @@
                     transition: all .4s;
                     z-index: 1;
 
-                    .title, .context {
+                    .title, .context, {
                       overflow: hidden;
                       text-overflow: ellipsis;
                       display: -webkit-box;
@@ -265,6 +300,10 @@
                       max-height: 7vw;
                       font-size: 1.1vw;
                       @include nsM;
+                    }
+
+                    .btnTop10Link {
+
                     }
                   }
 
@@ -290,7 +329,7 @@
 
                 &.swiper-slide-active {
 
-                  a {
+                  > a, .top10Item {
 
                     &.swiperOn01 {
                       transform-origin: -38% center;
@@ -299,7 +338,7 @@
 
                   & + .swiper-slide + .swiper-slide + .swiper-slide + .swiper-slide {
 
-                    a {
+                    > a, .top10Item {
 
                       &.swiperOn01 {
                         transform-origin: 138% center;
@@ -391,41 +430,6 @@
                   }
                 }
               }
-            }
-          }
-        }
-      }
-
-      .photoNumberArea, .photoWidthArea, .photoHeightArea {
-
-        .swiperArea {
-
-          .swiper {
-
-            .swiper-button-prev, .swiper-button-next {
-              top: 0;
-              bottom: 0;
-              width: 100px;
-              height: 100%;
-              margin: 0;
-
-              &::after {
-                display: none;
-              }
-            }
-
-            .swiper-button-prev {
-              left: 0;
-              @include imageUrl('web/icon/icon_mainSwiperArrowLeft');
-              background-position: 20px center;
-              background-size: 40px 70px;
-            }
-
-            .swiper-button-next {
-              right: 0;
-              @include imageUrl('web/icon/icon_mainSwiperArrowRight');
-              background-position: right 20px center;
-              background-size: 40px 70px;
             }
           }
         }
@@ -648,7 +652,7 @@
 
                 .swiper-slide {
 
-                  a {
+                  > a, .top10Item {
 
                     .numberWeb {
                       display: none;
@@ -665,7 +669,7 @@
 
                   &:first-child {
 
-                    a {
+                    .toop10Item {
 
                       .number {
                         left: 0;
