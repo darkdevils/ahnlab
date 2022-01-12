@@ -239,18 +239,19 @@
                   display: block;
                   transition: all .4s;
 
-                  .numberWeb {
+                  .numberWeb, .numberMobile {
                     position: relative;
-                    display: block;
                     width: 100%;
                     z-index: 1;
+                  }
+
+                  .numberWeb {
+                    display: block;
                     transition: all .4s;
                   }
 
                   .numberMobile {
-                    position: relative;
                     display: none;
-                    width: 100%;
                   }
 
                   .topImage {
@@ -270,8 +271,10 @@
                     bottom: 0;
                     box-sizing: border-box;
                     width: 61%;
-                    padding: 7%;
-                    background: #1c1c1c;
+                    padding: 8% 5% 0 6%;
+                    border: 1px solid #333;
+                    border-left: 0 none;
+                    background: #222;
                     opacity: 0;
                     transition: all .4s;
                     z-index: 1;
@@ -287,30 +290,41 @@
 
                     .title {
                       -webkit-line-clamp: 2;
-                      line-height: 1.6vw;
-                      max-height: 4.8vw;
-                      font-size: 1.3vw;
-                      @include nsB;
-                    }
-
-                    .context {
-                      margin-top: 0.7vw;
-                      -webkit-line-clamp: 5;
-                      line-height: 1.4vw;
-                      max-height: 7vw;
-                      font-size: 1.1vw;
+                      line-height: 1.1vw;
+                      font-size: 0.9vw;
                       @include nsM;
                     }
 
-                    .btnTop10Link {
+                    .context {
+                      margin-top: 0.4vw;
+                      -webkit-line-clamp: 5;
+                      line-height: 1vw;
+                      font-size: 0.7vw;
+                      color: #B3B3B3;
+                      @include nsR;
+                    }
 
+                    .btnTop10Link {
+                      display: inline-block;
+                      vertical-align: top;
+                      text-align: center;
+                      margin-top: 0.7vw;
+                      padding: 0.3vw 0.5vw;
+                      border: 1px solid #fff;
+                      font-size: 0.5vw;
+                      color: #fff;
+                      @include nsM;
+
+                      &:hover {
+                        background-color: $colorOrange;
+                      }
                     }
                   }
 
                   &.swiperOn01 {
                     position: relative;
                     z-index: 10;
-                    transform: scale(1.4);
+                    transform: scale(1.5);
 
                     .numberWeb {
                       opacity: 0;
@@ -318,11 +332,13 @@
 
                     .topImage {
                       right : 50%;
+                      border-radius: 0.6vw 0 0 0.6vw;
                     }
 
                     .textBox {
                       right : -11%;
                       opacity: 1;
+                      border-radius: 0 0.6vw 0.6vw 0;
                     }
                   }
                 }
@@ -332,7 +348,7 @@
                   > a, .top10Item {
 
                     &.swiperOn01 {
-                      transform-origin: -38% center;
+                      transform-origin: -32% center;
                     }
                   }
 
@@ -341,7 +357,7 @@
                     > a, .top10Item {
 
                       &.swiperOn01 {
-                        transform-origin: 138% center;
+                        transform-origin: 132% center;
                       }
                     }
                   }
@@ -457,6 +473,41 @@
     #container {
 
       .content {
+
+        .photoNumberArea {
+
+          .swiperArea {
+
+            .swiper {
+
+              .swiper-wrapper {
+
+                .swiper-slide {
+
+                  > a, .top10Item {
+
+                    .textBox {
+
+                      .title {
+                        line-height: 13px;
+                      }
+
+                      .context {
+                        margin-top: 4px;
+                        line-height: 12px;
+                      }
+
+                      .btnTop10Link {
+                        margin-top: 7px;
+                        padding: 4px 6px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
 
         .photoWidthArea {
 
@@ -660,19 +711,24 @@
 
                     .numberMobile {
                       display: block;
-                      z-index: 1;
                     }
 
-                    .topImage {
-                    }
-                  }
+                    .textBox {
+                      left: 0;
+                      width: 100%;
 
-                  &:first-child {
-
-                    .toop10Item {
-
-                      .number {
+                      .btnTop10Link {
+                        position: absolute;
                         left: 0;
+                        right: 0;
+                        top: 0;
+                        bottom: 0;
+                        width: auto;
+                        height: auto;
+                        margin: 0;
+                        border: 0 none;
+                        color: transparent;
+                        z-index: 2;
                       }
                     }
                   }
