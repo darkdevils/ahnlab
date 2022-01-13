@@ -978,19 +978,22 @@ html, body {
 
   /* input radio tab */
   .radioTab {
-    overflow: hidden;
     display: inline-block;
     vertical-align: top;
-    border: 1px solid #585858;
+    margin: 1px 0 0 1px;
+
+    &::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
 
     .ahnInputRadio {
       float: left;
       display: block;
+      margin: -1px 0 0 -1px;
+      border: 1px solid #585858;
       cursor: pointer;
-
-      & + .ahnInputRadio {
-        border-left: 1px solid #585858;
-      }
 
       input {
         @include blind;

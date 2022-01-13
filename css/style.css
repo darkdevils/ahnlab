@@ -3220,7 +3220,8 @@ html .opening, body .opening {
 }
 #wrap.mainLayout #container .content .mainTitleArea {
   overflow: hidden;
-  padding: 45px 100px 20px 100px;
+  margin-top: 50px;
+  padding: 0 100px 10px 100px;
 }
 #wrap.mainLayout #container .content .mainTitleArea .title {
   float: left;
@@ -3553,7 +3554,8 @@ html .opening, body .opening {
   }
   #wrap.mainLayout #container .content .mainTitleArea {
     overflow: hidden;
-    padding: 6vw 3.2051vw 3vw 3.2051vw;
+    margin-top: 6vw;
+    padding: 0 3.2051vw 3vw 3.2051vw;
   }
   #wrap.mainLayout #container .content .mainTitleArea .title {
     line-height: 6vw;
@@ -3631,6 +3633,7 @@ html .opening, body .opening {
   width: 1px;
   height: 1px;
   margin: -1px;
+  margin: -1px;
   overflow: hidden;
 }
 
@@ -3638,7 +3641,7 @@ h2.title {
   padding: 71px 0 0;
   font-family: "NotoSansCJKkrMedium", sans-serif;
   font-size: 30px;
-  margin-bottom: 51px;
+  margin-bottom: 50px;
 }
 h2.title strong {
   font-family: "NotoSansCJKkrBold", sans-serif;
@@ -3999,9 +4002,10 @@ h2.title-margin {
 .detailWrap .text {
   display: block;
   margin: 60px 0 0;
-  font-size: 22px;
+  font-size: 16px;
+  font-family: "NotoSansCJKkrRegular", sans-serif;
   color: #E4E4E4;
-  line-height: 36px;
+  line-height: 26px;
 }
 .detailWrap .imageText {
   padding-top: 60px;
@@ -4115,26 +4119,34 @@ h2.title-margin {
   transform: rotate(-135deg);
 }
 
-/* 안철수의 오늘 */
+/* tab */
 .tabWrap {
   position: relative;
-  margin-bottom: 70px;
+  margin-bottom: 50px;
 }
 .tabWrap ul {
-  display: flex;
+  margin: 1px 0 0 1px;
+}
+.tabWrap ul::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 .tabWrap ul li {
-  width: 120px;
+  float: left;
+  text-align: center;
+  min-width: 120px;
   height: 54px;
-  line-height: 54px;
+  margin: -1px 0 0 -1px;
+  padding: 0 15px;
   border: 1px solid #585858;
   box-sizing: border-box;
   text-align: center;
 }
-.tabWrap ul li + li {
-  margin-left: -1px;
-}
 .tabWrap ul li a {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 52px;
   font-size: 19px;
   font-family: "NotoSansCJKkrBold", sans-serif;
   color: #fff;
@@ -4144,6 +4156,7 @@ h2.title-margin {
   background-color: #EA5517;
 }
 
+/* 안철수의 오늘 */
 /* 커뮤니티 */
 .community .btnWriting {
   position: absolute;
@@ -4404,12 +4417,12 @@ h2.title-margin {
   background: #262626;
   box-sizing: border-box;
   vertical-align: top;
-  font-size: 20px;
-  line-height: 34px;
+  font-size: 16px;
+  font-family: "NotoSansCJKkrRegular", sans-serif;
+  line-height: 26px;
   color: #E4E4E4;
   outline: none;
   resize: none;
-  font-family: "NotoSansCJKkrRegular", sans-serif;
 }
 .commentWriter .commentAttach {
   position: relative;
@@ -4582,8 +4595,9 @@ h2.title-margin {
   padding: 0 0 45px;
 }
 .commentList .commentBox__text__view {
-  font-size: 20px;
-  line-height: 34px;
+  font-size: 16px;
+  font-family: "NotoSansCJKkrRegular", sans-serif;
+  line-height: 26px;
   color: #E4E4E4;
 }
 .commentList .commentBox__info {
@@ -4912,7 +4926,7 @@ h2.title-margin {
   border: 1px solid #707070;
   outline: 0 none;
   font-size: 16px;
-  font-family: "NotoSansCJKkrMedium", sans-serif;
+  font-family: "NotoSansCJKkrRegular", sans-serif;
   color: #fff;
   background-color: #262626;
 }
@@ -5593,38 +5607,23 @@ h2.title-margin {
     height: 9.5px;
   }
 
-  /* 안철수의 오늘 */
+  /* tab */
   .tabWrap {
     margin-bottom: 35px;
-    padding-left: 23.5px;
-  }
-  .tabWrap ul {
-    display: flex;
-    flex-flow: wrap;
+    padding: 0 24px;
   }
   .tabWrap ul li {
-    width: 84.5px;
+    min-width: 80px;
     height: 38px;
-    line-height: 31px;
-    margin-left: -1px;
-    margin-bottom: -1px;
+    padding: 0 5px;
   }
   .tabWrap ul li a {
-    font-size: 13.5px;
-    font-family: "NotoSansCJKkrBold", sans-serif;
-    color: #fff;
-  }
-  .tabWrap ul li.w140 {
-    width: 100px !important;
-  }
-  .tabWrap ul li.w180 {
-    width: 110px !important;
+    line-height: 36px;
+    font-size: 14px;
   }
 
+  /* 안철수의 오늘 */
   /* 커뮤니티 */
-  .community .tabWrap {
-    padding-right: 23.5px;
-  }
   .community .btnWriting {
     position: relative;
     right: initial;

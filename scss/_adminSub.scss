@@ -98,7 +98,111 @@
     /* 영상 */
     .ahnVideoContent {
 
+      .categoryWrap {
+        margin: 20px 0 80px;
+        border: 1px solid #707070;
 
+        .categoryAdd {
+          padding: 37px 36px 37px 37px;
+
+          .categoryInput {
+            overflow: hidden;
+
+            > * {
+              float: left;
+            }
+
+            .title {
+              display: block;
+              line-height: 53px;
+              margin-right: 24px;
+              font-size: 17px;
+              @include nsB;
+            }
+            .formType01 {
+              float: left;
+
+              .ahnBtnM {
+                border-color: #fff;
+              }
+            }
+          }
+
+          .categoryArea {
+            margin: 35px 0 0 1px;
+
+            &::after {
+              content: "";
+              display: block;
+              clear: both;
+            }
+
+            .categoryBtn {
+              float: left;
+              display: flex;
+              box-sizing: border-box;
+              width: 225px;
+              height: 46px;
+              margin: 10px 0 0 -1px;
+              border: 1px solid #585858;
+
+              .input {
+                flex: 1;
+                box-sizing: border-box;
+                padding: 6px 6px;
+
+                input {
+                  box-sizing: border-box;
+                  width: 100%;
+                  height: 100%;
+                  padding: 0 5px;
+                  border: 1px solid #585858;
+                  outline: 0 none;
+                  @include nsB;
+                  font-size: 14px;
+                  color: #fff;
+                  background-color: #262626;
+
+                  &:read-only {
+                    border-color: #000;
+                    background-color: #000;
+                  }
+                }
+              }
+
+              .btnBox {
+                float: left;
+                width: 33px;
+                height: 100%;
+                border-left: 1px solid #585858;
+
+                button {
+                  display: block;
+                  width: 100%;
+                  height: 22px;
+                  font-size: 12px;
+                  color: #fff;
+                  @include nsB;
+
+                  & + button {
+                    border-top: 1px solid #585858;
+                  }
+
+                  &:hover {
+                    background-color: $colorOrange;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .buttonArea {
+          margin-top: 0;
+          padding: 18px 0;
+          border-top: 1px solid #707070;
+        }
+      }
     }
 
     /* 라이브 보기 */
@@ -110,9 +214,6 @@
     /* 커뮤니티 */
     .ahnCommunityContent {
 
-      .pagingArea {
-        margin-top: 68px;
-      }
     }
   }
 }
