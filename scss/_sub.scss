@@ -35,7 +35,6 @@ h2.title {
 
 .ahnIs {
   &__visual {
-    margin-bottom: 77px;
     img {
       width: 100%;
     }
@@ -707,9 +706,10 @@ h2.title {
         }
       }
     }
-  }
-  .pagination {
-    padding: 55px 0 0;
+
+    .pagination {
+      padding-top: 45px;
+    }
   }
 }
 
@@ -1640,6 +1640,17 @@ h2.title {
 }
 
 /* 영상 */
+#wrap #container .content.typeWidth100 {
+  overflow: hidden;
+  @include contentWidth($mobileWidthNumber);
+  margin: 0;
+
+  h2.title {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
 .listWrap__list-video {
   padding-top: 0;
   overflow: hidden;
@@ -1764,7 +1775,6 @@ h2.title {
   /* 안철수는 */
   .ahnIs {
     &__visual {
-      margin-bottom: calc(70px / 2);
       img {
         display: none;
       }
@@ -2211,7 +2221,11 @@ h2.title {
         }
         li {
           width: 100%;
-          margin-bottom: calc(50px / 2);
+          margin: 0;
+
+          & + li {
+            margin-top: 25px;
+          }
           a {
             &.imgLink {
               height: auto;
@@ -2737,6 +2751,21 @@ h2.title {
   }
 
   /* 영상 */
+  #wrap #container .content.typeWidth100 {
+
+    h2.title {
+      padding: 35px 0 0 3.2051vw;
+
+      strong {
+        font-size: 5.7692vw;
+      }
+
+      span {
+        font-size: 3.8461vw;
+      }
+    }
+  }
+
   .listWrap__list-video {
     ul {
       display: flex;

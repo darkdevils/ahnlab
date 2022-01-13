@@ -3218,12 +3218,19 @@ html .opening, body .opening {
   width: auto;
   margin: 0;
 }
-#wrap.mainLayout #container .content .mainTitleArea {
+#wrap.mainLayout #footer .footerIn {
+  width: auto;
+  margin: 0;
+  padding-left: 100px;
+}
+
+/* swiper title */
+.mainTitleArea {
   overflow: hidden;
   margin-top: 50px;
   padding: 0 100px 10px 100px;
 }
-#wrap.mainLayout #container .content .mainTitleArea .title {
+.mainTitleArea .title {
   float: left;
   display: block;
   line-height: 58px;
@@ -3231,7 +3238,7 @@ html .opening, body .opening {
   font-family: "NotoSansCJKkrBold", sans-serif;
   letter-spacing: normal;
 }
-#wrap.mainLayout #container .content .mainTitleArea .moreLink {
+.mainTitleArea .moreLink {
   float: right;
   display: block;
   line-height: 44px;
@@ -3243,60 +3250,63 @@ html .opening, body .opening {
   background: url("../images/web/icon/icon_moreLink.png") no-repeat;
   background-position: right center;
 }
-#wrap.mainLayout #container .content .mainTitleArea .moreLink:hover {
+.mainTitleArea .moreLink:hover {
   color: #fff;
   background: url("../images/web/icon/icon_moreLink_on.png") no-repeat;
   background-position: right center;
 }
-#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-button-prev, #wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-button-next, #wrap.mainLayout #container .content .photoWidthArea .swiperArea .swiper .swiper-button-prev, #wrap.mainLayout #container .content .photoWidthArea .swiperArea .swiper .swiper-button-next, #wrap.mainLayout #container .content .photoHeightArea .swiperArea .swiper .swiper-button-prev, #wrap.mainLayout #container .content .photoHeightArea .swiperArea .swiper .swiper-button-next {
+
+/* swiper */
+.photoNumberArea .swiperArea .swiper .swiper-button-prev, .photoNumberArea .swiperArea .swiper .swiper-button-next, .photoWidthArea .swiperArea .swiper .swiper-button-prev, .photoWidthArea .swiperArea .swiper .swiper-button-next, .photoHeightArea .swiperArea .swiper .swiper-button-prev, .photoHeightArea .swiperArea .swiper .swiper-button-next {
   top: 0;
   bottom: 0;
   width: 100px;
   height: 100%;
   margin: 0;
 }
-#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-button-prev::after, #wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-button-next::after, #wrap.mainLayout #container .content .photoWidthArea .swiperArea .swiper .swiper-button-prev::after, #wrap.mainLayout #container .content .photoWidthArea .swiperArea .swiper .swiper-button-next::after, #wrap.mainLayout #container .content .photoHeightArea .swiperArea .swiper .swiper-button-prev::after, #wrap.mainLayout #container .content .photoHeightArea .swiperArea .swiper .swiper-button-next::after {
+.photoNumberArea .swiperArea .swiper .swiper-button-prev::after, .photoNumberArea .swiperArea .swiper .swiper-button-next::after, .photoWidthArea .swiperArea .swiper .swiper-button-prev::after, .photoWidthArea .swiperArea .swiper .swiper-button-next::after, .photoHeightArea .swiperArea .swiper .swiper-button-prev::after, .photoHeightArea .swiperArea .swiper .swiper-button-next::after {
   display: none;
 }
-#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-button-prev, #wrap.mainLayout #container .content .photoWidthArea .swiperArea .swiper .swiper-button-prev, #wrap.mainLayout #container .content .photoHeightArea .swiperArea .swiper .swiper-button-prev {
+.photoNumberArea .swiperArea .swiper .swiper-button-prev, .photoWidthArea .swiperArea .swiper .swiper-button-prev, .photoHeightArea .swiperArea .swiper .swiper-button-prev {
   left: 0;
   background: url("../images/web/icon/icon_mainSwiperArrowLeft.png") no-repeat;
   background-position: 20px center;
   background-size: 40px 70px;
 }
-#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-button-next, #wrap.mainLayout #container .content .photoWidthArea .swiperArea .swiper .swiper-button-next, #wrap.mainLayout #container .content .photoHeightArea .swiperArea .swiper .swiper-button-next {
+.photoNumberArea .swiperArea .swiper .swiper-button-next, .photoWidthArea .swiperArea .swiper .swiper-button-next, .photoHeightArea .swiperArea .swiper .swiper-button-next {
   right: 0;
   background: url("../images/web/icon/icon_mainSwiperArrowRight.png") no-repeat;
   background-position: right 20px center;
   background-size: 40px 70px;
 }
-#wrap.mainLayout #container .content .photoNumberArea .swiperArea {
+
+.photoNumberArea .swiperArea {
   position: relative;
   padding: 0 100px;
 }
-#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper {
+.photoNumberArea .swiperArea .swiper {
   overflow: visible;
   position: static;
 }
-#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide > a, #wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide .top10Item {
+.photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide > a, .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide .top10Item {
   overflow: visible;
   position: relative;
   display: block;
   transition: all 0.4s;
 }
-#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide > a .numberWeb, #wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide > a .numberMobile, #wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide .top10Item .numberWeb, #wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide .top10Item .numberMobile {
+.photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide > a .numberWeb, .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide > a .numberMobile, .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide .top10Item .numberWeb, .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide .top10Item .numberMobile {
   position: relative;
   width: 100%;
   z-index: 1;
 }
-#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide > a .numberWeb, #wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide .top10Item .numberWeb {
+.photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide > a .numberWeb, .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide .top10Item .numberWeb {
   display: block;
   transition: all 0.4s;
 }
-#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide > a .numberMobile, #wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide .top10Item .numberMobile {
+.photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide > a .numberMobile, .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide .top10Item .numberMobile {
   display: none;
 }
-#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide > a .topImage, #wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide .top10Item .topImage {
+.photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide > a .topImage, .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide .top10Item .topImage {
   position: absolute;
   right: 0;
   top: 0;
@@ -3305,7 +3315,7 @@ html .opening, body .opening {
   height: 100%;
   transition: all 0.4s;
 }
-#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide > a .textBox, #wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide .top10Item .textBox {
+.photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide > a .textBox, .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide .top10Item .textBox {
   position: absolute;
   right: 0;
   top: 0;
@@ -3320,7 +3330,7 @@ html .opening, body .opening {
   transition: all 0.4s;
   z-index: 1;
 }
-#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide > a .textBox .title, #wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide > a .textBox .context, #wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide .top10Item .textBox .title, #wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide .top10Item .textBox .context {
+.photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide > a .textBox .title, .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide > a .textBox .context, .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide .top10Item .textBox .title, .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide .top10Item .textBox .context {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -3328,13 +3338,13 @@ html .opening, body .opening {
   word-wrap: break-word;
   color: #fff;
 }
-#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide > a .textBox .title, #wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide .top10Item .textBox .title {
+.photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide > a .textBox .title, .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide .top10Item .textBox .title {
   -webkit-line-clamp: 2;
   line-height: 1.1vw;
   font-size: 0.9vw;
   font-family: "NotoSansCJKkrMedium", sans-serif;
 }
-#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide > a .textBox .context, #wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide .top10Item .textBox .context {
+.photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide > a .textBox .context, .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide .top10Item .textBox .context {
   margin-top: 0.4vw;
   -webkit-line-clamp: 5;
   line-height: 1vw;
@@ -3342,7 +3352,7 @@ html .opening, body .opening {
   color: #B3B3B3;
   font-family: "NotoSansCJKkrRegular", sans-serif;
 }
-#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide > a .textBox .btnTop10Link, #wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide .top10Item .textBox .btnTop10Link {
+.photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide > a .textBox .btnTop10Link, .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide .top10Item .textBox .btnTop10Link {
   display: inline-block;
   vertical-align: top;
   text-align: center;
@@ -3353,51 +3363,52 @@ html .opening, body .opening {
   color: #fff;
   font-family: "NotoSansCJKkrMedium", sans-serif;
 }
-#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide > a .textBox .btnTop10Link:hover, #wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide .top10Item .textBox .btnTop10Link:hover {
+.photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide > a .textBox .btnTop10Link:hover, .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide .top10Item .textBox .btnTop10Link:hover {
   background-color: #EA5504;
 }
-#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide > a.swiperOn01, #wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide .top10Item.swiperOn01 {
+.photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide > a.swiperOn01, .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide .top10Item.swiperOn01 {
   position: relative;
   z-index: 10;
   transform: scale(1.5);
 }
-#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide > a.swiperOn01 .numberWeb, #wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide .top10Item.swiperOn01 .numberWeb {
+.photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide > a.swiperOn01 .numberWeb, .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide .top10Item.swiperOn01 .numberWeb {
   opacity: 0;
 }
-#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide > a.swiperOn01 .topImage, #wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide .top10Item.swiperOn01 .topImage {
+.photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide > a.swiperOn01 .topImage, .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide .top10Item.swiperOn01 .topImage {
   right: 50%;
   border-radius: 0.6vw 0 0 0.6vw;
 }
-#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide > a.swiperOn01 .textBox, #wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide .top10Item.swiperOn01 .textBox {
+.photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide > a.swiperOn01 .textBox, .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide .top10Item.swiperOn01 .textBox {
   right: -11%;
   opacity: 1;
   border-radius: 0 0.6vw 0.6vw 0;
 }
-#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide.swiper-slide-active > a.swiperOn01, #wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide.swiper-slide-active .top10Item.swiperOn01 {
+.photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide.swiper-slide-active > a.swiperOn01, .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide.swiper-slide-active .top10Item.swiperOn01 {
   transform-origin: -32% center;
 }
-#wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide.swiper-slide-active + .swiper-slide + .swiper-slide + .swiper-slide + .swiper-slide > a.swiperOn01, #wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide.swiper-slide-active + .swiper-slide + .swiper-slide + .swiper-slide + .swiper-slide .top10Item.swiperOn01 {
+.photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide.swiper-slide-active + .swiper-slide + .swiper-slide + .swiper-slide + .swiper-slide > a.swiperOn01, .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide.swiper-slide-active + .swiper-slide + .swiper-slide + .swiper-slide + .swiper-slide .top10Item.swiperOn01 {
   transform-origin: 132% center;
 }
-#wrap.mainLayout #container .content .photoWidthArea .swiperArea {
+
+.photoWidthArea .swiperArea {
   position: relative;
   padding: 0 100px;
 }
-#wrap.mainLayout #container .content .photoWidthArea .swiperArea .swiper {
+.photoWidthArea .swiperArea .swiper {
   overflow: visible;
   position: static;
 }
-#wrap.mainLayout #container .content .photoWidthArea .swiperArea .swiper .swiper-wrapper .swiper-slide a {
+.photoWidthArea .swiperArea .swiper .swiper-wrapper .swiper-slide a {
   display: block;
 }
-#wrap.mainLayout #container .content .photoWidthArea .swiperArea .swiper .swiper-wrapper .swiper-slide a img {
+.photoWidthArea .swiperArea .swiper .swiper-wrapper .swiper-slide a img {
   display: block;
   width: 100%;
 }
-#wrap.mainLayout #container .content .photoWidthArea .swiperArea.communitySwiper .swiper-slide a {
+.photoWidthArea .swiperArea.communitySwiper .swiper-slide a {
   position: relative;
 }
-#wrap.mainLayout #container .content .photoWidthArea .swiperArea.communitySwiper .swiper-slide a .text {
+.photoWidthArea .swiperArea.communitySwiper .swiper-slide a .text {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -3413,25 +3424,21 @@ html .opening, body .opening {
   color: #fff;
   font-family: "NotoSansCJKkrMedium", sans-serif;
 }
-#wrap.mainLayout #container .content .photoHeightArea .swiperArea {
+
+.photoHeightArea .swiperArea {
   position: relative;
   padding: 0 100px;
 }
-#wrap.mainLayout #container .content .photoHeightArea .swiperArea .swiper {
+.photoHeightArea .swiperArea .swiper {
   overflow: visible;
   position: static;
 }
-#wrap.mainLayout #container .content .photoHeightArea .swiperArea .swiper .swiper-wrapper .swiper-slide a {
+.photoHeightArea .swiperArea .swiper .swiper-wrapper .swiper-slide a {
   display: block;
 }
-#wrap.mainLayout #container .content .photoHeightArea .swiperArea .swiper .swiper-wrapper .swiper-slide a img {
+.photoHeightArea .swiperArea .swiper .swiper-wrapper .swiper-slide a img {
   display: block;
   width: 100%;
-}
-#wrap.mainLayout #footer .footerIn {
-  width: auto;
-  margin: 0;
-  padding-left: 100px;
 }
 
 /* media queries */
@@ -3552,16 +3559,21 @@ html .opening, body .opening {
     line-height: 3.0512vw;
     font-size: 2.6922vw;
   }
-  #wrap.mainLayout #container .content .mainTitleArea {
+  #wrap.mainLayout #footer .footerIn {
+    padding-left: 3.2051vw;
+  }
+
+  /* swiper title */
+  .mainTitleArea {
     overflow: hidden;
     margin-top: 6vw;
     padding: 0 3.2051vw 3vw 3.2051vw;
   }
-  #wrap.mainLayout #container .content .mainTitleArea .title {
+  .mainTitleArea .title {
     line-height: 6vw;
     font-size: 5.1282vw;
   }
-  #wrap.mainLayout #container .content .mainTitleArea .moreLink {
+  .mainTitleArea .moreLink {
     line-height: 5vw;
     margin-top: 1.2vw;
     padding-right: 3vw;
@@ -3570,28 +3582,31 @@ html .opening, body .opening {
     background-position: right center;
     background-size: 2vw 3vw;
   }
-  #wrap.mainLayout #container .content .mainTitleArea .moreLink:hover {
+  .mainTitleArea .moreLink:hover {
     background: url("../images/web/icon/icon_moreLink.png") no-repeat;
     background-position: right center;
     background-size: 2vw 3vw;
   }
-  #wrap.mainLayout #container .content .photoNumberArea .swiper-button-prev, #wrap.mainLayout #container .content .photoNumberArea .swiper-button-next, #wrap.mainLayout #container .content .photoWidthArea .swiper-button-prev, #wrap.mainLayout #container .content .photoWidthArea .swiper-button-next, #wrap.mainLayout #container .content .photoHeightArea .swiper-button-prev, #wrap.mainLayout #container .content .photoHeightArea .swiper-button-next {
+
+  /* swiper */
+  .photoNumberArea .swiper-button-prev, .photoNumberArea .swiper-button-next, .photoWidthArea .swiper-button-prev, .photoWidthArea .swiper-button-next, .photoHeightArea .swiper-button-prev, .photoHeightArea .swiper-button-next {
     display: none;
   }
-  #wrap.mainLayout #container .content .photoNumberArea .swiperArea {
+
+  .photoNumberArea .swiperArea {
     padding: 0 3.2051vw;
   }
-  #wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide > a .numberWeb, #wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide .top10Item .numberWeb {
+  .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide > a .numberWeb, .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide .top10Item .numberWeb {
     display: none;
   }
-  #wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide > a .numberMobile, #wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide .top10Item .numberMobile {
+  .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide > a .numberMobile, .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide .top10Item .numberMobile {
     display: block;
   }
-  #wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide > a .textBox, #wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide .top10Item .textBox {
+  .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide > a .textBox, .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide .top10Item .textBox {
     left: 0;
     width: 100%;
   }
-  #wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide > a .textBox .btnTop10Link, #wrap.mainLayout #container .content .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide .top10Item .textBox .btnTop10Link {
+  .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide > a .textBox .btnTop10Link, .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide .top10Item .textBox .btnTop10Link {
     position: absolute;
     left: 0;
     right: 0;
@@ -3604,19 +3619,18 @@ html .opening, body .opening {
     color: transparent;
     z-index: 2;
   }
-  #wrap.mainLayout #container .content .photoWidthArea .swiperArea {
+
+  .photoWidthArea .swiperArea {
     padding: 0 3.2051vw;
   }
-  #wrap.mainLayout #container .content .photoWidthArea .swiperArea.communitySwiper .swiper-slide a .text {
+  .photoWidthArea .swiperArea.communitySwiper .swiper-slide a .text {
     width: 30vw;
     line-height: 5.1vw;
     font-size: 4.2vw;
   }
-  #wrap.mainLayout #container .content .photoHeightArea .swiperArea {
+
+  .photoHeightArea .swiperArea {
     padding: 0 3.2051vw;
-  }
-  #wrap.mainLayout #footer .footerIn {
-    padding-left: 3.2051vw;
   }
 }
 .w140 {
@@ -3658,9 +3672,6 @@ h2.title-margin {
 }
 
 /* 안철수는 */
-.ahnIs__visual {
-  margin-bottom: 77px;
-}
 .ahnIs__visual img {
   width: 100%;
 }
@@ -4296,8 +4307,8 @@ h2.title-margin {
   line-height: 48px;
   font-family: "NotoSansCJKkrBold", sans-serif;
 }
-.community .pagination {
-  padding: 55px 0 0;
+.community__list .pagination {
+  padding-top: 45px;
 }
 
 .communityDetail .btnWrap, .videoDtail .btnWrap {
@@ -5138,6 +5149,16 @@ h2.title-margin {
 }
 
 /* 영상 */
+#wrap #container .content.typeWidth100 {
+  overflow: hidden;
+  width: auto;
+  margin: 0;
+}
+#wrap #container .content.typeWidth100 h2.title {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
 .listWrap__list-video {
   padding-top: 0;
   overflow: hidden;
@@ -5244,9 +5265,6 @@ h2.title-margin {
   }
 
   /* 안철수는 */
-  .ahnIs__visual {
-    margin-bottom: 35px;
-  }
   .ahnIs__visual img {
     display: none;
   }
@@ -5655,7 +5673,10 @@ h2.title-margin {
   }
   .community__list ul li {
     width: 100%;
-    margin-bottom: 25px;
+    margin: 0;
+  }
+  .community__list ul li + li {
+    margin-top: 25px;
   }
   .community__list ul li a.imgLink {
     height: auto;
@@ -6085,6 +6106,16 @@ h2.title-margin {
   }
 
   /* 영상 */
+  #wrap #container .content.typeWidth100 h2.title {
+    padding: 35px 0 0 3.2051vw;
+  }
+  #wrap #container .content.typeWidth100 h2.title strong {
+    font-size: 5.7692vw;
+  }
+  #wrap #container .content.typeWidth100 h2.title span {
+    font-size: 3.8461vw;
+  }
+
   .listWrap__list-video ul {
     display: flex;
     justify-content: space-between;
