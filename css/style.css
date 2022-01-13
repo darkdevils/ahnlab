@@ -3673,10 +3673,12 @@ h2.title-margin {
 
 /* 안철수는 */
 .ahnIs__visual img {
+  display: block;
   width: 100%;
 }
 .ahnIs__visual .mobile {
   display: none;
+  width: 100%;
 }
 .ahnIs__profile {
   display: flex;
@@ -4511,18 +4513,13 @@ h2.title-margin {
   border-bottom: 1px solid #707070;
   padding: 30px 0;
 }
-.commentList .commentItem + .commentItem-reply.commentItem-writer {
-  background: #000;
-  margin-top: -5px;
-  padding-top: 0;
-}
 .commentList .commentItem-reply {
   margin: 0;
   padding: 39px 0 30px 95px;
   background-color: #222222;
 }
 .commentList .commentItem-reply.commentItem-writer {
-  padding: 30px 0 30px 53px;
+  padding: 39px 0 30px 78px;
 }
 .commentList .commentItem-reply:after {
   content: "";
@@ -4549,10 +4546,6 @@ h2.title-margin {
 .commentList .commentItem-writer {
   padding: 0;
   background-color: transparent;
-}
-.commentList .commentItem-writer.commentItem-reply:after {
-  left: 0;
-  top: 0;
 }
 .commentList .commentBox {
   position: relative;
@@ -5879,6 +5872,9 @@ h2.title-margin {
     background-size: contain;
     width: 17px;
     height: 17px;
+  }
+  .communityDetail .detailWrap .commentList .commentItem-reply.commentItem-writer, .videoDetail .detailWrap .commentList .commentItem-reply.commentItem-writer {
+    padding-right: 0;
   }
   .communityDetail .detailWrap .commentList .commentItem-reply .commentWriter__textarea, .videoDetail .detailWrap .commentList .commentItem-reply .commentWriter__textarea {
     height: 138px;

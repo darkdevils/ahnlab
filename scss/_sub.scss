@@ -36,10 +36,12 @@ h2.title {
 .ahnIs {
   &__visual {
     img {
+      display: block;
       width: 100%;
     }
     .mobile {
       display: none;
+      width: 100%;
     }
   }
   &__profile {
@@ -925,18 +927,16 @@ h2.title {
     margin-top: 30px;
     border-bottom: 1px solid #707070;
     padding: 30px 0;
-    + .commentItem-reply.commentItem-writer {
-      background: #000;
-      margin-top: -5px;
-      padding-top: 0;
-    }
     &-reply {
       //display: none;
       margin: 0;
       padding: 39px 0 30px 95px;
       background-color: #222222;
       &.commentItem-writer {
-        padding: 30px 0 30px 53px;
+        padding: 39px 0 30px 78px;
+
+        &:after {
+        }
       }
       &:after {
         content: "";
@@ -969,12 +969,6 @@ h2.title {
     &-writer {
       padding: 0;
       background-color: transparent;
-      &.commentItem-reply {
-        &:after {
-          left: 0;
-          top: 0;
-        }
-      }
     }
   }
   .commentBox {
@@ -2468,6 +2462,10 @@ h2.title {
               background-size: contain;
               width: 17px;
               height: 17px;
+            }
+
+            &.commentItem-writer {
+              padding-right: 0;
             }
             .commentWriter {
               &__textarea {
