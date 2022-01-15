@@ -4041,7 +4041,7 @@ h2.title-margin {
 }
 .paginationWrap ul li {
   position: relative;
-  width: 386px;
+  width: 384px;
 }
 .paginationWrap ul li .text {
   display: block;
@@ -4063,11 +4063,23 @@ h2.title-margin {
 .paginationWrap ul li > .btnLike.on {
   background: url("../images/web/sub/like_27x26_on.png") no-repeat;
 }
+.paginationWrap ul li a img {
+  display: block;
+  width: 100%;
+  height: 226px;
+}
 .paginationWrap__list-video ul li {
   width: 270px;
 }
 .paginationWrap__list-video ul li a {
+  display: block;
+  width: 100%;
   color: #fff;
+}
+.paginationWrap__list-video ul li a img {
+  display: block;
+  width: 100%;
+  height: 367px;
 }
 .paginationWrap__list-video ul li a .txt {
   display: -webkit-box;
@@ -4217,6 +4229,11 @@ h2.title-margin {
   display: block;
 }
 .community__list ul li a.imgLink {
+  height: 226px;
+}
+.community__list ul li a img {
+  display: block;
+  width: 100%;
   height: 226px;
 }
 .community__list ul li .justifyWrap {
@@ -5574,8 +5591,8 @@ h2.title-margin {
     display: inline-block;
     width: 198px;
   }
-  .paginationWrap__list ul li img {
-    width: 100%;
+  .paginationWrap__list ul li a img {
+    height: 116px;
   }
   .paginationWrap__list ul li .text {
     margin-top: 12.5px;
@@ -5597,7 +5614,10 @@ h2.title-margin {
     background-size: 20px 20px;
   }
   .paginationWrap__list-video ul li {
-    width: 149.5px;
+    width: 150px;
+  }
+  .paginationWrap__list-video ul li a img {
+    height: 203px;
   }
 
   .pagination {
@@ -5661,12 +5681,12 @@ h2.title-margin {
     padding-left: 24px;
     padding-right: 24px;
   }
-  .community__list ul img {
-    width: 100%;
-  }
   .community__list ul li {
     width: 100%;
     margin: 0;
+  }
+  .community__list ul li a img {
+    height: auto;
   }
   .community__list ul li + li {
     margin-top: 25px;

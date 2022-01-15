@@ -423,7 +423,7 @@ h2.title {
     justify-content: space-between;
     li {
       position: relative;
-      width: 386px;
+      width: 384px;
       .text {
         display: block;
         margin-top: 17px;
@@ -444,6 +444,13 @@ h2.title {
           @include imageUrl("web/sub/like_27x26_on");
         }
       }
+      a {
+        img {
+          display: block;
+          width: 100%;
+          height: 226px;
+        }
+      }
     }
   }
   &__list-video {
@@ -451,7 +458,14 @@ h2.title {
       li {
         width: 270px;
         a {
+          display: block;
+          width: 100%;
           color: #fff;
+          img {
+            display: block;
+            width: 100%;
+            height: 367px;
+          }
           .txt {
             display: -webkit-box;
             font-size: 24px;
@@ -608,6 +622,11 @@ h2.title {
           position: relative;
           display: block;
           &.imgLink {
+            height: 226px;
+          }
+          img {
+            display: block;
+            width: 100%;
             height: 226px;
           }
         }
@@ -2110,8 +2129,10 @@ h2.title {
         li {
           display: inline-block;
           width: calc(396px / 2);
-          img {
-            width: 100%;
+          a {
+            img {
+              height: 116px;
+            }
           }
           .text {
             margin-top: calc(25px / 2);
@@ -2137,7 +2158,13 @@ h2.title {
       &-video {
         ul {
           li {
-            width: calc(299px / 2);
+            width: 150px;
+
+            a {
+              img {
+                height: 203px;
+              }
+            }
           }
         }
       }
@@ -2210,12 +2237,14 @@ h2.title {
       ul {
         padding-left: calc(48px / 2);
         padding-right: calc(48px / 2);
-        img {
-          width: 100%;
-        }
         li {
           width: 100%;
           margin: 0;
+          a {
+            img {
+              height: auto;
+            }
+          }
 
           & + li {
             margin-top: 25px;
