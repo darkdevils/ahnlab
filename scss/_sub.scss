@@ -2132,6 +2132,7 @@ h2.title {
         white-space: nowrap;
         li {
           display: inline-block;
+          vertical-align: top;
           width: calc(396px / 2);
           a {
             img {
@@ -2246,7 +2247,7 @@ h2.title {
           margin: 0;
           a {
             img {
-              height: auto;
+              height: 51.1111vw;
             }
           }
 

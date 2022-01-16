@@ -5593,6 +5593,7 @@ h2.title-margin {
   }
   .paginationWrap__list ul li {
     display: inline-block;
+    vertical-align: top;
     width: 198px;
   }
   .paginationWrap__list ul li a img {
@@ -5690,7 +5691,7 @@ h2.title-margin {
     margin: 0;
   }
   .community__list ul li a img {
-    height: auto;
+    height: 51.1111vw;
   }
   .community__list ul li + li {
     margin-top: 25px;
