@@ -736,6 +736,18 @@ h2.title {
       padding-top: 45px;
     }
   }
+
+  .community__list {
+    ul {
+      li {
+        a {
+          img {
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
 }
 
 .communityDetail, .videoDtail {

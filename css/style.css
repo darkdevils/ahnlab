@@ -4333,6 +4333,9 @@ h2.title-margin {
 .community__list .pagination {
   padding-top: 45px;
 }
+.community .community__list ul li a img {
+  object-fit: cover;
+}
 
 .communityDetail .btnWrap, .videoDtail .btnWrap {
   margin-bottom: 130px;
