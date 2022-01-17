@@ -31,6 +31,14 @@ h2.title {
     margin-bottom: 78px;
   }
 }
+
+.listTypeWeb {
+  display: block;
+}
+.listTypeMobile {
+  display: none;
+}
+
 /* 안철수는 */
 
 .ahnIs {
@@ -1727,20 +1735,26 @@ h2.title {
 }
 
 /* 라이브 */
-.liveDetail {
+#wrap #container .liveDetail {
   &.content{
     position: relative;
+    width: auto;
+    margin: 0;
     &:after {
       content           : "";
       position          : absolute;
-      left              : 50%;
+      left              : 0;
+      right             : 0;
       top               : 143px;
-      width: 1920px;
-      margin-left: calc(-1920px / 2);
       height            : 891px;
       @include imageUrl("web/sub/bg_live");
-      background-repeat : repeat;
+      background-position : center top;
 
+    }
+
+    h2.title, .detailWrap {
+      width: 1200px;
+      margin: 0 auto;
     }
   }
   .detailWrap {
@@ -1789,6 +1803,13 @@ h2.title {
 }
 
 @media (max-width: 780px) {
+  .listTypeWeb {
+    display: none;
+  }
+  .listTypeMobile {
+    display: block;
+  }
+
   h2.title {
     padding-top: calc(70px / 2);
     padding-left: calc(47px / 2);
@@ -2841,10 +2862,18 @@ h2.title {
   }
 
   /* 라이브 */
-  .liveDetail {
+  #wrap #container .liveDetail {
     padding:0 24px;
-    &.content:after {
-      display: none;
+
+    &.content {
+      &:after {
+        display: none;
+      }
+
+      h2.title, .detailWrap {
+        width: auto;
+        margin: 0;
+      }
     }
     .topVisualSwiper,h2.title {
       display: none;
@@ -2875,6 +2904,8 @@ h2.title {
     }
 
     .detailWrap {
+      width: auto;
+      margin: 0;
       .commentWriter {
         margin-top: 0;
         h3.title {
