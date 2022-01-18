@@ -114,18 +114,15 @@ html, body {
       .logoText {
         display: inline-block;
         vertical-align: top;
-        padding-top: 43px;
+        padding: 52px 0 0 70px;
 
         a {
+          overflow: hidden;
           display: block;
-          line-height: 44px;
-          font-size: 30px;
-          @include nsB;
-          color: #fff;
-
-          &:hover {
-            @include colorOrange;
-          }
+          width: 185px;
+          height: 47px;
+          color: transparent;
+          @include imageUrl('web/bg/bg_logoWeb');
         }
       }
 
@@ -589,55 +586,131 @@ html, body {
 
   /* footer */
   #footer {
+    height: 360px;
     margin-top: auto;
+    background-color: #262626;
 
     .footerIn {
+      overflow: hidden;
       box-sizing: border-box;
       width: 1200px;
-      height: 286px;
       margin: 0 auto;
+      padding-top: 65px;
 
-      .homepageLink {
-        padding-top: 65px;
-
-        a {
-          display: inline-block;
-          vertical-align: top;
-          line-height: 34px;
-          font-size: 24px;
-          color: #DE5A27;
-        }
-      }
-
-      .tel {
-        margin-top: 9px;
-
-        a {
-          display: inline-block;
-          vertical-align: top;
-          line-height: 52px;
-          @include gtM;
-          font-size: 48px;
-          color: #fff;
-        }
-      }
-
-      .copyright {
-        line-height: 27px;
-        margin-top: 9px;
-        font-size: 19px;
+      * {
         color: #fff;
       }
 
-      .adminLogin {
-        margin-top: 27px;
+      .footerLeft {
+        float: left;
 
-        .adminLoginOpen {
-          display: inline-block;
-          vertical-align: top;
-          line-height: 25px;
-          font-size: 17px;
-          color: #9F9F9F;
+        .homepageLink {
+
+          a {
+            display: block;
+            line-height: 27px;
+            font-size: 19px;
+            color: $colorOrange;
+          }
+        }
+
+        .tel {
+          margin-top: 10px;
+
+          a {
+            display: block;
+            line-height: 44px;
+            @include gtM;
+            font-size: 40px;
+          }
+        }
+
+        .copyright {
+          line-height: 20px;
+          margin-top: 9px;
+          font-size: 14px;
+        }
+
+        .adminLogin {
+          margin-top: 25px;
+
+          .adminLoginOpen {
+            display: block;
+            line-height: 20px;
+            font-size: 14px;
+            color: #9F9F9F;
+          }
+        }
+      }
+
+      .footerRight {
+        float: right;
+
+        .supportTitle {
+          line-height: 26px;
+          font-size: 18px;
+
+          span {
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 6px;
+            color: $colorOrange;
+          }
+        }
+
+        .supportNumber {
+          line-height: 44px;
+          margin-top: 13px;
+          font-size: 34px;
+
+          span {
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 4px;
+            @include gtM;
+            font-size: 40px;
+          }
+        }
+
+        .supportLink {
+          overflow: hidden;
+          line-height: 26px;
+          margin-top: 7px;
+          font-size: 15px;
+
+          * {
+            float: left;
+            display: inline-block;
+            vertical-align: top;
+            height: 26px;
+          }
+
+          span {
+            margin-right: 25px;
+          }
+
+          a {
+            padding: 0 10px;
+            border-radius: 3px;
+            font-size: 14px;
+            @include nsB;
+            background-color: $colorOrange;
+          }
+        }
+
+        .supportContextWeb {
+          line-height: 20px;
+          margin-top: 22px;
+          font-size: 14px;
+          color: #B5B5B5;
+
+          a {
+            color: #B5B5B5;
+          }
+        }
+
+        .supportContextMobile {
+          display: none;
         }
       }
     }
@@ -720,20 +793,20 @@ html, body {
         }
 
         .logoText {
-          display    : block;
-          text-align : center;
-          padding    : 0;
+          display: block;
+          text-align: center;
+          padding: 0;
 
           a {
-            display        : inline-block;
-            vertical-align : top;
-            line-height    : 50px;
-            font-size      : 18px;
+            display: inline-block;
+            vertical-align: top;
+            width: auto;
+            height: auto;
+            line-height: 50px;
+            font-size: 18px;
             @include nsB;
-
-            &:hover {
-              color: #fff;
-            }
+            color: #fff;
+            background: none;
           }
         }
 
@@ -1169,68 +1242,141 @@ html, body {
         }
       }
 
-      /* container */
-      #container {
+    /* container */
+    #container {
 
-        .topVisual {
+      .topVisual {
 
-          .topVisualSwiper {
-            height : 95.4166vw;
+        .topVisualSwiper {
+          height : 95.4166vw;
 
-            .swiper {
+          .swiper {
 
-            .swiper-button-prev, .swiper-button-next {
-              display: none;
-            }
+          .swiper-button-prev, .swiper-button-next {
+            display: none;
+          }
 
-              .imgWeb, .imgMobile {
-                background-size : 100% 100% !important;
-              }
+            .imgWeb, .imgMobile {
+              background-size : 100% 100% !important;
             }
           }
         }
-
-        .content {
-          @include contentWidth($mobileWidthNumber);
-          padding-bottom: 98px;
-        }
       }
 
-      /* footer */
-      #footer {
-        background-color: #262626;
+      .content {
+        @include contentWidth($mobileWidthNumber);
+        padding-bottom: 98px;
+      }
+    }
 
-        .footerIn {
-          width: auto;
-          height       : 143px;
-          padding-left : 24px;
+    /* footer */
+    #footer {
+      height: 376px;
+
+      .footerIn {
+        width: auto;
+        margin: 0;
+        padding: 32px 15px 0 24px;
+
+        .footerLeft {
+          float: none;
 
           .homepageLink {
-            padding-top : 33px;
 
             a {
-              line-height : 17px;
-              font-size   : 12px;
+              display: block;
+              line-height: 17px;
+              font-size: 12px;
+              @include nsB;
+              color: $colorOrange;
             }
           }
 
           .tel {
-            margin-top : 5px;
+            margin-top: 5px;
 
             a {
-              line-height : 26px;
-              font-size   : 24px;
+              line-height: 26px;
+              font-size: 24px;
             }
           }
 
           .copyright {
-            line-height : 14px;
-            margin-top  : 5px;
-            font-size   : 10px;
+            line-height: 14px;
+            margin-top: 5px;
+            font-size: 10px;
           }
 
-        .adminLogin {
-          display: none;
+          .adminLogin {
+            display: none;
+          }
+        }
+
+        .footerRight {
+          float: none;
+          margin-top: 28px;
+
+          .supportTitle {
+            line-height: 17px;
+            font-size: 12px;
+
+            span {
+              margin-right: 3px;
+            }
+          }
+
+          .supportNumber {
+            line-height: 26px;
+            margin-top: 6px;
+            font-size: 20px;
+
+            span {
+              margin-left: 2px;
+              font-size: 24px;
+            }
+          }
+
+          .supportLink {
+            line-height: normal;
+            margin-top: 9px;
+            font-size: 10px;
+
+            * {
+              float: none;
+              display: block;
+              height: auto;
+            }
+
+            span {
+              line-height: 14px;
+            }
+
+            a {
+              display: inline-block;
+              vertical-align: top;
+              line-height: 29px;
+              margin-top: 14px;
+              padding: 0 14px;
+              border-radius: 2px;
+              font-size: 16px;
+            }
+          }
+
+          .supportContextWeb {
+            display: none;
+          }
+
+          .supportContextMobile {
+            display: block;
+            line-height: 12px;
+            margin-top: 10px;
+            font-size: 10px;
+            color: #B5B5B5;
+
+            a {
+              color: #B5B5B5;
+            }
+          }
         }
       }
     }

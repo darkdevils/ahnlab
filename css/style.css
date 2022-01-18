@@ -2154,17 +2154,15 @@ html .opening, body .opening {
 #wrap #header .headerIn .logoText {
   display: inline-block;
   vertical-align: top;
-  padding-top: 43px;
+  padding: 52px 0 0 70px;
 }
 #wrap #header .headerIn .logoText a {
+  overflow: hidden;
   display: block;
-  line-height: 44px;
-  font-size: 30px;
-  font-family: "NotoSansCJKkrBold", sans-serif;
-  color: #fff;
-}
-#wrap #header .headerIn .logoText a:hover {
-  color: #EA5504;
+  width: 185px;
+  height: 47px;
+  color: transparent;
+  background: url("../images/web/bg/bg_logoWeb.png") no-repeat;
 }
 #wrap #header .headerIn .gnb .gnbOpenBtn {
   display: none;
@@ -2551,50 +2549,110 @@ html .opening, body .opening {
   padding-bottom: 180px;
 }
 #wrap #footer {
+  height: 360px;
   margin-top: auto;
+  background-color: #262626;
 }
 #wrap #footer .footerIn {
+  overflow: hidden;
   box-sizing: border-box;
   width: 1200px;
-  height: 286px;
   margin: 0 auto;
-}
-#wrap #footer .footerIn .homepageLink {
   padding-top: 65px;
 }
-#wrap #footer .footerIn .homepageLink a {
-  display: inline-block;
-  vertical-align: top;
-  line-height: 34px;
-  font-size: 24px;
-  color: #DE5A27;
-}
-#wrap #footer .footerIn .tel {
-  margin-top: 9px;
-}
-#wrap #footer .footerIn .tel a {
-  display: inline-block;
-  vertical-align: top;
-  line-height: 52px;
-  font-family: "GothamMedium", sans-serif;
-  font-size: 48px;
+#wrap #footer .footerIn * {
   color: #fff;
 }
-#wrap #footer .footerIn .copyright {
+#wrap #footer .footerIn .footerLeft {
+  float: left;
+}
+#wrap #footer .footerIn .footerLeft .homepageLink a {
+  display: block;
   line-height: 27px;
-  margin-top: 9px;
   font-size: 19px;
-  color: #fff;
+  color: #EA5504;
 }
-#wrap #footer .footerIn .adminLogin {
-  margin-top: 27px;
+#wrap #footer .footerIn .footerLeft .tel {
+  margin-top: 10px;
 }
-#wrap #footer .footerIn .adminLogin .adminLoginOpen {
+#wrap #footer .footerIn .footerLeft .tel a {
+  display: block;
+  line-height: 44px;
+  font-family: "GothamMedium", sans-serif;
+  font-size: 40px;
+}
+#wrap #footer .footerIn .footerLeft .copyright {
+  line-height: 20px;
+  margin-top: 9px;
+  font-size: 14px;
+}
+#wrap #footer .footerIn .footerLeft .adminLogin {
+  margin-top: 25px;
+}
+#wrap #footer .footerIn .footerLeft .adminLogin .adminLoginOpen {
+  display: block;
+  line-height: 20px;
+  font-size: 14px;
+  color: #9F9F9F;
+}
+#wrap #footer .footerIn .footerRight {
+  float: right;
+}
+#wrap #footer .footerIn .footerRight .supportTitle {
+  line-height: 26px;
+  font-size: 18px;
+}
+#wrap #footer .footerIn .footerRight .supportTitle span {
   display: inline-block;
   vertical-align: top;
-  line-height: 25px;
-  font-size: 17px;
-  color: #9F9F9F;
+  margin-right: 6px;
+  color: #EA5504;
+}
+#wrap #footer .footerIn .footerRight .supportNumber {
+  line-height: 44px;
+  margin-top: 13px;
+  font-size: 34px;
+}
+#wrap #footer .footerIn .footerRight .supportNumber span {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 4px;
+  font-family: "GothamMedium", sans-serif;
+  font-size: 40px;
+}
+#wrap #footer .footerIn .footerRight .supportLink {
+  overflow: hidden;
+  line-height: 26px;
+  margin-top: 7px;
+  font-size: 15px;
+}
+#wrap #footer .footerIn .footerRight .supportLink * {
+  float: left;
+  display: inline-block;
+  vertical-align: top;
+  height: 26px;
+}
+#wrap #footer .footerIn .footerRight .supportLink span {
+  margin-right: 25px;
+}
+#wrap #footer .footerIn .footerRight .supportLink a {
+  padding: 0 10px;
+  border-radius: 3px;
+  font-size: 14px;
+  font-family: "NotoSansCJKkrBold", sans-serif;
+  background-color: #EA5504;
+}
+#wrap #footer .footerIn .footerRight .supportContextWeb {
+  line-height: 20px;
+  margin-top: 22px;
+  font-size: 14px;
+  color: #B5B5B5;
+}
+#wrap #footer .footerIn .footerRight .supportContextWeb a {
+  color: #B5B5B5;
+}
+#wrap #footer .footerIn .footerRight .supportContextMobile {
+  display: none;
 }
 
 /* media queries */
@@ -2675,12 +2733,13 @@ html .opening, body .opening {
   #wrap #header .headerIn .logoText a {
     display: inline-block;
     vertical-align: top;
+    width: auto;
+    height: auto;
     line-height: 50px;
     font-size: 18px;
     font-family: "NotoSansCJKkrBold", sans-serif;
-  }
-  #wrap #header .headerIn .logoText a:hover {
     color: #fff;
+    background: none;
   }
   #wrap #header .headerIn .gnb .gnbOpenBtn {
     position: absolute;
@@ -3061,34 +3120,92 @@ html .opening, body .opening {
     padding-bottom: 98px;
   }
   #wrap #footer {
-    background-color: #262626;
+    height: 376px;
   }
   #wrap #footer .footerIn {
     width: auto;
-    height: 143px;
-    padding-left: 24px;
+    margin: 0;
+    padding: 32px 15px 0 24px;
   }
-  #wrap #footer .footerIn .homepageLink {
-    padding-top: 33px;
+  #wrap #footer .footerIn .footerLeft {
+    float: none;
   }
-  #wrap #footer .footerIn .homepageLink a {
+  #wrap #footer .footerIn .footerLeft .homepageLink a {
+    display: block;
     line-height: 17px;
     font-size: 12px;
+    font-family: "NotoSansCJKkrBold", sans-serif;
+    color: #EA5504;
   }
-  #wrap #footer .footerIn .tel {
+  #wrap #footer .footerIn .footerLeft .tel {
     margin-top: 5px;
   }
-  #wrap #footer .footerIn .tel a {
+  #wrap #footer .footerIn .footerLeft .tel a {
     line-height: 26px;
     font-size: 24px;
   }
-  #wrap #footer .footerIn .copyright {
+  #wrap #footer .footerIn .footerLeft .copyright {
     line-height: 14px;
     margin-top: 5px;
     font-size: 10px;
   }
-  #wrap #footer .footerIn .adminLogin {
+  #wrap #footer .footerIn .footerLeft .adminLogin {
     display: none;
+  }
+  #wrap #footer .footerIn .footerRight {
+    float: none;
+    margin-top: 28px;
+  }
+  #wrap #footer .footerIn .footerRight .supportTitle {
+    line-height: 17px;
+    font-size: 12px;
+  }
+  #wrap #footer .footerIn .footerRight .supportTitle span {
+    margin-right: 3px;
+  }
+  #wrap #footer .footerIn .footerRight .supportNumber {
+    line-height: 26px;
+    margin-top: 6px;
+    font-size: 20px;
+  }
+  #wrap #footer .footerIn .footerRight .supportNumber span {
+    margin-left: 2px;
+    font-size: 24px;
+  }
+  #wrap #footer .footerIn .footerRight .supportLink {
+    line-height: normal;
+    margin-top: 9px;
+    font-size: 10px;
+  }
+  #wrap #footer .footerIn .footerRight .supportLink * {
+    float: none;
+    display: block;
+    height: auto;
+  }
+  #wrap #footer .footerIn .footerRight .supportLink span {
+    line-height: 14px;
+  }
+  #wrap #footer .footerIn .footerRight .supportLink a {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 29px;
+    margin-top: 14px;
+    padding: 0 14px;
+    border-radius: 2px;
+    font-size: 16px;
+  }
+  #wrap #footer .footerIn .footerRight .supportContextWeb {
+    display: none;
+  }
+  #wrap #footer .footerIn .footerRight .supportContextMobile {
+    display: block;
+    line-height: 12px;
+    margin-top: 10px;
+    font-size: 10px;
+    color: #B5B5B5;
+  }
+  #wrap #footer .footerIn .footerRight .supportContextMobile a {
+    color: #B5B5B5;
   }
 }
 /* layout */
@@ -3222,6 +3339,7 @@ html .opening, body .opening {
   width: auto;
   margin: 0;
   padding-left: 100px;
+  padding-right: 100px;
 }
 
 /* swiper title */
@@ -3476,7 +3594,14 @@ html .opening, body .opening {
   }
   #wrap.mainLayout #header .headerIn .logoText {
     text-align: left;
-    padding-left: 24px;
+    padding: 16px 0 0 20px;
+  }
+  #wrap.mainLayout #header .headerIn .logoText a {
+    width: 84px;
+    height: 22px;
+    color: transparent;
+    background: url("../images/mobile/bg/bg_logoMobile.png") no-repeat;
+    background-size: 84px 22px;
   }
   #wrap.mainLayout #container .topVisual .topVisualSwiper {
     height: 108.9743vw;
@@ -3560,7 +3685,7 @@ html .opening, body .opening {
     font-size: 2.6922vw;
   }
   #wrap.mainLayout #footer .footerIn {
-    padding-left: 3.2051vw;
+    padding: 32px 15px 0 24px;
   }
 
   /* swiper title */
