@@ -765,6 +765,54 @@
         }
       }
     }
+
+    &.on {
+
+      .swiperArea {
+        padding: 0 3.2051vw;
+
+        .swiper {
+
+          .swiper-wrapper {
+            overflow: auto;
+
+            .swiper-slide {
+              width: 33.35vw;
+
+              > a, .top10Item {
+
+                .numberWeb {
+                  display: none;
+                }
+
+                .numberMobile {
+                  display: block;
+                }
+
+                .textBox {
+                  left: 0;
+                  width: 100%;
+
+                  .btnTop10Link {
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    width: auto;
+                    height: auto;
+                    margin: 0;
+                    border: 0 none;
+                    color: transparent;
+                    z-index: 2;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   .photoWidthArea {
@@ -782,6 +830,43 @@
               width: 30vw;
               line-height: 5.1vw;
               font-size: 4.2vw;
+            }
+          }
+        }
+      }
+    }
+
+    &.on {
+
+      .swiperArea {
+        padding: 0 3.2051vw;
+
+        .swiper {
+
+          .swiper-wrapper {
+            overflow: auto;
+
+            .swiper-slide {
+              width: 41.67vw;
+
+              & + .swiper-slide {
+                margin-left: 5px;
+              }
+            }
+          }
+        }
+
+        &.communitySwiper {
+
+          .swiper-slide {
+
+            a {
+
+              .text {
+                width: 30vw;
+                line-height: 5.1vw;
+                font-size: 4.2vw;
+              }
             }
           }
         }

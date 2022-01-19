@@ -437,6 +437,7 @@
                 <!-- //TOP10 컨텐츠 -->
 
                 <script>
+                    /*
                     var swiperTop = new Swiper(".photoNumberArea .swiper", {
                         breakpoints: {
                             781: {
@@ -452,6 +453,35 @@
                             nextEl: ".swiper-button-next",
                             prevEl: ".swiper-button-prev",
                         },
+                    });
+                    */
+
+                    $(function (){
+                        $(".photoNumberArea").addClass("on");
+
+                        var swiperTop = undefined;
+
+                        function initSwiper() {
+                            if ($("#wrap").is(".web") && swiperTop == undefined) {
+                                swiperTop = new Swiper(".photoNumberArea .swiper", {
+                                    slidesPerView: 3.5,
+                                    spaceBetween: 30,
+                                    navigation: {
+                                        nextEl: ".swiper-button-next",
+                                        prevEl: ".swiper-button-prev",
+                                    },
+                                });
+                            } else if ($("#wrap").is(".mobile") && swiperTop != undefined) {
+                                swiperTop.destroy();
+                                swiperTop = undefined;
+                            }
+                        }
+
+                        initSwiper();
+
+                        $(window).on('resize', function () {
+                            initSwiper();
+                        });
                     });
                 </script>
             </div>
@@ -596,21 +626,36 @@
                 <!-- //커뮤니티 -->
 
                 <script>
-                    var swiperWidth = new Swiper(".photoWidthArea .swiper", {
-                        breakpoints: {
-                            781: {
-                                slidesPerView: 3.5,
-                                spaceBetween: 30,
-                            },
-                            1: {
-                                slidesPerView: 2.2,
-                                spaceBetween: 5,
+                    $(function (){
+                        $(".photoWidthArea").addClass("on");
+
+                        var swiperWidth = undefined;
+
+                        function initSwiper() {
+                            if ($("#wrap").is(".web") && swiperWidth == undefined) {
+                                swiperWidth = new Swiper(".photoWidthArea .swiper", {
+                                    slidesPerView: 3.5,
+                                    spaceBetween: 30,
+                                    navigation: {
+                                        nextEl: ".swiper-button-next",
+                                        prevEl: ".swiper-button-prev",
+                                    },
+                                });
+                            } else if ($("#wrap").is(".mobile") && swiperWidth != undefined) {
+                                var photoWidthAreaNumber = $(".photoWidthArea .swiper").length;
+
+                                for(var i=0; i<photoWidthAreaNumber; i++){
+                                    swiperWidth[i].destroy();
+                                }
+                                swiperWidth = undefined;
                             }
-                        },
-                        navigation: {
-                            nextEl: ".swiper-button-next",
-                            prevEl: ".swiper-button-prev",
-                        },
+                        }
+
+                        initSwiper();
+
+                        $(window).on('resize', function () {
+                            initSwiper();
+                        });
                     });
                 </script>
             </div>
@@ -797,93 +842,36 @@
                 <!-- //슬기로운 격리생활 -->
 
                 <script>
-                    /*
-                    var swiperHeight = new Swiper(".photoHeightArea .swiper", {
-                        breakpoints: {
-                            781: {
-                                slidesPerView: 7.55,
-                                spaceBetween: 15,
-                            },
-                            1: {
-                                slidesPerView: 3.2,
-                                spaceBetween: 5,
+                    $(function (){
+                        $(".photoHeightArea").addClass("on");
+
+                        var swiperHeight = undefined;
+
+                        function initSwiper() {
+                            if ($("#wrap").is(".web") && swiperHeight == undefined) {
+                                swiperHeight = new Swiper(".photoHeightArea .swiper", {
+                                    slidesPerView: 7.55,
+                                    spaceBetween: 15,
+                                    navigation: {
+                                        nextEl: ".swiper-button-next",
+                                        prevEl: ".swiper-button-prev",
+                                    },
+                                });
+                            } else if ($("#wrap").is(".mobile") && swiperHeight != undefined) {
+                                var photoHeightAreaNumber = $(".photoHeightArea .swiper").length;
+
+                                for(var i=0; i<photoHeightAreaNumber; i++){
+                                    swiperHeight[i].destroy();
+                                }
+                                swiperHeight = undefined;
                             }
-                        },
-                        navigation: {
-                            nextEl: ".swiper-button-next",
-                            prevEl: ".swiper-button-prev",
-                        },
-                    });
-                    */
-
-
-                    var ww = $(window).width();
-                    var swiperHeight = new Swiper(".anCandidacySwiper .swiper", {
-                        slidesPerView: 7.55,
-                        spaceBetween: 15,
-                        navigation: {
-                            nextEl: ".swiper-button-next",
-                            prevEl: ".swiper-button-prev",
-                        },
-                    });
-                    var swiperHeight2 = new Swiper(".anAppearanceSwiper .swiper", {
-                        slidesPerView: 7.55,
-                        spaceBetween: 15,
-                        navigation: {
-                            nextEl: ".swiper-button-next",
-                            prevEl: ".swiper-button-prev",
-                        },
-                    });
-                    var swiperHeight3 = new Swiper(".anIsolationSwiper .swiper", {
-                        slidesPerView: 7.55,
-                        spaceBetween: 15,
-                        navigation: {
-                            nextEl: ".swiper-button-next",
-                            prevEl: ".swiper-button-prev",
-                        },
-                    });
-
-                    initSwiper();
-
-                    function initSwiper() {
-                        if (ww > 780 ) {
-                            swiperHeight.destroy();
-                            swiperHeight2.destroy();
-                            swiperHeight3.destroy();
-                            swiperHeight = new Swiper(".anCandidacySwiper .swiper", {
-                                slidesPerView: 7.55,
-                                spaceBetween: 15,
-                                navigation: {
-                                    nextEl: ".swiper-button-next",
-                                    prevEl: ".swiper-button-prev",
-                                },
-                            });
-                            swiperHeight2 = new Swiper(".anAppearanceSwiper .swiper", {
-                                slidesPerView: 7.55,
-                                spaceBetween: 15,
-                                navigation: {
-                                    nextEl: ".swiper-button-next",
-                                    prevEl: ".swiper-button-prev",
-                                },
-                            });
-                            swiperHeight3 = new Swiper(".anIsolationSwiper .swiper", {
-                                slidesPerView: 7.55,
-                                spaceBetween: 15,
-                                navigation: {
-                                    nextEl: ".swiper-button-next",
-                                    prevEl: ".swiper-button-prev",
-                                },
-                            });
-                        } else if (ww < 780) {
-                            swiperHeight.destroy();
-                            swiperHeight2.destroy();
-                            swiperHeight3.destroy();
                         }
-                    }
 
-                    $(window).on('resize', function () {
-                        ww = $(window).width();
                         initSwiper();
+
+                        $(window).on('resize', function () {
+                            initSwiper();
+                        });
                     });
                 </script>
             </div>
