@@ -797,6 +797,7 @@
                 <!-- //슬기로운 격리생활 -->
 
                 <script>
+                    /*
                     var swiperHeight = new Swiper(".photoHeightArea .swiper", {
                         breakpoints: {
                             781: {
@@ -812,6 +813,35 @@
                             nextEl: ".swiper-button-next",
                             prevEl: ".swiper-button-prev",
                         },
+                    });
+                    */
+
+
+                    var ww = $(window).width();
+                    var swiperHeight = undefined;
+
+                    function initSwiper() {
+
+                        if (ww > 780 && swiperHeight == undefined) {
+                            swiperHeight = new Swiper(".photoHeightArea .swiper", {
+                                slidesPerView: 7.55,
+                                spaceBetween: 15,
+                                navigation: {
+                                    nextEl: ".swiper-button-next",
+                                    prevEl: ".swiper-button-prev",
+                                },
+                            });
+                        } else if (ww <= 780 && swiperHeight != undefined) {
+                            swiperHeight = undefined;
+                            swiperHeight.destroy();
+                        }
+                    }
+
+                    initSwiper();
+
+                    $(window).on('resize', function () {
+                        ww = $(window).width();
+                        initSwiper();
                     });
                 </script>
             </div>

@@ -2154,7 +2154,7 @@ html .opening, body .opening {
 #wrap #header .headerIn .logoText {
   display: inline-block;
   vertical-align: top;
-  padding: 52px 0 0 70px;
+  padding-top: 52px;
 }
 #wrap #header .headerIn .logoText a {
   overflow: hidden;
@@ -2516,6 +2516,7 @@ html .opening, body .opening {
   line-height: 45px;
   margin-top: 30px;
   font-size: 31px;
+  color: #EA5504;
 }
 #wrap #container .topVisual .topVisualSwiper {
   height: 600px;
@@ -2977,7 +2978,7 @@ html .opening, body .opening {
   }
   #wrap #header .headerIn .gnb nav .navIn .gnbItem.search {
     display: block;
-    padding: 0 66px 20px 30px;
+    padding: 0 30px 20px 30px;
     margin-left: 0;
   }
   #wrap #header .headerIn .gnb nav .navIn .gnbItem.search > button {
@@ -3027,12 +3028,13 @@ html .opening, body .opening {
     display: none;
   }
   #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .searchInputArea .searchInput {
-    overflow: hidden;
-    display: inline-block;
-    vertical-align: top;
+    overflow: visible;
+    display: flex;
+    vertical-align: baseline;
   }
   #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .searchInputArea .searchInput input {
-    width: 170px;
+    flex: 1;
+    width: auto;
     height: 30px;
     padding: 0 5px;
     border-bottom: 2px solid #fff;
@@ -6335,7 +6337,7 @@ h2.title-margin {
   }
   #wrap #container .liveDetail .liveWrap .titleLive img.mobile {
     display: inline-block;
-    width: 177px;
+    width: 188px;
   }
   #wrap #container .liveDetail .liveWrap .liveArea {
     width: 100%;
