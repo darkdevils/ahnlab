@@ -818,12 +818,39 @@
 
 
                     var ww = $(window).width();
-                    var swiperHeight = undefined;
+                    var swiperHeight = new Swiper(".anCandidacySwiper .swiper", {
+                        slidesPerView: 7.55,
+                        spaceBetween: 15,
+                        navigation: {
+                            nextEl: ".swiper-button-next",
+                            prevEl: ".swiper-button-prev",
+                        },
+                    });
+                    var swiperHeight2 = new Swiper(".anAppearanceSwiper .swiper", {
+                        slidesPerView: 7.55,
+                        spaceBetween: 15,
+                        navigation: {
+                            nextEl: ".swiper-button-next",
+                            prevEl: ".swiper-button-prev",
+                        },
+                    });
+                    var swiperHeight3 = new Swiper(".anIsolationSwiper .swiper", {
+                        slidesPerView: 7.55,
+                        spaceBetween: 15,
+                        navigation: {
+                            nextEl: ".swiper-button-next",
+                            prevEl: ".swiper-button-prev",
+                        },
+                    });
+
+                    initSwiper();
 
                     function initSwiper() {
-
-                        if (ww > 780 && swiperHeight == undefined) {
-                            swiperHeight = new Swiper(".photoHeightArea .swiper", {
+                        if (ww > 780 ) {
+                            swiperHeight.destroy();
+                            swiperHeight2.destroy();
+                            swiperHeight3.destroy();
+                            swiperHeight = new Swiper(".anCandidacySwiper .swiper", {
                                 slidesPerView: 7.55,
                                 spaceBetween: 15,
                                 navigation: {
@@ -831,13 +858,28 @@
                                     prevEl: ".swiper-button-prev",
                                 },
                             });
-                        } else if (ww <= 780 && swiperHeight != undefined) {
-                            swiperHeight = undefined;
+                            swiperHeight2 = new Swiper(".anAppearanceSwiper .swiper", {
+                                slidesPerView: 7.55,
+                                spaceBetween: 15,
+                                navigation: {
+                                    nextEl: ".swiper-button-next",
+                                    prevEl: ".swiper-button-prev",
+                                },
+                            });
+                            swiperHeight3 = new Swiper(".anIsolationSwiper .swiper", {
+                                slidesPerView: 7.55,
+                                spaceBetween: 15,
+                                navigation: {
+                                    nextEl: ".swiper-button-next",
+                                    prevEl: ".swiper-button-prev",
+                                },
+                            });
+                        } else if (ww < 780) {
                             swiperHeight.destroy();
+                            swiperHeight2.destroy();
+                            swiperHeight3.destroy();
                         }
                     }
-
-                    initSwiper();
 
                     $(window).on('resize', function () {
                         ww = $(window).width();
