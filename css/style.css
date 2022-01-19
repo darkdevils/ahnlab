@@ -3238,6 +3238,7 @@ html .opening, body .opening {
   height: 100%;
 }
 #wrap.mainLayout #container .topVisual .topVisualSwiper {
+  overflow: hidden;
   height: 800px;
 }
 #wrap.mainLayout #container .topVisual .topVisualSwiper .imgLink {
@@ -3407,6 +3408,10 @@ html .opening, body .opening {
 .photoNumberArea .swiperArea .swiper {
   overflow: visible;
   position: static;
+}
+.photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide {
+  float: left;
+  width: 15.41vw;
 }
 .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide > a, .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide .top10Item {
   overflow: visible;
@@ -3722,6 +3727,9 @@ html .opening, body .opening {
 
   .photoNumberArea .swiperArea {
     padding: 0 3.2051vw;
+  }
+  .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide {
+    width: 33.35vw;
   }
   .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide > a .numberWeb, .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide .top10Item .numberWeb {
     display: none;

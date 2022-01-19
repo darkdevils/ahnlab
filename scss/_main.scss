@@ -36,6 +36,7 @@
     .topVisual {
 
       .topVisualSwiper {
+        overflow: hidden;
         height: 800px;
 
         .imgLink {
@@ -249,6 +250,8 @@
       .swiper-wrapper {
 
         .swiper-slide {
+          float: left;
+          width: 15.41vw;
 
           > a, .top10Item {
             overflow: visible;
@@ -727,6 +730,7 @@
         .swiper-wrapper {
 
           .swiper-slide {
+            width: 33.35vw;
 
             > a, .top10Item {
 
