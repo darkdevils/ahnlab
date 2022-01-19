@@ -3767,6 +3767,18 @@ html .opening, body .opening {
   .photoHeightArea .swiperArea {
     padding: 0 3.2051vw;
   }
+  .photoHeightArea.on .swiperArea {
+    padding: 0 3.2051vw;
+  }
+  .photoHeightArea.on .swiperArea .swiper .swiper-wrapper {
+    overflow: auto;
+  }
+  .photoHeightArea.on .swiperArea .swiper .swiper-wrapper .swiper-slide {
+    width: 28.2vw;
+  }
+  .photoHeightArea.on .swiperArea .swiper .swiper-wrapper .swiper-slide + .swiper-slide {
+    margin-left: 5px;
+  }
 }
 .w140 {
   width: 140px !important;

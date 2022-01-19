@@ -794,5 +794,27 @@
     .swiperArea {
       padding: 0 3.2051vw;
     }
+
+    &.on {
+
+      .swiperArea {
+        padding: 0 3.2051vw;
+
+        .swiper {
+
+          .swiper-wrapper {
+            overflow: auto;
+
+            .swiper-slide {
+              width: 28.2vw;
+
+              & + .swiper-slide {
+                margin-left: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
