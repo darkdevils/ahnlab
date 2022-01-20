@@ -401,21 +401,34 @@
                 <!-- //슬기로운 격리생활 -->
 
                 <script>
-                    var swiperHeight = new Swiper(".photoHeightArea .swiper", {
-                        breakpoints: {
-                            781: {
-                                slidesPerView: 7.55,
-                                spaceBetween: 15,
-                            },
-                            1: {
-                                slidesPerView: 3.2,
-                                spaceBetween: 5,
+                    $(function (){
+                        var swiperHeight = undefined;
+
+                        function initSwiper() {
+                            if ($("#wrap").is(".web") && swiperHeight == undefined) {
+                                swiperHeight = new Swiper(".photoHeightArea .swiper", {
+                                    slidesPerView: 7.55,
+                                    spaceBetween: 15,
+                                    navigation: {
+                                        nextEl: ".swiper-button-next",
+                                        prevEl: ".swiper-button-prev",
+                                    },
+                                });
+                            } else if ($("#wrap").is(".mobile") && swiperHeight != undefined) {
+                                var photoHeightAreaNumber = $(".photoHeightArea .swiper").length;
+
+                                for(var i=0; i<photoHeightAreaNumber; i++){
+                                    swiperHeight[i].destroy();
+                                }
+                                swiperHeight = undefined;
                             }
-                        },
-                        navigation: {
-                            nextEl: ".swiper-button-next",
-                            prevEl: ".swiper-button-prev",
-                        },
+                        }
+
+                        initSwiper();
+
+                        $(window).on('resize', function () {
+                            initSwiper();
+                        });
                     });
                 </script>
             </div>

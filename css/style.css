@@ -3743,6 +3743,9 @@ html .opening, body .opening {
   .photoNumberArea .swiperArea {
     padding: 0 3.2051vw;
   }
+  .photoNumberArea .swiperArea .swiper .swiper-wrapper {
+    overflow: auto;
+  }
   .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide {
     width: 33.35vw;
   }
@@ -3769,60 +3772,20 @@ html .opening, body .opening {
     color: transparent;
     z-index: 2;
   }
-  .photoNumberArea.on .swiperArea {
-    padding: 0 3.2051vw;
-  }
-  .photoNumberArea.on .swiperArea .swiper .swiper-wrapper {
-    overflow: auto;
-  }
-  .photoNumberArea.on .swiperArea .swiper .swiper-wrapper .swiper-slide {
-    width: 33.35vw;
-  }
-  .photoNumberArea.on .swiperArea .swiper .swiper-wrapper .swiper-slide > a .numberWeb, .photoNumberArea.on .swiperArea .swiper .swiper-wrapper .swiper-slide .top10Item .numberWeb {
-    display: none;
-  }
-  .photoNumberArea.on .swiperArea .swiper .swiper-wrapper .swiper-slide > a .numberMobile, .photoNumberArea.on .swiperArea .swiper .swiper-wrapper .swiper-slide .top10Item .numberMobile {
-    display: block;
-  }
-  .photoNumberArea.on .swiperArea .swiper .swiper-wrapper .swiper-slide > a .textBox, .photoNumberArea.on .swiperArea .swiper .swiper-wrapper .swiper-slide .top10Item .textBox {
-    left: 0;
-    width: 100%;
-  }
-  .photoNumberArea.on .swiperArea .swiper .swiper-wrapper .swiper-slide > a .textBox .btnTop10Link, .photoNumberArea.on .swiperArea .swiper .swiper-wrapper .swiper-slide .top10Item .textBox .btnTop10Link {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: auto;
-    height: auto;
-    margin: 0;
-    border: 0 none;
-    color: transparent;
-    z-index: 2;
-  }
 
   .photoWidthArea .swiperArea {
     padding: 0 3.2051vw;
   }
-  .photoWidthArea .swiperArea.communitySwiper .swiper-slide a .text {
-    width: 30vw;
-    line-height: 5.1vw;
-    font-size: 4.2vw;
-  }
-  .photoWidthArea.on .swiperArea {
-    padding: 0 3.2051vw;
-  }
-  .photoWidthArea.on .swiperArea .swiper .swiper-wrapper {
+  .photoWidthArea .swiperArea .swiper .swiper-wrapper {
     overflow: auto;
   }
-  .photoWidthArea.on .swiperArea .swiper .swiper-wrapper .swiper-slide {
+  .photoWidthArea .swiperArea .swiper .swiper-wrapper .swiper-slide {
     width: 41.67vw;
   }
-  .photoWidthArea.on .swiperArea .swiper .swiper-wrapper .swiper-slide + .swiper-slide {
+  .photoWidthArea .swiperArea .swiper .swiper-wrapper .swiper-slide + .swiper-slide {
     margin-left: 5px;
   }
-  .photoWidthArea.on .swiperArea.communitySwiper .swiper-slide a .text {
+  .photoWidthArea .swiperArea.communitySwiper .swiper-slide a .text {
     width: 30vw;
     line-height: 5.1vw;
     font-size: 4.2vw;
@@ -3831,16 +3794,13 @@ html .opening, body .opening {
   .photoHeightArea .swiperArea {
     padding: 0 3.2051vw;
   }
-  .photoHeightArea.on .swiperArea {
-    padding: 0 3.2051vw;
-  }
-  .photoHeightArea.on .swiperArea .swiper .swiper-wrapper {
+  .photoHeightArea .swiperArea .swiper .swiper-wrapper {
     overflow: auto;
   }
-  .photoHeightArea.on .swiperArea .swiper .swiper-wrapper .swiper-slide {
+  .photoHeightArea .swiperArea .swiper .swiper-wrapper .swiper-slide {
     width: 28.2vw;
   }
-  .photoHeightArea.on .swiperArea .swiper .swiper-wrapper .swiper-slide + .swiper-slide {
+  .photoHeightArea .swiperArea .swiper .swiper-wrapper .swiper-slide + .swiper-slide {
     margin-left: 5px;
   }
 }
