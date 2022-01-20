@@ -412,7 +412,7 @@
 
         .swiper-slide {
           width: 22.455vw;
-          height: 13.064vw;
+          height: 12.766vw;
 
           a {
             display: block;
@@ -633,7 +633,6 @@
                 font-size: 3.5897vw;
                 @include gtB;
                 background-color: $colorRed;
-
               }
             }
           }
@@ -800,7 +799,7 @@
 
           .swiper-slide {
             width: 41.67vw;
-            height: 27.735vw;
+            height: 24.445vw;
 
             & + .swiper-slide {
               margin-left: 5px;
