@@ -4388,12 +4388,14 @@ h2.title-margin {
 .community__list ul {
   display: flex;
   flex-flow: wrap;
-  justify-content: space-between;
 }
 .community__list ul li {
   position: relative;
   width: 384px;
-  margin-bottom: 50px;
+  margin: 0 0 50px 24px;
+}
+.community__list ul li:nth-child(3n+1) {
+  margin-left: 0;
 }
 .community__list ul li > .btnLike {
   position: absolute;

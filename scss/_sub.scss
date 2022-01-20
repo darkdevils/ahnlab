@@ -608,11 +608,14 @@ h2.title {
     ul {
       display: flex;
       flex-flow: wrap;
-      justify-content: space-between;
       li {
         position: relative;
         width: 384px;
-        margin-bottom: 50px;
+        margin: 0 0 50px 24px;
+
+        &:nth-child(3n+1) {
+          margin-left: 0;
+        }
         > .btnLike {
           position: absolute;
           right: 3px;
