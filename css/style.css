@@ -3342,7 +3342,10 @@ html .opening, body .opening {
   width: auto;
   margin: 0;
   padding-left: 100px;
-  padding-right: 100px;
+}
+#wrap.mainLayout #footer .footerIn .footerRight {
+  float: left;
+  margin-left: 120px;
 }
 
 /* swiper title */
@@ -3378,6 +3381,9 @@ html .opening, body .opening {
 }
 
 /* swiper */
+.photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide, .photoWidthArea .swiperArea .swiper .swiper-wrapper .swiper-slide, .photoHeightArea .swiperArea .swiper .swiper-wrapper .swiper-slide {
+  float: left;
+}
 .photoNumberArea .swiperArea .swiper .swiper-button-prev, .photoNumberArea .swiperArea .swiper .swiper-button-next, .photoWidthArea .swiperArea .swiper .swiper-button-prev, .photoWidthArea .swiperArea .swiper .swiper-button-next, .photoHeightArea .swiperArea .swiper .swiper-button-prev, .photoHeightArea .swiperArea .swiper .swiper-button-next {
   top: 0;
   bottom: 0;
@@ -3410,7 +3416,6 @@ html .opening, body .opening {
   position: static;
 }
 .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide {
-  float: left;
   width: 15.41vw;
 }
 .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide > a, .photoNumberArea .swiperArea .swiper .swiper-wrapper .swiper-slide .top10Item {
@@ -3523,6 +3528,9 @@ html .opening, body .opening {
   overflow: visible;
   position: static;
 }
+.photoWidthArea .swiperArea .swiper .swiper-wrapper .swiper-slide {
+  width: 22.455vw;
+}
 .photoWidthArea .swiperArea .swiper .swiper-wrapper .swiper-slide a {
   display: block;
 }
@@ -3557,6 +3565,9 @@ html .opening, body .opening {
 .photoHeightArea .swiperArea .swiper {
   overflow: visible;
   position: static;
+}
+.photoHeightArea .swiperArea .swiper .swiper-wrapper .swiper-slide {
+  width: 10.184vw;
 }
 .photoHeightArea .swiperArea .swiper .swiper-wrapper .swiper-slide a {
   display: block;
@@ -3693,6 +3704,10 @@ html .opening, body .opening {
   }
   #wrap.mainLayout #footer .footerIn {
     padding: 32px 15px 0 24px;
+  }
+  #wrap.mainLayout #footer .footerIn .footerRight {
+    float: none;
+    margin-left: 0;
   }
 
   /* swiper title */

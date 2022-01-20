@@ -161,7 +161,11 @@
       width: auto;
       margin: 0;
       padding-left: 100px;
-      padding-right: 100px;
+
+      .footerRight {
+        float: left;
+        margin-left: 120px;
+      }
     }
   }
 }
@@ -208,6 +212,13 @@
 
     .swiper {
 
+      .swiper-wrapper {
+
+        .swiper-slide {
+          float: left;
+        }
+      }
+
       .swiper-button-prev, .swiper-button-next {
         top: 0;
         bottom: 0;
@@ -250,7 +261,6 @@
       .swiper-wrapper {
 
         .swiper-slide {
-          float: left;
           width: 15.41vw;
 
           > a, .top10Item {
@@ -401,6 +411,7 @@
       .swiper-wrapper {
 
         .swiper-slide {
+          width: 22.455vw;
 
           a {
             display: block;
@@ -456,6 +467,7 @@
       .swiper-wrapper {
 
         .swiper-slide {
+          width: 10.184vw;
 
           a {
             display: block;
@@ -680,6 +692,11 @@
 
       .footerIn {
         padding: 32px 15px 0 24px;
+
+        .footerRight {
+          float: none;
+          margin-left: 0;
+        }
       }
     }
   }
