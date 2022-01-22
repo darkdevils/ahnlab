@@ -565,14 +565,13 @@ h2.title {
       min-width: 120px;
       height: 54px;
       margin: -1px 0 0 -1px;
-      padding: 0 15px;
       border: 1px solid #585858;
       box-sizing: border-box;
-      text-align: center;
 
       a {
-        display: inline-block;
-        vertical-align: top;
+        display: block;
+        text-align: center;
+        padding: 0 15px;
         line-height: 52px;
         font-size: 19px;
         @include nsB;
@@ -590,18 +589,65 @@ h2.title {
 
 /* 커뮤니티 */
 .community {
-  .btnWriting {
+  .rightArea {
+    overflow: hidden;
     position: absolute;
     right: 0;
-    top: 0;
-    width: 191px;
-    height: 54px;
-    border: 1px solid #fff;
-    @include imageUrl("web/sub/btnWriting");
-    background-position: center;
-    background-size: 87px 29px;
-    &:hover {
-      background-color: #EA5517;
+    top: -1px;
+
+    > * {
+      float: left;
+      display: block;
+
+      & + *  {
+        margin-left: 8px;
+      }
+    }
+
+    .btnWriting {
+      width: 191px;
+      height: 54px;
+      border: 1px solid #fff;
+      box-sizing: border-box;
+      @include imageUrl("web/sub/btnWriting");
+      background-position: center;
+      background-size: 87px 29px;
+      &:hover {
+        background-color: #EA5517;
+      }
+    }
+
+    .typeBtn {
+      box-sizing: border-box;
+      width: 54px;
+      height: 54px;
+      border: 1px solid #fff;
+
+      span {
+        @include blind;
+      }
+    }
+
+    .listType01 {
+      @include imageUrl("web/icon/icon_listType01");
+      background-position: center;
+
+      &.on {
+        border-color: $colorOrange;
+        @include imageUrl("web/icon/icon_listType01_on");
+        background-position: center;
+      }
+    }
+
+    .listType02 {
+      @include imageUrl("web/icon/icon_listType02");
+      background-position: center;
+
+      &.on {
+        border-color: $colorOrange;
+        @include imageUrl("web/icon/icon_listType02_on");
+        background-position: center;
+      }
     }
   }
   &__list {
@@ -739,6 +785,40 @@ h2.title {
           font-size: 44px;
           line-height: 48px;
           @include nsB;
+        }
+      }
+    }
+
+    &.on {
+
+      ul {
+        padding: 20px 0 10px;
+        border-top: 2px solid $colorOrange;
+        border-bottom: 1px solid $colorOrange;
+
+        li {
+          display: flex;
+          flex-direction: column-reverse;
+          width: 100%;
+          margin: 0;
+          padding: 20px 0 24px;
+
+          > .btnLike, > .btnLike + a {
+            display: none;
+          }
+
+          & + * {
+            border-top: 1px solid #707070;
+          }
+
+          .justifyWrap {
+            margin-top: 20px;
+          }
+
+          .txt {
+            margin: 0;
+            -webkit-line-clamp: 1;
+          }
         }
       }
     }
@@ -2239,8 +2319,8 @@ h2.title {
       li {
         min-width: 80px;
         height: 38px;
-        padding: 0 7px;
         a {
+          padding: 0 7px;
           line-height: 36px;
           font-size: 14px;
         }
@@ -2252,28 +2332,77 @@ h2.title {
 
   /* 커뮤니티 */
   .community {
-    .btnWriting {
-      position: relative;
-      right: initial;
-      display: block;
-      width: 100%;
-      height: 41px;
+
+    .rightArea {
+      position: static;
+      display: flex;
       margin-top: 22px;
-      border: 1px solid #fff;
-      background: none;
-      box-sizing: border-box;
-      &:after {
-        content: "";
-        position: absolute;
-        left: 50%;
-        top: calc(15px / 2);
-        width: calc(143px / 2);
-        height: calc(52px / 2);
-        margin-left: calc(-143px / 4);
-        @include imageUrl("mobile/sub/text_writing");
-        background-size: contain;
+
+      > * {
+        float: none;
+
+        & + *  {
+          margin-left: 7px;
+        }
       }
+
+      .btnWriting {
+        flex: 1;
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 41px;
+        border: 1px solid #fff;
+        background: none;
+        box-sizing: border-box;
+        &:after {
+          content: "";
+          position: absolute;
+          left: 50%;
+          top: calc(15px / 2);
+          width: calc(143px / 2);
+          height: calc(52px / 2);
+          margin-left: calc(-143px / 4);
+          @include imageUrl("mobile/sub/text_writing");
+          background-size: contain;
+        }
+      }
+
+      .typeBtn {
+        width: 41px;
+        height: 41px;
+
+        span {
+          @include blind;
+        }
+      }
+
+      .listType01 {
+        @include imageUrl("mobile/icon/icon_listType01");
+        background-position: center;
+        background-size: 19px 19px;
+
+        &.on {
+          @include imageUrl("mobile/icon/icon_listType01_on");
+          background-position: center;
+          background-size: 19px 19px;
+        }
+      }
+
+      .listType02 {
+        @include imageUrl("mobile/icon/icon_listType02");
+        background-position: center;
+        background-size: 21px 18px;
+
+        &.on {
+          @include imageUrl("mobile/icon/icon_listType02_on");
+          background-position: center;
+          background-size: 21px 18px;
+        }
+      }
+
     }
+
     &__list {
       ul {
         padding-left: calc(48px / 2);
@@ -2304,8 +2433,7 @@ h2.title {
             }
           }
           .justifyWrap {
-            display: none;
-            margin-top: 10px;
+            margin-top: 5px;
             * {
               font-size: calc(28px / 2);
             }
@@ -2316,9 +2444,6 @@ h2.title {
             }
             &__right {
               .btnLike {
-                &:after {
-                  top: 1px;
-                }
                 span {
                   font-size: calc(28px / 2);
                 }
@@ -2328,13 +2453,33 @@ h2.title {
           .txt {
             display: -webkit-box;
             font-size: calc(40px / 2);
-            margin-top: calc(36px / 2);
+            margin-top: 10px;
             line-height: calc(48px / 2);
           }
           .text {
             width: 66vw;
             font-size: 9.3vw;
             line-height: 11.7vw;
+          }
+        }
+      }
+
+      &.on {
+        padding: 0 24px;
+
+        ul {
+          padding: 0;
+
+          li {
+            padding: 16px 0;
+
+            .justifyWrap {
+              margin-top: 8px;
+            }
+
+            .txt {
+              -webkit-line-clamp: 2;
+            }
           }
         }
       }

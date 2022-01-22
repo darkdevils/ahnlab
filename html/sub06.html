@@ -227,7 +227,11 @@
                     <li><a href="#">자랑하기</a></li>
                     <li><a href="#">소통해줘</a></li>
                 </ul>
-                <a href="#" class="btnWriting"><span class="blind">글쓰기</span></a>
+                <div class="rightArea listTypeArea">
+                    <a href="#" class="btnWriting"><span class="blind">글쓰기</span></a>
+                    <button type="button" class="typeBtn listType01 on"><span>썸네일형 리스트</span></button>
+                    <button type="button" class="typeBtn listType02"><span>텍스트형 리스트</span></button>
+                </div>
             </div>
             <div id="tabs__con">
                 <!-- 전체 -->
@@ -591,6 +595,24 @@
         });
     });
 
+    //list type button
+    $(function(){
+        $(document).on("click", ".listTypeArea .typeBtn",function () {
+            let $this = $(this);
+            let onCheck = $this.is(".on");
+
+            if(!onCheck) {
+                $(".typeBtn.on").removeClass("on");
+                $this.addClass("on");
+
+                if($this.is(".listType01")) {
+                    $(".community__list").removeClass("on");
+                } else {
+                    $(".community__list").addClass("on");
+                }
+            }
+        });
+    });
 </script>
 </body>
 </html>

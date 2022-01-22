@@ -4351,14 +4351,13 @@ h2.title-margin {
   min-width: 120px;
   height: 54px;
   margin: -1px 0 0 -1px;
-  padding: 0 15px;
   border: 1px solid #585858;
   box-sizing: border-box;
-  text-align: center;
 }
 .tabWrap ul li a {
-  display: inline-block;
-  vertical-align: top;
+  display: block;
+  text-align: center;
+  padding: 0 15px;
   line-height: 52px;
   font-size: 19px;
   font-family: "NotoSansCJKkrBold", sans-serif;
@@ -4371,19 +4370,61 @@ h2.title-margin {
 
 /* 안철수의 오늘 */
 /* 커뮤니티 */
-.community .btnWriting {
+.community .rightArea {
+  overflow: hidden;
   position: absolute;
   right: 0;
-  top: 0;
+  top: -1px;
+}
+.community .rightArea > * {
+  float: left;
+  display: block;
+}
+.community .rightArea > * + * {
+  margin-left: 8px;
+}
+.community .rightArea .btnWriting {
   width: 191px;
   height: 54px;
   border: 1px solid #fff;
+  box-sizing: border-box;
   background: url("../images/web/sub/btnWriting.png") no-repeat;
   background-position: center;
   background-size: 87px 29px;
 }
-.community .btnWriting:hover {
+.community .rightArea .btnWriting:hover {
   background-color: #EA5517;
+}
+.community .rightArea .typeBtn {
+  box-sizing: border-box;
+  width: 54px;
+  height: 54px;
+  border: 1px solid #fff;
+}
+.community .rightArea .typeBtn span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.community .rightArea .listType01 {
+  background: url("../images/web/icon/icon_listType01.png") no-repeat;
+  background-position: center;
+}
+.community .rightArea .listType01.on {
+  border-color: #EA5504;
+  background: url("../images/web/icon/icon_listType01_on.png") no-repeat;
+  background-position: center;
+}
+.community .rightArea .listType02 {
+  background: url("../images/web/icon/icon_listType02.png") no-repeat;
+  background-position: center;
+}
+.community .rightArea .listType02.on {
+  border-color: #EA5504;
+  background: url("../images/web/icon/icon_listType02_on.png") no-repeat;
+  background-position: center;
 }
 .community__list ul {
   display: flex;
@@ -4515,6 +4556,31 @@ h2.title-margin {
   font-size: 44px;
   line-height: 48px;
   font-family: "NotoSansCJKkrBold", sans-serif;
+}
+.community__list.on ul {
+  padding: 20px 0 10px;
+  border-top: 2px solid #EA5504;
+  border-bottom: 1px solid #EA5504;
+}
+.community__list.on ul li {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+  margin: 0;
+  padding: 20px 0 24px;
+}
+.community__list.on ul li > .btnLike, .community__list.on ul li > .btnLike + a {
+  display: none;
+}
+.community__list.on ul li + * {
+  border-top: 1px solid #707070;
+}
+.community__list.on ul li .justifyWrap {
+  margin-top: 20px;
+}
+.community__list.on ul li .txt {
+  margin: 0;
+  -webkit-line-clamp: 1;
 }
 .community__list .pagination {
   padding-top: 45px;
@@ -5853,27 +5919,37 @@ h2.title-margin {
   .tabWrap ul li {
     min-width: 80px;
     height: 38px;
-    padding: 0 7px;
   }
   .tabWrap ul li a {
+    padding: 0 7px;
     line-height: 36px;
     font-size: 14px;
   }
 
   /* 안철수의 오늘 */
   /* 커뮤니티 */
-  .community .btnWriting {
+  .community .rightArea {
+    position: static;
+    display: flex;
+    margin-top: 22px;
+  }
+  .community .rightArea > * {
+    float: none;
+  }
+  .community .rightArea > * + * {
+    margin-left: 7px;
+  }
+  .community .rightArea .btnWriting {
+    flex: 1;
     position: relative;
-    right: initial;
     display: block;
     width: 100%;
     height: 41px;
-    margin-top: 22px;
     border: 1px solid #fff;
     background: none;
     box-sizing: border-box;
   }
-  .community .btnWriting:after {
+  .community .rightArea .btnWriting:after {
     content: "";
     position: absolute;
     left: 50%;
@@ -5883,6 +5959,37 @@ h2.title-margin {
     margin-left: -35.75px;
     background: url("../images/mobile/sub/text_writing.png") no-repeat;
     background-size: contain;
+  }
+  .community .rightArea .typeBtn {
+    width: 41px;
+    height: 41px;
+  }
+  .community .rightArea .typeBtn span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+  .community .rightArea .listType01 {
+    background: url("../images/mobile/icon/icon_listType01.png") no-repeat;
+    background-position: center;
+    background-size: 19px 19px;
+  }
+  .community .rightArea .listType01.on {
+    background: url("../images/mobile/icon/icon_listType01_on.png") no-repeat;
+    background-position: center;
+    background-size: 19px 19px;
+  }
+  .community .rightArea .listType02 {
+    background: url("../images/mobile/icon/icon_listType02.png") no-repeat;
+    background-position: center;
+    background-size: 21px 18px;
+  }
+  .community .rightArea .listType02.on {
+    background: url("../images/mobile/icon/icon_listType02_on.png") no-repeat;
+    background-position: center;
+    background-size: 21px 18px;
   }
   .community__list ul {
     padding-left: 24px;
@@ -5910,8 +6017,7 @@ h2.title-margin {
     background-size: 20px 20px;
   }
   .community__list ul li .justifyWrap {
-    display: none;
-    margin-top: 10px;
+    margin-top: 5px;
   }
   .community__list ul li .justifyWrap * {
     font-size: 14px;
@@ -5919,22 +6025,34 @@ h2.title-margin {
   .community__list ul li .justifyWrap__left .name {
     margin-right: 10px;
   }
-  .community__list ul li .justifyWrap__right .btnLike:after {
-    top: 1px;
-  }
   .community__list ul li .justifyWrap__right .btnLike span {
     font-size: 14px;
   }
   .community__list ul li .txt {
     display: -webkit-box;
     font-size: 20px;
-    margin-top: 18px;
+    margin-top: 10px;
     line-height: 24px;
   }
   .community__list ul li .text {
     width: 66vw;
     font-size: 9.3vw;
     line-height: 11.7vw;
+  }
+  .community__list.on {
+    padding: 0 24px;
+  }
+  .community__list.on ul {
+    padding: 0;
+  }
+  .community__list.on ul li {
+    padding: 16px 0;
+  }
+  .community__list.on ul li .justifyWrap {
+    margin-top: 8px;
+  }
+  .community__list.on ul li .txt {
+    -webkit-line-clamp: 2;
   }
 
   .communityDetail, .videoDetail {
