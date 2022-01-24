@@ -2084,6 +2084,9 @@ html .opening, body .opening {
   /* header */
   /* container */
   /* footer */
+  /* popup */
+  /* radio button */
+  /* etc */
 }
 #wrap .pageTop {
   position: fixed;
@@ -2655,6 +2658,101 @@ html .opening, body .opening {
 #wrap #footer .footerIn .footerRight .supportContextMobile {
   display: none;
 }
+#wrap .ahnPopupWrap {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+}
+#wrap .ahnPopupWrap .ahnPopupContainer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+#wrap .ahnPopupWrap .ahnPopupContainer .popupCloseBtn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 70px;
+  height: 70px;
+  background: url("../images/web/icon/icon_popupCloseBtn.png") no-repeat;
+  background-position: center;
+}
+#wrap .ahnPopupWrap .ahnPopupContainer .popupCloseBtn span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+#wrap .ahnPopupWrap .ahnPopupContainer .popupContent {
+  display: block;
+  width: 700px;
+  border: 1px solid #707070;
+}
+#wrap .ahnPopupWrap .ahnPopupContainer .popupContent img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+#wrap .ahnPopupWrap .ahnPopupContainer .popupFunction {
+  overflow: hidden;
+  margin-top: 10px;
+}
+#wrap .ahnPopupWrap .ahnPopupContainer .popupFunction .popupDayCloseBtn {
+  float: right;
+  display: block;
+  line-height: 26px;
+  font-size: 19px;
+  color: #fff;
+}
+#wrap .btnRadio {
+  display: inline-block;
+  vertical-align: top;
+  cursor: pointer;
+}
+#wrap .btnRadio input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+#wrap .btnRadio input + .inpTxt {
+  display: block;
+  box-sizing: border-box;
+  text-align: center;
+  min-width: 110px;
+  height: 43px;
+  padding: 0 10px;
+  line-height: 41px;
+  border: 1px solid #707070;
+  font-size: 20px;
+  font-family: "NotoSansCJKkrRegular", sans-serif;
+  color: #fff;
+}
+#wrap .btnRadio input:checked + .inpTxt {
+  border-color: #EA5504;
+  background-color: #EA5504;
+}
+#wrap .commentSorting {
+  overflow: hidden;
+  margin-top: 50px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid #EA5504;
+}
+#wrap .commentSorting .btnRadio {
+  float: left;
+}
+#wrap .commentSorting .btnRadio + .btnRadio {
+  margin-left: 10px;
+}
 
 /* media queries */
 @media (max-width: 780px) {
@@ -2672,6 +2770,9 @@ html .opening, body .opening {
     /* header */
     /* container */
     /* footer */
+    /* popup */
+    /* radio button */
+    /* etc */
   }
   #wrap .pageTop {
     right: 24px;
@@ -3208,6 +3309,50 @@ html .opening, body .opening {
   }
   #wrap #footer .footerIn .footerRight .supportContextMobile a {
     color: #B5B5B5;
+  }
+  #wrap .ahnPopupWrap .ahnPopupContainer {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    transform: translate(0, -50%);
+  }
+  #wrap .ahnPopupWrap .ahnPopupContainer .popupCloseBtn {
+    width: 35px;
+    height: 35px;
+    background-position: center;
+    background-size: 15px 15px;
+  }
+  #wrap .ahnPopupWrap .ahnPopupContainer .popupContent {
+    box-sizing: border-box;
+    width: 100%;
+  }
+  #wrap .ahnPopupWrap .ahnPopupContainer .popupFunction {
+    margin-top: 12px;
+  }
+  #wrap .ahnPopupWrap .ahnPopupContainer .popupFunction .popupDayCloseBtn {
+    line-height: 20px;
+    font-size: 15px;
+  }
+  #wrap .btnRadio input + .inpTxt {
+    min-width: 60px;
+    height: 30px;
+    padding: 0 5px;
+    line-height: 28px;
+    font-size: 13px;
+    font-family: "NotoSansCJKkrMedium", sans-serif;
+    color: #fff;
+  }
+  #wrap .btnRadio input:checked + .inpTxt {
+    border-color: #EA5504;
+    background-color: #EA5504;
+  }
+  #wrap .commentSorting {
+    margin-top: 23px;
+    padding-bottom: 15px;
+    border-bottom-width: 1px;
+  }
+  #wrap .commentSorting .btnRadio + .btnRadio {
+    margin-left: 6px;
   }
 }
 /* layout */

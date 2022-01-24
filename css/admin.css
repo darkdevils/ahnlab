@@ -3823,6 +3823,7 @@ html, body {
   font-family: "NotoSansCJKkrMedium", sans-serif;
 }
 #wrap .imageWidthBoxW .imageBox .image img {
+  display: block;
   width: 100%;
   height: 100%;
 }
@@ -3881,6 +3882,34 @@ html, body {
   height: 314px;
 }
 #wrap .videoWidthBoxH .imageFunction {
+  padding-bottom: 0;
+}
+#wrap .imagePopupBox {
+  padding: 18px 0;
+}
+#wrap .imagePopupBox .imageBox {
+  position: relative;
+}
+#wrap .imagePopupBox .imageBox .image {
+  width: 300px;
+  border: 1px solid #464646;
+  background-color: #1F1F1F;
+  font-size: 18px;
+  font-family: "NotoSansCJKkrMedium", sans-serif;
+}
+#wrap .imagePopupBox .imageBox .image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+#wrap .imagePopupBox .imageBox .tableText {
+  position: absolute;
+  left: 324px;
+  bottom: 0;
+  line-height: 26px;
+  margin-left: 0;
+}
+#wrap .imagePopupBox .imageFunction {
   padding-bottom: 0;
 }
 #wrap .liveVideoControl {
@@ -4024,6 +4053,7 @@ html, body {
   /* 영상 */
   /* 라이브 보기 */
   /* 커뮤니티 */
+  /* popup */
 }
 #wrap #container .ahnMainBanner .bannerArea {
   margin-top: 34px;
@@ -4165,6 +4195,9 @@ html, body {
   margin-top: 0;
   padding: 18px 0;
   border-top: 1px solid #707070;
+}
+#wrap #container .ahnPopupContent .popupFunction {
+  margin-left: 160px;
 }
 
 /*# sourceMappingURL=admin.css.map */

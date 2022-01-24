@@ -14,6 +14,26 @@
 <body>
 <!-- wrap -->
 <div id="wrap" class="mainLayout">
+    <!-- popup -->
+    <div class="ahnPopupWrap" style="display: block;">
+        <div class="ahnPopupContainer">
+            <button type="button" class="popupCloseBtn"><span>팝업 닫기</span></button>
+            <a href="#" class="popupContent">
+                <img src="../images/temp/popupImage.png" alt="팝업" />
+            </a>
+            <div class="popupFunction">
+                <button type="button" class="popupDayCloseBtn">오늘 하루 보지 않기</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function (){
+            $(document).on("click", ".ahnPopupWrap .popupCloseBtn, .ahnPopupWrap .popupDayCloseBtn", function (){
+                $(this).closest(".ahnPopupWrap").hide();
+            });
+        });
+    </script>
+    <!-- //popup -->
     <!-- header -->
     <hader id="header">
         <div class="headerIn">

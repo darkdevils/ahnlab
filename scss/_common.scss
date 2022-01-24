@@ -716,6 +716,114 @@ html, body {
       }
     }
   }
+
+  /* popup */
+  .ahnPopupWrap {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+
+    .ahnPopupContainer {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      .popupCloseBtn {
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: block;
+        width: 70px;
+        height: 70px;
+        @include imageUrl("web/icon/icon_popupCloseBtn");
+        background-position: center;
+
+        span {
+          @include blind;
+        }
+      }
+
+      .popupContent {
+        display: block;
+        width: 700px;
+        border: 1px solid #707070;
+
+        img {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .popupFunction {
+        overflow: hidden;
+        margin-top: 10px;
+
+        .popupDayCloseBtn {
+          float: right;
+          display: block;
+          line-height: 26px;
+          font-size: 19px;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  /* radio button */
+  .btnRadio {
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+
+    input {
+      @include blind;
+
+      & + .inpTxt {
+        display: block;
+        box-sizing: border-box;
+        text-align: center;
+        min-width: 110px;
+        height: 43px;
+        padding: 0 10px;
+        line-height: 41px;
+        border: 1px solid #707070;
+        font-size: 20px;
+        @include nsR;
+        color: #fff;
+      }
+
+      &:checked {
+
+        & + .inpTxt {
+          border-color: $colorOrange;
+          background-color: $colorOrange;
+        }
+      }
+    }
+  }
+
+  /* etc */
+  .commentSorting {
+    overflow: hidden;
+    margin-top: 50px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid $colorOrange;
+
+    .btnRadio {
+      float: left;
+
+      & + .btnRadio {
+        margin-left: 10px;
+      }
+    }
+  }
 }
 
 /* media queries */
@@ -1379,6 +1487,77 @@ html, body {
               color: #B5B5B5;
             }
           }
+        }
+      }
+    }
+
+    /* popup */
+    .ahnPopupWrap {
+
+      .ahnPopupContainer {
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        transform: translate(0, -50%);
+
+        .popupCloseBtn {
+          width: 35px;
+          height: 35px;
+          background-position: center;
+          background-size: 15px 15px;
+        }
+
+        .popupContent {
+          box-sizing: border-box;
+          width: 100%;
+        }
+
+        .popupFunction {
+          margin-top: 12px;
+
+          .popupDayCloseBtn {
+            line-height: 20px;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+
+    /* radio button */
+    .btnRadio {
+
+      input {
+
+        & + .inpTxt {
+          min-width: 60px;
+          height: 30px;
+          padding: 0 5px;
+          line-height: 28px;
+          font-size: 13px;
+          @include nsM;
+          color: #fff;
+        }
+
+        &:checked {
+
+          & + .inpTxt {
+            border-color: $colorOrange;
+            background-color: $colorOrange;
+          }
+        }
+      }
+    }
+
+    /* etc */
+    .commentSorting {
+      margin-top: 23px;
+      padding-bottom: 15px;
+      border-bottom-width: 1px;
+
+      .btnRadio {
+
+        & + .btnRadio {
+          margin-left: 6px;
         }
       }
     }
